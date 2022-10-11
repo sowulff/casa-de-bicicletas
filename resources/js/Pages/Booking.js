@@ -9,13 +9,16 @@ export default function Booking({ rooms }) {
             <p>Här kan gäster se lediga rum och dagar samt lägga bokningar</p>
             <ul>
                 {rooms.map(function (room) {
+                    console.log(room.id);
                     return (
                         <div key={room.id}>
-                            <li>{room.name}</li>
+                            <Link href={`/booking/${room.id}`}>
+                                {room.name}
+                            </Link>
                             <li>
                                 <img width={100} src={room.image} alt="img" />
                             </li>
-                            <li>{room.price}</li>
+                            <li>{room.price + " kr"}</li>
                         </div>
                     );
                 })}

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Rooms;
+use App\Models\Room;
 use Illuminate\Http\Request;
 
 
@@ -17,7 +17,7 @@ class ListAllRoomsController extends Controller
     public function __invoke(Request $request)
     {
 
-        $rooms = Rooms::all();
+        $rooms = Room::all();
 
         return inertia('Booking', ['rooms' => $rooms],);
     }

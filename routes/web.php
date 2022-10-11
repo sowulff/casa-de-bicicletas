@@ -3,8 +3,7 @@
 // use App\Http\Controllers\Auth\LoginController;
 
 use App\Http\Controllers\ListAllRoomsController;
-
-
+use App\Models\Room;
 
 
 use Illuminate\Support\Facades\Route;
@@ -30,6 +29,11 @@ Route::get('/', function () {
 });
 Route::get('/booking', ListAllRoomsController::class, function () {
     return Inertia::render('Booking');
+});
+Route::get('/booking/{room}', function (Room $room) {
+    return Inertia::render('Booking', [
+        'room' => $room,
+    ]);
 });
 Route::get('/admin', function () {
     return Inertia::render('Admin/Login');
