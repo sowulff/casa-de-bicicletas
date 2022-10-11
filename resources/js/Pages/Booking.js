@@ -1,12 +1,11 @@
 import { Link } from "@inertiajs/inertia-react";
-
+import Calender from "../components/Calender.js";
 export default function Booking({ rooms }) {
-    console.log(rooms);
-
     return (
         <div>
             <h1>Hello</h1>
             <p>Här kan gäster se lediga rum och dagar samt lägga bokningar</p>
+            <Calender />
             <ul>
                 {rooms.map(function (room) {
                     console.log(room.id);
