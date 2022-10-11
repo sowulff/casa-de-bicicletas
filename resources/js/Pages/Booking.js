@@ -1,5 +1,5 @@
 import { Link } from "@inertiajs/inertia-react";
-import Calender from "../components/Calender.js";
+import Calender from "../components/Calender/Calender.js";
 export default function Booking({ rooms }) {
     return (
         <div>

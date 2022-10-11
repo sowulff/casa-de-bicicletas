@@ -2207,7 +2207,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ Booking)
 /* harmony export */ });
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
-/* harmony import */ var _components_Calender_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Calender.js */ "./resources/js/components/Calender.js");
+/* harmony import */ var _components_Calender_Calender_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Calender/Calender.js */ "./resources/js/components/Calender/Calender.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
@@ -2220,7 +2220,7 @@ function Booking(_ref) {
       children: "Hello"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
       children: "H\xE4r kan g\xE4ster se lediga rum och dagar samt l\xE4gga bokningar"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_components_Calender_js__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("ul", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_components_Calender_Calender_js__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("ul", {
       children: rooms.map(function (room) {
         console.log(room.id);
         return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
@@ -2314,10 +2314,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /***/ }),
 
-/***/ "./resources/js/components/Calender.js":
-/*!*********************************************!*\
-  !*** ./resources/js/components/Calender.js ***!
-  \*********************************************/
+/***/ "./resources/js/components/Calender/Calender.js":
+/*!******************************************************!*\
+  !*** ./resources/js/components/Calender/Calender.js ***!
+  \******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2371,17 +2371,16 @@ function DateRangePickerCalendarExample() {
     setFocus(newFocus || react_nice_dates__WEBPACK_IMPORTED_MODULE_1__.START_DATE);
   };
 
+  {
+    console.log(startDate ? (0,date_fns__WEBPACK_IMPORTED_MODULE_4__["default"])(startDate, "dd MMM yyyy") : "none");
+  }
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
-      children: ["Selected start date:", " ", startDate ? (0,date_fns__WEBPACK_IMPORTED_MODULE_4__["default"])(startDate, "dd MMM yyyy", {
-        locale: date_fns_locale__WEBPACK_IMPORTED_MODULE_5__["default"]
-      }) : "none", "."]
+      children: ["Selected start date:", " ", startDate ? (0,date_fns__WEBPACK_IMPORTED_MODULE_4__["default"])(startDate, "dd MMM yyyy") : "none"]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
-      children: ["Selected end date:", " ", endDate ? (0,date_fns__WEBPACK_IMPORTED_MODULE_4__["default"])(endDate, "dd MMM yyyy", {
-        locale: date_fns_locale__WEBPACK_IMPORTED_MODULE_5__["default"]
-      }) : "none", "."]
+      children: ["Selected end date:", " ", endDate ? (0,date_fns__WEBPACK_IMPORTED_MODULE_4__["default"])(endDate, "dd MMM yyyy") : "none"]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
-      children: ["Currently selecting: ", focus, "."]
+      children: ["Currently selecting: ", focus]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_nice_dates__WEBPACK_IMPORTED_MODULE_1__.DateRangePickerCalendar, {
       startDate: startDate,
       endDate: endDate,

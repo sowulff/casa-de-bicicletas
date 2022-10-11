@@ -3,6 +3,7 @@ import { format } from "date-fns";
 import { enGB } from "date-fns/locale";
 import { DateRangePickerCalendar, START_DATE } from "react-nice-dates";
 import "react-nice-dates/build/style.css";
+
 export default function DateRangePickerCalendarExample() {
     const [startDate, setStartDate] = useState();
     const [endDate, setEndDate] = useState();
@@ -10,23 +11,20 @@ export default function DateRangePickerCalendarExample() {
     const handleFocusChange = (newFocus) => {
         setFocus(newFocus || START_DATE);
     };
+    {
+        console.log(startDate ? format(startDate, "dd MMM yyyy") : "none");
+    }
     return (
         <div>
             <p>
                 Selected start date:{" "}
-                {startDate
-                    ? format(startDate, "dd MMM yyyy", { locale: enGB })
-                    : "none"}
-                .
+                {startDate ? format(startDate, "dd MMM yyyy") : "none"}
             </p>
             <p>
                 Selected end date:{" "}
-                {endDate
-                    ? format(endDate, "dd MMM yyyy", { locale: enGB })
-                    : "none"}
-                .
+                {endDate ? format(endDate, "dd MMM yyyy") : "none"}
             </p>
-            <p>Currently selecting: {focus}.</p>
+            <p>Currently selecting: {focus}</p>
             <DateRangePickerCalendar
                 startDate={startDate}
                 endDate={endDate}
