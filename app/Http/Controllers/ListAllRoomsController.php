@@ -16,9 +16,7 @@ class ListAllRoomsController extends Controller
      */
     public function __invoke(Request $request)
     {
-
         $rooms = Room::all();
-
         return inertia('Booking', ['rooms' => $rooms],);
     }
 }
