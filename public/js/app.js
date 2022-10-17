@@ -2371,9 +2371,13 @@ function DateRangePickerCalendarExample() {
     setFocus(newFocus || react_nice_dates__WEBPACK_IMPORTED_MODULE_1__.START_DATE);
   };
 
-  {
-    console.log(startDate ? (0,date_fns__WEBPACK_IMPORTED_MODULE_4__["default"])(startDate, "dd MMM yyyy") : "none");
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log("You clicked submit.");
+    console.log(startDate ? (0,date_fns__WEBPACK_IMPORTED_MODULE_4__["default"])(startDate, "yy-MM-dd") : "none");
+    console.log(endDate ? (0,date_fns__WEBPACK_IMPORTED_MODULE_4__["default"])(endDate, "yy-MM-dd") : "none");
   }
+
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
       children: ["Selected start date:", " ", startDate ? (0,date_fns__WEBPACK_IMPORTED_MODULE_4__["default"])(startDate, "dd MMM yyyy") : "none"]
@@ -2381,14 +2385,20 @@ function DateRangePickerCalendarExample() {
       children: ["Selected end date:", " ", endDate ? (0,date_fns__WEBPACK_IMPORTED_MODULE_4__["default"])(endDate, "dd MMM yyyy") : "none"]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
       children: ["Currently selecting: ", focus]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_nice_dates__WEBPACK_IMPORTED_MODULE_1__.DateRangePickerCalendar, {
-      startDate: startDate,
-      endDate: endDate,
-      focus: focus,
-      onStartDateChange: setStartDate,
-      onEndDateChange: setEndDate,
-      onFocusChange: handleFocusChange,
-      locale: date_fns_locale__WEBPACK_IMPORTED_MODULE_5__["default"]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("form", {
+      onSubmit: handleSubmit,
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_nice_dates__WEBPACK_IMPORTED_MODULE_1__.DateRangePickerCalendar, {
+        startDate: startDate,
+        endDate: endDate,
+        focus: focus,
+        onStartDateChange: setStartDate,
+        onEndDateChange: setEndDate,
+        onFocusChange: handleFocusChange,
+        locale: date_fns_locale__WEBPACK_IMPORTED_MODULE_5__["default"]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
+        type: "submit",
+        children: "V\xE4lj"
+      })]
     })]
   });
 }

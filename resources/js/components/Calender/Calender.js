@@ -11,9 +11,13 @@ export default function DateRangePickerCalendarExample() {
     const handleFocusChange = (newFocus) => {
         setFocus(newFocus || START_DATE);
     };
-    {
-        console.log(startDate ? format(startDate, "dd MMM yyyy") : "none");
+    function handleSubmit(e) {
+        e.preventDefault();
+        console.log("You clicked submit.");
+        console.log(startDate ? format(startDate, "yy-MM-dd") : "none");
+        console.log(endDate ? format(endDate, "yy-MM-dd") : "none");
     }
+
     return (
         <div>
             <p>
@@ -25,15 +29,19 @@ export default function DateRangePickerCalendarExample() {
                 {endDate ? format(endDate, "dd MMM yyyy") : "none"}
             </p>
             <p>Currently selecting: {focus}</p>
-            <DateRangePickerCalendar
-                startDate={startDate}
-                endDate={endDate}
-                focus={focus}
-                onStartDateChange={setStartDate}
-                onEndDateChange={setEndDate}
-                onFocusChange={handleFocusChange}
-                locale={enGB}
-            />
+            <form onSubmit={handleSubmit}>
+                <DateRangePickerCalendar
+                    startDate={startDate}
+                    endDate={endDate}
+                    focus={focus}
+                    onStartDateChange={setStartDate}
+                    onEndDateChange={setEndDate}
+                    onFocusChange={handleFocusChange}
+                    locale={enGB}
+                />
+
+                <button type="submit">Välj</button>
+            </form>
         </div>
     );
 }
