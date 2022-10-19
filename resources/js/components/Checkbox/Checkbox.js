@@ -1,9 +1,8 @@
-import { Link } from "@inertiajs/inertia-react";
-import { useState } from "react";
-import Calender from "../components/Calender/Calender.js";
+import React, { useState } from "react";
 
-export default function Booking({ rooms }) {
+export default function Checkbox({ rooms }) {
     // State with list of all checked item
+
     const [checked, setChecked] = useState([]);
 
     // Add/Remove checked item from list
@@ -29,15 +28,13 @@ export default function Booking({ rooms }) {
         checked.includes(room) ? "checked-room" : "not-checked-room";
     return (
         <div>
-            <h1>Hello</h1>
-            <p>Här kan gäster se lediga rum och dagar samt lägga bokningar</p>
             <div>{`Du har valt: ${checkedItems}`}</div>
-
             <form>
                 <ul>
                     {rooms.map(function (room, index) {
                         return (
                             <div key={index}>
+                                <li>{room.name}</li>
                                 <input
                                     type="checkbox"
                                     value={room.id}
@@ -59,9 +56,6 @@ export default function Booking({ rooms }) {
                     })}
                 </ul>
             </form>
-            <Calender />
-
-            <Link href="/">Gå tillbaka</Link>
         </div>
     );
 }

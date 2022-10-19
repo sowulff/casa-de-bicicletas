@@ -2239,10 +2239,12 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 function Booking(_ref) {
   var rooms = _ref.rooms;
 
+  // State with list of all checked item
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]),
       _useState2 = _slicedToArray(_useState, 2),
       checked = _useState2[0],
-      setChecked = _useState2[1];
+      setChecked = _useState2[1]; // Add/Remove checked item from list
+
 
   var handleCheck = function handleCheck(event) {
     var updatedList = _toConsumableArray(checked);
@@ -2254,11 +2256,12 @@ function Booking(_ref) {
     }
 
     setChecked(updatedList);
-  };
+  }; // Generate string of checked items
+
 
   var checkedItems = checked.length ? checked.reduce(function (total, room) {
     return total + ", " + room;
-  }) : "";
+  }) : ""; // Return classes based on whether item is checked
 
   var isChecked = function isChecked(room) {
     return checked.includes(room) ? "checked-room" : "not-checked-room";
@@ -2270,16 +2273,14 @@ function Booking(_ref) {
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
       children: "H\xE4r kan g\xE4ster se lediga rum och dagar samt l\xE4gga bokningar"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-      children: "Items checked are: ".concat(checkedItems)
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("form", {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("ul", {
+      children: "Du har valt: ".concat(checkedItems)
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("form", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("ul", {
         children: rooms.map(function (room, index) {
           return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
-              children: room.name
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
               type: "checkbox",
-              value: room.name,
+              value: room.id,
               onChange: handleCheck
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
               className: isChecked(room.name),
@@ -2295,9 +2296,7 @@ function Booking(_ref) {
             })]
           }, index);
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
-        children: "Click"
-      })]
+      })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_Calender_Calender_js__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
       href: "/",
       children: "G\xE5 tillbaka"
