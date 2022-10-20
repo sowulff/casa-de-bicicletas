@@ -2214,13 +2214,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function Booking() {
+function Booking(_ref) {
+  var rooms = _ref.rooms;
+
   var _useForm = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.useForm)({
     first_name: "",
     last_name: "",
     email: "",
     mobile: "",
-    guests: 0
+    guests: 0,
+    room_id: 0
   }),
       data = _useForm.data,
       setData = _useForm.setData,
@@ -2238,6 +2241,22 @@ function Booking() {
       children: "Hello"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
       children: "H\xE4r kan g\xE4ster se lediga rum och dagar samt l\xE4gga bokningar"
+    }), rooms.map(function (room) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        value: data.room_id,
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+          children: room.name
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+          width: 100,
+          src: room.image,
+          alt: "img"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+          children: room.price + " kr"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
+          href: "/booking/".concat(room.id),
+          children: "se tillg\xE4nglighet och bok"
+        })]
+      }, room.id);
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("form", {
       onSubmit: submit,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {

@@ -31,7 +31,11 @@ Route::get('/', function () {
 Route::get('/booking', ListAllRoomsController::class, function () {
     return Inertia::render('Booking');
 });
-
+Route::get('/booking/{room}', function (Room $room) {
+    return Inertia::render('Booking', [
+        'room' => $room,
+    ]);
+});
 
 Route::get('/admin', function () {
     return Inertia::render('Admin/Login');
