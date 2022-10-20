@@ -16,6 +16,7 @@ class NewBookingController extends Controller
     public function __invoke(Request $request)
     {
         $booking = new Booking();
+        // här skall siffran som står i url:en skickas in i DB.
         $booking->room_id = 2;
         $booking->first_name = $request->input('first_name');
         $booking->last_name = $request->input('first_name');

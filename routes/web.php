@@ -29,11 +29,11 @@ Route::get('/', function () {
     ]);
 });
 Route::get('/booking', ListAllRoomsController::class, function () {
-    return Inertia::render('Booking');
+    return Inertia::render('Booking/SelectRoom');
 });
-Route::get('/booking/{room}', function (Room $room) {
-    return Inertia::render('Booking', [
-        'room' => $room,
+Route::get('/booking/{id}', function (Room $id) {
+    return Inertia::render('Booking/SelectDates', [
+        'room' => $id,
     ]);
 });
 
