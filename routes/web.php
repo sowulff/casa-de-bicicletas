@@ -3,6 +3,7 @@
 // use App\Http\Controllers\Auth\LoginController;
 
 use App\Http\Controllers\ListAllRoomsController;
+use App\Http\Controllers\NewBookingController;
 use App\Models\Room;
 
 
@@ -35,6 +36,8 @@ Route::get('/booking', ListAllRoomsController::class, function () {
 Route::get('/admin', function () {
     return Inertia::render('Admin/Login');
 });
+
+Route::post('/upload', NewBookingController::class);
 
 // Route::middleware('guest')->group(function () {
 //     Route::get('login', [LoginController::class, 'create'])->name('login');

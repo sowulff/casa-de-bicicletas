@@ -1,63 +1,66 @@
 import { Link } from "@inertiajs/inertia-react";
-import { useState } from "react";
 import Calender from "../components/Calender/Calender.js";
+import { useForm } from "@inertiajs/inertia-react";
 
-export default function Booking({ rooms }) {
-    // State with list of all checked item
-    const [checked, setChecked] = useState([]);
+export default function Booking() {
+    const { data, setData, post } = useForm({
+        first_name: "",
+        last_name: "",
+        email: "",
+        mobile: "",
+        guests: 0,
+    });
 
-    // Add/Remove checked item from list
-    const handleCheck = (event) => {
-        var updatedList = [...checked];
-        if (event.target.checked) {
-            updatedList = [...checked, event.target.value];
-        } else {
-            updatedList.splice(checked.indexOf(event.target.value), 1);
-        }
-        setChecked(updatedList);
-    };
-
-    // Generate string of checked items
-    const checkedItems = checked.length
-        ? checked.reduce((total, room) => {
-              return total + ", " + room;
-          })
-        : "";
-
-    // Return classes based on whether item is checked
-    const isChecked = (room) =>
-        checked.includes(room) ? "checked-room" : "not-checked-room";
+    console.log(data);
+    function submit(e) {
+        e.preventDefault();
+        post("/upload");
+    }
     return (
         <div>
             <h1>Hello</h1>
             <p>Här kan gäster se lediga rum och dagar samt lägga bokningar</p>
-            <div>{`Du har valt: ${checkedItems}`}</div>
+            <form onSubmit={submit}>
+                <input
+                    type="text"
+                    value={data.first_name}
+                    onChange={(e) => setData("first_name", e.target.value)}
+                    placeholder="Förnamn"
+                />
 
-            <form>
-                <ul>
-                    {rooms.map(function (room, index) {
-                        return (
-                            <div key={index}>
-                                <input
-                                    type="checkbox"
-                                    value={room.id}
-                                    onChange={handleCheck}
-                                />
-                                <span className={isChecked(room.name)}>
-                                    {room.name}
-                                </span>
-                                <li>
-                                    <img
-                                        width={100}
-                                        src={room.image}
-                                        alt="img"
-                                    />
-                                </li>
-                                <li>{room.price + " kr"}</li>
-                            </div>
-                        );
-                    })}
-                </ul>
+                <input
+                    type="text"
+                    value={data.last_name}
+                    onChange={(e) => setData("last_name", e.target.value)}
+                    placeholder="Efternamn"
+                />
+                <input
+                    type="text"
+                    value={data.email}
+                    onChange={(e) => setData("email", e.target.value)}
+                    placeholder="E-post"
+                />
+                <input
+                    type="text"
+                    value={data.mobile}
+                    onChange={(e) => setData("mobile", e.target.value)}
+                    placeholder="Mobilnummer"
+                />
+                <select
+                    type="number"
+                    value={data.guests}
+                    onChange={(e) =>
+                        setData("guests", parseInt(e.target.value))
+                    }
+                >
+                    <option value="">Antal gäster</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+
+                <button type="submit">Välj rum</button>
             </form>
             <Calender />
 

@@ -16,7 +16,15 @@ class NewBookingController extends Controller
     public function __invoke(Request $request)
     {
         $booking = new Booking();
-        $booking->name = $request->input('name');
+        $booking->room_id = 2;
+        $booking->first_name = $request->input('first_name');
+        $booking->last_name = $request->input('first_name');
+        $booking->email = $request->input('email');
+        $booking->mobile = $request->input('mobile');
+        $booking->guests = $request->input('guests');
+        $booking->start_date = '2022-11-03';
+        $booking->end_date = '2022-12-05';
         $booking->save();
+        return back()->with('success', 'Item created successfully!');
     }
 }
