@@ -11,7 +11,6 @@ export default function selectRoom({ rooms }) {
         guests: 0,
         room_id: 0,
     });
-    console.log(data);
 
     function submit(e) {
         e.preventDefault();

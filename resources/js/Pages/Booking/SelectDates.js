@@ -2,21 +2,21 @@ import { Link } from "@inertiajs/inertia-react";
 import Calender from "../../components/Calender/Calender.js";
 import { useForm } from "@inertiajs/inertia-react";
 
-export default function selectRoom({ rooms }) {
+export default function selectRoom({ room }) {
     const { data, setData, post } = useForm({
         first_name: "",
         last_name: "",
         email: "",
         mobile: "",
         guests: 0,
-        room_id: 0,
+        room_id: room.id,
     });
-    console.log(data);
 
     function submit(e) {
         e.preventDefault();
         post("/upload");
     }
+
     return (
         <div>
             <Calender />
@@ -46,6 +46,7 @@ export default function selectRoom({ rooms }) {
                     onChange={(e) => setData("mobile", e.target.value)}
                     placeholder="Mobilnummer"
                 />
+
                 <select
                     type="number"
                     value={data.guests}
@@ -62,7 +63,6 @@ export default function selectRoom({ rooms }) {
 
                 <button type="submit">Välj rum</button>
             </form>
-
             <Link href="/">Gå tillbaka</Link>
         </div>
     );

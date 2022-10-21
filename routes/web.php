@@ -31,6 +31,7 @@ Route::get('/', function () {
 Route::get('/booking', ListAllRoomsController::class, function () {
     return Inertia::render('Booking/SelectRoom');
 });
+
 Route::get('/booking/{id}', function (Room $id) {
     return Inertia::render('Booking/SelectDates', [
         'room' => $id,
