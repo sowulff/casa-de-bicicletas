@@ -40,7 +40,7 @@ export default function DateRangePickerCalendarExample() {
                     locale={enGB}
                 />
 
-                <button type="submit">Välj</button>
+                <button type="submit">Välj dessa</button>
             </form>
         </div>
     );

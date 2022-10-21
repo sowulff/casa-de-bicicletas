@@ -1,8 +1,21 @@
 import { Link } from "@inertiajs/inertia-react";
-import Calender from "../../components/Calender/Calender.js";
+// import Calender from "../../components/Calender/Calender.js";
 import { useForm } from "@inertiajs/inertia-react";
+import React, { useState } from "react";
+import { format } from "date-fns";
+import { enGB } from "date-fns/locale";
+import { DateRangePickerCalendar, START_DATE } from "react-nice-dates";
+import "react-nice-dates/build/style.css";
 
 export default function selectRoom({ room }) {
+    //Kalender
+    const [startDate, setStartDate] = useState();
+    const [endDate, setEndDate] = useState();
+    const [focus, setFocus] = useState(START_DATE);
+    const handleFocusChange = (newFocus) => {
+        setFocus(newFocus || START_DATE);
+    };
+    // resten
     const { data, setData, post } = useForm({
         first_name: "",
         last_name: "",
@@ -10,17 +23,44 @@ export default function selectRoom({ room }) {
         mobile: "",
         guests: 0,
         room_id: room.id,
+        start_date: startDate,
+        end_date: endDate,
     });
+    console.log(startDate);
 
     function submit(e) {
         e.preventDefault();
+        console.log("You clicked submit.");
+        console.log(startDate ? format(startDate, "yyyy-MM-dd") : "none");
+        console.log(endDate ? format(endDate, "yyyy-MM-dd") : "none");
         post("/upload");
     }
 
     return (
         <div>
-            <Calender />
             <form onSubmit={submit}>
+                <div>
+                    <p>
+                        Selected start date:{" "}
+                        {startDate ? format(startDate, "dd MMM yyyy") : "none"}
+                    </p>
+                    <p>
+                        Selected end date:{" "}
+                        {endDate ? format(endDate, "dd MMM yyyy") : "none"}
+                    </p>
+                    <p>Currently selecting: {focus}</p>
+
+                    <DateRangePickerCalendar
+                        startDate={startDate}
+                        endDate={endDate}
+                        focus={focus}
+                        onStartDateChange={setStartDate}
+                        onEndDateChange={setEndDate}
+                        onFocusChange={handleFocusChange}
+                        locale={enGB}
+                    />
+                </div>
+
                 <input
                     type="text"
                     value={data.first_name}
