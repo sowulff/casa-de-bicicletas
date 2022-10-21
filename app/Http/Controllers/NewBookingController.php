@@ -19,7 +19,7 @@ class NewBookingController extends Controller
         // här skall siffran som står i url:en skickas in i DB.
         $booking->room_id = $request->input('room_id');
         $booking->first_name = $request->input('first_name');
-        $booking->last_name = $request->input('first_name');
+        $booking->last_name = $request->input('last_name');
         $booking->email = $request->input('email');
         $booking->mobile = $request->input('mobile');
         $booking->guests = $request->input('guests');
