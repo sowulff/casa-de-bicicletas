@@ -2267,42 +2267,43 @@ function selectRoom(_ref) {
     mobile: "",
     guests: 0,
     room_id: room.id,
-    start_date: startDate,
-    end_date: endDate
+    start_date: "",
+    end_date: ""
   }),
       data = _useForm.data,
       setData = _useForm.setData,
       post = _useForm.post;
 
-  console.log(startDate);
-
   function submit(e) {
     e.preventDefault();
-    console.log("You clicked submit.");
-    console.log(startDate ? (0,date_fns__WEBPACK_IMPORTED_MODULE_5__["default"])(startDate, "yyyy-MM-dd") : "none");
-    console.log(endDate ? (0,date_fns__WEBPACK_IMPORTED_MODULE_5__["default"])(endDate, "yyyy-MM-dd") : "none");
     post("/upload");
   }
 
+  function formatDate(date) {
+    return (0,date_fns__WEBPACK_IMPORTED_MODULE_5__["default"])(date, "yyyy-MM-dd");
+  }
+
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("form", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
+      children: ["Tillg\xE4ngliga datum f\xF6r ", room.name, ":"]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("form", {
       onSubmit: submit,
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
-          children: ["Selected start date:", " ", startDate ? (0,date_fns__WEBPACK_IMPORTED_MODULE_5__["default"])(startDate, "dd MMM yyyy") : "none"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
-          children: ["Selected end date:", " ", endDate ? (0,date_fns__WEBPACK_IMPORTED_MODULE_5__["default"])(endDate, "dd MMM yyyy") : "none"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
-          children: ["Currently selecting: ", focus]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_nice_dates__WEBPACK_IMPORTED_MODULE_2__.DateRangePickerCalendar, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_nice_dates__WEBPACK_IMPORTED_MODULE_2__.DateRangePickerCalendar, {
           startDate: startDate,
           endDate: endDate,
           focus: focus,
-          onStartDateChange: setStartDate,
-          onEndDateChange: setEndDate,
+          onStartDateChange: function onStartDateChange(e) {
+            setStartDate(e);
+            setData("start_date", formatDate(e));
+          },
+          onEndDateChange: function onEndDateChange(e) {
+            setEndDate(e);
+            setData("end_date", formatDate(e));
+          },
           onFocusChange: handleFocusChange,
           locale: date_fns_locale__WEBPACK_IMPORTED_MODULE_6__["default"]
-        })]
+        })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
         type: "text",
         value: data.first_name,
@@ -2422,7 +2423,7 @@ function selectRoom(_ref) {
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
           children: room.price + " kr"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-          href: "/booking/".concat(room.id),
+          href: "/booking/room/".concat(room.id),
           children: "se tillg\xE4nglighet och bok"
         })]
       }, room.id);

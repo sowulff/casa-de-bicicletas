@@ -32,7 +32,7 @@ Route::get('/booking', ListAllRoomsController::class, function () {
     return Inertia::render('Booking/SelectRoom');
 });
 
-Route::get('/booking/{id}', function (Room $id) {
+Route::get('/booking/room/{id}', function (Room $id) {
     return Inertia::render('Booking/SelectDates', [
         'room' => $id,
     ]);

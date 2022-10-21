@@ -23,8 +23,8 @@ class NewBookingController extends Controller
         $booking->email = $request->input('email');
         $booking->mobile = $request->input('mobile');
         $booking->guests = $request->input('guests');
-        $booking->start_date = '2022-11-03';
-        $booking->end_date = '2022-12-05';
+        $booking->start_date = $request->input('start_date');
+        $booking->end_date = $request->input('end_date');
         $booking->save();
         return back()->with('success', 'Item created successfully!');
     }

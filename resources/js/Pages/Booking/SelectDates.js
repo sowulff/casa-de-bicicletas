@@ -15,6 +15,7 @@ export default function selectRoom({ room }) {
     const handleFocusChange = (newFocus) => {
         setFocus(newFocus || START_DATE);
     };
+
     // resten
     const { data, setData, post } = useForm({
         first_name: "",
@@ -23,39 +24,35 @@ export default function selectRoom({ room }) {
         mobile: "",
         guests: 0,
         room_id: room.id,
-        start_date: startDate,
-        end_date: endDate,
+        start_date: "",
+        end_date: "",
     });
-    console.log(startDate);
 
     function submit(e) {
         e.preventDefault();
-        console.log("You clicked submit.");
-        console.log(startDate ? format(startDate, "yyyy-MM-dd") : "none");
-        console.log(endDate ? format(endDate, "yyyy-MM-dd") : "none");
         post("/upload");
+    }
+    function formatDate(date) {
+        return format(date, "yyyy-MM-dd");
     }
 
     return (
         <div>
+            <p>Tillgängliga datum för {room.name}:</p>
             <form onSubmit={submit}>
                 <div>
-                    <p>
-                        Selected start date:{" "}
-                        {startDate ? format(startDate, "dd MMM yyyy") : "none"}
-                    </p>
-                    <p>
-                        Selected end date:{" "}
-                        {endDate ? format(endDate, "dd MMM yyyy") : "none"}
-                    </p>
-                    <p>Currently selecting: {focus}</p>
-
                     <DateRangePickerCalendar
                         startDate={startDate}
                         endDate={endDate}
                         focus={focus}
-                        onStartDateChange={setStartDate}
-                        onEndDateChange={setEndDate}
+                        onStartDateChange={(e) => {
+                            setStartDate(e);
+                            setData("start_date", formatDate(e));
+                        }}
+                        onEndDateChange={(e) => {
+                            setEndDate(e);
+                            setData("end_date", formatDate(e));
+                        }}
                         onFocusChange={handleFocusChange}
                         locale={enGB}
                     />

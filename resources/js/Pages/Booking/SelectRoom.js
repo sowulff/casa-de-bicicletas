@@ -26,7 +26,7 @@ export default function selectRoom({ rooms }) {
                         <p>{room.name}</p>
                         <img width={100} src={room.image} alt="img" />
                         <p>{room.price + " kr"}</p>
-                        <Link href={`/booking/${room.id}`}>
+                        <Link href={`/booking/room/${room.id}`}>
                             se tillgänglighet och bok
                         </Link>
                     </div>
