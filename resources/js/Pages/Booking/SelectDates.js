@@ -1,5 +1,4 @@
 import { Link } from "@inertiajs/inertia-react";
-// import Calender from "../../components/Calender/Calender.js";
 import { useForm } from "@inertiajs/inertia-react";
 import React, { useState } from "react";
 import { format, getDay } from "date-fns";
@@ -9,7 +8,6 @@ import { DateRangePickerCalendar, START_DATE } from "react-nice-dates";
 import "react-nice-dates/build/style.css";
 
 export default function selectRoom({ room, bookings }) {
-    console.log(bookings);
     //Kalender
     const [startDate, setStartDate] = useState();
     const [endDate, setEndDate] = useState();
@@ -17,6 +15,13 @@ export default function selectRoom({ room, bookings }) {
     const handleFocusChange = (newFocus) => {
         setFocus(newFocus || START_DATE);
     };
+
+    const bookingArray = bookings.map(function (booking) {
+        if (booking.room_id == room.id) {
+            return booking.start_date;
+        }
+    });
+    const oneBooking = bookings[1].start_date;
     const modifiers = {
         disabled: (date) => getDay(date) === 6, // Disables Saturdays Här vill vi få in bokade
         highlight: (date) => getDay(date) === 2, // Highlights Tuesdays
@@ -48,7 +53,6 @@ export default function selectRoom({ room, bookings }) {
     return (
         <div>
             <p>Tillgängliga datum för {room.name}:</p>
-
             <form onSubmit={submit}>
                 <div>
                     <DateRangePickerCalendar

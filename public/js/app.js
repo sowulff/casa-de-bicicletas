@@ -2227,7 +2227,6 @@ function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Sy
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
- // import Calender from "../../components/Calender/Calender.js";
 
 
 
@@ -2240,8 +2239,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 function selectRoom(_ref) {
   var room = _ref.room,
       bookings = _ref.bookings;
-  console.log(bookings); //Kalender
 
+  //Kalender
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(),
       _useState2 = _slicedToArray(_useState, 2),
       startDate = _useState2[0],
@@ -2261,6 +2260,12 @@ function selectRoom(_ref) {
     setFocus(newFocus || react_nice_dates__WEBPACK_IMPORTED_MODULE_2__.START_DATE);
   };
 
+  var bookingArray = bookings.map(function (booking) {
+    if (booking.room_id == room.id) {
+      return booking.start_date;
+    }
+  });
+  var oneBooking = bookings[1].start_date;
   var modifiers = {
     disabled: function disabled(date) {
       return (0,date_fns__WEBPACK_IMPORTED_MODULE_5__["default"])(date) === 6;
