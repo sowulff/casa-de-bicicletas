@@ -2209,8 +2209,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! date-fns */ "./node_modules/date-fns/esm/format/index.js");
-/* harmony import */ var date_fns_locale__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! date-fns/locale */ "./node_modules/date-fns/esm/locale/en-GB/index.js");
+/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! date-fns */ "./node_modules/date-fns/esm/getDay/index.js");
+/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! date-fns */ "./node_modules/date-fns/esm/format/index.js");
+/* harmony import */ var date_fns_locale__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! date-fns/locale */ "./node_modules/date-fns/esm/locale/en-GB/index.js");
 /* harmony import */ var react_nice_dates__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-nice-dates */ "./node_modules/react-nice-dates/build/index.esm.js");
 /* harmony import */ var react_nice_dates_build_style_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-nice-dates/build/style.css */ "./node_modules/react-nice-dates/build/style.css");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
@@ -2257,8 +2258,21 @@ function selectRoom(_ref) {
 
   var handleFocusChange = function handleFocusChange(newFocus) {
     setFocus(newFocus || react_nice_dates__WEBPACK_IMPORTED_MODULE_2__.START_DATE);
-  }; // resten
+  };
 
+  var modifiers = {
+    disabled: function disabled(date) {
+      return (0,date_fns__WEBPACK_IMPORTED_MODULE_5__["default"])(date) === 6;
+    },
+    // Disables Saturdays Här vill vi få in bokade
+    highlight: function highlight(date) {
+      return (0,date_fns__WEBPACK_IMPORTED_MODULE_5__["default"])(date) === 2;
+    } // Highlights Tuesdays
+
+  };
+  var modifiersClassNames = {
+    highlight: "-highlight"
+  }; // resten
 
   var _useForm = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.useForm)({
     first_name: "",
@@ -2280,7 +2294,7 @@ function selectRoom(_ref) {
   }
 
   function formatDate(date) {
-    return (0,date_fns__WEBPACK_IMPORTED_MODULE_5__["default"])(date, "yyyy-MM-dd");
+    return (0,date_fns__WEBPACK_IMPORTED_MODULE_6__["default"])(date, "yyyy-MM-dd");
   }
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
@@ -2302,7 +2316,9 @@ function selectRoom(_ref) {
             setData("end_date", formatDate(e));
           },
           onFocusChange: handleFocusChange,
-          locale: date_fns_locale__WEBPACK_IMPORTED_MODULE_6__["default"]
+          locale: date_fns_locale__WEBPACK_IMPORTED_MODULE_7__["default"],
+          modifiers: modifiers,
+          modifiersClassNames: modifiersClassNames
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
         type: "text",
@@ -2399,12 +2415,11 @@ function selectRoom(_ref) {
   }),
       data = _useForm.data,
       setData = _useForm.setData,
-      post = _useForm.post;
+      post = _useForm.post; // function submit(e) {
+  //     e.preventDefault();
+  //     post("/upload");
+  // }
 
-  function submit(e) {
-    e.preventDefault();
-    post("/upload");
-  }
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
@@ -5929,6 +5944,48 @@ function getDate(dirtyDate) {
   var date = (0,_toDate_index_js__WEBPACK_IMPORTED_MODULE_1__["default"])(dirtyDate);
   var dayOfMonth = date.getDate();
   return dayOfMonth;
+}
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/esm/getDay/index.js":
+/*!***************************************************!*\
+  !*** ./node_modules/date-fns/esm/getDay/index.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ getDay)
+/* harmony export */ });
+/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../toDate/index.js */ "./node_modules/date-fns/esm/toDate/index.js");
+/* harmony import */ var _lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_lib/requiredArgs/index.js */ "./node_modules/date-fns/esm/_lib/requiredArgs/index.js");
+
+
+/**
+ * @name getDay
+ * @category Weekday Helpers
+ * @summary Get the day of the week of the given date.
+ *
+ * @description
+ * Get the day of the week of the given date.
+ *
+ * @param {Date|Number} date - the given date
+ * @returns {0|1|2|3|4|5|6} the day of week, 0 represents Sunday
+ * @throws {TypeError} 1 argument required
+ *
+ * @example
+ * // Which day of the week is 29 February 2012?
+ * const result = getDay(new Date(2012, 1, 29))
+ * //=> 3
+ */
+
+function getDay(dirtyDate) {
+  (0,_lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__["default"])(1, arguments);
+  var date = (0,_toDate_index_js__WEBPACK_IMPORTED_MODULE_1__["default"])(dirtyDate);
+  var day = date.getDay();
+  return day;
 }
 
 /***/ }),

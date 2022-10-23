@@ -2,7 +2,8 @@ import { Link } from "@inertiajs/inertia-react";
 // import Calender from "../../components/Calender/Calender.js";
 import { useForm } from "@inertiajs/inertia-react";
 import React, { useState } from "react";
-import { format } from "date-fns";
+import { format, getDay } from "date-fns";
+
 import { enGB } from "date-fns/locale";
 import { DateRangePickerCalendar, START_DATE } from "react-nice-dates";
 import "react-nice-dates/build/style.css";
@@ -14,6 +15,13 @@ export default function selectRoom({ room }) {
     const [focus, setFocus] = useState(START_DATE);
     const handleFocusChange = (newFocus) => {
         setFocus(newFocus || START_DATE);
+    };
+    const modifiers = {
+        disabled: (date) => getDay(date) === 6, // Disables Saturdays Här vill vi få in bokade
+        highlight: (date) => getDay(date) === 2, // Highlights Tuesdays
+    };
+    const modifiersClassNames = {
+        highlight: "-highlight",
     };
 
     // resten
@@ -55,6 +63,8 @@ export default function selectRoom({ room }) {
                         }}
                         onFocusChange={handleFocusChange}
                         locale={enGB}
+                        modifiers={modifiers}
+                        modifiersClassNames={modifiersClassNames}
                     />
                 </div>
 
