@@ -3,7 +3,10 @@
 // use App\Http\Controllers\Auth\LoginController;
 
 use App\Http\Controllers\ListAllRoomsController;
+use App\Http\Controllers\ListBookingController;
 use App\Http\Controllers\NewBookingController;
+
+use App\Models\Booking;
 use App\Models\Room;
 
 
@@ -24,18 +27,16 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-    return Inertia::render('Home', [
-        'name' => 'Sophie',
-    ]);
+    return Inertia::render('Home');
 });
 Route::get('/booking', ListAllRoomsController::class, function () {
     return Inertia::render('Booking/SelectRoom');
 });
 
-Route::get('/booking/room/{id}', function (Room $id) {
-    return Inertia::render('Booking/SelectDates', [
-        'room' => $id,
-    ]);
+Route::get('/booking/room/{id}', ListBookingController::class);
+
+Route::get('/booking/room', function () {
+    return Inertia::render('Booking/SelectDates');
 });
 
 Route::get('/admin', function () {

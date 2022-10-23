@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Room;
 use Illuminate\Http\Request;
 
-
 class ListAllRoomsController extends Controller
 {
     /**
@@ -17,6 +16,7 @@ class ListAllRoomsController extends Controller
     public function __invoke(Request $request)
     {
         $rooms = Room::all();
+
         return inertia('Booking/SelectRoom', ['rooms' => $rooms],);
     }
 }

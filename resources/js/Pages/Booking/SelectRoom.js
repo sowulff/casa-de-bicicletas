@@ -1,5 +1,5 @@
 import { Link } from "@inertiajs/inertia-react";
-import Calender from "../../components/Calender/Calender.js";
+
 import { useForm } from "@inertiajs/inertia-react";
 
 export default function selectRoom({ rooms }) {

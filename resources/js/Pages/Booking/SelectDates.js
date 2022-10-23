@@ -8,7 +8,8 @@ import { enGB } from "date-fns/locale";
 import { DateRangePickerCalendar, START_DATE } from "react-nice-dates";
 import "react-nice-dates/build/style.css";
 
-export default function selectRoom({ room }) {
+export default function selectRoom({ room, bookings }) {
+    console.log(bookings);
     //Kalender
     const [startDate, setStartDate] = useState();
     const [endDate, setEndDate] = useState();
@@ -47,6 +48,7 @@ export default function selectRoom({ room }) {
     return (
         <div>
             <p>Tillgängliga datum för {room.name}:</p>
+
             <form onSubmit={submit}>
                 <div>
                     <DateRangePickerCalendar
