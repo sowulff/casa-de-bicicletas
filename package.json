@@ -17,10 +17,11 @@
         "@inertiajs/inertia": "^0.11.1",
         "@inertiajs/inertia-react": "^0.8.1",
         "date-fns": "^2.29.3",
+        "dateformat": "^5.0.3",
         "react": "^18.2.0",
+        "react-calendar": "^3.9.0",
         "react-dates": "^21.8.0",
-        "react-dom": "^18.2.0",
-        "react-nice-dates": "^3.1.0"
+        "react-dom": "^18.2.0"
     },
     "name": "casa-de-bicicletas",
     "description": "<p align=\"center\"><a href=\"https://laravel.com\" target=\"_blank\"><img src=\"https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg\" width=\"400\" alt=\"Laravel Logo\"></a></p>",
