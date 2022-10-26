@@ -21,7 +21,7 @@ export default function Login({ errors }) {
         <div>
             <h1>Admin log in</h1>
             <p>Här loggar man in som admin och kan se alla bokningar</p>
-            <form role="form" onSubmit={submitHandler} noValidate>
+            <form onSubmit={submitHandler} noValidate>
                 <div>
                     <input
                         value={data.email}
