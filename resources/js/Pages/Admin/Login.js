@@ -11,9 +11,12 @@ export default function Login({ errors }) {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        post(route("login"), data);
+        post(route("do.login"), {
+            email: data.email,
+            password: data.password,
+        });
     };
-    console.log(data);
+    console.log(data.email);
     return (
         <div>
             <h1>Admin log in</h1>

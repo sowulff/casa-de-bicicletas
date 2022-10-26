@@ -2,6 +2,8 @@
 
 // use App\Http\Controllers\Auth\LoginController;
 
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ListAllRoomsController;
 use App\Http\Controllers\ListBookingController;
 use App\Http\Controllers\NewBookingController;
@@ -42,6 +44,24 @@ Route::get('/booking/room', function () {
 Route::get('/admin', function () {
     return Inertia::render('Admin/Login');
 });
+
+// Route::get('/admin/dashboard', function () {
+//     return Inertia::render('Admin/Dashboard');
+// });
+
+// Route::post(
+//     'login',
+//     LoginController::class
+// );
+
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+
+Route::post('/login', [LoginController::class, 'login'])->name('do.login');
+
+
+//Route::group(['middleware' => ['auth']], function () {
+//   Route::get('/', DashboardController::class)->name('dashboard');
+//});
 
 Route::post('/upload', NewBookingController::class);
 

@@ -6,30 +6,30 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
+use Illuminate\Support\Facades\Redirect;
+use Inertia\Inertia;
 
 
 class LoginController extends Controller
 {
-    public function create()
+    public function index()
     {
-        return inertia('Admin/Login');
+        return Inertia::render('Admin/Login');
     }
 
-    public function store(Request $request)
+    public function login(Request $request)
     {
-        $request->validate([
+        $credentials = $request->validate([
             'email' => ['required'],
             'password' => ['required'],
         ]);
 
         if (Auth::attempt(
-            $request->only('email', 'password')
+            $credentials
         )) {
-            session()->regenerate();
-            return redirect('/dashboard')->with([
-                'type' => 'success',
-                'message' => 'You are logged in.'
-            ]);
+
+            $request->session()->regenerate();
+            return inertia('Admin/Dashboard');
         }
 
         throw ValidationException::withMessages([

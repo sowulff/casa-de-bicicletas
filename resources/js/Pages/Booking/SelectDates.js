@@ -6,9 +6,9 @@ import dateFormat from "dateformat";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 
-export default function selectRoom({ room, bookings }) {
+export default function selectDates({ room, bookings }) {
     //Kalender
-
+    console.log(room.id);
     // resten
     const { data, setData, post } = useForm({
         first_name: "",
@@ -30,8 +30,13 @@ export default function selectRoom({ room, bookings }) {
     // console.log(value);
     function onChange(value) {
         setValue(value);
-        console.log(value);
+        setData({
+            ...data,
+            end_date: dateFormat(new Date(value[1]), "yyyy-mm-dd"),
+            start_date: dateFormat(new Date(value[0]), "yyyy-mm-dd"),
+        });
     }
+
     // value = dateFormat(value[0], "yyyy-mm-dd");
 
     // const dat = dateFormat(value, "yyyy-mm-dd");
