@@ -1,48 +1,48 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Validation\ValidationException;
-use Illuminate\Support\Facades\Redirect;
+
 use Inertia\Inertia;
 
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
-    public function index()
+    /**
+     * Handle the incoming request.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function __invoke(Request $request)
     {
-        return Inertia::render('Admin/Login');
-    }
+        // die(var_dump($request));
+        //     $request->validate([
+        //         'email' => ['required', 'email'],
+        //         'password' => ['required']
+        //     ]);
 
-    public function login(Request $request)
-    {
+        //     if (Auth::attempt($request->only(['email', 'password']))) {
+        //         return redirect('admin/dashboard');
+        //     }
+
+        //     return back()->withErrors(['failedLogin' => 'something went wrong, please try again!']);
+        // }
         $credentials = $request->validate([
-            'email' => ['required'],
+            'email' => ['required', 'email'],
             'password' => ['required'],
         ]);
 
-        if (Auth::attempt(
-            $credentials
-        )) {
-
+        if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return inertia('Admin/Dashboard');
+
+            return redirect()->intended('admin/dashboard');
         }
 
-        throw ValidationException::withMessages([
-            'email' => 'The provide credentials does not match our record.',
-        ]);
-    }
-
-    public function destroy()
-    {
-        Auth::logout();
-
-        return redirect('/login')->with([
-            'type' => 'success', 'message' => 'You are now logout.',
-        ]);
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records.',
+        ])->onlyInput('email');
     }
 }
