@@ -3,26 +3,6 @@ import { Link, useForm } from "@inertiajs/inertia-react";
 import React from "react";
 
 export default function Login() {
-    // const { data, setData, post } = useForm({
-    //     email: "",
-    //     password: "",
-    // });
-
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     post(route("login"));
-    // };
-
-    // const changeHandler = (e) =>
-    //     setData({ ...data, [e.target.id]: e.target.value });
-
-    // const submitHandler = (e) => {
-    // e.preventDefault();
-    // post(route("do.login"), {
-    //     email: data.email,
-    //     password: data.password,
-    // });
-
     const { data, setData, post } = useForm({
         email: "",
         password: "",

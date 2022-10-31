@@ -1,5 +1,10 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DeleteBookingController;
+
+
+
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ListAllRoomsController;
 use App\Http\Controllers\ListBookingController;
@@ -28,15 +33,14 @@ Route::get('/', function () {
     return Inertia::render('Home');
 });
 
-Route::get('/admin/dashboard', function () {
-    return Inertia::render('Admin/Dashboard');
-});
+// Route::get('/admin/dashboard', DashboardController::class);
 
 Route::get('/booking', ListAllRoomsController::class, function () {
     return Inertia::render('Booking/SelectRoom');
 });
 
 Route::get('/booking/room/{id}', ListBookingController::class);
+
 
 Route::get('/booking/room', function () {
     return Inertia::render('Booking/SelectDates');
@@ -45,22 +49,14 @@ Route::get('/booking/room', function () {
 Route::get('/admin', function () {
     return Inertia::render('Admin/Login');
 });
-// Route::get('/admin/dashboard', function () {
-//     return Inertia::render('Admin/Dashboard');
-// });
 
-// Route::get('/admin/dashboard', function () {
-//     return Inertia::render('Admin/Dashboard');
-// });
-
-// Route::post(
-//     'login',
-//     LoginController::class
-// );
-
-// Route::get('/login', [LoginController::class, 'index'])->name('login');
 
 Route::post('/login', LoginController::class);
+
+
+Route::get('/admin/dashboard', DashboardController::class)->middleware('auth');
+
+
 
 
 //Route::group(['middleware' => ['auth']], function () {
@@ -68,3 +64,4 @@ Route::post('/login', LoginController::class);
 //});
 
 Route::post('/upload', NewBookingController::class);
+Route::post('/delete/{booking:id}', DeleteBookingController::class);

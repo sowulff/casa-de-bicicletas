@@ -8,7 +8,7 @@ import "react-calendar/dist/Calendar.css";
 
 export default function selectDates({ room, bookings }) {
     //Kalender
-    console.log(room.id);
+
     // resten
     const { data, setData, post } = useForm({
         first_name: "",

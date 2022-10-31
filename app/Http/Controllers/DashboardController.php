@@ -1,9 +1,9 @@
-
-
 <?php
 
 namespace App\Http\Controllers;
 
+use App\Models\Booking;
+use App\Models\Room;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -14,8 +14,12 @@ class DashboardController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function __invoke(Request $request)
+    public function __invoke(Room $id)
     {
-        return inertia('Dashboard');
+        $bookings = Booking::all();
+        return inertia('Admin/Dashboard', [
+            'room' => $id,
+            'bookings' => $bookings,
+        ]);
     }
 }
