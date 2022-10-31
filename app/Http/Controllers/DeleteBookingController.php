@@ -15,8 +15,7 @@ class DeleteBookingController extends Controller
      */
     public function __invoke(Booking $booking)
     {
-        die(var_dump($booking));
+        // die(var_dump($booking));
         $booking->delete();
-        return redirect('/admin/dashboard');
     }
 }

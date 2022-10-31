@@ -64,4 +64,4 @@ Route::get('/admin/dashboard', DashboardController::class)->middleware('auth');
 //});
 
 Route::post('/upload', NewBookingController::class);
-Route::post('/delete/{booking:id}', DeleteBookingController::class);
+Route::post('/bookings/{booking}', DeleteBookingController::class);

@@ -4,11 +4,15 @@ import { Link, useForm } from "@inertiajs/inertia-react";
 export default function Dashboard({ bookings }) {
     console.log(bookings);
 
-    function handleDelete(e) {
-        console.log(e);
-        // e.preventDefault();
-        // post("/delete/{e}");
-    }
+    const deleteBooking = async (id) => {
+        Inertia.post(`/bookings/${id}`);
+    };
+
+    // function handleDelete(e) {
+    //     console.log(e);
+    //     e.preventDefault();
+    //     // post("/delete");
+    // }
 
     return (
         <div>
@@ -17,14 +21,17 @@ export default function Dashboard({ bookings }) {
 
             {bookings.map(function (booking) {
                 return (
-                    <div key={booking.id}>
+                    <div value={booking.id} key={booking.id}>
                         <p>{booking.first_name}</p>
                         <p>{booking.last_name}</p>
                         <p>{booking.start_date}</p>
                         <p>{booking.end_date}</p>
-                        <form onSubmit={() => handleDelete(booking.id)}>
+                        {/* <form onSubmit={() => handleDelete(booking.id)}>
                             <button type="submit">Radera bokning</button>
-                        </form>
+                        </form> */}
+                        <button onClick={() => deleteBooking(booking.id)}>
+                            DELETE
+                        </button>
                     </div>
                 );
             })}
