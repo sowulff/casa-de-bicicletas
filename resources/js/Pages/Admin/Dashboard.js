@@ -22,13 +22,12 @@ export default function Dashboard({ bookings }) {
             {bookings.map(function (booking) {
                 return (
                     <div value={booking.id} key={booking.id}>
-                        <p>{booking.first_name}</p>
-                        <p>{booking.last_name}</p>
-                        <p>{booking.start_date}</p>
-                        <p>{booking.end_date}</p>
-                        {/* <form onSubmit={() => handleDelete(booking.id)}>
-                            <button type="submit">Radera bokning</button>
-                        </form> */}
+                        <p>
+                            {booking.first_name} {booking.last_name}
+                        </p>
+                        <p>startdatum: {booking.start_date}</p>
+                        <p>slutdatum: {booking.end_date}</p>
+                        <p>antal gäster: {booking.guests}</p>
                         <button onClick={() => deleteBooking(booking.id)}>
                             DELETE
                         </button>
