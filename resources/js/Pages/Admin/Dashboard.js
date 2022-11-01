@@ -8,12 +8,6 @@ export default function Dashboard({ bookings }) {
         Inertia.post(`/bookings/${id}`);
     };
 
-    // function handleDelete(e) {
-    //     console.log(e);
-    //     e.preventDefault();
-    //     // post("/delete");
-    // }
-
     return (
         <div>
             <h1>Admin panel</h1>
@@ -25,9 +19,12 @@ export default function Dashboard({ bookings }) {
                         <p>
                             {booking.first_name} {booking.last_name}
                         </p>
-                        <p>startdatum: {booking.start_date}</p>
-                        <p>slutdatum: {booking.end_date}</p>
+                        <p>
+                            {booking.start_date} till {booking.end_date}
+                        </p>
+
                         <p>antal gäster: {booking.guests}</p>
+                        <p>Rum: {booking.room_id}</p>
                         <button onClick={() => deleteBooking(booking.id)}>
                             DELETE
                         </button>

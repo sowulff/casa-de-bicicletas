@@ -2542,12 +2542,7 @@ function Dashboard(_ref) {
     return function deleteBooking(_x) {
       return _ref2.apply(this, arguments);
     };
-  }(); // function handleDelete(e) {
-  //     console.log(e);
-  //     e.preventDefault();
-  //     // post("/delete");
-  // }
-
+  }();
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
@@ -2560,11 +2555,11 @@ function Dashboard(_ref) {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
           children: [booking.first_name, " ", booking.last_name]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
-          children: ["startdatum: ", booking.start_date]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
-          children: ["slutdatum: ", booking.end_date]
+          children: [booking.start_date, " till ", booking.end_date]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
           children: ["antal g\xE4ster: ", booking.guests]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+          children: ["Rum: ", booking.room_id]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
           onClick: function onClick() {
             return deleteBooking(booking.id);
