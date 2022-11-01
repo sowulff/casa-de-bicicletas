@@ -15,6 +15,20 @@ class NewBookingController extends Controller
      */
     public function __invoke(Request $request)
     {
+
+        $request->validate(
+            [
+                'first_name' => 'string|required',
+                'last_name' => 'string|required',
+                'email' => 'email|required',
+                'mobile' => 'required',
+                'guests' => 'required',
+                'start_date' => 'required',
+                'end_date' => 'required'
+            ]
+
+        );
+
         // dd($request->input());
         $booking = new Booking();
         // här skall siffran som står i url:en skickas in i DB.

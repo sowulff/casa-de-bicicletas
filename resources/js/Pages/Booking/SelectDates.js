@@ -10,7 +10,7 @@ export default function selectDates({ room, bookings }) {
     //Kalender
 
     // resten
-    const { data, setData, post } = useForm({
+    const { data, setData, post, errors } = useForm({
         first_name: "",
         last_name: "",
         email: "",
@@ -20,6 +20,10 @@ export default function selectDates({ room, bookings }) {
         start_date: "",
         end_date: "",
     });
+
+    console.log(errors);
+
+    // om errors first_name finns, skriv ut det på sidan
 
     function submit(e) {
         e.preventDefault();
@@ -45,6 +49,8 @@ export default function selectDates({ room, bookings }) {
         <div>
             <p>Tillgängliga datum för {room.name}:</p>
             <Calendar selectRange={true} onChange={onChange} value={value} />
+            {errors.start_date && <p>{errors.start_date}</p>}
+            {errors.end_date && <p>{errors.end_date}</p>}
             <form onSubmit={submit}>
                 <input
                     type="text"
@@ -52,6 +58,7 @@ export default function selectDates({ room, bookings }) {
                     onChange={(e) => setData("first_name", e.target.value)}
                     placeholder="Förnamn"
                 />
+                {errors.first_name && <p>{errors.first_name}</p>}
 
                 <input
                     type="text"
@@ -59,18 +66,21 @@ export default function selectDates({ room, bookings }) {
                     onChange={(e) => setData("last_name", e.target.value)}
                     placeholder="Efternamn"
                 />
+                {errors.last_name && <p>{errors.last_name}</p>}
                 <input
                     type="text"
                     value={data.email}
                     onChange={(e) => setData("email", e.target.value)}
                     placeholder="E-post"
                 />
+                {errors.email && <p>{errors.email}</p>}
                 <input
                     type="text"
                     value={data.mobile}
                     onChange={(e) => setData("mobile", e.target.value)}
                     placeholder="Mobilnummer"
                 />
+                {errors.mobile && <p>{errors.mobile}</p>}
 
                 <select
                     type="number"
@@ -85,6 +95,7 @@ export default function selectDates({ room, bookings }) {
                     <option value="3">3</option>
                     <option value="4">4</option>
                 </select>
+                {errors.guests && <p>{errors.guests}</p>}
 
                 <button type="submit">Välj rum</button>
             </form>

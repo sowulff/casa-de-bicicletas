@@ -2742,7 +2742,10 @@ function selectDates(_ref) {
   }),
       data = _useForm.data,
       setData = _useForm.setData,
-      post = _useForm.post;
+      post = _useForm.post,
+      errors = _useForm.errors;
+
+  console.log(errors); // om errors first_name finns, skriv ut det på sidan
 
   function submit(e) {
     e.preventDefault();
@@ -2773,6 +2776,10 @@ function selectDates(_ref) {
       selectRange: true,
       onChange: onChange,
       value: value
+    }), errors.start_date && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+      children: errors.start_date
+    }), errors.end_date && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+      children: errors.end_date
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("form", {
       onSubmit: submit,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
@@ -2782,6 +2789,8 @@ function selectDates(_ref) {
           return setData("first_name", e.target.value);
         },
         placeholder: "F\xF6rnamn"
+      }), errors.first_name && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+        children: errors.first_name
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
         type: "text",
         value: data.last_name,
@@ -2789,6 +2798,8 @@ function selectDates(_ref) {
           return setData("last_name", e.target.value);
         },
         placeholder: "Efternamn"
+      }), errors.last_name && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+        children: errors.last_name
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
         type: "text",
         value: data.email,
@@ -2796,6 +2807,8 @@ function selectDates(_ref) {
           return setData("email", e.target.value);
         },
         placeholder: "E-post"
+      }), errors.email && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+        children: errors.email
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
         type: "text",
         value: data.mobile,
@@ -2803,6 +2816,8 @@ function selectDates(_ref) {
           return setData("mobile", e.target.value);
         },
         placeholder: "Mobilnummer"
+      }), errors.mobile && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+        children: errors.mobile
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("select", {
         type: "number",
         value: data.guests,
@@ -2825,6 +2840,8 @@ function selectDates(_ref) {
           value: "4",
           children: "4"
         })]
+      }), errors.guests && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+        children: errors.guests
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
         type: "submit",
         children: "V\xE4lj rum"
