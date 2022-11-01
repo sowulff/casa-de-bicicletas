@@ -3,8 +3,6 @@
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DeleteBookingController;
 
-
-
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ListAllRoomsController;
 use App\Http\Controllers\ListBookingController;
@@ -56,6 +54,11 @@ Route::post('/login', LoginController::class);
 
 Route::get('/admin/dashboard', DashboardController::class)->middleware('auth');
 
+Route::get('/admin/dashboard', DashboardController::class)->middleware('auth');
+
+Route::get('/booking/confirmation', function () {
+    return Inertia::render('Booking/Confirmation');
+});;
 
 
 

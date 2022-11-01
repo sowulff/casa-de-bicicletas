@@ -27,6 +27,6 @@ class NewBookingController extends Controller
         $booking->start_date = $request->input('start_date');
         $booking->end_date = $request->input('end_date');
         $booking->save();
-        return back()->with('success', 'Item created successfully!');
+        return redirect('booking/confirmation');
     }
 }
