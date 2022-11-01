@@ -2,13 +2,14 @@ import { Link } from "@inertiajs/inertia-react";
 import { useForm } from "@inertiajs/inertia-react";
 import React, { useState } from "react";
 import dateFormat from "dateformat";
+import { format } from "date-fns";
 
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 
 export default function selectDates({ room, bookings }) {
     //Kalender
-
+    console.log(room);
     // resten
     const { data, setData, post, errors } = useForm({
         first_name: "",
@@ -16,7 +17,7 @@ export default function selectDates({ room, bookings }) {
         email: "",
         mobile: "",
         guests: 0,
-        room_id: room.id,
+        room_id: room,
         start_date: "",
         end_date: "",
     });
@@ -41,14 +42,32 @@ export default function selectDates({ room, bookings }) {
         });
     }
 
-    // value = dateFormat(value[0], "yyyy-mm-dd");
-
-    // const dat = dateFormat(value, "yyyy-mm-dd");
-    // console.log(dat);
+    const dateToDisable = () => {
+        return bookings.map((booking) => {
+            const dates = [];
+            let date = new Date(booking.start_date);
+            let end_date = new Date(booking.end_date);
+            while (date <= end_date) {
+                dates.push(format(date, "y-M-dd"));
+                date.setDate(date.getDate() + 1);
+            }
+            return dates;
+        });
+    };
+    const disableDates = dateToDisable();
     return (
         <div>
             <p>Tillgängliga datum för {room.name}:</p>
-            <Calendar selectRange={true} onChange={onChange} value={value} />
+            <Calendar
+                selectRange={true}
+                onChange={onChange}
+                value={value}
+                tileDisabled={(date) => {
+                    return disableDates
+                        .flat()
+                        .includes(format(date.date, "y-M-dd"));
+                }}
+            />
             {errors.start_date && <p>{errors.start_date}</p>}
             {errors.end_date && <p>{errors.end_date}</p>}
             <form onSubmit={submit}>
