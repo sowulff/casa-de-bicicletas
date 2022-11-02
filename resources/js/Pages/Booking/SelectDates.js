@@ -2,16 +2,29 @@ import { Link } from "@inertiajs/inertia-react";
 import { useForm } from "@inertiajs/inertia-react";
 import React, { useState } from "react";
 import dateFormat from "dateformat";
-import { format } from "date-fns";
+import { addDays, format } from "date-fns";
 
 import Calendar from "react-calendar";
-import "react-calendar/dist/Calendar.css";
+import ReactDatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 export default function selectDates({ room, bookings }) {
     //Kalender
-    console.log(room);
+
+    const [startDate, setStartDate] = useState(null);
+    const [endDate, setEndDate] = useState(null);
+    const onChange = (dates) => {
+        const [start, end] = dates;
+        setStartDate(start);
+        setEndDate(end);
+        setData({
+            ...data,
+            start_date: dateFormat(start, "yyyy-mm-dd"),
+            end_date: dateFormat(end, "yyyy-mm-dd"),
+        });
+    };
     // resten
-    const { data, setData, post, errors } = useForm({
+    const { data, setData, post } = useForm({
         first_name: "",
         last_name: "",
         email: "",
@@ -22,25 +35,21 @@ export default function selectDates({ room, bookings }) {
         end_date: "",
     });
 
-    console.log(errors);
-
-    // om errors first_name finns, skriv ut det på sidan
-
     function submit(e) {
         e.preventDefault();
         post("/upload");
     }
 
-    const [value, setValue] = useState(new Date());
+    // const [value, setValue] = useState(new Date());
     // console.log(value);
-    function onChange(value) {
-        setValue(value);
-        setData({
-            ...data,
-            end_date: dateFormat(new Date(value[1]), "yyyy-mm-dd"),
-            start_date: dateFormat(new Date(value[0]), "yyyy-mm-dd"),
-        });
-    }
+    // function onChange(value) {
+    //     setValue(value);
+    //     setData({
+    //         ...data,
+    //         end_date: dateFormat(new Date(value[1]), "yyyy-mm-dd"),
+    //         start_date: dateFormat(new Date(value[0]), "yyyy-mm-dd"),
+    //     });
+    // }
 
     const dateToDisable = () => {
         return bookings.map((booking) => {
@@ -48,28 +57,48 @@ export default function selectDates({ room, bookings }) {
             let date = new Date(booking.start_date);
             let end_date = new Date(booking.end_date);
             while (date <= end_date) {
-                dates.push(format(date, "y-M-dd"));
+                dates.push(new Date(date));
                 date.setDate(date.getDate() + 1);
             }
             return dates;
         });
     };
+
     const disableDates = dateToDisable();
+
     return (
         <div>
             <p>Tillgängliga datum för {room.name}:</p>
-            <Calendar
+            <ReactDatePicker
+                selected={startDate}
+                onChange={onChange}
+                startDate={startDate}
+                endDate={endDate}
+                excludeDates={disableDates.flat()}
+                minDate={new Date()}
+                selectsRange
+                inline
+            />
+            {/* <Calendar
                 selectRange={true}
                 onChange={onChange}
                 value={value}
                 tileDisabled={(date) => {
+                    console.log(
+                        format(date.date, "y-M-dd"),
+                        format(new Date(), "y-M-dd")
+                    );
+                    if (
+                        format(date.date, "y-M-dd") <
+                        format(new Date(), "y-M-dd")
+                    ) {
+                        return true;
+                    }
                     return disableDates
                         .flat()
                         .includes(format(date.date, "y-M-dd"));
                 }}
-            />
-            {errors.start_date && <p>{errors.start_date}</p>}
-            {errors.end_date && <p>{errors.end_date}</p>}
+            /> */}
             <form onSubmit={submit}>
                 <input
                     type="text"
@@ -77,7 +106,6 @@ export default function selectDates({ room, bookings }) {
                     onChange={(e) => setData("first_name", e.target.value)}
                     placeholder="Förnamn"
                 />
-                {errors.first_name && <p>{errors.first_name}</p>}
 
                 <input
                     type="text"
@@ -85,21 +113,18 @@ export default function selectDates({ room, bookings }) {
                     onChange={(e) => setData("last_name", e.target.value)}
                     placeholder="Efternamn"
                 />
-                {errors.last_name && <p>{errors.last_name}</p>}
                 <input
                     type="text"
                     value={data.email}
                     onChange={(e) => setData("email", e.target.value)}
                     placeholder="E-post"
                 />
-                {errors.email && <p>{errors.email}</p>}
                 <input
                     type="text"
                     value={data.mobile}
                     onChange={(e) => setData("mobile", e.target.value)}
                     placeholder="Mobilnummer"
                 />
-                {errors.mobile && <p>{errors.mobile}</p>}
 
                 <select
                     type="number"
@@ -114,7 +139,6 @@ export default function selectDates({ room, bookings }) {
                     <option value="3">3</option>
                     <option value="4">4</option>
                 </select>
-                {errors.guests && <p>{errors.guests}</p>}
 
                 <button type="submit">Välj rum</button>
             </form>
