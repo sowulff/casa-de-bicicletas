@@ -8,14 +8,21 @@ img {
     vertical-align: middle;
     display: inline-block;
 }
-
 .gridWrapper {
+    display: flex;
+}
+.columnOne {
+    display: flex;
+    flex-direction: column;
+}
+
+/* .gridWrapper {
     display: grid;
 
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-rows: auto;
-}
-.gridWrapper .wide {
+} */
+/* .gridWrapper .wide {
     grid-column: span 2;
 }
 .gridWrapper .tall {
@@ -24,4 +31,4 @@ img {
 .gridWrapper .big {
     grid-row: span 2;
     grid-column: span 2;
-}
+} */
