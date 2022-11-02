@@ -31,6 +31,10 @@ Route::get('/', function () {
     return Inertia::render('Home');
 });
 
+Route::get('/galleri', function () {
+    return Inertia::render('Galleri/Galleri');
+});
+
 // Route::get('/admin/dashboard', DashboardController::class);
 
 Route::get('/booking', ListAllRoomsController::class, function () {

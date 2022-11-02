@@ -1,0 +1,27 @@
+/* .wrapper {
+    display: flex;
+} */
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.gridWrapper {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+}
+.gridWrapper .wide {
+    grid-column: span 2;
+}
+.gridWrapper .tall {
+    grid-row: span 2;
+}
+.gridWrapper .big {
+    grid-row: span 2;
+    grid-column: span 2;
+}
