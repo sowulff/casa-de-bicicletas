@@ -5466,6 +5466,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_datepicker__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-datepicker */ "./node_modules/react-datepicker/dist/react-datepicker.min.js");
 /* harmony import */ var react_datepicker__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_datepicker__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var react_datepicker_dist_react_datepicker_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-datepicker/dist/react-datepicker.css */ "./node_modules/react-datepicker/dist/react-datepicker.css");
+/* harmony import */ var date_fns_locale_sv__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! date-fns/locale/sv */ "./node_modules/date-fns/esm/locale/sv/index.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
@@ -5495,6 +5496,9 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
+
+(0,react_datepicker__WEBPACK_IMPORTED_MODULE_5__.registerLocale)("sv", date_fns_locale_sv__WEBPACK_IMPORTED_MODULE_6__["default"]);
 function selectDates(_ref) {
   var room = _ref.room,
       bookings = _ref.bookings;
@@ -5580,7 +5584,8 @@ function selectDates(_ref) {
       excludeDates: disableDates.flat(),
       minDate: new Date(),
       selectsRange: true,
-      inline: true
+      inline: true,
+      locale: "sv"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("form", {
       onSubmit: submit,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
@@ -10888,6 +10893,499 @@ var locale = {
     /* Sunday */
     ,
     firstWeekContainsDate: 1
+  }
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (locale);
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/esm/locale/sv/_lib/formatDistance/index.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/date-fns/esm/locale/sv/_lib/formatDistance/index.js ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var formatDistanceLocale = {
+  lessThanXSeconds: {
+    one: 'mindre än en sekund',
+    other: 'mindre än {{count}} sekunder'
+  },
+  xSeconds: {
+    one: 'en sekund',
+    other: '{{count}} sekunder'
+  },
+  halfAMinute: 'en halv minut',
+  lessThanXMinutes: {
+    one: 'mindre än en minut',
+    other: 'mindre än {{count}} minuter'
+  },
+  xMinutes: {
+    one: 'en minut',
+    other: '{{count}} minuter'
+  },
+  aboutXHours: {
+    one: 'ungefär en timme',
+    other: 'ungefär {{count}} timmar'
+  },
+  xHours: {
+    one: 'en timme',
+    other: '{{count}} timmar'
+  },
+  xDays: {
+    one: 'en dag',
+    other: '{{count}} dagar'
+  },
+  aboutXWeeks: {
+    one: 'ungefär en vecka',
+    other: 'ungefär {{count}} vecka'
+  },
+  xWeeks: {
+    one: 'en vecka',
+    other: '{{count}} vecka'
+  },
+  aboutXMonths: {
+    one: 'ungefär en månad',
+    other: 'ungefär {{count}} månader'
+  },
+  xMonths: {
+    one: 'en månad',
+    other: '{{count}} månader'
+  },
+  aboutXYears: {
+    one: 'ungefär ett år',
+    other: 'ungefär {{count}} år'
+  },
+  xYears: {
+    one: 'ett år',
+    other: '{{count}} år'
+  },
+  overXYears: {
+    one: 'över ett år',
+    other: 'över {{count}} år'
+  },
+  almostXYears: {
+    one: 'nästan ett år',
+    other: 'nästan {{count}} år'
+  }
+};
+var wordMapping = ['noll', 'en', 'två', 'tre', 'fyra', 'fem', 'sex', 'sju', 'åtta', 'nio', 'tio', 'elva', 'tolv'];
+
+var formatDistance = function formatDistance(token, count, options) {
+  var result;
+  var tokenValue = formatDistanceLocale[token];
+
+  if (typeof tokenValue === 'string') {
+    result = tokenValue;
+  } else if (count === 1) {
+    result = tokenValue.one;
+  } else {
+    if (options && options.onlyNumeric) {
+      result = tokenValue.other.replace('{{count}}', String(count));
+    } else {
+      result = tokenValue.other.replace('{{count}}', count < 13 ? wordMapping[count] : String(count));
+    }
+  }
+
+  if (options !== null && options !== void 0 && options.addSuffix) {
+    if (options.comparison && options.comparison > 0) {
+      return 'om ' + result;
+    } else {
+      return result + ' sedan';
+    }
+  }
+
+  return result;
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (formatDistance);
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/esm/locale/sv/_lib/formatLong/index.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/date-fns/esm/locale/sv/_lib/formatLong/index.js ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _lib_buildFormatLongFn_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../_lib/buildFormatLongFn/index.js */ "./node_modules/date-fns/esm/locale/_lib/buildFormatLongFn/index.js");
+
+var dateFormats = {
+  full: 'EEEE d MMMM y',
+  long: 'd MMMM y',
+  medium: 'd MMM y',
+  short: 'y-MM-dd'
+};
+var timeFormats = {
+  full: "'kl'. HH:mm:ss zzzz",
+  long: 'HH:mm:ss z',
+  medium: 'HH:mm:ss',
+  short: 'HH:mm'
+};
+var dateTimeFormats = {
+  full: "{{date}} 'kl.' {{time}}",
+  long: "{{date}} 'kl.' {{time}}",
+  medium: '{{date}} {{time}}',
+  short: '{{date}} {{time}}'
+};
+var formatLong = {
+  date: (0,_lib_buildFormatLongFn_index_js__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    formats: dateFormats,
+    defaultWidth: 'full'
+  }),
+  time: (0,_lib_buildFormatLongFn_index_js__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    formats: timeFormats,
+    defaultWidth: 'full'
+  }),
+  dateTime: (0,_lib_buildFormatLongFn_index_js__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    formats: dateTimeFormats,
+    defaultWidth: 'full'
+  })
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (formatLong);
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/esm/locale/sv/_lib/formatRelative/index.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/date-fns/esm/locale/sv/_lib/formatRelative/index.js ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var formatRelativeLocale = {
+  lastWeek: "'i' EEEE's kl.' p",
+  yesterday: "'igår kl.' p",
+  today: "'idag kl.' p",
+  tomorrow: "'imorgon kl.' p",
+  nextWeek: "EEEE 'kl.' p",
+  other: 'P'
+};
+
+var formatRelative = function formatRelative(token, _date, _baseDate, _options) {
+  return formatRelativeLocale[token];
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (formatRelative);
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/esm/locale/sv/_lib/localize/index.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/date-fns/esm/locale/sv/_lib/localize/index.js ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _lib_buildLocalizeFn_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../_lib/buildLocalizeFn/index.js */ "./node_modules/date-fns/esm/locale/_lib/buildLocalizeFn/index.js");
+
+var eraValues = {
+  narrow: ['f.Kr.', 'e.Kr.'],
+  abbreviated: ['f.Kr.', 'e.Kr.'],
+  wide: ['före Kristus', 'efter Kristus']
+};
+var quarterValues = {
+  narrow: ['1', '2', '3', '4'],
+  abbreviated: ['Q1', 'Q2', 'Q3', 'Q4'],
+  wide: ['1:a kvartalet', '2:a kvartalet', '3:e kvartalet', '4:e kvartalet']
+};
+var monthValues = {
+  narrow: ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'],
+  abbreviated: ['jan.', 'feb.', 'mars', 'apr.', 'maj', 'juni', 'juli', 'aug.', 'sep.', 'okt.', 'nov.', 'dec.'],
+  wide: ['januari', 'februari', 'mars', 'april', 'maj', 'juni', 'juli', 'augusti', 'september', 'oktober', 'november', 'december']
+};
+var dayValues = {
+  narrow: ['S', 'M', 'T', 'O', 'T', 'F', 'L'],
+  short: ['sö', 'må', 'ti', 'on', 'to', 'fr', 'lö'],
+  abbreviated: ['sön', 'mån', 'tis', 'ons', 'tors', 'fre', 'lör'],
+  wide: ['söndag', 'måndag', 'tisdag', 'onsdag', 'torsdag', 'fredag', 'lördag']
+}; // https://www.unicode.org/cldr/charts/32/summary/sv.html#1888
+
+var dayPeriodValues = {
+  narrow: {
+    am: 'fm',
+    pm: 'em',
+    midnight: 'midnatt',
+    noon: 'middag',
+    morning: 'morg.',
+    afternoon: 'efterm.',
+    evening: 'kväll',
+    night: 'natt'
+  },
+  abbreviated: {
+    am: 'f.m.',
+    pm: 'e.m.',
+    midnight: 'midnatt',
+    noon: 'middag',
+    morning: 'morgon',
+    afternoon: 'efterm.',
+    evening: 'kväll',
+    night: 'natt'
+  },
+  wide: {
+    am: 'förmiddag',
+    pm: 'eftermiddag',
+    midnight: 'midnatt',
+    noon: 'middag',
+    morning: 'morgon',
+    afternoon: 'eftermiddag',
+    evening: 'kväll',
+    night: 'natt'
+  }
+};
+var formattingDayPeriodValues = {
+  narrow: {
+    am: 'fm',
+    pm: 'em',
+    midnight: 'midnatt',
+    noon: 'middag',
+    morning: 'på morg.',
+    afternoon: 'på efterm.',
+    evening: 'på kvällen',
+    night: 'på natten'
+  },
+  abbreviated: {
+    am: 'fm',
+    pm: 'em',
+    midnight: 'midnatt',
+    noon: 'middag',
+    morning: 'på morg.',
+    afternoon: 'på efterm.',
+    evening: 'på kvällen',
+    night: 'på natten'
+  },
+  wide: {
+    am: 'fm',
+    pm: 'em',
+    midnight: 'midnatt',
+    noon: 'middag',
+    morning: 'på morgonen',
+    afternoon: 'på eftermiddagen',
+    evening: 'på kvällen',
+    night: 'på natten'
+  }
+};
+
+var ordinalNumber = function ordinalNumber(dirtyNumber, _options) {
+  var number = Number(dirtyNumber);
+  var rem100 = number % 100;
+
+  if (rem100 > 20 || rem100 < 10) {
+    switch (rem100 % 10) {
+      case 1:
+      case 2:
+        return number + ':a';
+    }
+  }
+
+  return number + ':e';
+};
+
+var localize = {
+  ordinalNumber: ordinalNumber,
+  era: (0,_lib_buildLocalizeFn_index_js__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    values: eraValues,
+    defaultWidth: 'wide'
+  }),
+  quarter: (0,_lib_buildLocalizeFn_index_js__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    values: quarterValues,
+    defaultWidth: 'wide',
+    argumentCallback: function argumentCallback(quarter) {
+      return quarter - 1;
+    }
+  }),
+  month: (0,_lib_buildLocalizeFn_index_js__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    values: monthValues,
+    defaultWidth: 'wide'
+  }),
+  day: (0,_lib_buildLocalizeFn_index_js__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    values: dayValues,
+    defaultWidth: 'wide'
+  }),
+  dayPeriod: (0,_lib_buildLocalizeFn_index_js__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    values: dayPeriodValues,
+    defaultWidth: 'wide',
+    formattingValues: formattingDayPeriodValues,
+    defaultFormattingWidth: 'wide'
+  })
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (localize);
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/esm/locale/sv/_lib/match/index.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/date-fns/esm/locale/sv/_lib/match/index.js ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _lib_buildMatchFn_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../_lib/buildMatchFn/index.js */ "./node_modules/date-fns/esm/locale/_lib/buildMatchFn/index.js");
+/* harmony import */ var _lib_buildMatchPatternFn_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../_lib/buildMatchPatternFn/index.js */ "./node_modules/date-fns/esm/locale/_lib/buildMatchPatternFn/index.js");
+
+
+var matchOrdinalNumberPattern = /^(\d+)(:a|:e)?/i;
+var parseOrdinalNumberPattern = /\d+/i;
+var matchEraPatterns = {
+  narrow: /^(f\.? ?Kr\.?|f\.? ?v\.? ?t\.?|e\.? ?Kr\.?|v\.? ?t\.?)/i,
+  abbreviated: /^(f\.? ?Kr\.?|f\.? ?v\.? ?t\.?|e\.? ?Kr\.?|v\.? ?t\.?)/i,
+  wide: /^(före Kristus|före vår tid|efter Kristus|vår tid)/i
+};
+var parseEraPatterns = {
+  any: [/^f/i, /^[ev]/i]
+};
+var matchQuarterPatterns = {
+  narrow: /^[1234]/i,
+  abbreviated: /^q[1234]/i,
+  wide: /^[1234](:a|:e)? kvartalet/i
+};
+var parseQuarterPatterns = {
+  any: [/1/i, /2/i, /3/i, /4/i]
+};
+var matchMonthPatterns = {
+  narrow: /^[jfmasond]/i,
+  abbreviated: /^(jan|feb|mar[s]?|apr|maj|jun[i]?|jul[i]?|aug|sep|okt|nov|dec)\.?/i,
+  wide: /^(januari|februari|mars|april|maj|juni|juli|augusti|september|oktober|november|december)/i
+};
+var parseMonthPatterns = {
+  narrow: [/^j/i, /^f/i, /^m/i, /^a/i, /^m/i, /^j/i, /^j/i, /^a/i, /^s/i, /^o/i, /^n/i, /^d/i],
+  any: [/^ja/i, /^f/i, /^mar/i, /^ap/i, /^maj/i, /^jun/i, /^jul/i, /^au/i, /^s/i, /^o/i, /^n/i, /^d/i]
+};
+var matchDayPatterns = {
+  narrow: /^[smtofl]/i,
+  short: /^(sö|må|ti|on|to|fr|lö)/i,
+  abbreviated: /^(sön|mån|tis|ons|tors|fre|lör)/i,
+  wide: /^(söndag|måndag|tisdag|onsdag|torsdag|fredag|lördag)/i
+};
+var parseDayPatterns = {
+  any: [/^s/i, /^m/i, /^ti/i, /^o/i, /^to/i, /^f/i, /^l/i]
+};
+var matchDayPeriodPatterns = {
+  any: /^([fe]\.?\s?m\.?|midn(att)?|midd(ag)?|(på) (morgonen|eftermiddagen|kvällen|natten))/i
+};
+var parseDayPeriodPatterns = {
+  any: {
+    am: /^f/i,
+    pm: /^e/i,
+    midnight: /^midn/i,
+    noon: /^midd/i,
+    morning: /morgon/i,
+    afternoon: /eftermiddag/i,
+    evening: /kväll/i,
+    night: /natt/i
+  }
+};
+var match = {
+  ordinalNumber: (0,_lib_buildMatchPatternFn_index_js__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    matchPattern: matchOrdinalNumberPattern,
+    parsePattern: parseOrdinalNumberPattern,
+    valueCallback: function valueCallback(value) {
+      return parseInt(value, 10);
+    }
+  }),
+  era: (0,_lib_buildMatchFn_index_js__WEBPACK_IMPORTED_MODULE_1__["default"])({
+    matchPatterns: matchEraPatterns,
+    defaultMatchWidth: 'wide',
+    parsePatterns: parseEraPatterns,
+    defaultParseWidth: 'any'
+  }),
+  quarter: (0,_lib_buildMatchFn_index_js__WEBPACK_IMPORTED_MODULE_1__["default"])({
+    matchPatterns: matchQuarterPatterns,
+    defaultMatchWidth: 'wide',
+    parsePatterns: parseQuarterPatterns,
+    defaultParseWidth: 'any',
+    valueCallback: function valueCallback(index) {
+      return index + 1;
+    }
+  }),
+  month: (0,_lib_buildMatchFn_index_js__WEBPACK_IMPORTED_MODULE_1__["default"])({
+    matchPatterns: matchMonthPatterns,
+    defaultMatchWidth: 'wide',
+    parsePatterns: parseMonthPatterns,
+    defaultParseWidth: 'any'
+  }),
+  day: (0,_lib_buildMatchFn_index_js__WEBPACK_IMPORTED_MODULE_1__["default"])({
+    matchPatterns: matchDayPatterns,
+    defaultMatchWidth: 'wide',
+    parsePatterns: parseDayPatterns,
+    defaultParseWidth: 'any'
+  }),
+  dayPeriod: (0,_lib_buildMatchFn_index_js__WEBPACK_IMPORTED_MODULE_1__["default"])({
+    matchPatterns: matchDayPeriodPatterns,
+    defaultMatchWidth: 'any',
+    parsePatterns: parseDayPeriodPatterns,
+    defaultParseWidth: 'any'
+  })
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (match);
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/esm/locale/sv/index.js":
+/*!******************************************************!*\
+  !*** ./node_modules/date-fns/esm/locale/sv/index.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _lib_formatDistance_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_lib/formatDistance/index.js */ "./node_modules/date-fns/esm/locale/sv/_lib/formatDistance/index.js");
+/* harmony import */ var _lib_formatLong_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_lib/formatLong/index.js */ "./node_modules/date-fns/esm/locale/sv/_lib/formatLong/index.js");
+/* harmony import */ var _lib_formatRelative_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_lib/formatRelative/index.js */ "./node_modules/date-fns/esm/locale/sv/_lib/formatRelative/index.js");
+/* harmony import */ var _lib_localize_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_lib/localize/index.js */ "./node_modules/date-fns/esm/locale/sv/_lib/localize/index.js");
+/* harmony import */ var _lib_match_index_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./_lib/match/index.js */ "./node_modules/date-fns/esm/locale/sv/_lib/match/index.js");
+
+
+
+
+
+/**
+ * @type {Locale}
+ * @category Locales
+ * @summary Swedish locale.
+ * @language Swedish
+ * @iso-639-2 swe
+ * @author Johannes Ulén [@ejulen]{@link https://github.com/ejulen}
+ * @author Alexander Nanberg [@alexandernanberg]{@link https://github.com/alexandernanberg}
+ * @author Henrik Andersson [@limelights]{@link https://github.com/limelights}
+ */
+
+var locale = {
+  code: 'sv',
+  formatDistance: _lib_formatDistance_index_js__WEBPACK_IMPORTED_MODULE_0__["default"],
+  formatLong: _lib_formatLong_index_js__WEBPACK_IMPORTED_MODULE_1__["default"],
+  formatRelative: _lib_formatRelative_index_js__WEBPACK_IMPORTED_MODULE_2__["default"],
+  localize: _lib_localize_index_js__WEBPACK_IMPORTED_MODULE_3__["default"],
+  match: _lib_match_index_js__WEBPACK_IMPORTED_MODULE_4__["default"],
+  options: {
+    weekStartsOn: 1
+    /* Monday */
+    ,
+    firstWeekContainsDate: 4
   }
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (locale);

@@ -7,6 +7,9 @@ import { addDays, format } from "date-fns";
 import Calendar from "react-calendar";
 import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { registerLocale, setDefaultLocale } from "react-datepicker";
+import sv from "date-fns/locale/sv";
+registerLocale("sv", sv);
 
 export default function selectDates({ room, bookings }) {
     //Kalender
@@ -78,6 +81,7 @@ export default function selectDates({ room, bookings }) {
                 minDate={new Date()}
                 selectsRange
                 inline
+                locale="sv"
             />
             {/* <Calendar
                 selectRange={true}
