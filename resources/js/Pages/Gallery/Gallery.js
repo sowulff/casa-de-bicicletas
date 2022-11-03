@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import styles from "./galleri.module.css";
-
+import styles from "./gallery.module.css";
+import NavBar from "../../components/NavBar/NavBar";
 export default function Galleri() {
     return (
         <div>
-            <p>Galleri</p>
+            <NavBar />
+
             <div className={styles.gridWrapper}>
                 <div className={styles.columnOne}>
                     <div>

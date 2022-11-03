@@ -3,7 +3,7 @@ import { useForm } from "@inertiajs/inertia-react";
 import React, { useState } from "react";
 import dateFormat from "dateformat";
 import { addDays, format } from "date-fns";
-
+import NavBar from "../../components/NavBar/NavBar";
 import Calendar from "react-calendar";
 import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -71,6 +71,7 @@ export default function selectDates({ room, bookings }) {
 
     return (
         <div>
+            <NavBar />
             <p>Tillgängliga datum för {room.name}:</p>
             <ReactDatePicker
                 selected={startDate}

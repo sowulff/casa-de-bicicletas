@@ -32,12 +32,20 @@ Route::get('/', function () {
 });
 
 Route::get('/galleri', function () {
-    return Inertia::render('Galleri/Galleri');
+    return Inertia::render('Gallery/Gallery');
 });
 
+
+Route::get('/cykling', function () {
+    return Inertia::render('Cycling/Cycling');
+});
+
+Route::get('/om-oss', function () {
+    return Inertia::render('About/About');
+});
 // Route::get('/admin/dashboard', DashboardController::class);
 
-Route::get('/booking', ListAllRoomsController::class, function () {
+Route::get('/boka', ListAllRoomsController::class, function () {
     return Inertia::render('Booking/SelectRoom');
 });
 

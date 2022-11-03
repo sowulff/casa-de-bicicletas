@@ -1,5 +1,5 @@
 import { Link } from "@inertiajs/inertia-react";
-
+import NavBar from "../../components/NavBar/NavBar";
 import { useForm } from "@inertiajs/inertia-react";
 
 export default function selectRoom({ rooms }) {
@@ -18,6 +18,7 @@ export default function selectRoom({ rooms }) {
     // }
     return (
         <div>
+            <NavBar />
             <h1>Hello</h1>
             <p>Här kan gäster se lediga rum och dagar samt lägga bokningar</p>
             {rooms.map(function (room) {

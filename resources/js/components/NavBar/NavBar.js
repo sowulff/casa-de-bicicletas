@@ -21,10 +21,10 @@ export default function NavBar() {
                 />
             </svg>
             <div className={styles.navLinks}>
-                <Link href="/booking">BOKA&#x2b;</Link>
-                <Link href="/booking">CYKLING&#x2b;</Link>
-                <Link href="/booking">GALLERI&#x2b;</Link>
-                <Link href="/booking">OM OSS&#x2b;</Link>
+                <Link href="/boka">BOKA&#x2b;</Link>
+                <Link href="/cykling">CYKLING&#x2b;</Link>
+                <Link href="/galleri">GALLERI&#x2b;</Link>
+                <Link href="/om-oss">OM OSS&#x2b;</Link>
             </div>
         </div>
     );
