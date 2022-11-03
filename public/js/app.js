@@ -5916,8 +5916,16 @@ __webpack_require__.r(__webpack_exports__);
 
 function Welcome() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {
-      children: "Hello"
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("video", {
+      controls: true,
+      width: "100%",
+      autoPlay: true,
+      muted: true,
+      loop: true,
+      playsInline: true,
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("source", {
+        src: "assets/video/flying.mov"
+      }), "Sorry, your browser doesn't support videos."]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
       href: "/booking",
       children: "Boka ett rum"
@@ -6158,11 +6166,13 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/* .wrapper {\n    display: flex;\n} */\n\nimg {\n    max-width: 100%;\n    height: auto;\n    vertical-align: middle;\n    display: inline-block;\n}\n._2XTtmqktJUYscOjizM7uMA\\=\\= {\n    display: flex;\n}\n.Vf4wDBBP9-ZtV7ChJn38QA\\=\\= {\n    display: flex;\n    flex-direction: column;\n}\n\n/* .gridWrapper {\n    display: grid;\n\n    grid-template-columns: 1fr 1fr 1fr;\n    grid-auto-rows: auto;\n} */\n/* .gridWrapper .wide {\n    grid-column: span 2;\n}\n.gridWrapper .tall {\n    grid-row: span 2;\n}\n.gridWrapper .big {\n    grid-row: span 2;\n    grid-column: span 2;\n} */\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "/* .wrapper {\n    display: flex;\n} */\n\nimg {\n    max-width: 100%;\n    height: auto;\n    vertical-align: middle;\n    display: inline-block;\n}\n._2XTtmqktJUYscOjizM7uMA\\=\\= {\n    display: flex;\n    gap: 1rem;\n}\n.Vf4wDBBP9-ZtV7ChJn38QA\\=\\=,\n._8L34aXLSyVtxXkwv3YjI1g\\=\\=,\n.tvX\\+w81kIjVaGtPUXq9HRA\\=\\= {\n    display: flex;\n    flex-direction: column;\n    gap: 1rem;\n}\n\n/* .gridWrapper {\n    display: grid;\n\n    grid-template-columns: 1fr 1fr 1fr;\n    grid-auto-rows: auto;\n} */\n/* .gridWrapper .wide {\n    grid-column: span 2;\n}\n.gridWrapper .tall {\n    grid-row: span 2;\n}\n.gridWrapper .big {\n    grid-row: span 2;\n    grid-column: span 2;\n} */\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"gridWrapper": "_2XTtmqktJUYscOjizM7uMA==",
-	"columnOne": "Vf4wDBBP9-ZtV7ChJn38QA=="
+	"columnOne": "Vf4wDBBP9-ZtV7ChJn38QA==",
+	"columnTwo": "_8L34aXLSyVtxXkwv3YjI1g==",
+	"columnThree": "tvX+w81kIjVaGtPUXq9HRA=="
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

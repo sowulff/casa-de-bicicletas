@@ -10,10 +10,14 @@ img {
 }
 .gridWrapper {
     display: flex;
+    gap: 1rem;
 }
-.columnOne {
+.columnOne,
+.columnTwo,
+.columnThree {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
 }
 
 /* .gridWrapper {
