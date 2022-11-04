@@ -6,6 +6,7 @@
 body {
     font-family: Roboto-Thin;
 }
+
 .bgVideo {
     position: absolute;
     top: 0;
@@ -22,7 +23,8 @@ body {
     pointer-events: none;
 }
 .infoText {
-    padding-top: 28rem;
+    padding-top: 30%;
+    padding-left: 3%;
     color: white;
-    width: 20%;
+    width: 30%;
 }

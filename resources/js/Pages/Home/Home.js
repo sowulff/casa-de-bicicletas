@@ -24,7 +24,10 @@ export default function Welcome() {
                     Hyr rum, lägenhet eller ställplats i hjärtat av Spanien. Det
                     kan stå lite mer text men jag är för trött för att komma på
                     någon bra just nu Lite mer text skulle det kunna vara eller
-                    vad tror du.{" "}
+                    vad tror du. Hyr rum, lägenhet eller ställplats i hjärtat av
+                    Spanien. Det kan stå lite mer text men jag är för trött för
+                    att komma på någon bra just nu Lite mer text skulle det
+                    kunna vara eller vad tror du.{" "}
                 </p>
             </div>
         </div>
