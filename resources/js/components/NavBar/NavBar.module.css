@@ -1,8 +1,14 @@
+@font-face {
+    src: url("/../assets/fonts/JuliusSansOne-Regular.ttf");
+    font-family: Julius;
+}
+
 .navBar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem 0 2rem;
+    font-family: Julius;
 }
 .navLinks {
     display: flex;

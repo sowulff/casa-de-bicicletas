@@ -6378,7 +6378,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "._4USzpIOJSIJ-abx07L2ZuQ\\=\\= {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    z-index: -1;\n    overflow: hidden;\n}\n.Esszq93d-43raJAL6-zqsg\\=\\= {\n    height: 100%;\n    width: 100%;\n    -o-object-fit: cover;\n       object-fit: cover;\n    pointer-events: none;\n}\n.E78Lg\\+vvbPmKumJqowKcsQ\\=\\= {\n    padding-top: 28rem;\n    color: white;\n    width: 20%;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\nbody {\n    font-family: Roboto-Thin;\n}\n._4USzpIOJSIJ-abx07L2ZuQ\\=\\= {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    z-index: -1;\n    overflow: hidden;\n}\n.Esszq93d-43raJAL6-zqsg\\=\\= {\n    height: 100%;\n    width: 100%;\n    -o-object-fit: cover;\n       object-fit: cover;\n    pointer-events: none;\n}\n.E78Lg\\+vvbPmKumJqowKcsQ\\=\\= {\n    padding-top: 28rem;\n    color: white;\n    width: 20%;\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"bgVideo": "_4USzpIOJSIJ-abx07L2ZuQ==",
@@ -6407,7 +6407,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "._71hV\\+fOZYQGIixtAlDhymQ\\=\\= {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 1rem 2rem 0 2rem;\n}\n.V7hdcHsY5o68MXxr1nsD8Q\\=\\= {\n    display: flex;\n    gap: 2rem;\n}\n\na {\n    text-decoration: none;\n    color: black;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\n._71hV\\+fOZYQGIixtAlDhymQ\\=\\= {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 1rem 2rem 0 2rem;\n    font-family: Julius;\n}\n.V7hdcHsY5o68MXxr1nsD8Q\\=\\= {\n    display: flex;\n    gap: 2rem;\n}\n\na {\n    text-decoration: none;\n    color: black;\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"navBar": "_71hV+fOZYQGIixtAlDhymQ==",
