@@ -5700,7 +5700,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
 /* harmony import */ var _components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/NavBar/NavBar */ "./resources/js/components/NavBar/NavBar.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _selectRoom_module_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./selectRoom.module.css */ "./resources/js/Pages/Booking/selectRoom.module.css");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
@@ -5725,32 +5727,43 @@ function selectRoom(_ref) {
   // }
 
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
-      children: "Hello"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
-      children: "H\xE4r kan g\xE4ster se lediga rum och dagar samt l\xE4gga bokningar"
-    }), rooms.map(function (room) {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-        value: data.room_id,
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
-          children: room.name
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
-          width: 100,
-          src: room.image,
-          alt: "img"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
-          children: room.price + " kr"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
-          children: room.description
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-          href: "/booking/room/".concat(room.id),
-          children: "se tillg\xE4nglighet och bok"
-        })]
-      }, room.id);
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-      href: "/",
-      children: "G\xE5 tillbaka"
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+      className: _selectRoom_module_css__WEBPACK_IMPORTED_MODULE_2__["default"].fullPageContainer,
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: _selectRoom_module_css__WEBPACK_IMPORTED_MODULE_2__["default"].container,
+        children: rooms.map(function (room) {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+            className: _selectRoom_module_css__WEBPACK_IMPORTED_MODULE_2__["default"].roomContainer,
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+              value: data.room_id,
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
+                width: 100,
+                src: room.image,
+                alt: "img"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h2", {
+                children: room.name
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+                children: room.description
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+                children: room.price + " kr"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+                children: room.description
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                className: _selectRoom_module_css__WEBPACK_IMPORTED_MODULE_2__["default"].linkContainer,
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
+                  className: _selectRoom_module_css__WEBPACK_IMPORTED_MODULE_2__["default"].link,
+                  href: "/booking/room/".concat(room.id),
+                  children: "Se tillg\xE4nglighet och boka"
+                })
+              })]
+            }, room.id)
+          });
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
+        href: "/",
+        children: "G\xE5 tillbaka"
+      })]
     })]
   });
 }
@@ -6306,6 +6319,37 @@ ___CSS_LOADER_EXPORT___.locals = {};
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/Pages/Booking/selectRoom.module.css":
+/*!********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/Pages/Booking/selectRoom.module.css ***!
+  \********************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\nbody {\n    font-family: Roboto-Thin;\n}\n\n.WHjbWmiU1IiXC2bKa6wetw\\=\\= {\n    display: flex;\n    justify-content: center;\n}\n.bArZ17oPD7EX8SO\\+wwoFJA\\=\\= {\n    display: grid;\n    grid-template-columns: 20% 20%;\n    background-color: blue;\n    justify-content: center;\n    gap: 1rem;\n    height: 85vh;\n}\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= {\n    background-color: red;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= .ldUC95G-xUa6ZcAXb49yow\\=\\= {\n    border-radius: 0 50px 0 0;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= h2 {\n    font-family: Julius;\n    font-size: 1rem;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= p {\n    font-size: 0.8rem;\n}\n\n.ldUC95G-xUa6ZcAXb49yow\\=\\= {\n    background-color: pink;\n    display: flex;\n    justify-content: center;\n    padding: 0.2rem;\n}\n.EJBYWyp\\+GUZGYgfz7UeSGw\\=\\= {\n    font-size: 0.9rem;\n    font-family: Julius;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= img {\n    width: 100%;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\=:nth-child(2) {\n    background-color: blueviolet;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\=:nth-child(3) {\n    background-color: pink;\n}\n", ""]);
+// Exports
+___CSS_LOADER_EXPORT___.locals = {
+	"fullPageontainer": "WHjbWmiU1IiXC2bKa6wetw==",
+	"container": "bArZ17oPD7EX8SO+wwoFJA==",
+	"roomContainer": "Ib5IaVeo8xk0PoOLMqeKgw==",
+	"linkContainer": "ldUC95G-xUa6ZcAXb49yow==",
+	"link": "EJBYWyp+GUZGYgfz7UeSGw=="
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/Pages/Cycling/cycling.module.css":
 /*!*****************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/Pages/Cycling/cycling.module.css ***!
@@ -6378,7 +6422,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\nbody {\n    font-family: Roboto-Thin;\n}\n\n._4USzpIOJSIJ-abx07L2ZuQ\\=\\= {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    z-index: -1;\n    overflow: hidden;\n}\n.Esszq93d-43raJAL6-zqsg\\=\\= {\n    height: 100%;\n    width: 100%;\n    -o-object-fit: cover;\n       object-fit: cover;\n    pointer-events: none;\n}\n.E78Lg\\+vvbPmKumJqowKcsQ\\=\\= {\n    padding-top: 30%;\n    padding-left: 3%;\n    color: white;\n    width: 30%;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\nbody {\n    font-family: Roboto-Thin;\n}\n\n._4USzpIOJSIJ-abx07L2ZuQ\\=\\= {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    z-index: -1;\n    overflow: hidden;\n}\n.Esszq93d-43raJAL6-zqsg\\=\\= {\n    height: 100%;\n    width: 100%;\n    -o-object-fit: cover;\n       object-fit: cover;\n    pointer-events: none;\n}\n.E78Lg\\+vvbPmKumJqowKcsQ\\=\\= {\n    padding-top: 30%;\n    padding-left: 3%;\n    color: rgb(225, 219, 211);\n    width: 30%;\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"bgVideo": "_4USzpIOJSIJ-abx07L2ZuQ==",
@@ -58987,6 +59031,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
+/***/ "./resources/js/Pages/Booking/selectRoom.module.css":
+/*!**********************************************************!*\
+  !*** ./resources/js/Pages/Booking/selectRoom.module.css ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_selectRoom_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../../../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./selectRoom.module.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/Pages/Booking/selectRoom.module.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_selectRoom_module_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_selectRoom_module_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
 /***/ "./resources/js/Pages/Cycling/cycling.module.css":
 /*!*******************************************************!*\
   !*** ./resources/js/Pages/Cycling/cycling.module.css ***!
@@ -59479,6 +59553,7 @@ var map = {
 	"./Booking/SelectDates.js": "./resources/js/Pages/Booking/SelectDates.js",
 	"./Booking/SelectRoom": "./resources/js/Pages/Booking/SelectRoom.js",
 	"./Booking/SelectRoom.js": "./resources/js/Pages/Booking/SelectRoom.js",
+	"./Booking/selectRoom.module.css": "./resources/js/Pages/Booking/selectRoom.module.css",
 	"./Cycling/Cycling": "./resources/js/Pages/Cycling/Cycling.js",
 	"./Cycling/Cycling.js": "./resources/js/Pages/Cycling/Cycling.js",
 	"./Cycling/cycling.module.css": "./resources/js/Pages/Cycling/cycling.module.css",

@@ -1,6 +1,7 @@
 import { Link } from "@inertiajs/inertia-react";
 import NavBar from "../../components/NavBar/NavBar";
 import { useForm } from "@inertiajs/inertia-react";
+import styles from "./selectRoom.module.css";
 
 export default function selectRoom({ rooms }) {
     const { data, setData, post } = useForm({
@@ -19,23 +20,37 @@ export default function selectRoom({ rooms }) {
     return (
         <div>
             <NavBar />
-            <h1>Hello</h1>
-            <p>Här kan gäster se lediga rum och dagar samt lägga bokningar</p>
-            {rooms.map(function (room) {
-                return (
-                    <div value={data.room_id} key={room.id}>
-                        <p>{room.name}</p>
-                        <img width={100} src={room.image} alt="img" />
-                        <p>{room.price + " kr"}</p>
-                        <p>{room.description}</p>
-                        <Link href={`/booking/room/${room.id}`}>
-                            se tillgänglighet och bok
-                        </Link>
-                    </div>
-                );
-            })}
+            <div className={styles.fullPageContainer}>
+                <div className={styles.container}>
+                    {rooms.map(function (room) {
+                        return (
+                            <div className={styles.roomContainer}>
+                                <div value={data.room_id} key={room.id}>
+                                    <img
+                                        width={100}
+                                        src={room.image}
+                                        alt="img"
+                                    />
+                                    <h2>{room.name}</h2>
+                                    <p>{room.description}</p>
+                                    <p>{room.price + " kr"}</p>
+                                    <p>{room.description}</p>
+                                    <div className={styles.linkContainer}>
+                                        <Link
+                                            className={styles.link}
+                                            href={`/booking/room/${room.id}`}
+                                        >
+                                            Se tillgänglighet och boka
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
 
-            <Link href="/">Gå tillbaka</Link>
+                <Link href="/">Gå tillbaka</Link>
+            </div>
         </div>
     );
 }

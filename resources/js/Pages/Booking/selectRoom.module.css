@@ -1,0 +1,65 @@
+@font-face {
+    src: url("/../assets/fonts/Roboto-Thin.ttf");
+    font-family: Roboto-Thin;
+}
+
+@font-face {
+    src: url("/../assets/fonts/JuliusSansOne-Regular.ttf");
+    font-family: Julius;
+}
+
+body {
+    font-family: Roboto-Thin;
+}
+
+.fullPageontainer {
+    display: flex;
+    justify-content: center;
+}
+.container {
+    display: grid;
+    grid-template-columns: 20% 20%;
+    background-color: blue;
+    justify-content: center;
+    gap: 1rem;
+    height: 85vh;
+}
+.roomContainer {
+    background-color: red;
+}
+
+.roomContainer .linkContainer {
+    border-radius: 0 50px 0 0;
+}
+
+.roomContainer h2 {
+    font-family: Julius;
+    font-size: 1rem;
+}
+
+.roomContainer p {
+    font-size: 0.8rem;
+}
+
+.linkContainer {
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    padding: 0.2rem;
+}
+.link {
+    font-size: 0.9rem;
+    font-family: Julius;
+}
+
+.roomContainer img {
+    width: 100%;
+}
+
+.roomContainer:nth-child(2) {
+    background-color: blueviolet;
+}
+
+.roomContainer:nth-child(3) {
+    background-color: pink;
+}
