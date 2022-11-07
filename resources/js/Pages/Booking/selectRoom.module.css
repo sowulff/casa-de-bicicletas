@@ -32,7 +32,7 @@ body {
 .roomContainer {
     display: flex;
     flex-direction: column;
-    width: 35%;
+    width: 50%;
 }
 
 .roomContainer h2 {

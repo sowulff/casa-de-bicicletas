@@ -2,9 +2,6 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Support\Facades\DB;
-
-
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -17,38 +14,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('rooms')->insert(
-            [
-                'name' => "Lägenhet",
-                'image' => "https://live.staticflickr.com/65535/52483900458_2d90d6deda.jpg",
-                'price' => 300,
-                'description' => "Lägenhet med fullt utrustat kök, vardagsrum, matplats, två badrum och fyra sovplatser"
-            ],
+        // \App\Models\User::factory(10)->create();
 
-        );
-        DB::table('rooms')->insert(
-            [
-                'name' => "Dubbelrum",
-                'image' => "https://live.staticflickr.com/65535/52483815710_81e5b4c64f.jpg",
-                'price' => 300,
-                'description' => "Rum med dubbelsäng och stort badrum. Rummet har både fläkt och aircondition."
-            ],
-        );
-        DB::table('rooms')->insert(
-            [
-                'name' => "Ställplats",
-                'image' => "https://live.staticflickr.com/65535/52483900488_30f5445a8f_w.jpg",
-                'price' => 300,
-                'description' => "Ställplats för bil, campervan, husvagn eller husbil med tillgång till el och vatten."
-            ],
-        );
-        DB::table('rooms')->insert(
-            [
-                'name' => "Fembäddsrum",
-                'image' => "https://live.staticflickr.com/65535/52483352471_e6203e41f5_w.jpg",
-                'price' => 300,
-                'description' => "Sovsal med fem sängplatser, badrum. Tillgång till fullt utrustat kök och pool. "
-            ],
-        );
+        // \App\Models\User::factory()->create([
+        //     'name' => 'Test User',
+        //     'email' => 'test@example.com',
+        // ]);
     }
 }
