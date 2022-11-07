@@ -10,6 +10,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import { registerLocale, setDefaultLocale } from "react-datepicker";
 import sv from "date-fns/locale/sv";
 registerLocale("sv", sv);
+import styles from "./selectDates.module.css";
 
 export default function selectDates({ room, bookings }) {
     //Kalender
@@ -72,19 +73,20 @@ export default function selectDates({ room, bookings }) {
     return (
         <div>
             <NavBar />
-            <p>Tillgängliga datum för {room.name}:</p>
-            <ReactDatePicker
-                selected={startDate}
-                onChange={onChange}
-                startDate={startDate}
-                endDate={endDate}
-                excludeDates={disableDates.flat()}
-                minDate={new Date()}
-                selectsRange
-                inline
-                locale="sv"
-            />
-            {/* <Calendar
+            <div className={styles.fullpageContainer}>
+                {/* <p>Tillgängliga datum för {room.name}:</p> */}
+                <ReactDatePicker
+                    selected={startDate}
+                    onChange={onChange}
+                    startDate={startDate}
+                    endDate={endDate}
+                    excludeDates={disableDates.flat()}
+                    minDate={new Date()}
+                    selectsRange
+                    inline
+                    locale="sv"
+                />
+                {/* <Calendar
                 selectRange={true}
                 onChange={onChange}
                 value={value}
@@ -104,50 +106,70 @@ export default function selectDates({ room, bookings }) {
                         .includes(format(date.date, "y-M-dd"));
                 }}
             /> */}
-            <form onSubmit={submit}>
-                <input
-                    type="text"
-                    value={data.first_name}
-                    onChange={(e) => setData("first_name", e.target.value)}
-                    placeholder="Förnamn"
-                />
-
-                <input
-                    type="text"
-                    value={data.last_name}
-                    onChange={(e) => setData("last_name", e.target.value)}
-                    placeholder="Efternamn"
-                />
-                <input
-                    type="text"
-                    value={data.email}
-                    onChange={(e) => setData("email", e.target.value)}
-                    placeholder="E-post"
-                />
-                <input
-                    type="text"
-                    value={data.mobile}
-                    onChange={(e) => setData("mobile", e.target.value)}
-                    placeholder="Mobilnummer"
-                />
-
-                <select
-                    type="number"
-                    value={data.guests}
-                    onChange={(e) =>
-                        setData("guests", parseInt(e.target.value))
-                    }
-                >
-                    <option value="">Antal gäster</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                </select>
-
-                <button type="submit">Välj rum</button>
-            </form>
-            <Link href="/">Gå tillbaka</Link>
+                <form onSubmit={submit}>
+                    <input
+                        type="text"
+                        value={data.first_name}
+                        onChange={(e) => setData("first_name", e.target.value)}
+                        placeholder="Förnamn"
+                    />
+                    <hr></hr>
+                    <input
+                        type="text"
+                        value={data.last_name}
+                        onChange={(e) => setData("last_name", e.target.value)}
+                        placeholder="Efternamn"
+                    />
+                    <hr></hr>
+                    <input
+                        type="text"
+                        value={data.email}
+                        onChange={(e) => setData("email", e.target.value)}
+                        placeholder="E-post"
+                    />
+                    <hr></hr>
+                    <input
+                        type="text"
+                        value={data.mobile}
+                        onChange={(e) => setData("mobile", e.target.value)}
+                        placeholder="Mobilnummer"
+                    />
+                    <hr></hr>
+                    <select
+                        type="number"
+                        value={data.guests}
+                        onChange={(e) =>
+                            setData("guests", parseInt(e.target.value))
+                        }
+                    >
+                        <option value="">Antal gäster</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <hr></hr>
+                    <input
+                        type="text"
+                        value={data.mobile}
+                        onChange={(e) => setData("mobile", e.target.value)}
+                        placeholder="Valda datum:"
+                        readonly="readonly"
+                    />
+                    <hr></hr>
+                    <h2>Totalpris: </h2>
+                </form>
+            </div>
+            <div className={styles.buttonContainer}>
+                <button type="submit" className={styles.button}>
+                    BOKA NU!
+                </button>
+                <p>
+                    AVBOKNINGSREGLER: Här står det vad som gäller för avbokning
+                    och kanske även hur man betalar
+                </p>
+            </div>
+            {/* <Link href="/">Gå tillbaka</Link> */}
         </div>
     );
 }

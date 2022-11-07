@@ -1,0 +1,83 @@
+@font-face {
+    src: url("/../assets/fonts/Roboto-Thin.ttf");
+    font-family: Roboto-Thin;
+}
+
+@font-face {
+    src: url("/../assets/fonts/JuliusSansOne-Regular.ttf");
+    font-family: Julius;
+}
+
+.fullpageContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
+    color: #727374;
+    padding-top: 1rem;
+}
+
+h2 {
+    font-family: Julius;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 0.2rem;
+}
+
+input {
+    border: 1px solid #dcd0d0;
+    box-shadow: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+input[type="text"] {
+    font-family: Julius;
+    padding: 0.5rem;
+}
+
+select {
+    font-family: Julius;
+    color: #727374;
+    border: 1px solid #dcd0d0;
+    box-shadow: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 0.5rem;
+}
+
+/* hr {
+    width: 100%;
+    margin: 0;
+    height: 0.5px;
+    color: #dcd0d0;
+} */
+
+.button {
+    background-color: #dcd0d0;
+    align-self: center;
+    width: 25%;
+    border: none;
+    border-radius: 50px 0 100px 50px;
+    padding: 0.3rem;
+    color: white;
+    font-family: Julius;
+    margin-top: 10%;
+}
+
+.buttonContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-family: Roboto-Thin;
+    font-size: 0.8rem;
+    gap: 3rem;
+}
