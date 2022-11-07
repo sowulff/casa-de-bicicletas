@@ -16,20 +16,21 @@ body {
     display: flex;
     justify-content: center;
 }
+
 .container {
     display: grid;
-    grid-template-columns: 20% 20%;
-    background-color: blue;
+    grid-template-columns: 48% 48%;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem 5rem;
     height: 85vh;
-}
-.roomContainer {
-    background-color: red;
+    padding: 1rem;
+    margin-bottom: 10%;
 }
 
-.roomContainer .linkContainer {
-    border-radius: 0 50px 0 0;
+.roomContainer {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
 }
 
 .roomContainer h2 {
@@ -38,28 +39,65 @@ body {
 }
 
 .roomContainer p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 .linkContainer {
-    background-color: pink;
+    background-color: #dcd0d0;
     display: flex;
     justify-content: center;
     padding: 0.2rem;
+    margin-top: 2rem;
 }
+
 .link {
     font-size: 0.9rem;
     font-family: Julius;
+    color: white;
+    padding: 0.1rem;
 }
 
 .roomContainer img {
     width: 100%;
 }
 
+.coloredContainer:first-child {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: right;
+}
+
+.coloredContainer:nth-child(3) {
+    background-color: #fbf6f3;
+    display: flex;
+    justify-content: right;
+}
+
+.coloredContainer:last-child {
+    background-color: #ffffff;
+}
+.roomContainer:first-child .linkContainer {
+    border-radius: 50px 100px 0 50px;
+}
 .roomContainer:nth-child(2) {
-    background-color: blueviolet;
+    background-color: #fbf6f3;
+}
+
+.roomContainer:nth-child(2) .linkContainer {
+    border-radius: 0 50px 50px 100px;
 }
 
 .roomContainer:nth-child(3) {
-    background-color: pink;
+    background-color: #fbf6f3;
+}
+.roomContainer:nth-child(3) .linkContainer {
+    border-radius: 50px 0 100px 50px;
+}
+
+.roomContainer:nth-child(4) .linkContainer {
+    border-radius: 100px 50px 50px 0;
+}
+
+.coloredContainer {
+    background-color: #fbf6f3;
 }

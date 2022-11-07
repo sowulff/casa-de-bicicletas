@@ -24,32 +24,32 @@ export default function selectRoom({ rooms }) {
                 <div className={styles.container}>
                     {rooms.map(function (room) {
                         return (
-                            <div className={styles.roomContainer}>
-                                <div value={data.room_id} key={room.id}>
-                                    <img
-                                        width={100}
-                                        src={room.image}
-                                        alt="img"
-                                    />
-                                    <h2>{room.name}</h2>
-                                    <p>{room.description}</p>
-                                    <p>{room.price + " kr"}</p>
-                                    <p>{room.description}</p>
-                                    <div className={styles.linkContainer}>
-                                        <Link
-                                            className={styles.link}
-                                            href={`/booking/room/${room.id}`}
-                                        >
-                                            Se tillgänglighet och boka
-                                        </Link>
+                            <div className={styles.coloredContainer}>
+                                <div className={styles.roomContainer}>
+                                    <div value={data.room_id} key={room.id}>
+                                        <img
+                                            width={100}
+                                            src={room.image}
+                                            alt="img"
+                                        />
+                                        <h2>{room.name}</h2>
+                                        <p>{room.description}</p>
+                                        <p>{room.price + " kr"}</p>
+
+                                        <div className={styles.linkContainer}>
+                                            <Link
+                                                className={styles.link}
+                                                href={`/booking/room/${room.id}`}
+                                            >
+                                                Se tillgänglighet och boka
+                                            </Link>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         );
                     })}
                 </div>
-
-                <Link href="/">Gå tillbaka</Link>
             </div>
         </div>
     );

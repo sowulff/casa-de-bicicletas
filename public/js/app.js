@@ -5728,42 +5728,40 @@ function selectRoom(_ref) {
 
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       className: _selectRoom_module_css__WEBPACK_IMPORTED_MODULE_2__["default"].fullPageContainer,
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: _selectRoom_module_css__WEBPACK_IMPORTED_MODULE_2__["default"].container,
         children: rooms.map(function (room) {
           return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-            className: _selectRoom_module_css__WEBPACK_IMPORTED_MODULE_2__["default"].roomContainer,
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-              value: data.room_id,
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
-                width: 100,
-                src: room.image,
-                alt: "img"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h2", {
-                children: room.name
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-                children: room.description
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-                children: room.price + " kr"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-                children: room.description
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-                className: _selectRoom_module_css__WEBPACK_IMPORTED_MODULE_2__["default"].linkContainer,
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-                  className: _selectRoom_module_css__WEBPACK_IMPORTED_MODULE_2__["default"].link,
-                  href: "/booking/room/".concat(room.id),
-                  children: "Se tillg\xE4nglighet och boka"
-                })
-              })]
-            }, room.id)
+            className: _selectRoom_module_css__WEBPACK_IMPORTED_MODULE_2__["default"].coloredContainer,
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+              className: _selectRoom_module_css__WEBPACK_IMPORTED_MODULE_2__["default"].roomContainer,
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+                value: data.room_id,
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
+                  width: 100,
+                  src: room.image,
+                  alt: "img"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h2", {
+                  children: room.name
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+                  children: room.description
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+                  children: room.price + " kr"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                  className: _selectRoom_module_css__WEBPACK_IMPORTED_MODULE_2__["default"].linkContainer,
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
+                    className: _selectRoom_module_css__WEBPACK_IMPORTED_MODULE_2__["default"].link,
+                    href: "/booking/room/".concat(room.id),
+                    children: "Se tillg\xE4nglighet och boka"
+                  })
+                })]
+              }, room.id)
+            })
           });
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-        href: "/",
-        children: "G\xE5 tillbaka"
-      })]
+      })
     })]
   });
 }
@@ -6336,14 +6334,15 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\nbody {\n    font-family: Roboto-Thin;\n}\n\n.WHjbWmiU1IiXC2bKa6wetw\\=\\= {\n    display: flex;\n    justify-content: center;\n}\n.bArZ17oPD7EX8SO\\+wwoFJA\\=\\= {\n    display: grid;\n    grid-template-columns: 20% 20%;\n    background-color: blue;\n    justify-content: center;\n    gap: 1rem;\n    height: 85vh;\n}\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= {\n    background-color: red;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= .ldUC95G-xUa6ZcAXb49yow\\=\\= {\n    border-radius: 0 50px 0 0;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= h2 {\n    font-family: Julius;\n    font-size: 1rem;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= p {\n    font-size: 0.8rem;\n}\n\n.ldUC95G-xUa6ZcAXb49yow\\=\\= {\n    background-color: pink;\n    display: flex;\n    justify-content: center;\n    padding: 0.2rem;\n}\n.EJBYWyp\\+GUZGYgfz7UeSGw\\=\\= {\n    font-size: 0.9rem;\n    font-family: Julius;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= img {\n    width: 100%;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\=:nth-child(2) {\n    background-color: blueviolet;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\=:nth-child(3) {\n    background-color: pink;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\nbody {\n    font-family: Roboto-Thin;\n}\n\n.WHjbWmiU1IiXC2bKa6wetw\\=\\= {\n    display: flex;\n    justify-content: center;\n}\n\n.bArZ17oPD7EX8SO\\+wwoFJA\\=\\= {\n    display: grid;\n    grid-template-columns: 48% 48%;\n    justify-content: center;\n    gap: 2rem 5rem;\n    height: 85vh;\n    padding: 1rem;\n    margin-bottom: 10%;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= {\n    display: flex;\n    flex-direction: column;\n    width: 50%;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= h2 {\n    font-family: Julius;\n    font-size: 1rem;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= p {\n    font-size: 0.9rem;\n}\n\n.ldUC95G-xUa6ZcAXb49yow\\=\\= {\n    background-color: #dcd0d0;\n    display: flex;\n    justify-content: center;\n    padding: 0.2rem;\n    margin-top: 2rem;\n}\n\n.EJBYWyp\\+GUZGYgfz7UeSGw\\=\\= {\n    font-size: 0.9rem;\n    font-family: Julius;\n    color: white;\n    padding: 0.1rem;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= img {\n    width: 100%;\n}\n\n.WrX3i4N-HUqi1ymL3N7Ojg\\=\\=:first-child {\n    background-color: rgb(255, 255, 255);\n    display: flex;\n    justify-content: right;\n}\n\n.WrX3i4N-HUqi1ymL3N7Ojg\\=\\=:nth-child(3) {\n    background-color: #fbf6f3;\n    display: flex;\n    justify-content: right;\n}\n\n.WrX3i4N-HUqi1ymL3N7Ojg\\=\\=:last-child {\n    background-color: #ffffff;\n}\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\=:first-child .ldUC95G-xUa6ZcAXb49yow\\=\\= {\n    border-radius: 50px 100px 0 50px;\n}\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\=:nth-child(2) {\n    background-color: #fbf6f3;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\=:nth-child(2) .ldUC95G-xUa6ZcAXb49yow\\=\\= {\n    border-radius: 0 50px 50px 100px;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\=:nth-child(3) {\n    background-color: #fbf6f3;\n}\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\=:nth-child(3) .ldUC95G-xUa6ZcAXb49yow\\=\\= {\n    border-radius: 50px 0 100px 50px;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\=:nth-child(4) .ldUC95G-xUa6ZcAXb49yow\\=\\= {\n    border-radius: 100px 50px 50px 0;\n}\n\n.WrX3i4N-HUqi1ymL3N7Ojg\\=\\= {\n    background-color: #fbf6f3;\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"fullPageontainer": "WHjbWmiU1IiXC2bKa6wetw==",
 	"container": "bArZ17oPD7EX8SO+wwoFJA==",
 	"roomContainer": "Ib5IaVeo8xk0PoOLMqeKgw==",
 	"linkContainer": "ldUC95G-xUa6ZcAXb49yow==",
-	"link": "EJBYWyp+GUZGYgfz7UeSGw=="
+	"link": "EJBYWyp+GUZGYgfz7UeSGw==",
+	"coloredContainer": "WrX3i4N-HUqi1ymL3N7Ojg=="
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
