@@ -2,13 +2,14 @@ import { Link } from "@inertiajs/inertia-react";
 import { useForm } from "@inertiajs/inertia-react";
 import React, { useState } from "react";
 import dateFormat from "dateformat";
-import { addDays, format } from "date-fns";
+
 import NavBar from "../../components/NavBar/NavBar";
-import Calendar from "react-calendar";
+
 import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { registerLocale, setDefaultLocale } from "react-datepicker";
 import sv from "date-fns/locale/sv";
+
 registerLocale("sv", sv);
 
 export default function selectDates({ room, bookings }) {
@@ -83,6 +84,7 @@ export default function selectDates({ room, bookings }) {
                 selectsRange
                 inline
                 locale="sv"
+                calendarClassName="rasta-stripes"
             />
             {/* <Calendar
                 selectRange={true}

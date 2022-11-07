@@ -1,7 +1,9 @@
 import { Link } from "@inertiajs/inertia-react";
+import { useState } from "react";
 import styles from "./NavBar.module.css";
 
 export default function NavBar() {
+    const [navMenuIsOpen, setNavMenuIsOpen] = useState(false);
     return (
         <div className={styles.navBar}>
             <svg
@@ -21,6 +23,16 @@ export default function NavBar() {
                     fill="#3e2e29"
                 />
             </svg>
+            {/* BUgermenu */}
+            <button
+                onClick={() => setNavMenuIsOpen(true)}
+                className={styles.hamburgerButton}
+            >
+                <div className={styles.hamburgerBar}></div>
+                <div className={styles.hamburgerBar}></div>
+                <div className={styles.hamburgerBar}></div>
+            </button>
+
             <div className={styles.navLinks}>
                 <Link href="/boka">BOKA &#8595;</Link>
                 <Link href="/cykling">CYKLING &#8593;</Link>
