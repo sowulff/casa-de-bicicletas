@@ -21,7 +21,6 @@ export default function Cycling() {
 
             <div className={styles.cardTwo}>
                 <img src={"assets/cycling/3.JPG"} />
-
                 <img src={"assets/cycling/1.JPG"} />
             </div>
             <Footer />

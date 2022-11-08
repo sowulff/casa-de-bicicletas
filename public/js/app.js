@@ -5283,11 +5283,8 @@ __webpack_require__.r(__webpack_exports__);
 
 function About() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-      className: _about_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].infoText,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-        children: "About-sida "
-      })
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
+      src: "assets/galleri/19.JPG"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_1__["default"], {})]
   });
 }
@@ -5753,14 +5750,15 @@ function selectRoom(_ref) {
         children: rooms.map(function (room) {
           return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
             className: _selectRoom_module_css__WEBPACK_IMPORTED_MODULE_2__["default"].coloredContainer,
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
               className: _selectRoom_module_css__WEBPACK_IMPORTED_MODULE_2__["default"].roomContainer,
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-                value: data.room_id,
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                  src: room.image,
-                  alt: "img"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h2", {
+              value: data.room_id,
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
+                src: room.image,
+                alt: "img"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                className: _selectRoom_module_css__WEBPACK_IMPORTED_MODULE_2__["default"].roomInfo,
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h2", {
                   children: room.name
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
                   children: room.description
@@ -5774,8 +5772,8 @@ function selectRoom(_ref) {
                     children: "Se tillg\xE4nglighet och boka"
                   })
                 })]
-              }, room.id)
-            })
+              })]
+            }, room.id)
           });
         })
       })
@@ -6508,7 +6506,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\nbody {\n    font-family: Roboto-Thin;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\nbody {\n    font-family: Roboto-Thin;\n}\nimg {\n    max-width: 100%;\n    height: auto;\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {};
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
@@ -6563,7 +6561,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\nbody {\n    font-family: Roboto-Thin;\n}\n\n.WHjbWmiU1IiXC2bKa6wetw\\=\\= {\n    display: flex;\n    justify-content: center;\n}\n\n/* container som håller hela sidan */\n.bArZ17oPD7EX8SO\\+wwoFJA\\=\\= {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    justify-content: center;\n    gap: 2rem 5rem;\n\n    padding: 1rem;\n}\n\n/* container som håller varje enskilt rum och dess info */\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= {\n    display: flex;\n    flex-direction: column;\n    width: 35%;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= h2 {\n    font-family: Julius;\n    font-size: 1rem;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= p {\n    font-size: 0.9rem;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= img {\n    width: 100%;\n}\n\n/* styling för knapparna */\n.ldUC95G-xUa6ZcAXb49yow\\=\\= {\n    background-color: #dcd0d0;\n    display: flex;\n    justify-content: center;\n    padding: 0.2rem;\n    margin-top: 2rem;\n}\n\n.ldUC95G-xUa6ZcAXb49yow\\=\\=:hover {\n    background-color: #ff6f9a;\n}\n\n.EJBYWyp\\+GUZGYgfz7UeSGw\\=\\= {\n    font-size: 0.9rem;\n    font-family: Julius;\n    color: white;\n    padding: 0.1rem;\n}\n\n.ldUC95G-xUa6ZcAXb49yow\\=\\= {\n    border-radius: 50px 100px 0 50px;\n}\n\n/* .roomContainer:nth-child(2) .linkContainer {\n    border-radius: 0 50px 50px 100px;\n}\n\n.roomContainer:nth-child(3) .linkContainer {\n    border-radius: 50px 0 100px 50px;\n}\n\n.roomContainer:nth-child(4) .linkContainer {\n    border-radius: 100px 50px 50px 0;\n} */\n\n/* container som håller varje enskilt rum men har en större width för att få en mörkare bakgrund bakom vissa rum */\n.WrX3i4N-HUqi1ymL3N7Ojg\\=\\= {\n    background-color: #d3d2cf45;\n}\n\n.WrX3i4N-HUqi1ymL3N7Ojg\\=\\=:first-child {\n    background-color: rgb(255, 255, 255);\n    display: flex;\n    justify-content: right;\n}\n\n.WrX3i4N-HUqi1ymL3N7Ojg\\=\\=:nth-child(3) {\n    background-color: #d3d2cf45;\n    display: flex;\n    justify-content: right;\n}\n\n.WrX3i4N-HUqi1ymL3N7Ojg\\=\\=:last-child {\n    background-color: #ffffff;\n}\n\n/* //test */\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\nbody {\n    font-family: Roboto-Thin;\n}\n\n.WHjbWmiU1IiXC2bKa6wetw\\=\\= {\n    display: flex;\n    justify-content: center;\n}\n\n/* container som håller hela sidan */\n.bArZ17oPD7EX8SO\\+wwoFJA\\=\\= {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    justify-content: center;\n    gap: 2rem 5rem;\n    padding: 1rem;\n}\n\n/* container som håller varje enskilt rum och dess info */\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= {\n    display: flex;\n    flex-direction: column;\n    width: 35%;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= h2 {\n    font-family: Julius;\n    font-size: 1rem;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= p {\n    font-size: 0.9rem;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= img {\n    width: 100%;\n}\n\n/* styling för knapparna */\n.ldUC95G-xUa6ZcAXb49yow\\=\\= {\n    background-color: #dcd0d0;\n    display: flex;\n    justify-content: center;\n    padding: 0.2rem;\n    margin-top: 2rem;\n}\n\n.ldUC95G-xUa6ZcAXb49yow\\=\\=:hover {\n    background-color: #ff6f9a;\n}\n\n.EJBYWyp\\+GUZGYgfz7UeSGw\\=\\= {\n    font-size: 0.9rem;\n    font-family: Julius;\n    color: white;\n    padding: 0.1rem;\n}\n\n.ldUC95G-xUa6ZcAXb49yow\\=\\= {\n    border-radius: 50px 100px 0 50px;\n}\n\n/* .roomContainer:nth-child(2) .linkContainer {\n    border-radius: 0 50px 50px 100px;\n}\n\n.roomContainer:nth-child(3) .linkContainer {\n    border-radius: 50px 0 100px 50px;\n}\n\n.roomContainer:nth-child(4) .linkContainer {\n    border-radius: 100px 50px 50px 0;\n} */\n\n/* container som håller varje enskilt rum men har en större width för att få en mörkare bakgrund bakom vissa rum */\n.WrX3i4N-HUqi1ymL3N7Ojg\\=\\= {\n    background-color: #d3d2cf45;\n}\n\n.WrX3i4N-HUqi1ymL3N7Ojg\\=\\=:first-child {\n    background-color: rgb(255, 255, 255);\n    display: flex;\n    justify-content: right;\n}\n\n.WrX3i4N-HUqi1ymL3N7Ojg\\=\\=:nth-child(3) {\n    background-color: #d3d2cf45;\n    display: flex;\n    justify-content: right;\n}\n\n.WrX3i4N-HUqi1ymL3N7Ojg\\=\\=:last-child {\n    background-color: #ffffff;\n}\n\n@media only screen and (max-width: 1000px) {\n    .Ib5IaVeo8xk0PoOLMqeKgw\\=\\= {\n        width: 50%;\n    }\n}\n@media only screen and (max-width: 850px) {\n    .bArZ17oPD7EX8SO\\+wwoFJA\\=\\= {\n        grid-template-columns: 1fr;\n        justify-content: center;\n        gap: 2rem 5rem;\n        padding: 1rem;\n    }\n    .Ib5IaVeo8xk0PoOLMqeKgw\\=\\= {\n        flex-direction: row;\n        width: 30%;\n    }\n    .WrX3i4N-HUqi1ymL3N7Ojg\\=\\=:first-child {\n        justify-content: left;\n    }\n    .WrX3i4N-HUqi1ymL3N7Ojg\\=\\=:nth-child(3) {\n        justify-content: left;\n    }\n    .x7y4ywn4yWE92WHqIUn7AQ\\=\\= {\n        width: 100%;\n        background-color: aqua;\n    }\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"fullPageontainer": "WHjbWmiU1IiXC2bKa6wetw==",
@@ -6571,7 +6569,8 @@ ___CSS_LOADER_EXPORT___.locals = {
 	"roomContainer": "Ib5IaVeo8xk0PoOLMqeKgw==",
 	"linkContainer": "ldUC95G-xUa6ZcAXb49yow==",
 	"link": "EJBYWyp+GUZGYgfz7UeSGw==",
-	"coloredContainer": "WrX3i4N-HUqi1ymL3N7Ojg=="
+	"coloredContainer": "WrX3i4N-HUqi1ymL3N7Ojg==",
+	"roomInfo": "x7y4ywn4yWE92WHqIUn7AQ=="
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -6595,7 +6594,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\nbody {\n    font-family: Roboto-Thin;\n}\n\nimg {\n    max-width: 50%;\n    height: auto;\n    vertical-align: middle;\n    display: inline-block;\n}\n.yxBVEuZU\\+J-mFIR5OW9npg\\=\\= {\n    display: flex;\n    align-items: center;\n    border-bottom: 0.5px solid black;\n    margin: 1rem;\n    padding: 1rem;\n}\n\n.yxBVEuZU\\+J-mFIR5OW9npg\\=\\= img {\n    max-width: 40%;\n}\n\n.HJiL-V\\+2l0oWersE3\\+CMpw\\=\\= {\n    display: flex;\n    gap: 1rem;\n    justify-content: flex-end;\n    border-bottom: 0.5px solid black;\n    margin: 1rem;\n    padding: 1rem;\n}\n.HJiL-V\\+2l0oWersE3\\+CMpw\\=\\= img {\n    max-width: 40%;\n}\n.K4Ua\\+pzFGZz439dkS2eGww\\=\\= {\n    padding: 3rem;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\nbody {\n    font-family: Roboto-Thin;\n}\n\nimg {\n    max-width: 50%;\n    height: auto;\n    vertical-align: middle;\n    display: inline-block;\n}\n.yxBVEuZU\\+J-mFIR5OW9npg\\=\\= {\n    display: flex;\n    align-items: center;\n    border-bottom: 0.5px solid black;\n    margin: 1rem;\n    padding: 1rem;\n}\n\n.yxBVEuZU\\+J-mFIR5OW9npg\\=\\= img {\n    max-width: 40%;\n}\n\n.HJiL-V\\+2l0oWersE3\\+CMpw\\=\\= {\n    display: flex;\n    gap: 1rem;\n    justify-content: flex-end;\n    border-bottom: 0.5px solid black;\n    margin: 1rem;\n    padding: 1rem;\n}\n.HJiL-V\\+2l0oWersE3\\+CMpw\\=\\= img {\n    max-width: 40%;\n}\n\n.K4Ua\\+pzFGZz439dkS2eGww\\=\\= {\n    padding: 3rem;\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"cardOne": "yxBVEuZU+J-mFIR5OW9npg==",

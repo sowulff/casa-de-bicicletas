@@ -6,9 +6,9 @@ export default function About() {
     return (
         <div>
             <NavBar />
-            <div className={styles.infoText}>
-                <p>About-sida </p>
-            </div>
+
+            <img src={"assets/galleri/19.JPG"} />
+
             <Footer />
         </div>
     );

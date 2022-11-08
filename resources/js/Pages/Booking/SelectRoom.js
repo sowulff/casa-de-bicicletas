@@ -22,9 +22,13 @@ export default function selectRoom({ rooms }) {
                     {rooms.map(function (room) {
                         return (
                             <div className={styles.coloredContainer}>
-                                <div className={styles.roomContainer}>
-                                    <div value={data.room_id} key={room.id}>
-                                        <img src={room.image} alt="img" />
+                                <div
+                                    className={styles.roomContainer}
+                                    value={data.room_id}
+                                    key={room.id}
+                                >
+                                    <img src={room.image} alt="img" />
+                                    <div className={styles.roomInfo}>
                                         <h2>{room.name}</h2>
                                         <p>{room.description}</p>
                                         <p>{room.price + " kr"}</p>

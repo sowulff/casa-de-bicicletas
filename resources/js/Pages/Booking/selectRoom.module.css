@@ -23,7 +23,6 @@ body {
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     gap: 2rem 5rem;
-
     padding: 1rem;
 }
 
@@ -104,4 +103,30 @@ body {
     background-color: #ffffff;
 }
 
-/* //test */
+@media only screen and (max-width: 1000px) {
+    .roomContainer {
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 850px) {
+    .container {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        gap: 2rem 5rem;
+        padding: 1rem;
+    }
+    .roomContainer {
+        flex-direction: row;
+        width: 30%;
+    }
+    .coloredContainer:first-child {
+        justify-content: left;
+    }
+    .coloredContainer:nth-child(3) {
+        justify-content: left;
+    }
+    .roomInfo {
+        width: 100%;
+        background-color: aqua;
+    }
+}

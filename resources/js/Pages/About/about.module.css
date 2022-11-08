@@ -6,3 +6,7 @@
 body {
     font-family: Roboto-Thin;
 }
+img {
+    max-width: 100%;
+    height: auto;
+}
