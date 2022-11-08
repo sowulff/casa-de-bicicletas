@@ -1,0 +1,60 @@
+.menuContainer {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    /* opacity: 90%; */
+    z-index: 10;
+    top: 0;
+    left: 0;
+
+    overflow: hidden;
+}
+
+.closeButtonContainer {
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    padding: 2rem;
+}
+
+.closeButton {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    width: 26px;
+    height: 26px;
+}
+
+.closeButtonCrossLineOne {
+    position: absolute;
+    top: 11px;
+    background-color: black;
+    width: 24px;
+    height: 2px;
+    transform: rotate(45deg);
+}
+
+.closeButtonCrossLineTwo {
+    position: absolute;
+    top: 11px;
+    background-color: black;
+    width: 24px;
+    height: 2px;
+    transform: rotate(-45deg);
+}
+
+.navLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.navLinks a {
+    border-bottom: 1px solid #ebd4c8;
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+}
