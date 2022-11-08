@@ -15,11 +15,15 @@ class ListBookingController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function __invoke($id)
+
     {
+        $rooms = Room::where('id', $id)->get();
         $bookings = Booking::where('room_id', $id)->get();
+
         return inertia('Booking/SelectDates', [
             'room' => $id,
             'bookings' => $bookings,
+            'rooms' => $rooms
         ]);
     }
 }

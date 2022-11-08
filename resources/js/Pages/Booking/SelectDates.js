@@ -10,7 +10,7 @@ import sv from "date-fns/locale/sv";
 import styles from "./selectDates.module.css";
 registerLocale("sv", sv);
 
-export default function selectDates({ room, bookings }) {
+export default function selectDates({ room, bookings, rooms }) {
     //Kalender
 
     const [startDate, setStartDate] = useState(null);
@@ -25,6 +25,16 @@ export default function selectDates({ room, bookings }) {
             end_date: dateFormat(end, "yyyy-mm-dd"),
         });
     };
+
+    // Antal dagar
+
+    const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+    const diffDays = Math.round(Math.abs((endDate - startDate) / oneDay));
+    const totalPrice = diffDays * rooms[0].price;
+    if (startDate != null && endDate != null) {
+        console.log(totalPrice);
+    }
+
     // resten
     const { data, setData, post } = useForm({
         first_name: "",
@@ -41,17 +51,6 @@ export default function selectDates({ room, bookings }) {
         e.preventDefault();
         post("/upload");
     }
-
-    // const [value, setValue] = useState(new Date());
-    // console.log(value);
-    // function onChange(value) {
-    //     setValue(value);
-    //     setData({
-    //         ...data,
-    //         end_date: dateFormat(new Date(value[1]), "yyyy-mm-dd"),
-    //         start_date: dateFormat(new Date(value[0]), "yyyy-mm-dd"),
-    //     });
-    // }
 
     const dateToDisable = () => {
         return bookings.map((booking) => {
@@ -84,26 +83,7 @@ export default function selectDates({ room, bookings }) {
                     locale="sv"
                     calendarClassName="rasta-stripes"
                 />
-                {/* <Calendar
-                selectRange={true}
-                onChange={onChange}
-                value={value}
-                tileDisabled={(date) => {
-                    console.log(
-                        format(date.date, "y-M-dd"),
-                        format(new Date(), "y-M-dd")
-                    );
-                    if (
-                        format(date.date, "y-M-dd") <
-                        format(new Date(), "y-M-dd")
-                    ) {
-                        return true;
-                    }
-                    return disableDates
-                        .flat()
-                        .includes(format(date.date, "y-M-dd"));
-                }}
-            /> */}
+
                 <form onSubmit={submit}>
                     <input
                         type="text"
@@ -144,7 +124,8 @@ export default function selectDates({ room, bookings }) {
                         <option value="3">3</option>
                         <option value="4">4</option>
                     </select>
-                    <h2>Totalpris: </h2>
+
+                    <h2>Totalpris: {totalPrice}kr</h2>
                     <div className={styles.buttonContainer}>
                         <button type="submit">BOKA NU!</button>
                         <p>
