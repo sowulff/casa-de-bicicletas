@@ -14,10 +14,6 @@ export default function selectRoom({ rooms }) {
         room_id: 0,
     });
 
-    // function submit(e) {
-    //     e.preventDefault();
-    //     post("/upload");
-    // }
     return (
         <div>
             <NavBar />

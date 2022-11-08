@@ -6,3 +6,36 @@
 body {
     font-family: Roboto-Thin;
 }
+
+img {
+    max-width: 50%;
+    height: auto;
+    vertical-align: middle;
+    display: inline-block;
+}
+.cardOne {
+    display: flex;
+    align-items: center;
+    border-bottom: 0.5px solid black;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.cardOne img {
+    max-width: 40%;
+}
+
+.cardTwo {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    border-bottom: 0.5px solid black;
+    margin: 1rem;
+    padding: 1rem;
+}
+.cardTwo img {
+    max-width: 40%;
+}
+.text {
+    padding: 3rem;
+}

@@ -41,6 +41,6 @@ class NewBookingController extends Controller
         $booking->start_date = $request->input('start_date');
         $booking->end_date = $request->input('end_date');
         $booking->save();
-        return redirect('booking/confirmation')->with('success', 'Tack för din bokning namn!');
+        return inertia('Booking/Confirmation', ['booking' => $booking]);
     }
 }
