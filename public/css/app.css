@@ -1,4 +1,88 @@
+@font-face {
+    src: url("/../assets/fonts/Roboto-Thin.ttf");
+    font-family: Roboto-Thin;
+}
+
+@font-face {
+    src: url("/../assets/fonts/JuliusSansOne-Regular.ttf");
+    font-family: Julius;
+}
 * {
     box-sizing: border-box;
+}
+
+.react-datepicker__header {
+    background-color: #454141 !important;
+    width: 500px !important;
+    font-size: 1rem;
+    font-family: Roboto-thin;
+}
+
+.react-datepicker {
+    width: 502px !important;
+    font-size: 1rem;
+    font-family: Roboto-thin;
+    height: 450px !important;
+    border-radius: 50px 50px 0px 50px !important;
+    border-color: rgb(198, 197, 196) !important;
+}
+
+.react-datepicker__month {
+    font-size: 1rem;
+    font-family: Roboto-thin;
+    margin-top: 2rem !important;
+}
+
+.react-datepicker__current-month {
+    font-family: Julius;
+    font-size: 1.2rem !important;
+    padding: 1rem;
+    color: white !important;
+}
+
+.react-datepicker__day--keyboard-selected,
+.react-datepicker__month-text--keyboard-selected,
+.react-datepicker__quarter-text--keyboard-selected,
+.react-datepicker__year-text--keyboard-selected {
+    background-color: #dcd0d0 !important;
+}
+
+.react-datepicker__day {
+    width: 4rem !important;
+    height: 3rem !important;
+    padding-top: 0.5rem;
+}
+
+.react-datepicker__day--in-selecting-range:not(.react-datepicker__day--in-range, .react-datepicker__month-text--in-range, .react-datepicker__quarter-text--in-range, .react-datepicker__year-text--in-range) {
+    background-color: #dcd0d0 !important;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--in-selecting-range,
+.react-datepicker__day--in-range {
+    background-color: #dcd0d0 !important;
+}
+
+.react-datepicker__header:not(.react-datepicker__header--has-time-select) {
+    border-radius: 50px 50px 0px 0px !important;
+}
+
+.react-datepicker__day-names {
+    width: 500px !important;
+}
+
+.react-datepicker__day-name {
+    width: 4rem !important;
+    color: white !important;
+}
+
+.react-datepicker__navigation--next {
+    margin-top: 1rem;
+    right: 30px !important;
+}
+
+.react-datepicker__navigation--previous {
+    margin-top: 1rem !important;
+    left: 30px !important;
 }
 
