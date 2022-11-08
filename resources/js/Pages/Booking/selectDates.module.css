@@ -52,13 +52,6 @@ select {
     padding: 0.5rem;
 }
 
-/* hr {
-    width: 100%;
-    margin: 0;
-    height: 0.5px;
-    color: #dcd0d0;
-} */
-
 button {
     background-color: #dcd0d0;
     align-self: center;
@@ -84,6 +77,9 @@ button {
 .errorMessage {
     text-align: center;
     font-family: sans-serif;
-
     color: rgb(255, 108, 108);
+}
+/* DROPDOWN SELECT */
+option {
+    background-color: aqua;
 }

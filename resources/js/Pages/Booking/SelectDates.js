@@ -112,21 +112,21 @@ export default function selectDates({ room, bookings, rooms }) {
                         onChange={(e) => setData("mobile", e.target.value)}
                         placeholder="Mobilnummer"
                     />
-
-                    <select
-                        type="number"
-                        value={data.guests}
-                        onChange={(e) =>
-                            setData("guests", parseInt(e.target.value))
-                        }
-                    >
-                        <option value="">Antal gäster</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                    </select>
-
+                    <div className={styles.guestSelect}>
+                        <select
+                            type="number"
+                            value={data.guests}
+                            onChange={(e) =>
+                                setData("guests", parseInt(e.target.value))
+                            }
+                        >
+                            <option value="">Antal gäster</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
                     <h2>
                         Totalpris:
                         {endDate != null && <span>{totalPrice} kr</span>}

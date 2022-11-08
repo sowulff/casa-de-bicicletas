@@ -5472,10 +5472,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function Confirmation() {
+function Confirmation(_ref) {
+  var booking = _ref.booking;
+  console.log(booking);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
-      children: "Tack f\xF6r din bokning"
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+      children: ["Tack f\xF6r din bokning", booking.first_name]
     })]
   });
 }
@@ -5655,28 +5657,31 @@ function selectDates(_ref) {
             return setData("mobile", e.target.value);
           },
           placeholder: "Mobilnummer"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("select", {
-          type: "number",
-          value: data.guests,
-          onChange: function onChange(e) {
-            return setData("guests", parseInt(e.target.value));
-          },
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("option", {
-            value: "",
-            children: "Antal g\xE4ster"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("option", {
-            value: "1",
-            children: "1"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("option", {
-            value: "2",
-            children: "2"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("option", {
-            value: "3",
-            children: "3"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("option", {
-            value: "4",
-            children: "4"
-          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+          className: _selectDates_module_css__WEBPACK_IMPORTED_MODULE_5__["default"].guestSelect,
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("select", {
+            type: "number",
+            value: data.guests,
+            onChange: function onChange(e) {
+              return setData("guests", parseInt(e.target.value));
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("option", {
+              value: "",
+              children: "Antal g\xE4ster"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("option", {
+              value: "1",
+              children: "1"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("option", {
+              value: "2",
+              children: "2"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("option", {
+              value: "3",
+              children: "3"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("option", {
+              value: "4",
+              children: "4"
+            })]
+          })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("h2", {
           children: ["Totalpris:", endDate != null && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("span", {
             children: [totalPrice, " kr"]
@@ -5731,11 +5736,7 @@ function selectRoom(_ref) {
   }),
       data = _useForm.data,
       setData = _useForm.setData,
-      post = _useForm.post; // function submit(e) {
-  //     e.preventDefault();
-  //     post("/upload");
-  // }
-
+      post = _useForm.post;
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
@@ -6460,7 +6461,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\n.HSaiuel0n-lwezzLipBedA\\=\\= {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    gap: 5rem;\n    color: #727374;\n    padding-top: 1rem;\n}\n\nh2 {\n    font-family: Julius;\n}\n\nform {\n    display: flex;\n    flex-direction: column;\n    width: 30%;\n    gap: 0.2rem;\n}\n\ninput {\n    border: 1px solid #dcd0d0;\n    box-shadow: none;\n    border-top: none;\n    border-left: none;\n    border-right: none;\n}\n\ninput[type=\"text\"] {\n    font-family: Julius;\n    padding: 0.5rem;\n}\n\nselect {\n    font-family: Julius;\n    color: #727374;\n    border: 1px solid #dcd0d0;\n    box-shadow: none;\n    border-top: none;\n    border-left: none;\n    border-right: none;\n    padding: 0.5rem;\n}\n\n/* hr {\n    width: 100%;\n    margin: 0;\n    height: 0.5px;\n    color: #dcd0d0;\n} */\n\nbutton {\n    background-color: #dcd0d0;\n    align-self: center;\n    width: 50%;\n    border: none;\n    border-radius: 50px 0 100px 50px;\n    padding: 0.3rem;\n    color: white;\n    font-family: Julius;\n    margin-top: 10%;\n}\n\n.XM59B36MCbIntEiYJsWEMA\\=\\= {\n    width: 100%;\n    display: flex;\n    justify-content: center;\n    flex-direction: column;\n    text-align: center;\n    font-family: Roboto-Thin;\n    font-size: 0.8rem;\n    gap: 3rem;\n}\n.vX8rd\\+9bzmxcpN2i\\+wsdsA\\=\\= {\n    text-align: center;\n    font-family: sans-serif;\n\n    color: rgb(255, 108, 108);\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\n.HSaiuel0n-lwezzLipBedA\\=\\= {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    gap: 5rem;\n    color: #727374;\n    padding-top: 1rem;\n}\n\nh2 {\n    font-family: Julius;\n}\n\nform {\n    display: flex;\n    flex-direction: column;\n    width: 30%;\n    gap: 0.2rem;\n}\n\ninput {\n    border: 1px solid #dcd0d0;\n    box-shadow: none;\n    border-top: none;\n    border-left: none;\n    border-right: none;\n}\n\ninput[type=\"text\"] {\n    font-family: Julius;\n    padding: 0.5rem;\n}\n\nselect {\n    font-family: Julius;\n    color: #727374;\n    border: 1px solid #dcd0d0;\n    box-shadow: none;\n    border-top: none;\n    border-left: none;\n    border-right: none;\n    padding: 0.5rem;\n}\n\nbutton {\n    background-color: #dcd0d0;\n    align-self: center;\n    width: 50%;\n    border: none;\n    border-radius: 50px 0 100px 50px;\n    padding: 0.3rem;\n    color: white;\n    font-family: Julius;\n    margin-top: 10%;\n}\n\n.XM59B36MCbIntEiYJsWEMA\\=\\= {\n    width: 100%;\n    display: flex;\n    justify-content: center;\n    flex-direction: column;\n    text-align: center;\n    font-family: Roboto-Thin;\n    font-size: 0.8rem;\n    gap: 3rem;\n}\n.vX8rd\\+9bzmxcpN2i\\+wsdsA\\=\\= {\n    text-align: center;\n    font-family: sans-serif;\n    color: rgb(255, 108, 108);\n}\n/* DROPDOWN SELECT */\noption {\n    background-color: aqua;\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"fullpageContainer": "HSaiuel0n-lwezzLipBedA==",

@@ -79,4 +79,5 @@ Route::get('/booking/confirmation', function () {
 //});
 
 Route::post('/upload', NewBookingController::class);
+Route::get('/upload', NewBookingController::class);
 Route::post('/bookings/{booking}', DeleteBookingController::class);
