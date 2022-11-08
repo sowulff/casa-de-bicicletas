@@ -57,6 +57,10 @@ body {
     margin-top: 2rem;
 }
 
+.linkContainer:hover {
+    background-color: #ff6f9a;
+}
+
 .link {
     font-size: 0.9rem;
     font-family: Julius;
@@ -64,11 +68,11 @@ body {
     padding: 0.1rem;
 }
 
-.roomContainer:first-child .linkContainer {
+.linkContainer {
     border-radius: 50px 100px 0 50px;
 }
 
-.roomContainer:nth-child(2) .linkContainer {
+/* .roomContainer:nth-child(2) .linkContainer {
     border-radius: 0 50px 50px 100px;
 }
 
@@ -78,11 +82,11 @@ body {
 
 .roomContainer:nth-child(4) .linkContainer {
     border-radius: 100px 50px 50px 0;
-}
+} */
 
 /* container som håller varje enskilt rum men har en större width för att få en mörkare bakgrund bakom vissa rum */
 .coloredContainer {
-    background-color: #fbf6f3;
+    background-color: #d3d2cf45;
 }
 
 .coloredContainer:first-child {
@@ -92,7 +96,7 @@ body {
 }
 
 .coloredContainer:nth-child(3) {
-    background-color: #fbf6f3;
+    background-color: #d3d2cf45;
     display: flex;
     justify-content: right;
 }

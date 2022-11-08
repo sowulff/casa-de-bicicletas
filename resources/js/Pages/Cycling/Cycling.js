@@ -1,5 +1,6 @@
 import styles from "./cycling.module.css";
 import NavBar from "../../components/NavBar/NavBar";
+import Footer from "../../components/Footer/Footer";
 
 export default function Cycling() {
     return (
@@ -23,6 +24,7 @@ export default function Cycling() {
 
                 <img src={"assets/cycling/1.JPG"} />
             </div>
+            <Footer />
         </div>
     );
 }

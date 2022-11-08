@@ -5273,20 +5273,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ About)
 /* harmony export */ });
 /* harmony import */ var _about_module_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./about.module.css */ "./resources/js/Pages/About/about.module.css");
-/* harmony import */ var _components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/NavBar/NavBar */ "./resources/js/components/NavBar/NavBar.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _components_Footer_Footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/Footer/Footer */ "./resources/js/components/Footer/Footer.js");
+/* harmony import */ var _components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/NavBar/NavBar */ "./resources/js/components/NavBar/NavBar.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
 
 function About() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       className: _about_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].infoText,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
         children: "About-sida "
       })
-    })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_1__["default"], {})]
   });
 }
 
@@ -5686,16 +5688,19 @@ function selectDates(_ref) {
           children: ["Totalpris:", endDate != null && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("span", {
             children: [totalPrice, " kr"]
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
           className: _selectDates_module_css__WEBPACK_IMPORTED_MODULE_5__["default"].buttonContainer,
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
             type: "submit",
             children: "BOKA NU!"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
-            children: "AVBOKNINGSREGLER: H\xE4r st\xE5r det vad som g\xE4ller f\xF6r avbokning och kanske \xE4ven hur man betalar"
-          })]
+          })
         })]
       })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+      className: _selectDates_module_css__WEBPACK_IMPORTED_MODULE_5__["default"].rules,
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
+        children: "AVBOKNINGSREGLER: H\xE4r st\xE5r det vad som g\xE4ller f\xF6r avbokning och kanske \xE4ven hur man betalar lite mer tect hehehe kanske kanske"
+      })
     })]
   });
 }
@@ -5716,7 +5721,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
 /* harmony import */ var _components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/NavBar/NavBar */ "./resources/js/components/NavBar/NavBar.js");
 /* harmony import */ var _selectRoom_module_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./selectRoom.module.css */ "./resources/js/Pages/Booking/selectRoom.module.css");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _components_Footer_Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/Footer/Footer */ "./resources/js/components/Footer/Footer.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
@@ -5738,31 +5745,31 @@ function selectRoom(_ref) {
       setData = _useForm.setData,
       post = _useForm.post;
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
       className: _selectRoom_module_css__WEBPACK_IMPORTED_MODULE_2__["default"].fullPageContainer,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
         className: _selectRoom_module_css__WEBPACK_IMPORTED_MODULE_2__["default"].container,
         children: rooms.map(function (room) {
-          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
             className: _selectRoom_module_css__WEBPACK_IMPORTED_MODULE_2__["default"].coloredContainer,
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
               className: _selectRoom_module_css__WEBPACK_IMPORTED_MODULE_2__["default"].roomContainer,
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
                 value: data.room_id,
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
                   width: 100,
                   src: room.image,
                   alt: "img"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h2", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h2", {
                   children: room.name
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
                   children: room.description
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
                   children: room.price + " kr"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
                   className: _selectRoom_module_css__WEBPACK_IMPORTED_MODULE_2__["default"].linkContainer,
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
                     className: _selectRoom_module_css__WEBPACK_IMPORTED_MODULE_2__["default"].link,
                     href: "/booking/room/".concat(room.id),
                     children: "Se tillg\xE4nglighet och boka"
@@ -5773,7 +5780,7 @@ function selectRoom(_ref) {
           });
         })
       })
-    })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], {})]
   });
 }
 
@@ -5792,33 +5799,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _cycling_module_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./cycling.module.css */ "./resources/js/Pages/Cycling/cycling.module.css");
 /* harmony import */ var _components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/NavBar/NavBar */ "./resources/js/components/NavBar/NavBar.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _components_Footer_Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/Footer/Footer */ "./resources/js/components/Footer/Footer.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
 
 function Cycling() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
       className: _cycling_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].cardOne,
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
         src: "assets/galleri/3.JPG"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
         className: _cycling_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].text,
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {
           children: "Dags f\xF6r cykelsemester?"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h3", {
           children: "H\xE4r i n\xE4rheten hittar du bra cykling s\xE5v\xE4l mountainbike som landv\xE4gscykling. Hos oss kan man tryggt f\xF6rvara cyklarna och \xE4ven g\xF6ra rent dem i v\xE5r cykeltv\xE4tt."
         })]
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
       className: _cycling_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].cardTwo,
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
         src: "assets/cycling/3.JPG"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
         src: "assets/cycling/1.JPG"
       })]
-    })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {})]
   });
 }
 
@@ -6104,6 +6113,44 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /***/ }),
 
+/***/ "./resources/js/components/Footer/Footer.js":
+/*!**************************************************!*\
+  !*** ./resources/js/components/Footer/Footer.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Footer)
+/* harmony export */ });
+/* harmony import */ var _Footer_module_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Footer.module.css */ "./resources/js/components/Footer/Footer.module.css");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+function Footer() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+    className: _Footer_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].footer,
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+      className: _Footer_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].name,
+      children: "Casa la Marina"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+      children: "Adress: Av. San Fulgenicio 300"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+      children: "03194 San Fulgencio"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+      children: "Alicante, Spain"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+      children: "Phone: +46 85 92 84"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+      children: "E-mail: molle@hej.se"
+    })]
+  });
+}
+
+/***/ }),
+
 /***/ "./resources/js/components/NavBar/NavBar.js":
 /*!**************************************************!*\
   !*** ./resources/js/components/NavBar/NavBar.js ***!
@@ -6149,18 +6196,26 @@ function NavBar() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
     className: _NavBar_module_css__WEBPACK_IMPORTED_MODULE_3__["default"].navBar,
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("svg", {
-      className: _NavBar_module_css__WEBPACK_IMPORTED_MODULE_3__["default"].logo,
-      width: "147",
-      height: "71",
-      viewBox: "0 0 147 71",
+      width: "215",
+      height: "79",
+      viewBox: "0 0 215 79",
       fill: "none",
       xmlns: "http://www.w3.org/2000/svg",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("path", {
-        d: "M35.625 40.92C32.375 42.74 27.8467 43.65 22.04 43.65C16.2767 43.65 11.185 41.57 6.765 37.41C2.38833 33.25 0.2 28.0933 0.2 21.94C0.2 15.7433 2.10667 10.565 5.92 6.405C9.77667 2.245 14.7383 0.164997 20.805 0.164997C25.7017 0.164997 30.49 0.923331 35.17 2.44L34.39 4.91C29.8833 3.52333 25.225 2.83 20.415 2.83C15.605 2.83 11.5533 4.67166 8.26 8.355C5.01 11.995 3.385 16.48 3.385 21.81C3.385 27.0967 5.27 31.6033 9.04 35.33C12.8533 39.0567 17.2517 40.92 22.235 40.92C27.2183 40.92 31.3567 40.2267 34.65 38.84L35.625 40.92ZM48.3614 28.375L42.3164 43H39.2614L56.9414 0.554996H58.6964L76.5064 43H73.1914L67.0814 28.375H48.3614ZM57.6564 5.365C57.0064 7.315 56.4214 8.94 55.9014 10.24L49.4014 25.84H66.0414L59.6064 10.305C58.6098 7.87833 57.9598 6.23166 57.6564 5.365ZM93.5806 2.635C91.2406 2.635 89.334 3.19833 87.8606 4.325C86.3873 5.45167 85.6506 7.03333 85.6506 9.07C85.6506 11.41 86.6256 13.5117 88.5756 15.375C89.9623 16.7183 91.739 18.1483 93.9056 19.665C96.1156 21.1383 97.6323 22.2 98.4556 22.85C99.279 23.5 100.276 24.3883 101.446 25.515C103.569 27.6383 104.631 30.0867 104.631 32.86C104.631 36.4567 103.417 39.1867 100.991 41.05C98.6073 42.87 95.249 43.78 90.9156 43.78C86.6256 43.78 83.029 42.6533 80.1256 40.4L81.6856 38.125C84.6323 40.1183 87.7523 41.115 91.0456 41.115C94.339 41.115 96.8956 40.4217 98.7156 39.035C100.579 37.6483 101.511 35.6983 101.511 33.185C101.511 31.0183 100.579 29.025 98.7156 27.205C97.4156 25.905 95.6606 24.4967 93.4506 22.98C91.284 21.4633 89.7673 20.38 88.9006 19.73C88.034 19.0367 87.0156 18.1267 85.8456 17C83.6356 14.79 82.5306 12.2333 82.5306 9.33C82.5306 6.42666 83.549 4.15166 85.5856 2.505C87.6656 0.858332 90.5256 0.0349991 94.1656 0.0349991C97.8056 0.0349991 101.077 0.749999 103.981 2.18L102.876 4.585C100.189 3.285 97.0906 2.635 93.5806 2.635ZM118.693 28.375L112.648 43H109.593L127.273 0.554996H129.028L146.838 43H143.523L137.413 28.375H118.693ZM127.988 5.365C127.338 7.315 126.753 8.94 126.233 10.24L119.733 25.84H136.373L129.938 10.305C128.942 7.87833 128.292 6.23166 127.988 5.365Z",
-        fill: "#3e2e29"
+        d: "M35.9589 43.231C35.9149 43.0507 35.9447 42.8081 36.0321 42.4887C37.0426 31.3552 33.0823 30.3079 31.4619 30.3216C27.2861 30.3568 27.1114 40.1637 26.5309 45.3885C25.392 42.5448 16.6757 36.1181 14.1495 35.7972C10.7628 35.2419 10.5698 39.249 12.8606 40.844C8.24714 40.9169 9.33255 44.5636 10.9349 45.3309C11.6758 45.6857 12.4553 46.4383 25.0822 49.685C22.5798 49.0416 11.5751 51.2918 6.38558 52.4973C-0.966943 52.2579 0.38021 47.4335 2.08927 45.1131C-2.58435 38.0919 2.86536 36.5589 6.17442 36.6701C6.13346 36.4489 6.09873 36.2346 6.06997 36.0268C5.02274 28.4607 13.5077 30.2506 15.4972 31.2244C18.6024 32.7442 23.5995 37.1858 25.7021 41.4271C25.2309 39.5411 25.7752 38.402 24.6454 37.2522C19.9366 32.4597 18.5966 29.2679 18.5431 28.3586C17.8559 23.0807 23.184 24.0518 25.9339 25.197C25.4067 18.6959 30.6958 20.2195 33.4063 21.7939C37.8597 19.56 40.5279 24.0674 40.2635 26.1806C39.0162 36.1493 36.5424 40.6256 36.0321 42.4887C36.0101 42.7313 35.9857 42.9787 35.9589 43.231Z",
+        fill: "#FF6F9A"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("path", {
-        d: "M8.3 70V52.125H9.5V68.9H17.725V70H8.3ZM22.5313 63.8L19.9563 70H18.6813L26.2063 52H26.9063L34.4563 70H33.1063L30.5313 63.8H22.5313ZM26.4813 54C26.4646 54.0167 26.4313 54.1167 26.3813 54.3C26.1479 55.0167 25.9229 55.625 25.7063 56.125L22.9563 62.775H30.1063L27.3563 56.15C26.7729 54.8833 26.4813 54.1667 26.4813 54ZM63.401 69.15H62.726L58.001 57.675C57.801 57.225 57.601 56.7 57.401 56.1C57.401 56.1167 57.3843 56.2083 57.351 56.375C57.3343 56.5417 57.3093 56.7667 57.276 57.05C57.2426 57.3167 57.2093 57.5417 57.176 57.725L55.301 70H54.176L56.826 53.675H57.501L62.551 65.65C62.951 66.65 63.151 67.175 63.151 67.225C63.2676 66.875 63.4926 66.3583 63.826 65.675L69.451 53.675H70.126L72.601 70H71.401L69.626 57.675C69.5093 56.8583 69.451 56.3167 69.451 56.05L68.726 57.7L63.401 69.15ZM77.6965 64.375L75.3715 70H74.1965L80.9965 53.675H81.6715L88.5215 70H87.2465L84.8965 64.375H77.6965ZM81.2715 55.525C81.0215 56.275 80.7965 56.9 80.5965 57.4L78.0965 63.4H84.4965L82.0215 57.425C81.6382 56.4917 81.3882 55.8583 81.2715 55.525ZM91.8135 70V53.85C93.2468 53.7333 94.4635 53.675 95.4635 53.675C96.9968 53.675 98.2635 54.075 99.2635 54.875C100.263 55.6583 100.763 56.7833 100.763 58.25C100.763 59.2333 100.48 60.1417 99.9135 60.975C99.3468 61.8083 98.7051 62.4833 97.9885 63C99.9718 65.6333 101.197 67.2083 101.663 67.725C102.613 68.7083 103.647 69.2667 104.763 69.4L104.738 70.175C103.805 70.1583 103.047 70.025 102.463 69.775C101.88 69.5083 101.297 69.0667 100.713 68.45C100.147 67.8333 98.8885 66.175 96.9385 63.475C95.5885 63.475 94.2635 63.4333 92.9635 63.35V70H91.8135ZM96.3135 62.525C96.9635 62.525 97.6635 62.0917 98.4135 61.225C99.1635 60.3583 99.5385 59.35 99.5385 58.2C99.5385 57.05 99.1468 56.175 98.3635 55.575C97.5801 54.975 96.5635 54.675 95.3135 54.675C94.6468 54.675 93.8635 54.7083 92.9635 54.775V62.4C94.1635 62.4833 95.2801 62.525 96.3135 62.525ZM107.023 70V53.775H108.173V70H107.023ZM114.177 70V53.675H114.727L125.377 65.925C125.76 66.3583 126.11 66.7917 126.427 67.225C126.76 67.6417 126.935 67.8583 126.952 67.875C126.918 67.475 126.902 66.6917 126.902 65.525V53.775H128.052V70.1H127.502L116.652 57.65L115.277 55.975C115.31 56.3083 115.327 57.0917 115.327 58.325V70H114.177ZM134.85 64.375L132.525 70H131.35L138.15 53.675H138.825L145.675 70H144.4L142.05 64.375H134.85ZM138.425 55.525C138.175 56.275 137.95 56.9 137.75 57.4L135.25 63.4H141.65L139.175 57.425C138.791 56.4917 138.541 55.8583 138.425 55.525Z",
-        fill: "#3e2e29"
+        d: "M16.8148 57.1104C19.9464 55.9196 25.3295 52.4078 27.616 50.7223C22.7488 55.4752 19.6473 59.6447 19.0567 61.3963C16.0787 70.2282 26.4527 71.6536 28.9777 64.1655C30.1674 59.3632 31.7777 56.3923 32.4341 55.5071C31.0744 60.8135 31.8487 63.9786 32.4058 64.8978C35.2014 70.1107 35.5439 73.273 35.3657 74.2026C33.8871 81.9153 27.1914 76.4815 25.8746 73.3681C16.2689 79.7743 14.9477 72.8643 15.4877 68.6085C7.41234 69.9099 5.777 61.8789 7.65 59.8982C9.1484 58.3137 14.9955 57.5518 16.8148 57.1104Z",
+        fill: "#FF6F9A"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("path", {
+        d: "M36.1573 55.355C36.0303 55.3755 35.9226 55.3847 35.8341 55.3844C35.9378 55.375 36.0457 55.3652 36.1573 55.355C37.5203 55.1356 41.1086 53.6263 47.0082 48.7993C53.4577 43.5223 53.6145 43.7804 54.2918 43.5979C56.5735 43.4059 60.5696 44.3384 58.3011 49.6051C61.9507 50.4209 67.1434 53.6023 58.7178 59.8015C60.4853 62.3883 62.2607 68.083 55.2226 70.1675C48.1844 72.2521 37.6588 62.3186 33.2757 57.0912C36.2429 59.103 42.6474 62.6838 43.3445 62.952C44.2494 63.3 45.7145 64.0685 50.1084 62.4697C53.6236 61.1907 53.8395 57.6136 52.5482 56.0375C51.9084 55.2565 49.9143 53.5269 47.7607 53.9822C45.6796 54.4221 39.3584 55.0618 36.1573 55.355Z",
+        fill: "#FF6F9A"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("path", {
+        d: "M48.568 19.0371C48.7586 19.7592 51.7972 21.396 52.8672 21.9065L52.2811 24.0048C51.8622 23.6059 50.9685 22.6888 50.7454 22.2106C50.5223 21.7324 50.0935 21.8114 49.9069 21.9107C49.7903 22.035 49.6268 22.3583 49.906 22.6574C50.1853 22.9564 50.5814 22.9819 50.7445 22.9572C51.1915 23.3163 51.8148 24.253 52.0706 24.6764L51.6485 26.7665C51.1597 26.3427 50.1961 25.4503 50.2522 25.2711C50.3224 25.0473 49.4372 24.1529 49.2041 24.8963C49.0177 25.4911 49.6922 25.8182 50.0528 25.9074L51.5774 27.737L50.8745 30.7226C50.4091 30.2242 49.4785 29.078 49.4792 28.4806C49.48 27.8833 49.0621 27.8613 48.853 27.925C48.6425 27.9603 48.2353 28.1354 48.2907 28.5536C48.3461 28.9718 48.6863 29.027 48.8494 29.0024L50.5516 31.6031C50.0603 33.1703 47.7976 38.474 45.2689 41.1676C41.7689 44.8959 41.49 44.2981 40.7208 44.521C35.6879 44.2151 33.4347 44.7097 33.1705 44.8088C28.4145 46.5939 30.7859 50.9279 33.6515 51.4547C34.3127 51.5763 36.6564 52.2803 39.9677 49.5677C41.2295 48.5341 44.2322 44.8921 45.5586 42.8887C48.5574 38.8577 49.1155 37.3128 50.0985 35.4249C51.3271 33.0652 52.1306 29.574 52.3173 29.1639C52.4667 28.8358 53.5238 28.4964 54.0336 28.3677C54.3699 28.5329 55.0796 28.5921 54.9051 27.9362C54.7402 27.3167 54.0582 27.5713 53.8691 27.8527L52.3325 28.2985L52.7767 26.8815L54.1853 26.0271C54.6494 25.8959 55.4042 25.5403 54.7108 25.168C54.0173 24.7956 53.7837 25.3651 53.7535 25.6965L52.8004 26.1746L53.6754 22.1955C55.1819 22.1394 55.9545 21.7544 56.128 21.5228C57.1507 19.8648 55.3287 19.3103 54.3805 19.3893C54.519 18.6751 54.422 17.2146 52.9258 17.0859C51.0555 16.9251 51.6703 18.2439 51.4994 18.1827C51.1456 18.0562 49.8568 17.4013 49.1976 17.7676C48.8256 17.9743 48.4108 18.4418 48.568 19.0371Z",
+        fill: "#FF6E9A"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("path", {
+        d: "M88.1283 49.7992C81.3685 49.8483 75.5453 47.5939 70.6587 43.0359C65.7719 38.4346 63.3039 32.754 63.2548 25.9942C63.2054 19.191 65.2873 13.4774 69.5005 8.8534C73.7134 4.18602 79.1348 1.82827 85.7646 1.78013C90.9645 1.74238 96.2356 2.5708 101.578 4.26539L100.752 6.87145C95.5408 5.34925 90.5519 4.60545 85.7854 4.64006C80.1089 4.68127 75.4871 6.75155 71.9201 10.8509C68.3531 14.9502 66.591 19.9465 66.6338 25.8397C66.6766 31.7328 68.793 36.7443 72.9831 40.874C77.2162 44.96 82.2577 46.9818 88.1075 46.9393C93.2207 46.9022 97.635 46.0901 101.35 44.5031L102.341 46.706C100.702 47.6712 98.5403 48.4236 95.8574 48.9631C93.218 49.5023 90.6416 49.781 88.1283 49.7992ZM115.778 34.1931L109.84 48.8616L106.785 48.8838L124.156 6.31152L125.911 6.29878L144.029 48.6134L140.714 48.6374L134.498 34.0572L115.778 34.1931ZM124.906 11.1162C124.27 13.0709 123.697 14.7001 123.186 16.0038L116.8 31.6506L133.439 31.5298L126.892 16.0419C125.878 13.6225 125.216 11.9806 124.906 11.1162ZM160.809 8.12545C158.47 8.14244 156.567 8.7196 155.102 9.85694C153.637 10.9943 152.912 12.5812 152.926 14.6179C152.943 16.9578 153.934 19.0523 155.897 20.9015C157.293 22.2347 159.08 23.6518 161.258 25.1526C163.479 26.6099 165.003 27.6605 165.831 28.3045C166.659 28.9485 167.662 29.8296 168.84 30.9478C170.979 33.0556 172.058 35.4962 172.079 38.2694C172.105 41.866 170.911 44.6047 168.498 46.4856C166.128 48.3229 162.776 49.2573 158.443 49.2887C154.153 49.3199 150.549 48.2193 147.629 45.9871L149.172 43.7009C152.134 45.6728 155.261 46.6468 158.554 46.6228C161.847 46.5989 164.399 45.8871 166.209 44.4872C168.062 43.0871 168.979 41.1303 168.961 38.6171C168.945 36.4505 167.999 34.464 166.123 32.6575C164.813 31.367 163.048 29.9714 160.827 28.4709C158.65 26.97 157.125 25.8977 156.254 25.254C155.382 24.567 154.357 23.6644 153.179 22.5462C150.953 20.3523 149.829 17.8038 149.808 14.9005C149.787 11.9972 150.789 9.71491 152.814 8.0535C154.882 6.39178 157.736 5.5477 161.376 5.52128C165.015 5.49485 168.292 6.18608 171.206 7.59496L170.118 10.0079C167.422 8.72746 164.319 8.09997 160.809 8.12545ZM186.109 33.6825L180.17 48.351L177.115 48.3731L194.486 5.80089L196.241 5.78815L214.359 48.1027L211.044 48.1268L204.828 33.5465L186.109 33.6825ZM195.236 10.6056C194.6 12.5602 194.027 14.1894 193.517 15.4932L187.13 31.14L203.77 31.0192L197.222 15.5313C196.208 13.1119 195.546 11.47 195.236 10.6056ZM86.7404 76.03L86.6226 59.8054L87.7726 59.7971L87.8827 74.9717L95.3325 74.9176L95.3402 75.9676L86.7404 76.03ZM99.5109 70.3121L97.2268 75.9539L96.0519 75.9624L102.733 59.5885L103.408 59.5836L110.376 75.8584L109.102 75.8677L106.711 70.2599L99.5109 70.3121ZM103.022 61.4364C102.777 62.1882 102.557 62.8148 102.36 63.3163L99.9038 69.3343L106.304 69.2878L103.785 63.3309C103.395 62.4004 103.141 61.7689 103.022 61.4364ZM130.196 74.8645L129.521 74.8694L124.712 63.429C124.509 62.9805 124.305 62.4569 124.101 61.8584C124.101 61.8751 124.085 61.9668 124.053 62.1337C124.038 62.3005 124.014 62.5257 123.983 62.8093C123.951 63.0762 123.92 63.3014 123.888 63.485L122.102 75.7733L120.977 75.7814L123.508 59.4376L124.183 59.4327L129.32 71.3707C129.727 72.3678 129.931 72.8913 129.932 72.9413C130.046 72.5905 130.267 72.0722 130.595 71.3865L136.133 59.346L136.808 59.3411L139.402 75.6477L138.202 75.6564L136.337 63.3446C136.215 62.5288 136.152 61.9876 136.15 61.7209L135.437 63.3761L130.196 74.8645ZM144.456 69.9858L142.172 75.6275L140.997 75.6361L147.678 59.2621L148.353 59.2572L155.322 75.5321L154.047 75.5413L151.656 69.9335L144.456 69.9858ZM147.967 61.1101C147.722 61.8619 147.502 62.4885 147.305 62.9899L144.849 69.0079L151.249 68.9615L148.73 63.0046C148.34 62.0741 148.086 61.4426 147.967 61.1101ZM158.614 75.5082L158.496 59.3586C159.929 59.2315 161.145 59.1644 162.145 59.1571C163.678 59.146 164.948 59.5368 165.953 60.3295C166.959 61.1055 167.467 62.2269 167.478 63.6935C167.485 64.6768 167.208 65.5872 166.648 66.4246C166.087 67.262 165.45 67.9417 164.738 68.4635C166.74 71.0824 167.976 72.6485 168.447 73.1617C169.404 74.1381 170.441 74.6889 171.559 74.8142L171.539 75.5893C170.606 75.5794 169.847 75.4516 169.262 75.2059C168.676 74.9434 168.09 74.506 167.502 73.8936C166.931 73.2811 165.661 71.6319 163.691 68.9461C162.341 68.9559 161.016 68.9239 159.715 68.85L159.763 75.4998L158.614 75.5082ZM163.059 68.0007C163.709 67.996 164.406 67.5576 165.15 66.6855C165.893 65.8134 166.261 64.8024 166.253 63.6524C166.244 62.5024 165.846 61.6303 165.059 61.036C164.271 60.4417 163.252 60.1491 162.002 60.1582C161.335 60.163 160.552 60.202 159.653 60.2752L159.708 67.9C160.909 67.9746 162.026 68.0082 163.059 68.0007ZM173.823 75.3977L173.705 59.1732L174.855 59.1648L174.973 75.3894L173.823 75.3977ZM180.976 75.3458L180.858 59.0212L181.408 59.0172L192.146 71.1896C192.533 71.6201 192.886 72.0509 193.206 72.4819C193.542 72.8962 193.719 73.1116 193.735 73.1281C193.699 72.7284 193.677 71.9452 193.668 70.7785L193.583 59.0289L194.733 59.0205L194.852 75.3451L194.302 75.3491L183.361 62.9782L181.974 61.3132C182.01 61.6463 182.032 62.4295 182.041 63.6628L182.126 75.3375L180.976 75.3458ZM201.608 69.5709L199.324 75.2126L198.149 75.2211L204.83 58.8472L205.505 58.8423L212.473 75.1171L211.198 75.1264L208.808 69.5186L201.608 69.5709ZM205.119 60.6951C204.874 61.4469 204.654 62.0736 204.457 62.575L202.001 68.593L208.401 68.5465L205.882 62.5897C205.492 61.6591 205.238 61.0276 205.119 60.6951Z",
+        fill: "#433535"
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
       className: _NavBar_module_css__WEBPACK_IMPORTED_MODULE_3__["default"].hamburgerMenu,
@@ -6475,11 +6530,12 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\n.HSaiuel0n-lwezzLipBedA\\=\\= {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    gap: 5rem;\n    color: #727374;\n    padding-top: 1rem;\n}\n\nh2 {\n    font-family: Julius;\n}\n\nform {\n    display: flex;\n    flex-direction: column;\n    width: 30%;\n    gap: 0.2rem;\n}\n\ninput {\n    border: 1px solid #dcd0d0;\n    box-shadow: none;\n    border-top: none;\n    border-left: none;\n    border-right: none;\n}\n\ninput[type=\"text\"] {\n    font-family: Julius;\n    padding: 0.5rem;\n}\n\nselect {\n    font-family: Julius;\n    color: #727374;\n    border: 1px solid #dcd0d0;\n    box-shadow: none;\n    border-top: none;\n    border-left: none;\n    border-right: none;\n    padding: 0.5rem;\n}\n\nbutton {\n    background-color: #dcd0d0;\n    align-self: center;\n    width: 50%;\n    border: none;\n    border-radius: 50px 0 100px 50px;\n    padding: 0.3rem;\n    color: white;\n    font-family: Julius;\n    margin-top: 10%;\n}\n\n.XM59B36MCbIntEiYJsWEMA\\=\\= {\n    width: 100%;\n    display: flex;\n    justify-content: center;\n    flex-direction: column;\n    text-align: center;\n    font-family: Roboto-Thin;\n    font-size: 0.8rem;\n    gap: 3rem;\n}\n.vX8rd\\+9bzmxcpN2i\\+wsdsA\\=\\= {\n    text-align: center;\n    font-family: sans-serif;\n    color: rgb(255, 108, 108);\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\n.HSaiuel0n-lwezzLipBedA\\=\\= {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    color: #727374;\n    padding-top: 5rem;\n}\n\nh2 {\n    font-family: Julius;\n}\n\nform {\n    display: flex;\n    flex-direction: column;\n    width: 30%;\n    gap: 0.2rem;\n    margin-left: 2rem;\n    margin-top: 2rem;\n}\n\ninput {\n    border: 1px solid #dcd0d0;\n    box-shadow: none;\n    border-top: none;\n    border-left: none;\n    border-right: none;\n}\n\ninput[type=\"text\"] {\n    font-family: Julius;\n    padding: 0.5rem;\n}\n\nselect {\n    font-family: Julius;\n    color: #727374;\n    border: 1px solid #dcd0d0;\n    box-shadow: none;\n    border-top: none;\n    border-left: none;\n    border-right: none;\n    padding: 0.5rem;\n}\n\nbutton {\n    background-color: #dcd0d0;\n    align-self: left;\n    width: 50%;\n    border: none;\n    border-radius: 50px 0 100px 50px;\n    padding: 0.3rem;\n    color: white;\n    font-family: Julius;\n    margin-top: 10%;\n}\n\n.XM59B36MCbIntEiYJsWEMA\\=\\= {\n    width: 100%;\n    display: flex;\n    justify-content: center;\n    flex-direction: column;\n    text-align: center;\n    font-family: Roboto-Thin;\n    font-size: 0.8rem;\n    gap: 3rem;\n}\n\n.XM59B36MCbIntEiYJsWEMA\\=\\= button {\n    background-color: #6e6969 !important;\n}\n\n.Upfu\\+Ru3CaQ2SSPo-Ck7Bw\\=\\= {\n    width: 100%;\n    display: flex;\n    justify-content: center;\n    font-family: Roboto-Thin;\n    padding-top: 3rem;\n}\n\n.vX8rd\\+9bzmxcpN2i\\+wsdsA\\=\\= {\n    text-align: center;\n    font-family: sans-serif;\n    color: rgb(255, 108, 108);\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"fullpageContainer": "HSaiuel0n-lwezzLipBedA==",
 	"buttonContainer": "XM59B36MCbIntEiYJsWEMA==",
+	"rules": "Upfu+Ru3CaQ2SSPo-Ck7Bw==",
 	"errorMessage": "vX8rd+9bzmxcpN2i+wsdsA=="
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
@@ -6504,7 +6560,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\nbody {\n    font-family: Roboto-Thin;\n}\n\n.WHjbWmiU1IiXC2bKa6wetw\\=\\= {\n    display: flex;\n    justify-content: center;\n}\n\n/* container som håller hela sidan */\n.bArZ17oPD7EX8SO\\+wwoFJA\\=\\= {\n    display: grid;\n    grid-template-columns: 48% 48%;\n    justify-content: center;\n    gap: 2rem 5rem;\n    height: 85vh;\n    padding: 1rem;\n    margin-bottom: 10%;\n}\n\n/* container som håller varje enskilt rum och dess info */\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= {\n    display: flex;\n    flex-direction: column;\n    width: 50%;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= h2 {\n    font-family: Julius;\n    font-size: 1rem;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= p {\n    font-size: 0.9rem;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= img {\n    width: 100%;\n}\n\n/* styling för knapparna */\n.ldUC95G-xUa6ZcAXb49yow\\=\\= {\n    background-color: #dcd0d0;\n    display: flex;\n    justify-content: center;\n    padding: 0.2rem;\n    margin-top: 2rem;\n}\n\n.EJBYWyp\\+GUZGYgfz7UeSGw\\=\\= {\n    font-size: 0.9rem;\n    font-family: Julius;\n    color: white;\n    padding: 0.1rem;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\=:first-child .ldUC95G-xUa6ZcAXb49yow\\=\\= {\n    border-radius: 50px 100px 0 50px;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\=:nth-child(2) .ldUC95G-xUa6ZcAXb49yow\\=\\= {\n    border-radius: 0 50px 50px 100px;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\=:nth-child(3) .ldUC95G-xUa6ZcAXb49yow\\=\\= {\n    border-radius: 50px 0 100px 50px;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\=:nth-child(4) .ldUC95G-xUa6ZcAXb49yow\\=\\= {\n    border-radius: 100px 50px 50px 0;\n}\n\n/* container som håller varje enskilt rum men har en större width för att få en mörkare bakgrund bakom vissa rum */\n.WrX3i4N-HUqi1ymL3N7Ojg\\=\\= {\n    background-color: #fbf6f3;\n}\n\n.WrX3i4N-HUqi1ymL3N7Ojg\\=\\=:first-child {\n    background-color: rgb(255, 255, 255);\n    display: flex;\n    justify-content: right;\n}\n\n.WrX3i4N-HUqi1ymL3N7Ojg\\=\\=:nth-child(3) {\n    background-color: #fbf6f3;\n    display: flex;\n    justify-content: right;\n}\n\n.WrX3i4N-HUqi1ymL3N7Ojg\\=\\=:last-child {\n    background-color: #ffffff;\n}\n\n/* //test */\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\nbody {\n    font-family: Roboto-Thin;\n}\n\n.WHjbWmiU1IiXC2bKa6wetw\\=\\= {\n    display: flex;\n    justify-content: center;\n}\n\n/* container som håller hela sidan */\n.bArZ17oPD7EX8SO\\+wwoFJA\\=\\= {\n    display: grid;\n    grid-template-columns: 48% 48%;\n    justify-content: center;\n    gap: 2rem 5rem;\n    height: 85vh;\n    padding: 1rem;\n    margin-bottom: 10%;\n}\n\n/* container som håller varje enskilt rum och dess info */\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= {\n    display: flex;\n    flex-direction: column;\n    width: 50%;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= h2 {\n    font-family: Julius;\n    font-size: 1rem;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= p {\n    font-size: 0.9rem;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= img {\n    width: 100%;\n}\n\n/* styling för knapparna */\n.ldUC95G-xUa6ZcAXb49yow\\=\\= {\n    background-color: #dcd0d0;\n    display: flex;\n    justify-content: center;\n    padding: 0.2rem;\n    margin-top: 2rem;\n}\n\n.ldUC95G-xUa6ZcAXb49yow\\=\\=:hover {\n    background-color: #ff6f9a;\n}\n\n.EJBYWyp\\+GUZGYgfz7UeSGw\\=\\= {\n    font-size: 0.9rem;\n    font-family: Julius;\n    color: white;\n    padding: 0.1rem;\n}\n\n.ldUC95G-xUa6ZcAXb49yow\\=\\= {\n    border-radius: 50px 100px 0 50px;\n}\n\n/* .roomContainer:nth-child(2) .linkContainer {\n    border-radius: 0 50px 50px 100px;\n}\n\n.roomContainer:nth-child(3) .linkContainer {\n    border-radius: 50px 0 100px 50px;\n}\n\n.roomContainer:nth-child(4) .linkContainer {\n    border-radius: 100px 50px 50px 0;\n} */\n\n/* container som håller varje enskilt rum men har en större width för att få en mörkare bakgrund bakom vissa rum */\n.WrX3i4N-HUqi1ymL3N7Ojg\\=\\= {\n    background-color: #d3d2cf45;\n}\n\n.WrX3i4N-HUqi1ymL3N7Ojg\\=\\=:first-child {\n    background-color: rgb(255, 255, 255);\n    display: flex;\n    justify-content: right;\n}\n\n.WrX3i4N-HUqi1ymL3N7Ojg\\=\\=:nth-child(3) {\n    background-color: #d3d2cf45;\n    display: flex;\n    justify-content: right;\n}\n\n.WrX3i4N-HUqi1ymL3N7Ojg\\=\\=:last-child {\n    background-color: #ffffff;\n}\n\n/* //test */\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"fullPageontainer": "WHjbWmiU1IiXC2bKa6wetw==",
@@ -6602,6 +6658,34 @@ ___CSS_LOADER_EXPORT___.locals = {
 	"bgVideo": "_4USzpIOJSIJ-abx07L2ZuQ==",
 	"content": "Esszq93d-43raJAL6-zqsg==",
 	"infoText": "E78Lg+vvbPmKumJqowKcsQ=="
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/components/Footer/Footer.module.css":
+/*!********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/components/Footer/Footer.module.css ***!
+  \********************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\n@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n.rkT4cAwgqzlmUavoEGU5dA\\=\\= {\n    width: 100%;\n    display: flex;\n    justify-content: center;\n    background-color: #aeaaa245;\n    flex-direction: column;\n    margin: 0;\n    align-items: center;\n    padding-top: 1rem;\n    padding-bottom: 1rem;\n}\np {\n    margin: 0;\n    font-size: 12px;\n    color: rgb(42, 36, 26);\n    font-family: Roboto-Thin;\n}\n\n.HmgCxTqfG\\+FOpoGNCkBSjA\\=\\= {\n    font-family: Julius;\n    padding-bottom: 0.5rem;\n}\n", ""]);
+// Exports
+___CSS_LOADER_EXPORT___.locals = {
+	"footer": "rkT4cAwgqzlmUavoEGU5dA==",
+	"name": "HmgCxTqfG+FOpoGNCkBSjA=="
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -59387,6 +59471,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_home_module_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./resources/js/components/Footer/Footer.module.css":
+/*!**********************************************************!*\
+  !*** ./resources/js/components/Footer/Footer.module.css ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_Footer_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../../../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./Footer.module.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/components/Footer/Footer.module.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_Footer_module_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_Footer_module_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 

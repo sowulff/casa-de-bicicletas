@@ -12,9 +12,8 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 5rem;
     color: #727374;
-    padding-top: 1rem;
+    padding-top: 5rem;
 }
 
 h2 {
@@ -26,6 +25,8 @@ form {
     flex-direction: column;
     width: 30%;
     gap: 0.2rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
 }
 
 input {
@@ -54,7 +55,7 @@ select {
 
 button {
     background-color: #dcd0d0;
-    align-self: center;
+    align-self: left;
     width: 50%;
     border: none;
     border-radius: 50px 0 100px 50px;
@@ -74,6 +75,19 @@ button {
     font-size: 0.8rem;
     gap: 3rem;
 }
+
+.buttonContainer button {
+    background-color: #6e6969 !important;
+}
+
+.rules {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: Roboto-Thin;
+    padding-top: 3rem;
+}
+
 .errorMessage {
     text-align: center;
     font-family: sans-serif;

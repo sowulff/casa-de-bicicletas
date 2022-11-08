@@ -134,12 +134,15 @@ export default function selectDates({ room, bookings, rooms }) {
 
                     <div className={styles.buttonContainer}>
                         <button type="submit">BOKA NU!</button>
-                        <p>
-                            AVBOKNINGSREGLER: Här står det vad som gäller för
-                            avbokning och kanske även hur man betalar
-                        </p>
                     </div>
                 </form>
+            </div>
+            <div className={styles.rules}>
+                <p>
+                    AVBOKNINGSREGLER: Här står det vad som gäller för avbokning
+                    och kanske även hur man betalar lite mer tect hehehe kanske
+                    kanske
+                </p>
             </div>
         </div>
     );
