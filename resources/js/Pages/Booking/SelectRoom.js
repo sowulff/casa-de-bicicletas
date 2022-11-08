@@ -2,6 +2,7 @@ import { Link } from "@inertiajs/inertia-react";
 import NavBar from "../../components/NavBar/NavBar";
 import { useForm } from "@inertiajs/inertia-react";
 import styles from "./selectRoom.module.css";
+import Footer from "../../components/Footer/Footer";
 
 export default function selectRoom({ rooms }) {
     const { data, setData, post } = useForm({
@@ -51,6 +52,7 @@ export default function selectRoom({ rooms }) {
                     })}
                 </div>
             </div>
+            <Footer />
         </div>
     );
 }
