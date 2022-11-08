@@ -94,3 +94,10 @@ button {
     font-family: Roboto-Thin;
     padding-top: 3rem;
 }
+
+.errorMessage {
+    text-align: center;
+    font-family: sans-serif;
+
+    color: rgb(255, 108, 108);
+}
