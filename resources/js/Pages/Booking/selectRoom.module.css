@@ -82,7 +82,7 @@ body {
 
 /* container som håller varje enskilt rum men har en större width för att få en mörkare bakgrund bakom vissa rum */
 .coloredContainer {
-    background-color: #fbf6f3;
+    background-color: #d3d2cf45;
 }
 
 .coloredContainer:first-child {
@@ -92,7 +92,7 @@ body {
 }
 
 .coloredContainer:nth-child(3) {
-    background-color: #fbf6f3;
+    background-color: #d3d2cf45;
     display: flex;
     justify-content: right;
 }
