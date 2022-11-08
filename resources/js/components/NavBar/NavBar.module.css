@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0rem 2rem 1rem 2rem;
+    padding: 2rem 2rem 1rem 2rem;
 }
 .navLinks {
     display: flex;
@@ -17,6 +17,12 @@
 a {
     text-decoration: none;
     color: #3e2e29;
+}
+.navBar a:hover {
+    border-bottom: 1px solid#3e2e29;
+}
+.logo:hover {
+    border-bottom: none;
 }
 .hamburgerMenu {
     display: none;

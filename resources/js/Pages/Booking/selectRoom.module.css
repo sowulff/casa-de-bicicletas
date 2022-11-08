@@ -20,19 +20,18 @@ body {
 /* container som håller hela sidan */
 .container {
     display: grid;
-    grid-template-columns: 48% 48%;
+    grid-template-columns: 1fr 1fr;
     justify-content: center;
     gap: 2rem 5rem;
-    height: 85vh;
+
     padding: 1rem;
-    margin-bottom: 10%;
 }
 
 /* container som håller varje enskilt rum och dess info */
 .roomContainer {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 35%;
 }
 
 .roomContainer h2 {

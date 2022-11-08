@@ -24,11 +24,7 @@ export default function selectRoom({ rooms }) {
                             <div className={styles.coloredContainer}>
                                 <div className={styles.roomContainer}>
                                     <div value={data.room_id} key={room.id}>
-                                        <img
-                                            width={100}
-                                            src={room.image}
-                                            alt="img"
-                                        />
+                                        <img src={room.image} alt="img" />
                                         <h2>{room.name}</h2>
                                         <p>{room.description}</p>
                                         <p>{room.price + " kr"}</p>
