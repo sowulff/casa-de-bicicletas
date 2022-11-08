@@ -31,9 +31,6 @@ export default function selectDates({ room, bookings, rooms }) {
     const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
     const diffDays = Math.round(Math.abs((endDate - startDate) / oneDay));
     const totalPrice = diffDays * rooms[0].price;
-    if (startDate != null && endDate != null) {
-        console.log(totalPrice);
-    }
 
     // resten
     const { data, setData, post } = useForm({
@@ -125,7 +122,11 @@ export default function selectDates({ room, bookings, rooms }) {
                         <option value="4">4</option>
                     </select>
 
-                    <h2>Totalpris: {totalPrice}kr</h2>
+                    <h2>
+                        Totalpris:
+                        {endDate != null && <span>{totalPrice} kr</span>}
+                    </h2>
+
                     <div className={styles.buttonContainer}>
                         <button type="submit">BOKA NU!</button>
                         <p>

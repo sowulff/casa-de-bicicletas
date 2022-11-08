@@ -5568,12 +5568,7 @@ function selectDates(_ref) {
   var oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
 
   var diffDays = Math.round(Math.abs((endDate - startDate) / oneDay));
-  var totalPrice = diffDays * rooms[0].price;
-
-  if (startDate != null && endDate != null) {
-    console.log(totalPrice);
-  } // resten
-
+  var totalPrice = diffDays * rooms[0].price; // resten
 
   var _useForm = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.useForm)({
     first_name: "",
@@ -5677,7 +5672,9 @@ function selectDates(_ref) {
             children: "4"
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("h2", {
-          children: ["Totalpris: ", totalPrice, "kr"]
+          children: ["Totalpris:", endDate != null && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("span", {
+            children: [totalPrice, " kr"]
+          })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
           className: _selectDates_module_css__WEBPACK_IMPORTED_MODULE_5__["default"].buttonContainer,
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
