@@ -81,3 +81,9 @@ button {
     font-size: 0.8rem;
     gap: 3rem;
 }
+.errorMessage {
+    text-align: center;
+    font-family: sans-serif;
+
+    color: rgb(255, 108, 108);
+}
