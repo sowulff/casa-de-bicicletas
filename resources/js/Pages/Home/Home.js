@@ -21,13 +21,13 @@ export default function Welcome() {
             <NavBar />
             <div className={styles.infoText}>
                 <p>
-                    Hyr rum, lägenhet eller ställplats i hjärtat av Spanien. Det
-                    kan stå lite mer text men jag är för trött för att komma på
-                    någon bra just nu Lite mer text skulle det kunna vara eller
-                    vad tror du. Hyr rum, lägenhet eller ställplats i hjärtat av
-                    Spanien. Det kan stå lite mer text men jag är för trött för
-                    att komma på någon bra just nu Lite mer text skulle det
-                    kunna vara eller vad tror du.{" "}
+                    Mi casa es zu casa, som spanjorerna säger. På Casa la Marina
+                    bor ni i en hemtrevlig miljö med många sociala ytor. Pingis,
+                    biljard eller ett dopp i den uppvärmda poolen kanske lockar?
+                    Stora sanitetsutrymmen med tvättmaskiner och torktumlare
+                    finns också att låna. De lummiga planteringarna ger ett
+                    rofyllt intryck i Spaniens behagliga klimat. Varmt välkomna
+                    till vår lilla oas.
                 </p>
             </div>
         </div>

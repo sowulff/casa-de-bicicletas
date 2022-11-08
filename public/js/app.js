@@ -6064,8 +6064,8 @@ function Welcome() {
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
       className: _home_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].infoText,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
-        children: ["Hyr rum, l\xE4genhet eller st\xE4llplats i hj\xE4rtat av Spanien. Det kan st\xE5 lite mer text men jag \xE4r f\xF6r tr\xF6tt f\xF6r att komma p\xE5 n\xE5gon bra just nu Lite mer text skulle det kunna vara eller vad tror du. Hyr rum, l\xE4genhet eller st\xE4llplats i hj\xE4rtat av Spanien. Det kan st\xE5 lite mer text men jag \xE4r f\xF6r tr\xF6tt f\xF6r att komma p\xE5 n\xE5gon bra just nu Lite mer text skulle det kunna vara eller vad tror du.", " "]
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+        children: "Mi casa es zu casa, som spanjorerna s\xE4ger. P\xE5 Casa la Marina bor ni i en hemtrevlig milj\xF6 med m\xE5nga sociala ytor. Pingis, biljard eller ett dopp i den uppv\xE4rmda poolen kanske lockar? Stora sanitetsutrymmen med tv\xE4ttmaskiner och torktumlare finns ocks\xE5 att l\xE5na. De lummiga planteringarna ger ett rofyllt intryck i Spaniens behagliga klimat. Varmt v\xE4lkomna till v\xE5r lilla oas."
       })
     })]
   });
