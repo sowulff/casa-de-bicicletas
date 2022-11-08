@@ -33,7 +33,7 @@ export default function selectDates({ room, bookings, rooms }) {
     const totalPrice = diffDays * rooms[0].price;
 
     // resten
-    const { data, setData, post } = useForm({
+    const { data, setData, post, errors } = useForm({
         first_name: "",
         last_name: "",
         email: "",
@@ -43,7 +43,8 @@ export default function selectDates({ room, bookings, rooms }) {
         start_date: "",
         end_date: "",
     });
-
+    const errorMessage = errors[Object.keys(errors)[0]];
+    console.log(errors);
     function submit(e) {
         e.preventDefault();
         post("/upload");
@@ -78,10 +79,14 @@ export default function selectDates({ room, bookings, rooms }) {
                     selectsRange
                     inline
                     locale="sv"
-                    calendarClassName="rasta-stripes"
                 />
-
                 <form onSubmit={submit}>
+                    {errors && (
+                        <div className={styles.errorMessage}>
+                            {errorMessage}
+                        </div>
+                    )}
+
                     <input
                         type="text"
                         value={data.first_name}

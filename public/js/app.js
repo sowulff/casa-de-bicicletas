@@ -5584,7 +5584,11 @@ function selectDates(_ref) {
   }),
       data = _useForm.data,
       setData = _useForm.setData,
-      post = _useForm.post;
+      post = _useForm.post,
+      errors = _useForm.errors;
+
+  var errorMessage = errors[Object.keys(errors)[0]];
+  console.log(errors);
 
   function submit(e) {
     e.preventDefault();
@@ -5619,11 +5623,13 @@ function selectDates(_ref) {
         minDate: new Date(),
         selectsRange: true,
         inline: true,
-        locale: "sv",
-        calendarClassName: "rasta-stripes"
+        locale: "sv"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("form", {
         onSubmit: submit,
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("input", {
+        children: [errors && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+          className: _selectDates_module_css__WEBPACK_IMPORTED_MODULE_5__["default"].errorMessage,
+          children: errorMessage
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("input", {
           type: "text",
           value: data.first_name,
           onChange: function onChange(e) {
@@ -6522,11 +6528,12 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\n.HSaiuel0n-lwezzLipBedA\\=\\= {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    gap: 5rem;\n    color: #727374;\n    padding-top: 1rem;\n}\n\nh2 {\n    font-family: Julius;\n}\n\nform {\n    display: flex;\n    flex-direction: column;\n    width: 30%;\n    gap: 0.2rem;\n}\n\ninput {\n    border: 1px solid #dcd0d0;\n    box-shadow: none;\n    border-top: none;\n    border-left: none;\n    border-right: none;\n}\n\ninput[type=\"text\"] {\n    font-family: Julius;\n    padding: 0.5rem;\n}\n\nselect {\n    font-family: Julius;\n    color: #727374;\n    border: 1px solid #dcd0d0;\n    box-shadow: none;\n    border-top: none;\n    border-left: none;\n    border-right: none;\n    padding: 0.5rem;\n}\n\n/* hr {\n    width: 100%;\n    margin: 0;\n    height: 0.5px;\n    color: #dcd0d0;\n} */\n\nbutton {\n    background-color: #dcd0d0;\n    align-self: center;\n    width: 50%;\n    border: none;\n    border-radius: 50px 0 100px 50px;\n    padding: 0.3rem;\n    color: white;\n    font-family: Julius;\n    margin-top: 10%;\n}\n\n.XM59B36MCbIntEiYJsWEMA\\=\\= {\n    width: 100%;\n    display: flex;\n    justify-content: center;\n    flex-direction: column;\n    text-align: center;\n    font-family: Roboto-Thin;\n    font-size: 0.8rem;\n    gap: 3rem;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\n.HSaiuel0n-lwezzLipBedA\\=\\= {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    gap: 5rem;\n    color: #727374;\n    padding-top: 1rem;\n}\n\nh2 {\n    font-family: Julius;\n}\n\nform {\n    display: flex;\n    flex-direction: column;\n    width: 30%;\n    gap: 0.2rem;\n}\n\ninput {\n    border: 1px solid #dcd0d0;\n    box-shadow: none;\n    border-top: none;\n    border-left: none;\n    border-right: none;\n}\n\ninput[type=\"text\"] {\n    font-family: Julius;\n    padding: 0.5rem;\n}\n\nselect {\n    font-family: Julius;\n    color: #727374;\n    border: 1px solid #dcd0d0;\n    box-shadow: none;\n    border-top: none;\n    border-left: none;\n    border-right: none;\n    padding: 0.5rem;\n}\n\n/* hr {\n    width: 100%;\n    margin: 0;\n    height: 0.5px;\n    color: #dcd0d0;\n} */\n\nbutton {\n    background-color: #dcd0d0;\n    align-self: center;\n    width: 50%;\n    border: none;\n    border-radius: 50px 0 100px 50px;\n    padding: 0.3rem;\n    color: white;\n    font-family: Julius;\n    margin-top: 10%;\n}\n\n.XM59B36MCbIntEiYJsWEMA\\=\\= {\n    width: 100%;\n    display: flex;\n    justify-content: center;\n    flex-direction: column;\n    text-align: center;\n    font-family: Roboto-Thin;\n    font-size: 0.8rem;\n    gap: 3rem;\n}\n.vX8rd\\+9bzmxcpN2i\\+wsdsA\\=\\= {\n    text-align: center;\n    font-family: sans-serif;\n\n    color: rgb(255, 108, 108);\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"fullpageContainer": "HSaiuel0n-lwezzLipBedA==",
-	"buttonContainer": "XM59B36MCbIntEiYJsWEMA=="
+	"buttonContainer": "XM59B36MCbIntEiYJsWEMA==",
+	"errorMessage": "vX8rd+9bzmxcpN2i+wsdsA=="
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
