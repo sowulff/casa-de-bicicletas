@@ -5799,11 +5799,25 @@ __webpack_require__.r(__webpack_exports__);
 
 function Cycling() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      className: _cycling_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].infoText,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
-        children: "Cykling-sida "
-      })
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      className: _cycling_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].cardOne,
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+        src: "assets/galleri/3.JPG"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: _cycling_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].text,
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
+          children: "Dags f\xF6r cykelsemester?"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
+          children: "H\xE4r i n\xE4rheten hittar du bra cykling s\xE5v\xE4l mountainbike som landv\xE4gscykling. Hos oss kan man tryggt f\xF6rvara cyklarna och \xE4ven g\xF6ra rent dem i v\xE5r cykeltv\xE4tt."
+        })]
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      className: _cycling_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].cardTwo,
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+        src: "assets/cycling/3.JPG"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+        src: "assets/cycling/1.JPG"
+      })]
     })]
   });
 }
@@ -6461,7 +6475,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\n.HSaiuel0n-lwezzLipBedA\\=\\= {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    gap: 5rem;\n    color: #727374;\n    padding-top: 1rem;\n}\n\nh2 {\n    font-family: Julius;\n}\n\nform {\n    display: flex;\n    flex-direction: column;\n    width: 30%;\n    gap: 0.2rem;\n}\n\ninput {\n    border: 1px solid #dcd0d0;\n    box-shadow: none;\n    border-top: none;\n    border-left: none;\n    border-right: none;\n}\n\ninput[type=\"text\"] {\n    font-family: Julius;\n    padding: 0.5rem;\n}\n\nselect {\n    font-family: Julius;\n    color: #727374;\n    border: 1px solid #dcd0d0;\n    box-shadow: none;\n    border-top: none;\n    border-left: none;\n    border-right: none;\n    padding: 0.5rem;\n}\n\nbutton {\n    background-color: #dcd0d0;\n    align-self: center;\n    width: 50%;\n    border: none;\n    border-radius: 50px 0 100px 50px;\n    padding: 0.3rem;\n    color: white;\n    font-family: Julius;\n    margin-top: 10%;\n}\n\n.XM59B36MCbIntEiYJsWEMA\\=\\= {\n    width: 100%;\n    display: flex;\n    justify-content: center;\n    flex-direction: column;\n    text-align: center;\n    font-family: Roboto-Thin;\n    font-size: 0.8rem;\n    gap: 3rem;\n}\n.vX8rd\\+9bzmxcpN2i\\+wsdsA\\=\\= {\n    text-align: center;\n    font-family: sans-serif;\n    color: rgb(255, 108, 108);\n}\n/* DROPDOWN SELECT */\noption {\n    background-color: aqua;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\n.HSaiuel0n-lwezzLipBedA\\=\\= {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    gap: 5rem;\n    color: #727374;\n    padding-top: 1rem;\n}\n\nh2 {\n    font-family: Julius;\n}\n\nform {\n    display: flex;\n    flex-direction: column;\n    width: 30%;\n    gap: 0.2rem;\n}\n\ninput {\n    border: 1px solid #dcd0d0;\n    box-shadow: none;\n    border-top: none;\n    border-left: none;\n    border-right: none;\n}\n\ninput[type=\"text\"] {\n    font-family: Julius;\n    padding: 0.5rem;\n}\n\nselect {\n    font-family: Julius;\n    color: #727374;\n    border: 1px solid #dcd0d0;\n    box-shadow: none;\n    border-top: none;\n    border-left: none;\n    border-right: none;\n    padding: 0.5rem;\n}\n\nbutton {\n    background-color: #dcd0d0;\n    align-self: center;\n    width: 50%;\n    border: none;\n    border-radius: 50px 0 100px 50px;\n    padding: 0.3rem;\n    color: white;\n    font-family: Julius;\n    margin-top: 10%;\n}\n\n.XM59B36MCbIntEiYJsWEMA\\=\\= {\n    width: 100%;\n    display: flex;\n    justify-content: center;\n    flex-direction: column;\n    text-align: center;\n    font-family: Roboto-Thin;\n    font-size: 0.8rem;\n    gap: 3rem;\n}\n.vX8rd\\+9bzmxcpN2i\\+wsdsA\\=\\= {\n    text-align: center;\n    font-family: sans-serif;\n    color: rgb(255, 108, 108);\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"fullpageContainer": "HSaiuel0n-lwezzLipBedA==",
@@ -6522,9 +6536,13 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\nbody {\n    font-family: Roboto-Thin;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\nbody {\n    font-family: Roboto-Thin;\n}\n\nimg {\n    max-width: 50%;\n    height: auto;\n    vertical-align: middle;\n    display: inline-block;\n}\n.yxBVEuZU\\+J-mFIR5OW9npg\\=\\= {\n    display: flex;\n    align-items: center;\n    border-bottom: 0.5px solid black;\n    margin: 1rem;\n    padding: 1rem;\n}\n\n.yxBVEuZU\\+J-mFIR5OW9npg\\=\\= img {\n    max-width: 40%;\n}\n\n.HJiL-V\\+2l0oWersE3\\+CMpw\\=\\= {\n    display: flex;\n    gap: 1rem;\n    justify-content: flex-end;\n    border-bottom: 0.5px solid black;\n    margin: 1rem;\n    padding: 1rem;\n}\n.HJiL-V\\+2l0oWersE3\\+CMpw\\=\\= img {\n    max-width: 40%;\n}\n.K4Ua\\+pzFGZz439dkS2eGww\\=\\= {\n    padding: 3rem;\n}\n", ""]);
 // Exports
-___CSS_LOADER_EXPORT___.locals = {};
+___CSS_LOADER_EXPORT___.locals = {
+	"cardOne": "yxBVEuZU+J-mFIR5OW9npg==",
+	"cardTwo": "HJiL-V+2l0oWersE3+CMpw==",
+	"text": "K4Ua+pzFGZz439dkS2eGww=="
+};
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 
