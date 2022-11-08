@@ -2,14 +2,12 @@ import { Link } from "@inertiajs/inertia-react";
 import { useForm } from "@inertiajs/inertia-react";
 import React, { useState } from "react";
 import dateFormat from "dateformat";
-
 import NavBar from "../../components/NavBar/NavBar";
-
 import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { registerLocale, setDefaultLocale } from "react-datepicker";
 import sv from "date-fns/locale/sv";
-
+import styles from "./selectDates.module.css";
 registerLocale("sv", sv);
 
 export default function selectDates({ room, bookings }) {
@@ -73,20 +71,20 @@ export default function selectDates({ room, bookings }) {
     return (
         <div>
             <NavBar />
-            <p>Tillgängliga datum för {room.name}:</p>
-            <ReactDatePicker
-                selected={startDate}
-                onChange={onChange}
-                startDate={startDate}
-                endDate={endDate}
-                excludeDates={disableDates.flat()}
-                minDate={new Date()}
-                selectsRange
-                inline
-                locale="sv"
-                calendarClassName="rasta-stripes"
-            />
-            {/* <Calendar
+            <div className={styles.fullpageContainer}>
+                <ReactDatePicker
+                    selected={startDate}
+                    onChange={onChange}
+                    startDate={startDate}
+                    endDate={endDate}
+                    excludeDates={disableDates.flat()}
+                    minDate={new Date()}
+                    selectsRange
+                    inline
+                    locale="sv"
+                    calendarClassName="rasta-stripes"
+                />
+                {/* <Calendar
                 selectRange={true}
                 onChange={onChange}
                 value={value}
@@ -106,50 +104,56 @@ export default function selectDates({ room, bookings }) {
                         .includes(format(date.date, "y-M-dd"));
                 }}
             /> */}
-            <form onSubmit={submit}>
-                <input
-                    type="text"
-                    value={data.first_name}
-                    onChange={(e) => setData("first_name", e.target.value)}
-                    placeholder="Förnamn"
-                />
+                <form onSubmit={submit}>
+                    <input
+                        type="text"
+                        value={data.first_name}
+                        onChange={(e) => setData("first_name", e.target.value)}
+                        placeholder="Förnamn"
+                    />
 
-                <input
-                    type="text"
-                    value={data.last_name}
-                    onChange={(e) => setData("last_name", e.target.value)}
-                    placeholder="Efternamn"
-                />
-                <input
-                    type="text"
-                    value={data.email}
-                    onChange={(e) => setData("email", e.target.value)}
-                    placeholder="E-post"
-                />
-                <input
-                    type="text"
-                    value={data.mobile}
-                    onChange={(e) => setData("mobile", e.target.value)}
-                    placeholder="Mobilnummer"
-                />
+                    <input
+                        type="text"
+                        value={data.last_name}
+                        onChange={(e) => setData("last_name", e.target.value)}
+                        placeholder="Efternamn"
+                    />
+                    <input
+                        type="text"
+                        value={data.email}
+                        onChange={(e) => setData("email", e.target.value)}
+                        placeholder="E-post"
+                    />
+                    <input
+                        type="text"
+                        value={data.mobile}
+                        onChange={(e) => setData("mobile", e.target.value)}
+                        placeholder="Mobilnummer"
+                    />
 
-                <select
-                    type="number"
-                    value={data.guests}
-                    onChange={(e) =>
-                        setData("guests", parseInt(e.target.value))
-                    }
-                >
-                    <option value="">Antal gäster</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                </select>
-
-                <button type="submit">Välj rum</button>
-            </form>
-            <Link href="/">Gå tillbaka</Link>
+                    <select
+                        type="number"
+                        value={data.guests}
+                        onChange={(e) =>
+                            setData("guests", parseInt(e.target.value))
+                        }
+                    >
+                        <option value="">Antal gäster</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <h2>Totalpris: </h2>
+                    <div className={styles.buttonContainer}>
+                        <button type="submit">BOKA NU!</button>
+                        <p>
+                            AVBOKNINGSREGLER: Här står det vad som gäller för
+                            avbokning och kanske även hur man betalar
+                        </p>
+                    </div>
+                </form>
+            </div>
         </div>
     );
 }
