@@ -18,7 +18,7 @@ export default function Login() {
     return (
         <div className={styles.logInPage}>
             <div className={styles.logInContainer}>
-                <h1>Logga in</h1>
+                <h1>Casa La Marina</h1>
                 <form onSubmit={handleSubmit} noValidate>
                     <div className={styles.logInEmail}>
                         <label for="email">Email</label>
