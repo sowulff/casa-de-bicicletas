@@ -5386,7 +5386,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _login_module_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./login.module.css */ "./resources/js/Pages/Admin/login.module.css");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
@@ -5399,7 +5401,8 @@ function Login() {
   }),
       data = _useForm.data,
       setData = _useForm.setData,
-      post = _useForm.post;
+      post = _useForm.post,
+      errors = _useForm.errors;
 
   var handleSubmit = function handleSubmit(e) {
     e.preventDefault();
@@ -5407,46 +5410,63 @@ function Login() {
   };
 
   console.log(data);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {
-      children: "Admin log in"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-      children: "H\xE4r loggar man in som admin och kan se alla bokningar"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("form", {
-      onSubmit: handleSubmit,
-      noValidate: true,
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
-          value: data.email,
-          onChange: function onChange(e) {
-            return setData("email", e.target.value);
-          },
-          type: "email",
-          name: "email",
-          id: "email",
-          placeholder: "Email",
-          "aria-label": "Email"
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
-          value: data.password,
-          onChange: function onChange(e) {
-            return setData("password", e.target.value);
-          },
-          s: true,
-          type: "password",
-          name: "password",
-          id: "password",
-          placeholder: "Password",
-          "aria-label": "Password"
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
-          type: "submit",
-          children: "Sign in"
-        })
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+    className: _login_module_css__WEBPACK_IMPORTED_MODULE_3__["default"].logInPage,
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+      className: _login_module_css__WEBPACK_IMPORTED_MODULE_3__["default"].logInContainer,
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h1", {
+        children: "Logga in"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("form", {
+        onSubmit: handleSubmit,
+        noValidate: true,
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+          className: _login_module_css__WEBPACK_IMPORTED_MODULE_3__["default"].logInEmail,
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("label", {
+            "for": "email",
+            children: "Email"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
+            value: data.email,
+            onChange: function onChange(e) {
+              return setData("email", e.target.value);
+            },
+            type: "email",
+            name: "email",
+            id: "email" // placeholder="Email"
+            ,
+            "aria-label": "Email"
+          }), errors && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+            className: _login_module_css__WEBPACK_IMPORTED_MODULE_3__["default"].errorMessage,
+            children: errors.email
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+          className: _login_module_css__WEBPACK_IMPORTED_MODULE_3__["default"].logInPassword,
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("label", {
+            "for": "password",
+            children: "L\xF6senord"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
+            value: data.password,
+            onChange: function onChange(e) {
+              return setData("password", e.target.value);
+            },
+            s: true,
+            type: "password",
+            name: "password",
+            id: "password" // placeholder="Password"
+            ,
+            "aria-label": "Password"
+          }), errors && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+            className: _login_module_css__WEBPACK_IMPORTED_MODULE_3__["default"].errorMessage,
+            children: errors.password
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+          className: _login_module_css__WEBPACK_IMPORTED_MODULE_3__["default"].logInButton,
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
+            type: "submit",
+            children: "Logga in"
+          })
+        })]
       })]
-    })]
+    })
   });
 }
 
@@ -6525,6 +6545,38 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 ___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\nbody {\n    font-family: Roboto-Thin;\n}\nimg {\n    max-width: 100%;\n    height: auto;\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/Pages/Admin/login.module.css":
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/Pages/Admin/login.module.css ***!
+  \*************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n.AGMO6RnaVXodzmj0RKniBw\\=\\= {\n    background-color: #eceaea;\n    height: 100vh;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    font-family: Roboto-Thin;\n}\n\n._4LgWM\\+64jajyeFOTd8B\\+4A\\=\\= {\n    background-color: white;\n    border-radius: 20px;\n    border: 0.5px solid #454141;\n    width: 270px;\n}\nh1 {\n    text-align: center;\n    padding: 1rem 4rem;\n    width: 100%;\n    background-color: #454141;\n    color: white;\n    border-radius: 20px 20px 0px 0px;\n}\n.AGMO6RnaVXodzmj0RKniBw\\=\\= input {\n    width: 100%;\n    padding: 0.5rem;\n}\n.kCyOIDracyWtgQjpKLdKVg\\=\\=,\n.D0NsCwiBvlxa9AihMrZ9RA\\=\\= {\n    padding: 2rem 1rem 0rem 1rem;\n}\n\n.Pth1\\+VBaVNDT8yUpMriblQ\\=\\= {\n    text-align: center;\n    padding: 2rem 1rem;\n}\n.Pth1\\+VBaVNDT8yUpMriblQ\\=\\= button {\n    width: 100%;\n    text-align: center;\n    padding: 0.5rem;\n    cursor: pointer;\n    background-color: #474fcc;\n    border: none;\n    border-radius: 10px;\n    font-size: 16px;\n    color: white;\n}\n.uGZru1s2iq\\+GCZl4WlgnMA\\=\\= {\n    text-align: center;\n    font-family: sans-serif;\n    color: rgb(255, 108, 108);\n}\n", ""]);
+// Exports
+___CSS_LOADER_EXPORT___.locals = {
+	"logInPage": "AGMO6RnaVXodzmj0RKniBw==",
+	"logInContainer": "_4LgWM+64jajyeFOTd8B+4A==",
+	"logInPassword": "kCyOIDracyWtgQjpKLdKVg==",
+	"logInEmail": "D0NsCwiBvlxa9AihMrZ9RA==",
+	"logInButton": "Pth1+VBaVNDT8yUpMriblQ==",
+	"errorMessage": "uGZru1s2iq+GCZl4WlgnMA=="
+};
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 
@@ -59347,6 +59399,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
+/***/ "./resources/js/Pages/Admin/login.module.css":
+/*!***************************************************!*\
+  !*** ./resources/js/Pages/Admin/login.module.css ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_login_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../../../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./login.module.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/Pages/Admin/login.module.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_login_module_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_login_module_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
 /***/ "./resources/js/Pages/Booking/selectDates.module.css":
 /*!***********************************************************!*\
   !*** ./resources/js/Pages/Booking/selectDates.module.css ***!
@@ -59953,6 +60035,7 @@ var map = {
 	"./Admin/Dashboard.js": "./resources/js/Pages/Admin/Dashboard.js",
 	"./Admin/Login": "./resources/js/Pages/Admin/Login.js",
 	"./Admin/Login.js": "./resources/js/Pages/Admin/Login.js",
+	"./Admin/login.module.css": "./resources/js/Pages/Admin/login.module.css",
 	"./Booking/Confirmation": "./resources/js/Pages/Booking/Confirmation.js",
 	"./Booking/Confirmation.js": "./resources/js/Pages/Booking/Confirmation.js",
 	"./Booking/SelectDates": "./resources/js/Pages/Booking/SelectDates.js",
