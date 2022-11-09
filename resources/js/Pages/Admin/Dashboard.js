@@ -1,7 +1,13 @@
 import { Inertia } from "@inertiajs/inertia";
+import { useForm } from "@inertiajs/inertia-react";
 import styles from "./dashboard.module.css";
 
 export default function Dashboard({ bookings }) {
+    const { post } = useForm();
+    const logout = (e) => {
+        e.preventDefault();
+        post("/logout");
+    };
     const deleteBooking = async (id) => {
         Inertia.post(`/bookings/${id}`);
     };
@@ -9,7 +15,9 @@ export default function Dashboard({ bookings }) {
     return (
         <div className={styles.bookingPage}>
             <div className={styles.header}>
-                <button className={styles.logOut}>Logga ut</button>
+                <button onClick={logout} className={styles.logOut}>
+                    Logga ut
+                </button>
                 <h1>Admin panel</h1>
             </div>
             <div className={styles.bookingContainer}>
