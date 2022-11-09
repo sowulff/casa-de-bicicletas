@@ -5303,7 +5303,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ Dashboard)
 /* harmony export */ });
 /* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/inertia/dist/index.js");
-/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var _dashboard_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dashboard.module.css */ "./resources/js/Pages/Admin/dashboard.module.css");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
@@ -5319,7 +5319,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 function Dashboard(_ref) {
   var bookings = _ref.bookings;
-  console.log(bookings);
 
   var deleteBooking = /*#__PURE__*/function () {
     var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(id) {
@@ -5343,28 +5342,47 @@ function Dashboard(_ref) {
   }();
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
-      children: "Admin panel"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
-      children: "alla bokningar:"
-    }), bookings.map(function (booking) {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-        value: booking.id,
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
-          children: [booking.first_name, " ", booking.last_name]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
-          children: [booking.start_date, " till ", booking.end_date]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
-          children: ["antal g\xE4ster: ", booking.guests]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
-          children: ["Rum: ", booking.room_id]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
-          onClick: function onClick() {
-            return deleteBooking(booking.id);
-          },
-          children: "DELETE"
-        })]
-      }, booking.id);
+    className: _dashboard_module_css__WEBPACK_IMPORTED_MODULE_1__["default"].bookingPage,
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      className: _dashboard_module_css__WEBPACK_IMPORTED_MODULE_1__["default"].header,
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
+        className: _dashboard_module_css__WEBPACK_IMPORTED_MODULE_1__["default"].logOut,
+        children: "Logga ut"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
+        children: "Admin panel"
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      className: _dashboard_module_css__WEBPACK_IMPORTED_MODULE_1__["default"].bookingContainer,
+      children: bookings.map(function (booking) {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          value: booking.id,
+          className: _dashboard_module_css__WEBPACK_IMPORTED_MODULE_1__["default"].bookingCard,
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+            className: _dashboard_module_css__WEBPACK_IMPORTED_MODULE_1__["default"].typeOfRoom,
+            children: "L\xE4genhet"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("h3", {
+            children: [booking.first_name, " ", booking.last_name]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+            className: _dashboard_module_css__WEBPACK_IMPORTED_MODULE_1__["default"].bookingDate,
+            children: [booking.start_date, " till ", booking.end_date]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+            children: ["antal g\xE4ster: ", booking.guests]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h4", {
+              children: "Kontakta g\xE4st:"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+              children: booking.email
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+              children: booking.mobile
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
+            onClick: function onClick() {
+              return deleteBooking(booking.id);
+            },
+            children: "DELETE"
+          })]
+        }, booking.id);
+      })
     })]
   });
 }
@@ -5431,8 +5449,7 @@ function Login() {
             },
             type: "email",
             name: "email",
-            id: "email" // placeholder="Email"
-            ,
+            id: "email",
             "aria-label": "Email"
           }), errors && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
             className: _login_module_css__WEBPACK_IMPORTED_MODULE_3__["default"].errorMessage,
@@ -5451,8 +5468,7 @@ function Login() {
             s: true,
             type: "password",
             name: "password",
-            id: "password" // placeholder="Password"
-            ,
+            id: "password",
             "aria-label": "Password"
           }), errors && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
             className: _login_module_css__WEBPACK_IMPORTED_MODULE_3__["default"].errorMessage,
@@ -6579,6 +6595,37 @@ ___CSS_LOADER_EXPORT___.locals = {};
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/Pages/Admin/dashboard.module.css":
+/*!*****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/Pages/Admin/dashboard.module.css ***!
+  \*****************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n.OUZt7XLE32sP19hzzyqXkw\\=\\= {\n    width: 59%;\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    padding: 2rem;\n}\nh1 {\n    text-align: center;\n    padding: 2rem;\n    font-family: Julius;\n}\n.ypzc66m7KZK-M5bDHS7wOg\\=\\= {\n    background-color: white;\n    color: black;\n    border: 1px solid black;\n    width: 100px;\n    height: 2rem;\n}\n\n.ypzc66m7KZK-M5bDHS7wOg\\=\\=:hover {\n    background-color: black;\n    color: white;\n    border: 1px solid black;\n    width: 100px;\n    height: 2rem;\n}\n.wLZ1RWP3SnLx52mOh\\+xtJw\\=\\= {\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: center;\n    background-color: rgb(231, 231, 231);\n}\n.khq3lv1woluKpC8-cpcbgw\\=\\= {\n    background-color: rgb(255, 255, 255);\n    font-family: Roboto-Thin;\n    padding: 2rem;\n    margin: 2rem;\n    display: flex;\n    flex-direction: column;\n    gap: 1rem;\n    text-align: center;\n}\nbutton {\n    width: 100%;\n    text-align: center;\n    padding: 0.5rem;\n    cursor: pointer;\n    background-color: rgb(255, 108, 108);\n    border: none;\n    border-radius: 10px;\n    color: white;\n}\n.b5vt9Qr97YmSbiNYZY4X4Q\\=\\= {\n    background-color: aliceblue;\n}\n", ""]);
+// Exports
+___CSS_LOADER_EXPORT___.locals = {
+	"header": "OUZt7XLE32sP19hzzyqXkw==",
+	"logOut": "ypzc66m7KZK-M5bDHS7wOg==",
+	"bookingContainer": "wLZ1RWP3SnLx52mOh+xtJw==",
+	"bookingCard": "khq3lv1woluKpC8-cpcbgw==",
+	"bookingDate": "b5vt9Qr97YmSbiNYZY4X4Q=="
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/Pages/Admin/login.module.css":
 /*!*************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/Pages/Admin/login.module.css ***!
@@ -6596,7 +6643,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n.AGMO6RnaVXodzmj0RKniBw\\=\\= {\n    background-color: #eceaea;\n    height: 100vh;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    font-family: Roboto-Thin;\n}\n\n._4LgWM\\+64jajyeFOTd8B\\+4A\\=\\= {\n    background-color: white;\n    border-radius: 20px;\n    border: 0.5px solid #454141;\n    width: 270px;\n}\nh1 {\n    text-align: center;\n    padding: 1rem 4rem;\n    width: 100%;\n    background-color: #454141;\n    color: white;\n    border-radius: 20px 20px 0px 0px;\n}\n.AGMO6RnaVXodzmj0RKniBw\\=\\= input {\n    width: 100%;\n    padding: 0.5rem;\n}\n.kCyOIDracyWtgQjpKLdKVg\\=\\=,\n.D0NsCwiBvlxa9AihMrZ9RA\\=\\= {\n    padding: 2rem 1rem 0rem 1rem;\n}\n\n.Pth1\\+VBaVNDT8yUpMriblQ\\=\\= {\n    text-align: center;\n    padding: 2rem 1rem;\n}\n.Pth1\\+VBaVNDT8yUpMriblQ\\=\\= button {\n    width: 100%;\n    text-align: center;\n    padding: 0.5rem;\n    cursor: pointer;\n    background-color: #474fcc;\n    border: none;\n    border-radius: 10px;\n    font-size: 16px;\n    color: white;\n}\n.uGZru1s2iq\\+GCZl4WlgnMA\\=\\= {\n    text-align: center;\n    font-family: sans-serif;\n    color: rgb(255, 108, 108);\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n.AGMO6RnaVXodzmj0RKniBw\\=\\= {\n    background-color: #eceaea;\n    height: 100vh;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    font-family: Roboto-Thin;\n}\n\n._4LgWM\\+64jajyeFOTd8B\\+4A\\=\\= {\n    background-color: white;\n    border-radius: 20px;\n    border: 0.5px solid #454141;\n    width: 270px;\n}\nh1 {\n    text-align: center;\n    padding: 1rem 4rem;\n    width: 100%;\n    background-color: #454141;\n    color: white;\n    border-radius: 20px 20px 0px 0px;\n}\n.AGMO6RnaVXodzmj0RKniBw\\=\\= input {\n    width: 100%;\n    padding: 0.5rem;\n}\n.kCyOIDracyWtgQjpKLdKVg\\=\\=,\n.D0NsCwiBvlxa9AihMrZ9RA\\=\\= {\n    padding: 2rem 1rem 0rem 1rem;\n}\n\n.Pth1\\+VBaVNDT8yUpMriblQ\\=\\= {\n    text-align: center;\n    padding: 2rem 1rem;\n}\n.Pth1\\+VBaVNDT8yUpMriblQ\\=\\= button {\n    width: 100%;\n    text-align: center;\n    padding: 0.5rem;\n    cursor: pointer;\n    background-color: rgb(255, 108, 108);\n    border: none;\n    border-radius: 10px;\n    font-size: 16px;\n    color: white;\n}\n.uGZru1s2iq\\+GCZl4WlgnMA\\=\\= {\n    text-align: center;\n    font-family: sans-serif;\n    color: rgb(255, 108, 108);\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"logInPage": "AGMO6RnaVXodzmj0RKniBw==",
@@ -6757,7 +6804,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\nbody {\n    font-family: Roboto-Thin;\n}\n\n._4USzpIOJSIJ-abx07L2ZuQ\\=\\= {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    z-index: -1;\n    overflow: hidden;\n}\n.Esszq93d-43raJAL6-zqsg\\=\\= {\n    height: 100%;\n    width: 100%;\n    -o-object-fit: cover;\n       object-fit: cover;\n    pointer-events: none;\n}\n.E78Lg\\+vvbPmKumJqowKcsQ\\=\\= {\n    padding-top: 29%;\n    padding-left: 1.5rem;\n    color: rgb(225, 219, 211);\n    width: 40%;\n    line-height: 1.5;\n    margin-left: 1.5rem;\n}\n\n.VPWl5ySPsjhRHawsvA9gTA\\=\\= {\n    font-size: 1.8rem;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\nbody {\n    font-family: Roboto-Thin;\n}\n\n._4USzpIOJSIJ-abx07L2ZuQ\\=\\= {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    z-index: -1;\n    overflow: hidden;\n}\n.Esszq93d-43raJAL6-zqsg\\=\\= {\n    height: 100%;\n    width: 100%;\n    -o-object-fit: cover;\n       object-fit: cover;\n    pointer-events: none;\n}\n.E78Lg\\+vvbPmKumJqowKcsQ\\=\\= {\n    padding-left: 1.5rem;\n    color: rgb(225, 219, 211);\n    width: 40%;\n    line-height: 1.5;\n    margin-left: 1.5rem;\n    display: flex;\n    flex-direction: column;\n    height: 65vh;\n    justify-content: flex-end;\n}\n\n.VPWl5ySPsjhRHawsvA9gTA\\=\\= {\n    font-size: 1.8rem;\n}\n\n@media only screen and (max-width: 850px) {\n    .E78Lg\\+vvbPmKumJqowKcsQ\\=\\= {\n        width: 90%;\n        padding-top: 40%;\n    }\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"bgVideo": "_4USzpIOJSIJ-abx07L2ZuQ==",
@@ -59431,6 +59478,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
+/***/ "./resources/js/Pages/Admin/dashboard.module.css":
+/*!*******************************************************!*\
+  !*** ./resources/js/Pages/Admin/dashboard.module.css ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_dashboard_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../../../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./dashboard.module.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/Pages/Admin/dashboard.module.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_dashboard_module_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_dashboard_module_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
 /***/ "./resources/js/Pages/Admin/login.module.css":
 /*!***************************************************!*\
   !*** ./resources/js/Pages/Admin/login.module.css ***!
@@ -60067,6 +60144,7 @@ var map = {
 	"./Admin/Dashboard.js": "./resources/js/Pages/Admin/Dashboard.js",
 	"./Admin/Login": "./resources/js/Pages/Admin/Login.js",
 	"./Admin/Login.js": "./resources/js/Pages/Admin/Login.js",
+	"./Admin/dashboard.module.css": "./resources/js/Pages/Admin/dashboard.module.css",
 	"./Admin/login.module.css": "./resources/js/Pages/Admin/login.module.css",
 	"./Booking/Confirmation": "./resources/js/Pages/Booking/Confirmation.js",
 	"./Booking/Confirmation.js": "./resources/js/Pages/Booking/Confirmation.js",
