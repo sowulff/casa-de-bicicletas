@@ -86,3 +86,34 @@
     margin-top: 1rem !important;
     left: 30px !important;
 }
+
+@media only screen and (max-width: 850px) {
+    .react-datepicker {
+        width: 300px !important;
+        height: 350px !important;
+        font-size: 1rem;
+        font-family: Roboto-thin;
+
+        border-radius: 50px 50px 0px 50px !important;
+        border-color: rgb(198, 197, 196) !important;
+    }
+    .react-datepicker__header {
+        width: 300px !important;
+    }
+
+    .react-datepicker__day-name {
+        width: 2rem !important;
+        color: white !important;
+    }
+
+    .react-datepicker__day-names {
+        width: 300px !important;
+    }
+
+    .react-datepicker__day {
+        width: 2rem !important;
+        height: 2rem !important;
+        padding: unset;
+        line-height: 2rem !important;
+    }
+}

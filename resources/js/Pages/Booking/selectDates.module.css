@@ -78,8 +78,18 @@ button {
 
 .buttonContainer button {
     background-color: #fd6363 !important;
+    cursor: pointer;
 }
 
+.buttonContainer:hover {
+    background-color: white !important;
+}
+
+button:hover {
+    color: #fd6363;
+    background-color: white !important;
+    border: 1px solid #fd6363 !important;
+}
 .rules {
     width: 100%;
     display: flex;
@@ -92,4 +102,29 @@ button {
     text-align: center;
     font-family: sans-serif;
     color: rgb(255, 108, 108);
+}
+
+@media only screen and (max-width: 850px) {
+    .fullpageContainer {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
+    button {
+        width: 100%;
+    }
+    form {
+        width: 90% !important;
+        margin-left: unset;
+    }
+
+    select {
+        width: 100%;
+    }
 }
