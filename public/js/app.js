@@ -5824,6 +5824,22 @@ function Cycling() {
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
         src: "assets/cycling/1.JPG"
       })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+      className: _cycling_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].cardTwoText,
+      children: "Cykling \xE4r en stor del av vardagen h\xE4r nere f\xF6r oss som bor h\xE4r."
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+      className: _cycling_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].cardThree,
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
+        className: _cycling_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].photoSectionTwo,
+        src: "assets/cycling/5.JPG"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+        className: _cycling_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].photoSectionOne,
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
+          src: "assets/cycling/4.JPG"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
+          src: "assets/cycling/6.JPG"
+        })]
+      })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {})]
   });
 }
@@ -6594,12 +6610,16 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\nbody {\n    font-family: Roboto-Thin;\n}\n\nimg {\n    max-width: 50%;\n    height: auto;\n    vertical-align: middle;\n    display: inline-block;\n}\n.yxBVEuZU\\+J-mFIR5OW9npg\\=\\= {\n    display: flex;\n    align-items: center;\n    border-bottom: 0.5px solid black;\n    margin: 1rem;\n    padding: 1rem;\n}\n\n.yxBVEuZU\\+J-mFIR5OW9npg\\=\\= img {\n    max-width: 40%;\n}\n\n.HJiL-V\\+2l0oWersE3\\+CMpw\\=\\= {\n    display: flex;\n    gap: 1rem;\n    justify-content: flex-end;\n    border-bottom: 0.5px solid black;\n    margin: 1rem;\n    padding: 1rem;\n}\n.HJiL-V\\+2l0oWersE3\\+CMpw\\=\\= img {\n    max-width: 40%;\n}\n\n.K4Ua\\+pzFGZz439dkS2eGww\\=\\= {\n    padding: 3rem;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\nbody {\n    font-family: Roboto-Thin;\n}\n\nimg {\n    max-width: 50%;\n    height: auto;\n    vertical-align: middle;\n    display: inline-block;\n}\n.yxBVEuZU\\+J-mFIR5OW9npg\\=\\= {\n    display: flex;\n    align-items: center;\n    border-bottom: 0.5px solid black;\n    margin: 1rem;\n    padding: 1rem;\n}\n\n.yxBVEuZU\\+J-mFIR5OW9npg\\=\\= img {\n    max-width: 40%;\n}\n\n.HJiL-V\\+2l0oWersE3\\+CMpw\\=\\= {\n    display: flex;\n    gap: 1rem;\n    justify-content: flex-end;\n    margin: 1rem;\n    padding: 1rem;\n    margin-bottom: 0;\n}\n.R9S0WZ3dToaDgeczjsY-yg\\=\\= {\n    text-align: end;\n    border-bottom: 0.5px solid black;\n    padding: 0 0 2rem 0;\n    font-size: 16px;\n    margin: 2rem;\n}\n.HJiL-V\\+2l0oWersE3\\+CMpw\\=\\= img {\n    max-width: 40%;\n}\n\n.K4Ua\\+pzFGZz439dkS2eGww\\=\\= {\n    padding: 3rem;\n}\n.O8hZoiFEmUuJe-8fKfysJw\\=\\= {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n}\n.Fvmppkdnpg46jk4V1FyN7Q\\=\\= {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    /* gap: 1rem; */\n}\n.Fvmppkdnpg46jk4V1FyN7Q\\=\\= img:first-child {\n    align-self: flex-start;\n}\n\n.eCwBKeZjZKfRucyARKN1QQ\\=\\= {\n    max-width: 90%;\n    padding: 2rem;\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"cardOne": "yxBVEuZU+J-mFIR5OW9npg==",
 	"cardTwo": "HJiL-V+2l0oWersE3+CMpw==",
-	"text": "K4Ua+pzFGZz439dkS2eGww=="
+	"cardTwoText": "R9S0WZ3dToaDgeczjsY-yg==",
+	"text": "K4Ua+pzFGZz439dkS2eGww==",
+	"cardThree": "O8hZoiFEmUuJe-8fKfysJw==",
+	"photoSectionOne": "Fvmppkdnpg46jk4V1FyN7Q==",
+	"photoSectionTwo": "eCwBKeZjZKfRucyARKN1QQ=="
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -6654,7 +6674,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\nbody {\n    font-family: Roboto-Thin;\n}\n\n._4USzpIOJSIJ-abx07L2ZuQ\\=\\= {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    z-index: -1;\n    overflow: hidden;\n}\n.Esszq93d-43raJAL6-zqsg\\=\\= {\n    height: 100%;\n    width: 100%;\n    -o-object-fit: cover;\n       object-fit: cover;\n    pointer-events: none;\n}\n.E78Lg\\+vvbPmKumJqowKcsQ\\=\\= {\n    padding-top: 30%;\n    padding-left: 3%;\n    color: rgb(225, 219, 211);\n    width: 30%;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\nbody {\n    font-family: Roboto-Thin;\n}\n\n._4USzpIOJSIJ-abx07L2ZuQ\\=\\= {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    z-index: -1;\n    overflow: hidden;\n}\n.Esszq93d-43raJAL6-zqsg\\=\\= {\n    height: 100%;\n    width: 100%;\n    -o-object-fit: cover;\n       object-fit: cover;\n    pointer-events: none;\n}\n.E78Lg\\+vvbPmKumJqowKcsQ\\=\\= {\n    padding-top: 30%;\n    padding-left: 2rem;\n    color: rgb(225, 219, 211);\n    width: 40%;\n    line-height: 1.5;\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"bgVideo": "_4USzpIOJSIJ-abx07L2ZuQ==",

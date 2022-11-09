@@ -24,7 +24,8 @@ body {
 }
 .infoText {
     padding-top: 30%;
-    padding-left: 3%;
+    padding-left: 2rem;
     color: rgb(225, 219, 211);
-    width: 30%;
+    width: 40%;
+    line-height: 1.5;
 }

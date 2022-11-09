@@ -23,6 +23,19 @@ export default function Cycling() {
                 <img src={"assets/cycling/3.JPG"} />
                 <img src={"assets/cycling/1.JPG"} />
             </div>
+            <p className={styles.cardTwoText}>
+                Cykling är en stor del av vardagen här nere för oss som bor här.
+            </p>
+            <div className={styles.cardThree}>
+                <img
+                    className={styles.photoSectionTwo}
+                    src={"assets/cycling/5.JPG"}
+                />
+                <div className={styles.photoSectionOne}>
+                    <img src={"assets/cycling/4.JPG"} />
+                    <img src={"assets/cycling/6.JPG"} />
+                </div>
+            </div>
             <Footer />
         </div>
     );

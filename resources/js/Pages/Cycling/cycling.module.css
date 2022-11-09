@@ -29,9 +29,16 @@ img {
     display: flex;
     gap: 1rem;
     justify-content: flex-end;
-    border-bottom: 0.5px solid black;
     margin: 1rem;
     padding: 1rem;
+    margin-bottom: 0;
+}
+.cardTwoText {
+    text-align: end;
+    border-bottom: 0.5px solid black;
+    padding: 0 0 2rem 0;
+    font-size: 16px;
+    margin: 2rem;
 }
 .cardTwo img {
     max-width: 40%;
@@ -39,4 +46,23 @@ img {
 
 .text {
     padding: 3rem;
+}
+.cardThree {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.photoSectionOne {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* gap: 1rem; */
+}
+.photoSectionOne img:first-child {
+    align-self: flex-start;
+}
+
+.photoSectionTwo {
+    max-width: 90%;
+    padding: 2rem;
 }
