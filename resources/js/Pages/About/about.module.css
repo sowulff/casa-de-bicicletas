@@ -6,7 +6,22 @@
 body {
     font-family: Roboto-Thin;
 }
-img {
-    max-width: 100%;
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imageContainer img {
+    max-width: 55%;
     height: auto;
+    border-radius: 0px 0 50px 0;
+}
+.imageContainer h3 {
+    padding: 0 2rem;
+}
+@media only screen and (max-width: 850px) {
+    .imageContainer {
+        flex-direction: column;
+        gap: 2rem;
+    }
 }

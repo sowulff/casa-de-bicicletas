@@ -6,9 +6,19 @@ export default function About() {
     return (
         <div>
             <NavBar />
-
-            <img src={"assets/galleri/19.JPG"} />
-
+            <div className={styles.imageContainer}>
+                <img src={"assets/galleri/19.JPG"} />
+                <h3>
+                    Om ossJag heter Jonas och blablabla jag heter Molle och jag
+                    fjgngfgfng jkgns . Jag heter Jonas och blablabla jag heter
+                    Molle och jag fjgngfgfng jkgns . Jag heter Jonas och
+                    blablabla jag heter Molle och jag fjgngfgfng jkgns . Jag
+                    heter Jonas och blablabla jag heter Molle och jag fjgngfgfng
+                    jkgns . Jag heter Jonas och blablabla jag heter Molle och
+                    jag fjgngfgfng jkgns . Jag heter Jonas och blablabla jag
+                    heter Molle och jag fjgngfgfng jkgns{" "}
+                </h3>
+            </div>
             <Footer />
         </div>
     );
