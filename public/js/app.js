@@ -5880,6 +5880,9 @@ function Cycling() {
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h3", {
       className: _cycling_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].cardTwoText,
       children: "I m\xE5n av tid tar vi g\xE4rna med er p\xE5 guidning i omr\xE5det."
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h3", {
+      className: _cycling_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].cardThreeText,
+      children: "Varierande och rolig cykling f\xF6r alla!"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
       className: _cycling_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].cardThree,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
@@ -6753,7 +6756,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\nbody {\n    font-family: Roboto-Thin;\n}\n\nimg {\n    max-width: 50%;\n    height: auto;\n    vertical-align: middle;\n    display: inline-block;\n}\n.yxBVEuZU\\+J-mFIR5OW9npg\\=\\= {\n    display: flex;\n    align-items: center;\n    border-bottom: 0.5px solid black;\n    margin: 1rem;\n    padding: 1rem;\n}\n\n.yxBVEuZU\\+J-mFIR5OW9npg\\=\\= img {\n    max-width: 40%;\n}\n\n.HJiL-V\\+2l0oWersE3\\+CMpw\\=\\= {\n    display: flex;\n    gap: 1rem;\n    justify-content: flex-end;\n    margin: 1rem;\n    padding: 1rem;\n    margin-bottom: 0;\n}\n.R9S0WZ3dToaDgeczjsY-yg\\=\\= {\n    text-align: end;\n    border-bottom: 0.5px solid black;\n    padding: 0 0 2rem 0;\n    /* font-size: 16px; */\n    margin: 2rem;\n}\n.HJiL-V\\+2l0oWersE3\\+CMpw\\=\\= img {\n    max-width: 40%;\n}\n\n.K4Ua\\+pzFGZz439dkS2eGww\\=\\= {\n    padding: 3rem;\n}\n.O8hZoiFEmUuJe-8fKfysJw\\=\\= {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n}\n.Fvmppkdnpg46jk4V1FyN7Q\\=\\= {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    /* gap: 1rem; */\n}\n.Fvmppkdnpg46jk4V1FyN7Q\\=\\= img:first-child {\n    align-self: flex-start;\n}\n\n.eCwBKeZjZKfRucyARKN1QQ\\=\\= {\n    max-width: 90%;\n    padding: 2rem;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\nbody {\n    font-family: Roboto-Thin;\n}\n\nimg {\n    max-width: 50%;\n    height: auto;\n    vertical-align: middle;\n    display: inline-block;\n}\n.yxBVEuZU\\+J-mFIR5OW9npg\\=\\= {\n    display: flex;\n    align-items: center;\n    border-bottom: 0.5px solid black;\n    margin: 1rem;\n    padding: 1rem;\n}\n\n.yxBVEuZU\\+J-mFIR5OW9npg\\=\\= img {\n    max-width: 40%;\n}\n\n.HJiL-V\\+2l0oWersE3\\+CMpw\\=\\= {\n    display: flex;\n    gap: 1rem;\n    justify-content: flex-end;\n    margin: 1rem;\n    padding: 1rem;\n    margin-bottom: 0;\n}\n.R9S0WZ3dToaDgeczjsY-yg\\=\\= {\n    text-align: end;\n    border-bottom: 0.5px solid black;\n    padding: 0 0 2rem 0;\n    /* font-size: 16px; */\n    margin: 2rem;\n}\n.HJiL-V\\+2l0oWersE3\\+CMpw\\=\\= img {\n    max-width: 40%;\n}\n\n.K4Ua\\+pzFGZz439dkS2eGww\\=\\= {\n    padding: 3rem;\n}\n.O8hZoiFEmUuJe-8fKfysJw\\=\\= {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n}\n.dnkTkop6GCa39KZKmBPkjg\\=\\= {\n    padding: 0rem 2rem;\n}\n.Fvmppkdnpg46jk4V1FyN7Q\\=\\= {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n}\n.Fvmppkdnpg46jk4V1FyN7Q\\=\\= img:first-child {\n    align-self: flex-start;\n}\n\n.eCwBKeZjZKfRucyARKN1QQ\\=\\= {\n    max-width: 90%;\n    padding: 2rem;\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"cardOne": "yxBVEuZU+J-mFIR5OW9npg==",
@@ -6761,6 +6764,7 @@ ___CSS_LOADER_EXPORT___.locals = {
 	"cardTwoText": "R9S0WZ3dToaDgeczjsY-yg==",
 	"text": "K4Ua+pzFGZz439dkS2eGww==",
 	"cardThree": "O8hZoiFEmUuJe-8fKfysJw==",
+	"cardThreeText": "dnkTkop6GCa39KZKmBPkjg==",
 	"photoSectionOne": "Fvmppkdnpg46jk4V1FyN7Q==",
 	"photoSectionTwo": "eCwBKeZjZKfRucyARKN1QQ=="
 };

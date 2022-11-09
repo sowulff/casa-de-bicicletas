@@ -28,6 +28,9 @@ export default function Cycling() {
             <h3 className={styles.cardTwoText}>
                 I mån av tid tar vi gärna med er på guidning i området.
             </h3>
+            <h3 className={styles.cardThreeText}>
+                Varierande och rolig cykling för alla!
+            </h3>
             <div className={styles.cardThree}>
                 <img
                     className={styles.photoSectionTwo}

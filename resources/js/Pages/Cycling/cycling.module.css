@@ -51,12 +51,14 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+.cardThreeText {
+    padding: 0rem 2rem;
+}
 .photoSectionOne {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* gap: 1rem; */
 }
 .photoSectionOne img:first-child {
     align-self: flex-start;
