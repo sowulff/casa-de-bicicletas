@@ -23,14 +23,24 @@ body {
     pointer-events: none;
 }
 .infoText {
-    padding-top: 29%;
     padding-left: 1.5rem;
     color: rgb(225, 219, 211);
     width: 40%;
     line-height: 1.5;
     margin-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 65vh;
+    justify-content: flex-end;
 }
 
 .firstLine {
     font-size: 1.8rem;
+}
+
+@media only screen and (max-width: 850px) {
+    .infoText {
+        width: 90%;
+        padding-top: 40%;
+    }
 }
