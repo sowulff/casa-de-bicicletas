@@ -29,7 +29,6 @@ export default function Login() {
                             type="email"
                             name="email"
                             id="email"
-                            // placeholder="Email"
                             aria-label="Email"
                         />
                         {errors && (
@@ -50,7 +49,6 @@ export default function Login() {
                             type="password"
                             name="password"
                             id="password"
-                            // placeholder="Password"
                             aria-label="Password"
                         />
                         {errors && (
