@@ -6,6 +6,7 @@ use App\Http\Controllers\DeleteBookingController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ListAllRoomsController;
 use App\Http\Controllers\ListBookingController;
+use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\NewBookingController;
 
 use App\Models\Booking;
@@ -79,5 +80,6 @@ Route::get('/booking/confirmation', function () {
 //});
 
 Route::post('/upload', NewBookingController::class);
+Route::post('/logout', LogoutController::class);
 Route::get('/upload', NewBookingController::class);
 Route::post('/bookings/{booking}', DeleteBookingController::class);
