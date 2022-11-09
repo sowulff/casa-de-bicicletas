@@ -1,0 +1,57 @@
+@font-face {
+    src: url("/../assets/fonts/Roboto-Thin.ttf");
+    font-family: Roboto-Thin;
+}
+
+@font-face {
+    src: url("/../assets/fonts/JuliusSansOne-Regular.ttf");
+    font-family: Julius;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 1.5rem !important;
+    font-family: Roboto-Thin;
+}
+
+p {
+    font-size: 1rem;
+}
+
+.fullPageContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 2px solid #aeaaa245;
+    border-radius: 50px 50px 0 50px;
+    width: 60%;
+}
+
+img {
+    width: 80%;
+    border-radius: 50px 50px 0 50px;
+}
+
+.imageContainer {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.textContainer {
+    width: 60%;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+    gap: 1rem;
+
+    padding: 2rem;
+}
