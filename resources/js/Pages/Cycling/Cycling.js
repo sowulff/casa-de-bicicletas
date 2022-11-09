@@ -10,11 +10,13 @@ export default function Cycling() {
             <div className={styles.cardOne}>
                 <img src={"assets/galleri/3.JPG"} />
                 <div className={styles.text}>
-                    <h1>Dags för cykelsemester?</h1>
+                    <h1>Cykelsemester i värmen?</h1>
                     <h3>
-                        Här i närheten hittar du bra cykling såväl mountainbike
-                        som landvägscykling. Hos oss kan man tryggt förvara
-                        cyklarna och även göra rent dem i vår cykeltvätt.
+                        Vi hjälper till och ordnar transfer av cyklar och väl på
+                        plats i Casa La Marina finns det cykeltvätt, mekställ
+                        och verktyg att låna. I närheten finns bra cykling för
+                        dig med landsväg, mountainbike eller gravelcykel! Tips
+                        på rundor att upptäcka kan man få via gps.
                     </h3>
                 </div>
             </div>
@@ -23,9 +25,9 @@ export default function Cycling() {
                 <img src={"assets/cycling/3.JPG"} />
                 <img src={"assets/cycling/1.JPG"} />
             </div>
-            <p className={styles.cardTwoText}>
-                Cykling är en stor del av vardagen här nere för oss som bor här.
-            </p>
+            <h3 className={styles.cardTwoText}>
+                I mån av tid tar vi gärna med er på guidning i området.
+            </h3>
             <div className={styles.cardThree}>
                 <img
                     className={styles.photoSectionTwo}
