@@ -3,6 +3,9 @@
     font-family: Julius;
 }
 
+svg {
+    margin: 1.5rem;
+}
 .navBar {
     display: flex;
     justify-content: space-between;
@@ -12,21 +15,25 @@
 .navLinks {
     display: flex;
     gap: 2rem;
+    font-family: Julius;
 }
 
 a {
     text-decoration: none;
     color: #3e2e29;
 }
-.navBar a:hover {
+
+.navLinks a:hover {
     border-bottom: 1px solid#3e2e29;
 }
+
 .logo:hover {
     border-bottom: none;
 }
 .hamburgerMenu {
     display: none;
 }
+
 .hamburgerButton {
     background-color: transparent;
     border: none;
