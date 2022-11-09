@@ -17,9 +17,11 @@ class DashboardController extends Controller
     public function __invoke(Room $id)
     {
         $bookings = Booking::all();
+
         return inertia('Admin/Dashboard', [
             'room' => $id,
             'bookings' => $bookings,
+
         ]);
     }
 }
