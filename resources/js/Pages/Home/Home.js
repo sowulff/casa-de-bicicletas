@@ -20,14 +20,16 @@ export default function Welcome() {
 
             <NavBar />
             <div className={styles.infoText}>
+                <p className={styles.firstLine}>
+                    Mi casa es zu casa, som spanjorerna säger.
+                </p>
                 <p>
-                    Mi casa es zu casa, som spanjorerna säger. På Casa la Marina
-                    bor ni i en hemtrevlig miljö med många sociala ytor. Pingis,
-                    biljard eller ett dopp i den uppvärmda poolen kanske lockar?
-                    Stora sanitetsutrymmen med tvättmaskiner och torktumlare
-                    finns också att låna. De lummiga planteringarna ger ett
-                    rofyllt intryck i Spaniens behagliga klimat. Varmt välkomna
-                    till vår lilla oas.
+                    På Casa la Marina bor ni i en hemtrevlig miljö med många
+                    sociala ytor. Pingis, biljard eller ett dopp i den uppvärmda
+                    poolen kanske lockar? Stora sanitets - utrymmen med
+                    tvättmaskiner och torktumlare finns också att låna. De
+                    lummiga planteringarna ger ett rofyllt intryck i Spaniens
+                    behagliga klimat. Varmt välkomna till vår lilla oas.
                 </p>
             </div>
         </div>
