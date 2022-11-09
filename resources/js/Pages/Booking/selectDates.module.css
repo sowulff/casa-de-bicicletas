@@ -18,15 +18,16 @@
 
 h2 {
     font-family: Julius;
+    padding-top: 1rem;
 }
 
 form {
     display: flex;
     flex-direction: column;
     width: 30%;
-    gap: 0.2rem;
+    gap: 1.5rem;
     margin-left: 2rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 input {
@@ -62,7 +63,6 @@ button {
     padding: 0.3rem;
     color: white;
     font-family: Julius;
-    margin-top: 10%;
 }
 
 .buttonContainer {
@@ -77,7 +77,7 @@ button {
 }
 
 .buttonContainer button {
-    background-color: #6e6969 !important;
+    background-color: #fd6363 !important;
 }
 
 .rules {

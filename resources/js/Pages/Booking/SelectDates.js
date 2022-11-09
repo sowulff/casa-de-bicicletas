@@ -8,6 +8,8 @@ import "react-datepicker/dist/react-datepicker.css";
 import { registerLocale, setDefaultLocale } from "react-datepicker";
 import sv from "date-fns/locale/sv";
 import styles from "./selectDates.module.css";
+import Footer from "../../components/Footer/Footer";
+
 registerLocale("sv", sv);
 
 export default function selectDates({ room, bookings, rooms }) {
@@ -144,6 +146,7 @@ export default function selectDates({ room, bookings, rooms }) {
                     kanske
                 </p>
             </div>
+            <Footer />
         </div>
     );
 }

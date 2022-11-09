@@ -9,7 +9,7 @@
 }
 
 svg {
-    margin: 0.5rem !important;
+    margin-top: 0.8rem !important;
 }
 
 .footer {
@@ -20,8 +20,7 @@ svg {
     flex-direction: column;
     margin: 0;
     align-items: center;
-    padding-bottom: 1rem;
-    padding-top: 0.2rem;
+    padding-top: 2rem;
     margin-top: 5rem;
 }
 

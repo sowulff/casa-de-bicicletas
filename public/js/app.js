@@ -5535,12 +5535,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var dateformat__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! dateformat */ "./node_modules/dateformat/lib/dateformat.js");
 /* harmony import */ var _components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/NavBar/NavBar */ "./resources/js/components/NavBar/NavBar.js");
-/* harmony import */ var react_datepicker__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-datepicker */ "./node_modules/react-datepicker/dist/react-datepicker.min.js");
-/* harmony import */ var react_datepicker__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_datepicker__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react_datepicker__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-datepicker */ "./node_modules/react-datepicker/dist/react-datepicker.min.js");
+/* harmony import */ var react_datepicker__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_datepicker__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var react_datepicker_dist_react_datepicker_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-datepicker/dist/react-datepicker.css */ "./node_modules/react-datepicker/dist/react-datepicker.css");
-/* harmony import */ var date_fns_locale_sv__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! date-fns/locale/sv */ "./node_modules/date-fns/esm/locale/sv/index.js");
+/* harmony import */ var date_fns_locale_sv__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! date-fns/locale/sv */ "./node_modules/date-fns/esm/locale/sv/index.js");
 /* harmony import */ var _selectDates_module_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./selectDates.module.css */ "./resources/js/Pages/Booking/selectDates.module.css");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _components_Footer_Footer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/Footer/Footer */ "./resources/js/components/Footer/Footer.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
@@ -5571,7 +5572,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-(0,react_datepicker__WEBPACK_IMPORTED_MODULE_7__.registerLocale)("sv", date_fns_locale_sv__WEBPACK_IMPORTED_MODULE_8__["default"]);
+
+(0,react_datepicker__WEBPACK_IMPORTED_MODULE_8__.registerLocale)("sv", date_fns_locale_sv__WEBPACK_IMPORTED_MODULE_9__["default"]);
 function selectDates(_ref) {
   var room = _ref.room,
       bookings = _ref.bookings,
@@ -5646,10 +5648,10 @@ function selectDates(_ref) {
   };
 
   var disableDates = dateToDisable();
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_3__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_3__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
       className: _selectDates_module_css__WEBPACK_IMPORTED_MODULE_5__["default"].fullpageContainer,
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)((react_datepicker__WEBPACK_IMPORTED_MODULE_7___default()), {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)((react_datepicker__WEBPACK_IMPORTED_MODULE_8___default()), {
         selected: startDate,
         onChange: onChange,
         startDate: startDate,
@@ -5659,82 +5661,82 @@ function selectDates(_ref) {
         selectsRange: true,
         inline: true,
         locale: "sv"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("form", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("form", {
         onSubmit: submit,
-        children: [errors && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+        children: [errors && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
           className: _selectDates_module_css__WEBPACK_IMPORTED_MODULE_5__["default"].errorMessage,
           children: errorMessage
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("input", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("input", {
           type: "text",
           value: data.first_name,
           onChange: function onChange(e) {
             return setData("first_name", e.target.value);
           },
           placeholder: "F\xF6rnamn"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("input", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("input", {
           type: "text",
           value: data.last_name,
           onChange: function onChange(e) {
             return setData("last_name", e.target.value);
           },
           placeholder: "Efternamn"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("input", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("input", {
           type: "text",
           value: data.email,
           onChange: function onChange(e) {
             return setData("email", e.target.value);
           },
           placeholder: "E-post"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("input", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("input", {
           type: "text",
           value: data.mobile,
           onChange: function onChange(e) {
             return setData("mobile", e.target.value);
           },
           placeholder: "Mobilnummer"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
           className: _selectDates_module_css__WEBPACK_IMPORTED_MODULE_5__["default"].guestSelect,
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("select", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("select", {
             type: "number",
             value: data.guests,
             onChange: function onChange(e) {
               return setData("guests", parseInt(e.target.value));
             },
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("option", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("option", {
               value: "",
               children: "Antal g\xE4ster"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("option", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("option", {
               value: "1",
               children: "1"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("option", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("option", {
               value: "2",
               children: "2"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("option", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("option", {
               value: "3",
               children: "3"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("option", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("option", {
               value: "4",
               children: "4"
             })]
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("h2", {
-          children: ["Totalpris:", endDate != null && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("span", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("h2", {
+          children: ["Totalpris:", endDate != null && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("span", {
             children: [totalPrice, " kr"]
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
           className: _selectDates_module_css__WEBPACK_IMPORTED_MODULE_5__["default"].buttonContainer,
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("button", {
             type: "submit",
             children: "BOKA NU!"
           })
         })]
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
       className: _selectDates_module_css__WEBPACK_IMPORTED_MODULE_5__["default"].rules,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
         children: "AVBOKNINGSREGLER: H\xE4r st\xE5r det vad som g\xE4ller f\xF6r avbokning och kanske \xE4ven hur man betalar lite mer tect hehehe kanske kanske"
       })
-    })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_6__["default"], {})]
   });
 }
 
@@ -6188,7 +6190,20 @@ __webpack_require__.r(__webpack_exports__);
 function Footer() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
     className: _Footer_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].footer,
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+      className: _Footer_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].name,
+      children: "Casa la Marina"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+      children: "Adress: Av. San Fulgenicio 300"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+      children: "03194 San Fulgencio"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+      children: "Alicante, Spain"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+      children: "Phone: +46 85 92 84"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+      children: "E-mail: molle@hej.se"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
       width: "40",
       height: "35",
       viewBox: "0 0 60 55",
@@ -6222,19 +6237,6 @@ function Footer() {
         stroke: "black",
         "stroke-width": "0.2"
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-      className: _Footer_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].name,
-      children: "Casa la Marina"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-      children: "Adress: Av. San Fulgenicio 300"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-      children: "03194 San Fulgencio"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-      children: "Alicante, Spain"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-      children: "Phone: +46 85 92 84"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-      children: "E-mail: molle@hej.se"
     })]
   });
 }
@@ -6675,7 +6677,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\n.HSaiuel0n-lwezzLipBedA\\=\\= {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    color: #727374;\n    padding-top: 5rem;\n}\n\nh2 {\n    font-family: Julius;\n}\n\nform {\n    display: flex;\n    flex-direction: column;\n    width: 30%;\n    gap: 0.2rem;\n    margin-left: 2rem;\n    margin-top: 2rem;\n}\n\ninput {\n    border: 1px solid #dcd0d0;\n    box-shadow: none;\n    border-top: none;\n    border-left: none;\n    border-right: none;\n}\n\ninput[type=\"text\"] {\n    font-family: Julius;\n    padding: 0.5rem;\n}\n\nselect {\n    font-family: Julius;\n    color: #727374;\n    border: 1px solid #dcd0d0;\n    box-shadow: none;\n    border-top: none;\n    border-left: none;\n    border-right: none;\n    padding: 0.5rem;\n}\n\nbutton {\n    background-color: #dcd0d0;\n    align-self: left;\n    width: 50%;\n    border: none;\n    border-radius: 50px 0 100px 50px;\n    padding: 0.3rem;\n    color: white;\n    font-family: Julius;\n    margin-top: 10%;\n}\n\n.XM59B36MCbIntEiYJsWEMA\\=\\= {\n    width: 100%;\n    display: flex;\n    justify-content: center;\n    flex-direction: column;\n    text-align: center;\n    font-family: Roboto-Thin;\n    font-size: 0.8rem;\n    gap: 3rem;\n}\n\n.XM59B36MCbIntEiYJsWEMA\\=\\= button {\n    background-color: #6e6969 !important;\n}\n\n.Upfu\\+Ru3CaQ2SSPo-Ck7Bw\\=\\= {\n    width: 100%;\n    display: flex;\n    justify-content: center;\n    font-family: Roboto-Thin;\n    padding-top: 3rem;\n}\n\n.vX8rd\\+9bzmxcpN2i\\+wsdsA\\=\\= {\n    text-align: center;\n    font-family: sans-serif;\n    color: rgb(255, 108, 108);\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\n.HSaiuel0n-lwezzLipBedA\\=\\= {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    color: #727374;\n    padding-top: 5rem;\n}\n\nh2 {\n    font-family: Julius;\n    padding-top: 1rem;\n}\n\nform {\n    display: flex;\n    flex-direction: column;\n    width: 30%;\n    gap: 1.5rem;\n    margin-left: 2rem;\n    margin-top: 1rem;\n}\n\ninput {\n    border: 1px solid #dcd0d0;\n    box-shadow: none;\n    border-top: none;\n    border-left: none;\n    border-right: none;\n}\n\ninput[type=\"text\"] {\n    font-family: Julius;\n    padding: 0.5rem;\n}\n\nselect {\n    font-family: Julius;\n    color: #727374;\n    border: 1px solid #dcd0d0;\n    box-shadow: none;\n    border-top: none;\n    border-left: none;\n    border-right: none;\n    padding: 0.5rem;\n}\n\nbutton {\n    background-color: #dcd0d0;\n    align-self: left;\n    width: 50%;\n    border: none;\n    border-radius: 50px 0 100px 50px;\n    padding: 0.3rem;\n    color: white;\n    font-family: Julius;\n}\n\n.XM59B36MCbIntEiYJsWEMA\\=\\= {\n    width: 100%;\n    display: flex;\n    justify-content: center;\n    flex-direction: column;\n    text-align: center;\n    font-family: Roboto-Thin;\n    font-size: 0.8rem;\n    gap: 3rem;\n}\n\n.XM59B36MCbIntEiYJsWEMA\\=\\= button {\n    background-color: #fd6363 !important;\n}\n\n.Upfu\\+Ru3CaQ2SSPo-Ck7Bw\\=\\= {\n    width: 100%;\n    display: flex;\n    justify-content: center;\n    font-family: Roboto-Thin;\n    padding-top: 3rem;\n}\n\n.vX8rd\\+9bzmxcpN2i\\+wsdsA\\=\\= {\n    text-align: center;\n    font-family: sans-serif;\n    color: rgb(255, 108, 108);\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"fullpageContainer": "HSaiuel0n-lwezzLipBedA==",
@@ -6834,7 +6836,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\n@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\nsvg {\n    margin: 0.5rem !important;\n}\n\n.rkT4cAwgqzlmUavoEGU5dA\\=\\= {\n    width: 100%;\n    display: flex;\n    justify-content: center;\n    background-color: #aeaaa245;\n    flex-direction: column;\n    margin: 0;\n    align-items: center;\n    padding-bottom: 1rem;\n    padding-top: 0.2rem;\n    margin-top: 5rem;\n}\n\np {\n    margin: 0;\n    font-size: 12px;\n    color: rgb(42, 36, 26);\n    font-family: Roboto-Thin;\n}\n\n.HmgCxTqfG\\+FOpoGNCkBSjA\\=\\= {\n    font-family: Julius;\n    padding-bottom: 0.5rem;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\n@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\nsvg {\n    margin-top: 0.8rem !important;\n}\n\n.rkT4cAwgqzlmUavoEGU5dA\\=\\= {\n    width: 100%;\n    display: flex;\n    justify-content: center;\n    background-color: #aeaaa245;\n    flex-direction: column;\n    margin: 0;\n    align-items: center;\n    padding-top: 2rem;\n    margin-top: 5rem;\n}\n\np {\n    margin: 0;\n    font-size: 12px;\n    color: rgb(42, 36, 26);\n    font-family: Roboto-Thin;\n}\n\n.HmgCxTqfG\\+FOpoGNCkBSjA\\=\\= {\n    font-family: Julius;\n    padding-bottom: 0.5rem;\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"footer": "rkT4cAwgqzlmUavoEGU5dA==",
