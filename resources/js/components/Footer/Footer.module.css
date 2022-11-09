@@ -8,6 +8,10 @@
     font-family: Roboto-Thin;
 }
 
+svg {
+    margin: 0.5rem !important;
+}
+
 .footer {
     width: 100%;
     display: flex;
@@ -16,9 +20,11 @@
     flex-direction: column;
     margin: 0;
     align-items: center;
-    padding-top: 1rem;
     padding-bottom: 1rem;
+    padding-top: 0.2rem;
+    margin-top: 5rem;
 }
+
 p {
     margin: 0;
     font-size: 12px;

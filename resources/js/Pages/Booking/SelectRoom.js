@@ -31,15 +31,20 @@ export default function selectRoom({ rooms }) {
                                     <div className={styles.roomInfo}>
                                         <h2>{room.name}</h2>
                                         <p>{room.description}</p>
-                                        <p>{room.price + " kr"}</p>
-
-                                        <div className={styles.linkContainer}>
-                                            <Link
-                                                className={styles.link}
-                                                href={`/booking/room/${room.id}`}
+                                        <p className={styles.price}>
+                                            {room.price + " kr"}
+                                        </p>
+                                        <div className={styles.linkWrapper}>
+                                            <div
+                                                className={styles.linkContainer}
                                             >
-                                                Se tillgänglighet och boka
-                                            </Link>
+                                                <Link
+                                                    className={styles.link}
+                                                    href={`/booking/room/${room.id}`}
+                                                >
+                                                    Se tillgänglighet och boka
+                                                </Link>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

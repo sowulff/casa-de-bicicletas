@@ -12,18 +12,27 @@ body {
     font-family: Roboto-Thin;
 }
 
+h2 {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+}
+
 .fullPageontainer {
     display: flex;
     justify-content: center;
 }
 
+.price {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+}
 /* container som håller hela sidan */
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     gap: 2rem 5rem;
-    padding: 1rem;
+    /* padding: 1rem; */
 }
 
 /* container som håller varje enskilt rum och dess info */
@@ -48,39 +57,28 @@ body {
 
 /* styling för knapparna */
 .linkContainer {
-    background-color: #dcd0d0;
+    background-color: #fd6363;
     display: flex;
     justify-content: center;
     padding: 0.2rem;
-    margin-top: 2rem;
+    border-radius: 50px 100px 0 50px;
 }
 
 .linkContainer:hover {
-    background-color: #ff6f9a;
+    background-color: white;
+    border: solid 1px #fd6363;
 }
 
 .link {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-family: Julius;
     color: white;
     padding: 0.1rem;
 }
 
-.linkContainer {
-    border-radius: 50px 100px 0 50px;
+.link:hover {
+    color: #fd6363;
 }
-
-/* .roomContainer:nth-child(2) .linkContainer {
-    border-radius: 0 50px 50px 100px;
-}
-
-.roomContainer:nth-child(3) .linkContainer {
-    border-radius: 50px 0 100px 50px;
-}
-
-.roomContainer:nth-child(4) .linkContainer {
-    border-radius: 100px 50px 50px 0;
-} */
 
 /* container som håller varje enskilt rum men har en större width för att få en mörkare bakgrund bakom vissa rum */
 .coloredContainer {
@@ -103,12 +101,35 @@ body {
     background-color: #ffffff;
 }
 
+.coloredContainer:nth-child(2) {
+    border-radius: 0 0 0 35px;
+}
+
+.coloredContainer:nth-child(3) {
+    border-radius: 0 0 35px 0;
+}
+.coloredContainer:nth-child(2) .linkContainer {
+    border-radius: 0 50px 50px 100px;
+}
+
+.coloredContainer:nth-child(3) .linkContainer {
+    border-radius: 50px 0 100px 50px;
+}
+
+.coloredContainer:nth-child(4) .linkContainer {
+    border-radius: 100px 50px 50px 0;
+}
+
 @media only screen and (max-width: 1000px) {
     .roomContainer {
         width: 50%;
     }
 }
 @media only screen and (max-width: 850px) {
+    h2 {
+        font-size: 1.5rem !important;
+        margin-top: 2rem;
+    }
     .container {
         grid-template-columns: 1fr;
         justify-content: center;
@@ -116,17 +137,33 @@ body {
         padding: 1rem;
     }
     .roomContainer {
-        flex-direction: row;
-        width: 30%;
+        flex-direction: column;
+        width: 100%;
     }
-    .coloredContainer:first-child {
-        justify-content: left;
+
+    .roomContainer p,
+    h2 {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-top: 1rem;
     }
-    .coloredContainer:nth-child(3) {
-        justify-content: left;
+    .linkContainer {
+        width: 50%;
+        display: flex;
+        justify-self: center;
+        align-self: center;
     }
+
     .roomInfo {
         width: 100%;
-        background-color: aqua;
+        background-color: rgb(255, 255, 255);
+        padding-bottom: 2rem;
+        border: 2px solid #d3d2cf45;
+    }
+    .linkWrapper {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
     }
 }
