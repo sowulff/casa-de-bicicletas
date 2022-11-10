@@ -3,11 +3,11 @@
     font-family: Roboto-Thin;
 }
 
-body {
+.cycling {
     font-family: Roboto-Thin;
 }
 
-img {
+.cycling img {
     max-width: 50%;
     height: auto;
     vertical-align: middle;
@@ -67,4 +67,25 @@ img {
 .photoSectionTwo {
     max-width: 90%;
     padding: 2rem;
+}
+@media only screen and (max-width: 850px) {
+    .cardOne {
+        flex-direction: column;
+    }
+    .text {
+        padding: 1rem;
+        text-align: center;
+    }
+    .cardOne img {
+        max-width: 70%;
+    }
+    .cardThree {
+        grid-template-columns: 1fr;
+    }
+    .cardThree .photoSectionTwo {
+        max-width: 100%;
+    }
+    .photoSectionOne {
+        padding-left: 2rem;
+    }
 }

@@ -3,9 +3,6 @@
     font-family: Julius;
 }
 
-svg {
-    margin: 1.5rem;
-}
 .navBar {
     display: flex;
     justify-content: space-between;
@@ -56,5 +53,11 @@ a {
     }
     .navLinks {
         display: none;
+    }
+    .navBar {
+        align-items: flex-start;
+    }
+    svg {
+        width: 70%;
     }
 }

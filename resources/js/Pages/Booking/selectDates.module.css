@@ -50,7 +50,7 @@ select {
     padding: 0.5rem;
 }
 
-button {
+.buttonContainer button {
     background-color: #dcd0d0;
     align-self: left;
     width: 50%;
@@ -59,6 +59,8 @@ button {
     padding: 0.3rem;
     color: white;
     font-family: Julius;
+    background-color: #fd6363 !important;
+    cursor: pointer;
 }
 
 .fullpageContainer {
@@ -80,16 +82,7 @@ button {
     gap: 3rem;
 }
 
-.buttonContainer button {
-    background-color: #fd6363 !important;
-    cursor: pointer;
-}
-
-.buttonContainer:hover {
-    background-color: white !important;
-}
-
-button:hover {
+.buttonContainer button:hover {
     color: #fd6363;
     background-color: white !important;
     border: 1px solid #fd6363 !important;
@@ -118,18 +111,18 @@ button:hover {
         text-align: center;
     }
 
-    p {
+    .fullpageContainer p {
         text-align: center;
     }
-    button {
+    .fullpageContainer button {
         width: 100%;
     }
-    form {
+    .fullpageContainer form {
         width: 90% !important;
         margin-left: unset;
     }
 
-    select {
+    .fullpageContainer select {
         width: 100%;
     }
 }

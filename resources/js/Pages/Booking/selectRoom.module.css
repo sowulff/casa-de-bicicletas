@@ -12,7 +12,7 @@ body {
     font-family: Roboto-Thin;
 }
 
-h2 {
+.fullPageContainer h2 {
     padding-top: 0.8rem;
     padding-bottom: 0.8rem;
 }
@@ -100,9 +100,15 @@ h2 {
 .coloredContainer:last-child {
     background-color: #ffffff;
 }
+.coloredContainer:last-child .link {
+    padding-left: 0.9rem;
+}
 
 .coloredContainer:nth-child(2) {
     border-radius: 0 0 0 35px;
+}
+.coloredContainer:nth-child(2) .link {
+    padding-left: 0.9rem;
 }
 
 .coloredContainer:nth-child(3) {
@@ -126,7 +132,7 @@ h2 {
     }
 }
 @media only screen and (max-width: 850px) {
-    h2 {
+    .fullPageContainer h2 {
         font-size: 1.5rem !important;
         margin-top: 2rem;
     }
@@ -142,7 +148,7 @@ h2 {
     }
 
     .roomContainer p,
-    h2 {
+    .fullPageContainer h2 {
         padding-left: 3rem;
         padding-right: 3rem;
         padding-top: 1rem;
