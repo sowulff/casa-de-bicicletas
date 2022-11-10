@@ -33,7 +33,7 @@ p {
     width: 60%;
 }
 
-img {
+.fullPageContainer img {
     width: 80%;
     border-radius: 50px 50px 0 50px;
 }
