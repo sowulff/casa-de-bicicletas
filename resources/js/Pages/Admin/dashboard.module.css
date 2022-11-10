@@ -19,18 +19,18 @@
     font-family: Julius;
 }
 .logOut {
-    background-color: white;
-    color: rgb(58, 53, 53);
-    border: 1px solid rgb(58, 53, 53);
+    background-color: white !important;
+    color: rgb(58, 53, 53) !important;
+    border: 1px solid rgb(58, 53, 53) !important;
     width: 100%;
-    border-radius: 50px 50px 50px 0;
+    border-radius: 50px 50px 50px 0 !important;
 }
 
 .logOut:hover {
-    background-color: rgb(58, 53, 53);
-    color: white;
-    border: 1px solid rgb(58, 53, 53);
-    width: 100%;
+    background-color: rgb(58, 53, 53) !important;
+    color: white !important;
+    border: 1px solid rgb(58, 53, 53) !important;
+    width: 100% !important;
 }
 
 .bookingContainer {
