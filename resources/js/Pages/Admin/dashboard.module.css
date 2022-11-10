@@ -7,7 +7,7 @@
     font-family: Julius;
 }
 .header {
-    width: 59%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -20,27 +20,27 @@
 }
 .logOut {
     background-color: white;
-    color: black;
-    border: 1px solid black;
-    width: 100px;
-    height: 2rem;
+    color: rgb(58, 53, 53);
+    border: 1px solid rgb(58, 53, 53);
+    width: 100%;
+    border-radius: 50px 50px 50px 0;
 }
 
 .logOut:hover {
-    background-color: black;
+    background-color: rgb(58, 53, 53);
     color: white;
-    border: 1px solid black;
-    width: 100px;
-    height: 2rem;
+    border: 1px solid rgb(58, 53, 53);
+    width: 100%;
 }
+
 .bookingContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: rgb(231, 231, 231);
+    background-color: rgb(244, 242, 241);
 }
 .bookingCard {
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     font-family: Roboto-Thin;
     padding: 2rem;
     margin: 2rem;
@@ -48,17 +48,54 @@
     flex-direction: column;
     gap: 1rem;
     text-align: center;
+    border-radius: 15px 15px 0px 15px;
 }
-button {
+.bookingPage button {
     width: 100%;
     text-align: center;
     padding: 0.5rem;
     cursor: pointer;
-    background-color: rgb(255, 108, 108);
+    background-color: #fd6363;
     border: none;
-    border-radius: 10px;
+    border-radius: 15px 15px 0px 15px;
     color: white;
+    font-family: Roboto-Thin;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: white;
+    border: 1px solid #fd6363;
+    color: #fd6363;
 }
 .bookingDate {
-    background-color: aliceblue;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-radius: 15px;
+}
+
+.logOutContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.logOutContainer p {
+    background-color: white;
+    color: rgb(58, 53, 53);
+    font-size: 2rem;
+    font-family: Roboto-Thin;
+}
+
+.typeOfRoom {
+    font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 850px) {
+    .logOutContainer p {
+        background-color: white;
+        color: rgb(58, 53, 53);
+        font-size: 1rem;
+        font-family: Roboto-Thin;
+    }
 }
