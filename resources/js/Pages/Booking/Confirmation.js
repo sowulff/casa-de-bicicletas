@@ -11,7 +11,7 @@ export default function Confirmation({ booking }) {
             <div className={styles.wrapper}>
                 <div className={styles.fullPageContainer}>
                     <div className={styles.imageContainer}>
-                        <img src={"assets/galleri/28.JPG"} />
+                        <img src={"assets/galleri/25.JPG"} />
                     </div>
                     <div className={styles.textContainer}>
                         <h1>Tack för din bokning, {booking.first_name}!</h1>
