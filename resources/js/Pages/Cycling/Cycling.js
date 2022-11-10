@@ -4,7 +4,7 @@ import Footer from "../../components/Footer/Footer";
 
 export default function Cycling() {
     return (
-        <div>
+        <div className={styles.cycling}>
             <NavBar />
 
             <div className={styles.cardOne}>
