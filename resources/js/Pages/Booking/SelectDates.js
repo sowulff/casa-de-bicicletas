@@ -47,6 +47,7 @@ export default function selectDates({ room, bookings, rooms }) {
     });
     const errorMessage = errors[Object.keys(errors)[0]];
     console.log(errors);
+
     function submit(e) {
         e.preventDefault();
         post("/upload");

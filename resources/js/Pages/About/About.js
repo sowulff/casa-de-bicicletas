@@ -4,7 +4,7 @@ import NavBar from "../../components/NavBar/NavBar";
 
 export default function About() {
     return (
-        <div>
+        <div className={styles.about}>
             <NavBar />
             <div className={styles.imageContainer}>
                 <img src={"assets/galleri/19.JPG"} />
