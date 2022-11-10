@@ -42,5 +42,6 @@ body {
     .infoText {
         width: 90%;
         padding-top: 40%;
+        padding-left: 0;
     }
 }
