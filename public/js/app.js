@@ -5285,19 +5285,22 @@ function About() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
     className: _about_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].about,
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-      className: _about_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].fullPageContainer,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-        className: _about_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].imageContainer,
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
-          src: "assets/galleri/19.JPG"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-          className: _about_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].textContainer,
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {
-            children: "Om oss"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
-            children: ["Jag heter Jonas och blablabla jag heter Molle och jag fjgngfgfng jkgns . Jag heter Jonas och blablabla jag heter Molle och jag fjgngfgfng jkgns . Jag heter Jonas och blablabla jag heter Molle och jag fjgngfgfng jkgns . Jag heter Jonas och blablabla jag heter Molle och jag fjgngfgfng jkgns . Jag heter Jonas och blablabla jag heter Molle och jag fjgngfgfng jkgns . Jag heter Jonas och blablabla jag heter Molle och jag fjgngfgfng jkgns", " "]
+      className: _about_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].wrapper,
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: _about_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].fullPageContainer,
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+          className: _about_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].imageContainer,
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
+            src: "assets/galleri/19.JPG"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+            className: _about_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].textContainer,
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {
+              children: "Om oss"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
+              children: ["Jag heter Jonas och blablabla jag heter Molle och jag fjgngfgfng jkgns . Jag heter Jonas och blablabla jag heter Molle och jag fjgngfgfng jkgns . Jag heter Jonas och blablabla jag heter Molle och jag fjgngfgfng jkgns . Jag heter Jonas och blablabla jag heter Molle och jag fjgngfgfng jkgns . Jag heter Jonas och blablabla jag heter Molle och jag fjgngfgfng jkgns . Jag heter Jonas och blablabla jag heter Molle och jag fjgngfgfng jkgns", " "]
+            })]
           })]
-        })]
+        })
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_1__["default"], {})]
   });
@@ -6739,13 +6742,14 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n.tVxuWpOLNj1lRMxlQpYkng\\=\\= {\n    font-family: Roboto-Thin;\n}\n\n.fW8DKrA6lh6i8G7tRFbQXQ\\=\\= {\n    border: 2px solid #aeaaa245;\n    border-radius: 50px 0px 0 50px;\n    border-left: none;\n}\n.ujP2vLmV4SjdR9BW2IAzZA\\=\\= {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    height: 90%;\n}\n.ujP2vLmV4SjdR9BW2IAzZA\\=\\= img {\n    max-width: 55%;\n\n    border-radius: 50px 0 50px 0;\n    -o-object-fit: cover;\n       object-fit: cover;\n}\n\n.ujP2vLmV4SjdR9BW2IAzZA\\=\\= h1 {\n    padding-bottom: 1rem;\n}\n.ujP2vLmV4SjdR9BW2IAzZA\\=\\= p,\nh1 {\n    padding: 0 2rem;\n}\n\n.rw7KynDNZdxtv3Zt\\+nDYDw\\=\\= {\n    display: flex;\n    flex-direction: column;\n}\n\n@media only screen and (max-width: 850px) {\n    .ujP2vLmV4SjdR9BW2IAzZA\\=\\= {\n        flex-direction: column;\n        gap: 2rem;\n    }\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n.tVxuWpOLNj1lRMxlQpYkng\\=\\= {\n    font-family: Roboto-Thin;\n}\n\n.fW8DKrA6lh6i8G7tRFbQXQ\\=\\= {\n    border: 2px solid #aeaaa245;\n    border-radius: 50px 0px 0 50px;\n    border-left: none;\n}\n.ujP2vLmV4SjdR9BW2IAzZA\\=\\= {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    height: 90%;\n}\n.ujP2vLmV4SjdR9BW2IAzZA\\=\\= img {\n    max-width: 55%;\n    border-radius: 50px 0 50px 0;\n    -o-object-fit: cover;\n       object-fit: cover;\n}\n\n.ujP2vLmV4SjdR9BW2IAzZA\\=\\= h1 {\n    padding-bottom: 1rem;\n}\n.ujP2vLmV4SjdR9BW2IAzZA\\=\\= p,\nh1 {\n    padding: 0 2rem;\n}\n\n.rw7KynDNZdxtv3Zt\\+nDYDw\\=\\= {\n    display: flex;\n    flex-direction: column;\n}\n\n@media only screen and (max-width: 850px) {\n    .-qWcAnpmV9ZDPqb2VEasYw\\=\\= {\n        width: 100%;\n        display: flex;\n        justify-content: center;\n    }\n    .fW8DKrA6lh6i8G7tRFbQXQ\\=\\= {\n        width: 80vw;\n        border-left: 2px solid #aeaaa245;\n    }\n\n    .ujP2vLmV4SjdR9BW2IAzZA\\=\\= {\n        flex-direction: column;\n        gap: 2rem;\n    }\n\n    .ujP2vLmV4SjdR9BW2IAzZA\\=\\= img {\n        max-width: 100%;\n    }\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"about": "tVxuWpOLNj1lRMxlQpYkng==",
 	"fullPageContainer": "fW8DKrA6lh6i8G7tRFbQXQ==",
 	"imageContainer": "ujP2vLmV4SjdR9BW2IAzZA==",
-	"textContainer": "rw7KynDNZdxtv3Zt+nDYDw=="
+	"textContainer": "rw7KynDNZdxtv3Zt+nDYDw==",
+	"wrapper": "-qWcAnpmV9ZDPqb2VEasYw=="
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
