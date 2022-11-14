@@ -32,6 +32,7 @@
 .aboutWrapper .imageContainer p,
 .aboutWrapper .imageContainer h1 {
     padding: 0 2rem;
+    padding-bottom: 1rem;
 }
 
 .textContainer {
@@ -39,11 +40,29 @@
     flex-direction: column;
 }
 
+.aboutWrapper p {
+    margin-top: 0.5rem;
+}
+
+@media only screen and (max-width: 1050px) {
+    .aboutWrapper {
+        font-size: 12px;
+    }
+
+    .aboutWrapper h1 {
+        font-size: 18px;
+    }
+    .aboutWrapper p {
+        margin-top: 0rem;
+    }
+}
+
 @media only screen and (max-width: 850px) {
     .aboutWrapper {
         width: 100%;
         display: flex;
         justify-content: center;
+        font-size: 14px;
     }
     .fullPageContainer {
         width: 80vw;

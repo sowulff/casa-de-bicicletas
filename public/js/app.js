@@ -5295,9 +5295,13 @@ function About() {
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
             className: _about_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].textContainer,
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {
-              children: "Om oss"
+              children: "Hej!"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
-              children: ["Jag heter Jonas och blablabla jag heter Molle och jag fjgngfgfng jkgns . Jag heter Jonas och blablabla jag heter Molle och jag fjgngfgfng jkgns . Jag heter Jonas och blablabla jag heter Molle och jag fjgngfgfng jkgns . Jag heter Jonas och blablabla jag heter Molle och jag fjgngfgfng jkgns . Jag heter Jonas och blablabla jag heter Molle och jag fjgngfgfng jkgns . Jag heter Jonas och blablabla jag heter Molle och jag fjgngfgfng jkgns", " "]
+              children: ["Vi \xE4r tv\xE5 glada G\xF6teborgare med intresset f\xF6r mountainbike gemensamt. Den ena av oss har cyklat f\xF6r landslaget och den andra har bakgrund fr\xE5n surfing.", " "]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+              children: "2021 best\xE4mde vi oss f\xF6r att \xF6ppna Casa La Marina med m\xE5let att m\xF6ta och sammanf\xF6ra m\xE4nniskor som vi kunde cykla tillsammans med p\xE5 en h\xE4rlig plats. \xC4ven om vi \xE4gnar mycket tid f\xF6r cykling \xE4r det inte ett m\xE5ste att du delar v\xE5r k\xE4rlek f\xF6r cyklingen \u2013 hit \xE4r alla v\xE4lkomna! Vi str\xE4var efter att bevara en familj\xE4r atmosf\xE4r och go st\xE4mning."
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+              children: "Casa La Marina \xE4r ett semesterboende i San Fulgencio. H\xE4r kan du hyra en l\xE4genhet, dubbelrum, femb\xE4dsrum eller en st\xE4llplats f\xF6r din husbil, husvagn eller campenvan. Sl\xE4ng n\xE5got p\xE5 grillen, utmana kompisen i en biljard eller pingis-match, slappa i h\xE4ngmattan eller bada i poolen. H\xE4r \xE4r m\xF6jligheterna m\xE5nga! I n\xE4romr\xE5det finns m\xE5nga sev\xE4rdheter. Vi hj\xE4lper g\xE4rna till med tips p\xE5 utflykter!"
             })]
           })]
         })
@@ -5610,7 +5614,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var date_fns_locale_sv__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! date-fns/locale/sv */ "./node_modules/date-fns/esm/locale/sv/index.js");
 /* harmony import */ var _selectDates_module_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./selectDates.module.css */ "./resources/js/Pages/Booking/selectDates.module.css");
 /* harmony import */ var _components_Footer_Footer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/Footer/Footer */ "./resources/js/components/Footer/Footer.js");
-Object(function webpackMissingModule() { var e = new Error("Cannot find module 'emailjs-com'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var emailjs_com__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! emailjs-com */ "./node_modules/emailjs-com/es/index.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
@@ -5700,7 +5704,7 @@ function selectDates(_ref) {
 
   function submit(e) {
     e.preventDefault();
-    Object(function webpackMissingModule() { var e = new Error("Cannot find module 'emailjs-com'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())("service_28p48oe", "template_msi86bn", e.target, "px6u5Af-2QCLnhWNA").then(function (result) {
+    emailjs_com__WEBPACK_IMPORTED_MODULE_7__["default"].sendForm("service_28p48oe", "template_msi86bn", e.target, "px6u5Af-2QCLnhWNA").then(function (result) {
       console.log(result.text);
     }, function (error) {
       console.log(error.text);
@@ -6416,13 +6420,17 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 function NavBar() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
       navMenuIsOpen = _useState2[0],
       setNavMenuIsOpen = _useState2[1];
 
-  console.log(navMenuIsOpen);
+  var _usePage = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.usePage)(),
+      url = _usePage.url,
+      component = _usePage.component;
+
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
     className: _NavBar_module_css__WEBPACK_IMPORTED_MODULE_3__["default"].navBar,
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
@@ -6460,16 +6468,24 @@ function NavBar() {
       className: _NavBar_module_css__WEBPACK_IMPORTED_MODULE_3__["default"].navLinks,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
         href: "/boka",
+        className: url === "/boka" ? _NavBar_module_css__WEBPACK_IMPORTED_MODULE_3__["default"].active : "",
         children: "BOKA \u2193"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
         href: "/cykling",
+        className: url === "/cykling" ? _NavBar_module_css__WEBPACK_IMPORTED_MODULE_3__["default"].active : "",
         children: "CYKLING \u2191"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
         href: "/galleri",
+        className: url === "/galleri" ? _NavBar_module_css__WEBPACK_IMPORTED_MODULE_3__["default"].active : "",
         children: "GALLERI \u2193"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
         href: "/om-oss",
+        className: url === "/om-oss" ? _NavBar_module_css__WEBPACK_IMPORTED_MODULE_3__["default"].active : "",
         children: "OM OSS \u2191"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
+        href: "/kontakt",
+        className: url === "/kontakt" ? _NavBar_module_css__WEBPACK_IMPORTED_MODULE_3__["default"].active : "",
+        children: "KONTAKT \u2193"
       })]
     })]
   });
@@ -6730,7 +6746,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n.tVxuWpOLNj1lRMxlQpYkng\\=\\= {\n    font-family: Roboto-Thin;\n}\n\n.fW8DKrA6lh6i8G7tRFbQXQ\\=\\= {\n    border: 2px solid #aeaaa245;\n    border-radius: 50px 0px 0 50px;\n    border-left: none;\n}\n.ujP2vLmV4SjdR9BW2IAzZA\\=\\= {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    height: 90%;\n}\n.ujP2vLmV4SjdR9BW2IAzZA\\=\\= img {\n    max-width: 55%;\n    border-radius: 50px 0 50px 0;\n    -o-object-fit: cover;\n       object-fit: cover;\n}\n\n.LBgiKdkHbIt7jjZPSHR-3w\\=\\= .ujP2vLmV4SjdR9BW2IAzZA\\=\\= h1 {\n    padding-bottom: 1rem;\n    font-family: Roboto-Thin;\n}\n\n.LBgiKdkHbIt7jjZPSHR-3w\\=\\= .ujP2vLmV4SjdR9BW2IAzZA\\=\\= p,\nh1 {\n    padding: 0 2rem;\n}\n\n.rw7KynDNZdxtv3Zt\\+nDYDw\\=\\= {\n    display: flex;\n    flex-direction: column;\n}\n\n@media only screen and (max-width: 850px) {\n    .LBgiKdkHbIt7jjZPSHR-3w\\=\\= {\n        width: 100%;\n        display: flex;\n        justify-content: center;\n    }\n    .fW8DKrA6lh6i8G7tRFbQXQ\\=\\= {\n        width: 80vw;\n        border-left: 2px solid #aeaaa245;\n    }\n\n    .ujP2vLmV4SjdR9BW2IAzZA\\=\\= {\n        flex-direction: column;\n        gap: 2rem;\n    }\n\n    .ujP2vLmV4SjdR9BW2IAzZA\\=\\= img {\n        max-width: 100%;\n    }\n\n    .LBgiKdkHbIt7jjZPSHR-3w\\=\\= .rw7KynDNZdxtv3Zt\\+nDYDw\\=\\= {\n        padding-bottom: 2rem;\n    }\n\n    .ujP2vLmV4SjdR9BW2IAzZA\\=\\= {\n        height: unset;\n    }\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n.tVxuWpOLNj1lRMxlQpYkng\\=\\= {\n    font-family: Roboto-Thin;\n}\n\n.fW8DKrA6lh6i8G7tRFbQXQ\\=\\= {\n    border: 2px solid #aeaaa245;\n    border-radius: 50px 0px 0 50px;\n    border-left: none;\n}\n.ujP2vLmV4SjdR9BW2IAzZA\\=\\= {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    height: 90%;\n}\n.ujP2vLmV4SjdR9BW2IAzZA\\=\\= img {\n    max-width: 55%;\n    border-radius: 50px 0 50px 0;\n    -o-object-fit: cover;\n       object-fit: cover;\n}\n\n.LBgiKdkHbIt7jjZPSHR-3w\\=\\= .ujP2vLmV4SjdR9BW2IAzZA\\=\\= h1 {\n    padding-bottom: 1rem;\n    font-family: Roboto-Thin;\n}\n\n.LBgiKdkHbIt7jjZPSHR-3w\\=\\= .ujP2vLmV4SjdR9BW2IAzZA\\=\\= p,\n.LBgiKdkHbIt7jjZPSHR-3w\\=\\= .ujP2vLmV4SjdR9BW2IAzZA\\=\\= h1 {\n    padding: 0 2rem;\n    padding-bottom: 1rem;\n}\n\n.rw7KynDNZdxtv3Zt\\+nDYDw\\=\\= {\n    display: flex;\n    flex-direction: column;\n}\n\n.LBgiKdkHbIt7jjZPSHR-3w\\=\\= p {\n    margin-top: 0.5rem;\n}\n\n@media only screen and (max-width: 1050px) {\n    .LBgiKdkHbIt7jjZPSHR-3w\\=\\= {\n        font-size: 12px;\n    }\n\n    .LBgiKdkHbIt7jjZPSHR-3w\\=\\= h1 {\n        font-size: 18px;\n    }\n    .LBgiKdkHbIt7jjZPSHR-3w\\=\\= p {\n        margin-top: 0rem;\n    }\n}\n\n@media only screen and (max-width: 850px) {\n    .LBgiKdkHbIt7jjZPSHR-3w\\=\\= {\n        width: 100%;\n        display: flex;\n        justify-content: center;\n        font-size: 14px;\n    }\n    .fW8DKrA6lh6i8G7tRFbQXQ\\=\\= {\n        width: 80vw;\n        border-left: 2px solid #aeaaa245;\n    }\n\n    .ujP2vLmV4SjdR9BW2IAzZA\\=\\= {\n        flex-direction: column;\n        gap: 2rem;\n    }\n\n    .ujP2vLmV4SjdR9BW2IAzZA\\=\\= img {\n        max-width: 100%;\n    }\n\n    .LBgiKdkHbIt7jjZPSHR-3w\\=\\= .rw7KynDNZdxtv3Zt\\+nDYDw\\=\\= {\n        padding-bottom: 2rem;\n    }\n\n    .ujP2vLmV4SjdR9BW2IAzZA\\=\\= {\n        height: unset;\n    }\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"about": "tVxuWpOLNj1lRMxlQpYkng==",
@@ -7019,7 +7035,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\nbody {\n    font-family: Roboto-Thin;\n}\n\n._4USzpIOJSIJ-abx07L2ZuQ\\=\\= {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    z-index: -1;\n    overflow: hidden;\n}\n.Esszq93d-43raJAL6-zqsg\\=\\= {\n    height: 100%;\n    width: 100%;\n    -o-object-fit: cover;\n       object-fit: cover;\n    pointer-events: none;\n}\n.E78Lg\\+vvbPmKumJqowKcsQ\\=\\= {\n    padding-left: 1.5rem;\n    color: rgb(225, 219, 211);\n    width: 40%;\n    line-height: 1.5;\n    margin-left: 1.5rem;\n    display: flex;\n    flex-direction: column;\n    height: 65vh;\n    justify-content: flex-end;\n}\n\n.VPWl5ySPsjhRHawsvA9gTA\\=\\= {\n    font-size: 1.8rem;\n}\n\n@media only screen and (max-width: 850px) {\n    .E78Lg\\+vvbPmKumJqowKcsQ\\=\\= {\n        width: 90%;\n        padding-top: 40%;\n        padding-left: 0;\n    }\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\nbody {\n    font-family: Roboto-Thin;\n}\n\n._4USzpIOJSIJ-abx07L2ZuQ\\=\\= {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    z-index: -1;\n    overflow: hidden;\n}\n.Esszq93d-43raJAL6-zqsg\\=\\= {\n    height: 100%;\n    width: 100%;\n    -o-object-fit: cover;\n       object-fit: cover;\n    pointer-events: none;\n}\n.E78Lg\\+vvbPmKumJqowKcsQ\\=\\= {\n    padding-left: 1.5rem;\n    color: rgb(225, 219, 211);\n    width: 40%;\n    line-height: 1.5;\n    margin-left: 1.5rem;\n    display: flex;\n    flex-direction: column;\n    height: 75vh;\n    justify-content: flex-end;\n}\n\n.VPWl5ySPsjhRHawsvA9gTA\\=\\= {\n    font-size: 1.8rem;\n}\n\n@media only screen and (max-width: 850px) {\n    .E78Lg\\+vvbPmKumJqowKcsQ\\=\\= {\n        width: 90%;\n        padding-top: 40%;\n        padding-left: 0;\n    }\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"bgVideo": "_4USzpIOJSIJ-abx07L2ZuQ==",
@@ -7049,7 +7065,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\n@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\nsvg {\n    margin-top: 0.8rem !important;\n}\n\n.rkT4cAwgqzlmUavoEGU5dA\\=\\= {\n    width: 100%;\n    display: flex;\n    justify-content: center;\n    background-color: #aeaaa245;\n    flex-direction: column;\n    margin: 0;\n    align-items: center;\n    padding-top: 2rem;\n    padding-bottom: 1rem;\n    margin-top: 5rem;\n}\n\n.rkT4cAwgqzlmUavoEGU5dA\\=\\= p {\n    margin: 0;\n    font-size: 12px;\n    color: rgb(42, 36, 26);\n    font-family: Roboto-Thin;\n}\n\n.HmgCxTqfG\\+FOpoGNCkBSjA\\=\\= {\n    font-family: Julius;\n    padding-bottom: 0.5rem;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\n@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\nsvg {\n    margin-top: 0.8rem !important;\n}\n\n.rkT4cAwgqzlmUavoEGU5dA\\=\\= {\n    width: 100%;\n    display: flex;\n    justify-content: center;\n    background-color: #aeaaa245;\n    flex-direction: column;\n    margin: 0;\n    align-items: center;\n    padding-top: 2rem;\n    padding-bottom: 1rem;\n    margin-top: 5rem;\n}\n\n.rkT4cAwgqzlmUavoEGU5dA\\=\\= p {\n    margin: 0;\n    font-size: 12px;\n    color: rgb(42, 36, 26);\n    font-family: Roboto-Thin;\n}\n\n.rkT4cAwgqzlmUavoEGU5dA\\=\\= .HmgCxTqfG\\+FOpoGNCkBSjA\\=\\= {\n    padding-bottom: 0.5rem;\n    font-size: 1.1rem !important;\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"footer": "rkT4cAwgqzlmUavoEGU5dA==",
@@ -7077,11 +7093,13 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\n._71hV\\+fOZYQGIixtAlDhymQ\\=\\= {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 2rem 2rem 1rem 2rem;\n}\n.V7hdcHsY5o68MXxr1nsD8Q\\=\\= {\n    display: flex;\n    gap: 2rem;\n    font-family: Julius;\n}\n\na {\n    text-decoration: none;\n    color: #3e2e29;\n}\n\n.V7hdcHsY5o68MXxr1nsD8Q\\=\\= a:hover {\n    border-bottom: 1px solid#3e2e29;\n}\n\n.QH3-tSp6gjwQakvBwdGa5A\\=\\=:hover {\n    border-bottom: none;\n}\n._6b8ZBlmHxU0QC1L-Oo5QYg\\=\\= {\n    display: none;\n}\n\n.QfGAqRcTzOIdA0mPoh3INQ\\=\\= {\n    background-color: transparent;\n    border: none;\n    padding: 0;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    width: 20px;\n    height: 14px;\n}\n.\\+xF2b64o\\+f0VMmAhvuzXNg\\=\\= {\n    background-color: black;\n    width: 100%;\n    height: 2px;\n}\n\n@media only screen and (max-width: 850px) {\n    ._6b8ZBlmHxU0QC1L-Oo5QYg\\=\\= {\n        display: block;\n    }\n    .V7hdcHsY5o68MXxr1nsD8Q\\=\\= {\n        display: none;\n    }\n    ._71hV\\+fOZYQGIixtAlDhymQ\\=\\= {\n        align-items: flex-start;\n    }\n    svg {\n        width: 70%;\n    }\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\n._71hV\\+fOZYQGIixtAlDhymQ\\=\\= {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 2rem 2rem 1rem 2rem;\n}\n._6Uq9-Sk3QviGIxCdHcCBdA\\=\\= {\n    border-bottom: 1px solid black;\n}\n.V7hdcHsY5o68MXxr1nsD8Q\\=\\= {\n    display: flex;\n    gap: 2rem;\n    font-family: Julius;\n}\n.D2ORbr4jinFNQvLKBmf-8g\\=\\= {\n    background-color: #3e2e29;\n}\na {\n    text-decoration: none;\n    color: #3e2e29;\n    padding-bottom: 0.3rem;\n}\n\n.V7hdcHsY5o68MXxr1nsD8Q\\=\\= a:hover {\n    border-bottom: 1px solid#3e2e29;\n}\n\n.QH3-tSp6gjwQakvBwdGa5A\\=\\=:hover {\n    border-bottom: none;\n}\n._6b8ZBlmHxU0QC1L-Oo5QYg\\=\\= {\n    display: none;\n}\n\n.QfGAqRcTzOIdA0mPoh3INQ\\=\\= {\n    background-color: transparent;\n    border: none;\n    padding: 0;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    width: 20px;\n    height: 14px;\n}\n.\\+xF2b64o\\+f0VMmAhvuzXNg\\=\\= {\n    background-color: black;\n    width: 100%;\n    height: 2px;\n}\n\n@media only screen and (max-width: 850px) {\n    ._6b8ZBlmHxU0QC1L-Oo5QYg\\=\\= {\n        display: block;\n    }\n    .V7hdcHsY5o68MXxr1nsD8Q\\=\\= {\n        display: none;\n    }\n    ._71hV\\+fOZYQGIixtAlDhymQ\\=\\= {\n        align-items: flex-start;\n    }\n    svg {\n        width: 70%;\n    }\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"navBar": "_71hV+fOZYQGIixtAlDhymQ==",
+	"active": "_6Uq9-Sk3QviGIxCdHcCBdA==",
 	"navLinks": "V7hdcHsY5o68MXxr1nsD8Q==",
+	"underline": "D2ORbr4jinFNQvLKBmf-8g==",
 	"logo": "QH3-tSp6gjwQakvBwdGa5A==",
 	"hamburgerMenu": "_6b8ZBlmHxU0QC1L-Oo5QYg==",
 	"hamburgerButton": "QfGAqRcTzOIdA0mPoh3INQ==",
@@ -18698,6 +18716,265 @@ deepmerge.all = function deepmergeAll(array, options) {
 var deepmerge_1 = deepmerge;
 
 module.exports = deepmerge_1;
+
+
+/***/ }),
+
+/***/ "./node_modules/emailjs-com/es/api/sendPost.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/emailjs-com/es/api/sendPost.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "sendPost": () => (/* binding */ sendPost)
+/* harmony export */ });
+/* harmony import */ var _models_EmailJSResponseStatus__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../models/EmailJSResponseStatus */ "./node_modules/emailjs-com/es/models/EmailJSResponseStatus.js");
+/* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../store/store */ "./node_modules/emailjs-com/es/store/store.js");
+
+
+const sendPost = (url, data, headers = {}) => {
+    return new Promise((resolve, reject) => {
+        const xhr = new XMLHttpRequest();
+        xhr.addEventListener('load', ({ target }) => {
+            const responseStatus = new _models_EmailJSResponseStatus__WEBPACK_IMPORTED_MODULE_0__.EmailJSResponseStatus(target);
+            if (responseStatus.status === 200 || responseStatus.text === 'OK') {
+                resolve(responseStatus);
+            }
+            else {
+                reject(responseStatus);
+            }
+        });
+        xhr.addEventListener('error', ({ target }) => {
+            reject(new _models_EmailJSResponseStatus__WEBPACK_IMPORTED_MODULE_0__.EmailJSResponseStatus(target));
+        });
+        xhr.open('POST', _store_store__WEBPACK_IMPORTED_MODULE_1__.store._origin + url, true);
+        Object.keys(headers).forEach((key) => {
+            xhr.setRequestHeader(key, headers[key]);
+        });
+        xhr.send(data);
+    });
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/emailjs-com/es/index.js":
+/*!**********************************************!*\
+  !*** ./node_modules/emailjs-com/es/index.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   "init": () => (/* reexport safe */ _methods_init_init__WEBPACK_IMPORTED_MODULE_0__.init),
+/* harmony export */   "send": () => (/* reexport safe */ _methods_send_send__WEBPACK_IMPORTED_MODULE_1__.send),
+/* harmony export */   "sendForm": () => (/* reexport safe */ _methods_sendForm_sendForm__WEBPACK_IMPORTED_MODULE_2__.sendForm)
+/* harmony export */ });
+/* harmony import */ var _methods_init_init__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./methods/init/init */ "./node_modules/emailjs-com/es/methods/init/init.js");
+/* harmony import */ var _methods_send_send__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./methods/send/send */ "./node_modules/emailjs-com/es/methods/send/send.js");
+/* harmony import */ var _methods_sendForm_sendForm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./methods/sendForm/sendForm */ "./node_modules/emailjs-com/es/methods/sendForm/sendForm.js");
+
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+    init: _methods_init_init__WEBPACK_IMPORTED_MODULE_0__.init,
+    send: _methods_send_send__WEBPACK_IMPORTED_MODULE_1__.send,
+    sendForm: _methods_sendForm_sendForm__WEBPACK_IMPORTED_MODULE_2__.sendForm,
+});
+
+
+/***/ }),
+
+/***/ "./node_modules/emailjs-com/es/methods/init/init.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/emailjs-com/es/methods/init/init.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "init": () => (/* binding */ init)
+/* harmony export */ });
+/* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../store/store */ "./node_modules/emailjs-com/es/store/store.js");
+
+/**
+ * Initiation
+ * @param {string} userID - set the EmailJS user ID
+ * @param {string} origin - set the EmailJS origin
+ */
+const init = (userID, origin = 'https://api.emailjs.com') => {
+    _store_store__WEBPACK_IMPORTED_MODULE_0__.store._userID = userID;
+    _store_store__WEBPACK_IMPORTED_MODULE_0__.store._origin = origin;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/emailjs-com/es/methods/send/send.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/emailjs-com/es/methods/send/send.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "send": () => (/* binding */ send)
+/* harmony export */ });
+/* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../store/store */ "./node_modules/emailjs-com/es/store/store.js");
+/* harmony import */ var _utils_validateParams__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/validateParams */ "./node_modules/emailjs-com/es/utils/validateParams.js");
+/* harmony import */ var _api_sendPost__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../api/sendPost */ "./node_modules/emailjs-com/es/api/sendPost.js");
+
+
+
+/**
+ * Send a template to the specific EmailJS service
+ * @param {string} serviceID - the EmailJS service ID
+ * @param {string} templateID - the EmailJS template ID
+ * @param {object} templatePrams - the template params, what will be set to the EmailJS template
+ * @param {string} userID - the EmailJS user ID
+ * @returns {Promise<EmailJSResponseStatus>}
+ */
+const send = (serviceID, templateID, templatePrams, userID) => {
+    const uID = userID || _store_store__WEBPACK_IMPORTED_MODULE_0__.store._userID;
+    (0,_utils_validateParams__WEBPACK_IMPORTED_MODULE_1__.validateParams)(uID, serviceID, templateID);
+    const params = {
+        lib_version: '3.2.0',
+        user_id: uID,
+        service_id: serviceID,
+        template_id: templateID,
+        template_params: templatePrams,
+    };
+    return (0,_api_sendPost__WEBPACK_IMPORTED_MODULE_2__.sendPost)('/api/v1.0/email/send', JSON.stringify(params), {
+        'Content-type': 'application/json',
+    });
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/emailjs-com/es/methods/sendForm/sendForm.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/emailjs-com/es/methods/sendForm/sendForm.js ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "sendForm": () => (/* binding */ sendForm)
+/* harmony export */ });
+/* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../store/store */ "./node_modules/emailjs-com/es/store/store.js");
+/* harmony import */ var _utils_validateParams__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/validateParams */ "./node_modules/emailjs-com/es/utils/validateParams.js");
+/* harmony import */ var _api_sendPost__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../api/sendPost */ "./node_modules/emailjs-com/es/api/sendPost.js");
+
+
+
+const findHTMLForm = (form) => {
+    let currentForm;
+    if (typeof form === 'string') {
+        currentForm = document.querySelector(form);
+    }
+    else {
+        currentForm = form;
+    }
+    if (!currentForm || currentForm.nodeName !== 'FORM') {
+        throw 'The 3rd parameter is expected to be the HTML form element or the style selector of form';
+    }
+    return currentForm;
+};
+/**
+ * Send a form the specific EmailJS service
+ * @param {string} serviceID - the EmailJS service ID
+ * @param {string} templateID - the EmailJS template ID
+ * @param {string | HTMLFormElement} form - the form element or selector
+ * @param {string} userID - the EmailJS user ID
+ * @returns {Promise<EmailJSResponseStatus>}
+ */
+const sendForm = (serviceID, templateID, form, userID) => {
+    const uID = userID || _store_store__WEBPACK_IMPORTED_MODULE_0__.store._userID;
+    const currentForm = findHTMLForm(form);
+    (0,_utils_validateParams__WEBPACK_IMPORTED_MODULE_1__.validateParams)(uID, serviceID, templateID);
+    const formData = new FormData(currentForm);
+    formData.append('lib_version', '3.2.0');
+    formData.append('service_id', serviceID);
+    formData.append('template_id', templateID);
+    formData.append('user_id', uID);
+    return (0,_api_sendPost__WEBPACK_IMPORTED_MODULE_2__.sendPost)('/api/v1.0/email/send-form', formData);
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/emailjs-com/es/models/EmailJSResponseStatus.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/emailjs-com/es/models/EmailJSResponseStatus.js ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "EmailJSResponseStatus": () => (/* binding */ EmailJSResponseStatus)
+/* harmony export */ });
+class EmailJSResponseStatus {
+    constructor(httpResponse) {
+        this.status = httpResponse.status;
+        this.text = httpResponse.responseText;
+    }
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/emailjs-com/es/store/store.js":
+/*!****************************************************!*\
+  !*** ./node_modules/emailjs-com/es/store/store.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "store": () => (/* binding */ store)
+/* harmony export */ });
+const store = {
+    _origin: 'https://api.emailjs.com',
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/emailjs-com/es/utils/validateParams.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/emailjs-com/es/utils/validateParams.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "validateParams": () => (/* binding */ validateParams)
+/* harmony export */ });
+const validateParams = (userID, serviceID, templateID) => {
+    if (!userID) {
+        throw 'The user ID is required. Visit https://dashboard.emailjs.com/admin/integration';
+    }
+    if (!serviceID) {
+        throw 'The service ID is required. Visit https://dashboard.emailjs.com/admin';
+    }
+    if (!templateID) {
+        throw 'The template ID is required. Visit https://dashboard.emailjs.com/admin/templates';
+    }
+    return true;
+};
 
 
 /***/ }),
