@@ -62,11 +62,15 @@ body {
     justify-content: center;
     padding: 0.2rem;
     border-radius: 50px 100px 0 50px;
+    border: solid 1px #fd6363;
 }
 
 .linkContainer:hover {
     background-color: white;
     border: solid 1px #fd6363;
+}
+.linkContainer:hover .link {
+    color: #fd6363;
 }
 
 .link {
@@ -74,10 +78,6 @@ body {
     font-family: Julius;
     color: white;
     padding: 0.1rem;
-}
-
-.link:hover {
-    color: #fd6363;
 }
 
 /* container som håller varje enskilt rum men har en större width för att få en mörkare bakgrund bakom vissa rum */
