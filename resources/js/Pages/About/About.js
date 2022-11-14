@@ -22,7 +22,7 @@ export default function About() {
                                 2021 bestämde vi oss för att öppna Casa La
                                 Marina med målet att möta och sammanföra
                                 människor som vi kunde cykla tillsammans med på
-                                en härlig plats. Även om vi ägnar mycket tid för
+                                en härlig plats. Även om vi ägnar mycket åt
                                 cykling är det inte ett måste att du delar vår
                                 kärlek för cyklingen – hit är alla välkomna! Vi
                                 strävar efter att bevara en familjär atmosfär
@@ -31,13 +31,13 @@ export default function About() {
                             <p>
                                 Casa La Marina är ett semesterboende i San
                                 Fulgencio. Här kan du hyra en lägenhet,
-                                dubbelrum, fembädsrum eller en ställplats för
+                                dubbelrum, fembäddsrum eller en ställplats för
                                 din husbil, husvagn eller campenvan. Släng något
                                 på grillen, utmana kompisen i en biljard eller
                                 pingis-match, slappa i hängmattan eller bada i
                                 poolen. Här är möjligheterna många! I närområdet
-                                finns många sevärdheter. Vi hjälper gärna till
-                                med tips på utflykter!
+                                finns dessutom många sevärdheter. Vi hjälper
+                                gärna till med tips på utflykter!
                             </p>
                         </div>
                     </div>
