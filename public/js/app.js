@@ -5916,7 +5916,33 @@ __webpack_require__.r(__webpack_exports__);
 function Contact() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
     className: _contact_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].contact,
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {})]
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+      className: _contact_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].wrapper,
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+        className: _contact_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].fullPageContainer,
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+          className: _contact_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].textContainer,
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {
+            children: "Casa La Marina"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+            children: "Avenida San Fulgencio 300"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+            children: "03194 San Fulgencio"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+            children: "Alicante, Spanien"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+            children: "+46 739 293 83 / casa@info.se"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+            children: "Vid fr\xE5gor, kontakta oss via telefon eller e-post. Transfer fr\xE5n Alicante flygplats g\xE5r att ordna."
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          className: _contact_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].imageContainer,
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
+            src: "assets/galleri/23.JPG"
+          })
+        })]
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {})]
   });
 }
 
@@ -6886,9 +6912,14 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\n.M8LJ3yDECOdkQ27zqYiceg\\=\\= {\n    display: flex;\n    justify-content: center;\n    flex-direction: column;\n    align-items: center;\n}\n\n.M8LJ3yDECOdkQ27zqYiceg\\=\\= h1 {\n    font-size: 1.5rem !important;\n    font-family: Roboto-Thin;\n}\n\n.M8LJ3yDECOdkQ27zqYiceg\\=\\= p {\n    font-size: 1rem;\n    font-family: Roboto-Thin;\n}\n\n.x-H8MV4cNjxxbxIeI0Gmiw\\=\\= {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    border: 2px solid #aeaaa245;\n    border-radius: 50px 50px 0 50px;\n    width: 60%;\n    font-family: Roboto-Thin;\n}\n\n.M8LJ3yDECOdkQ27zqYiceg\\=\\= img {\n    width: 100%;\n    border-radius: 0px 50px 0 0px;\n}\n\n.oIFLP0uZdmjXHyD2aosGBA\\=\\= {\n    width: 40%;\n    display: flex;\n    align-items: center;\n    height: 100%;\n}\n\n.wlJuN67ILQJ2-IWokDJZvg\\=\\= {\n    width: 60%;\n    display: flex;\n    justify-content: right;\n    align-items: right;\n    flex-direction: column;\n    gap: 1rem;\n    padding: 2rem;\n    text-align: right;\n}\n\n@media only screen and (max-width: 1000px) {\n    .x-H8MV4cNjxxbxIeI0Gmiw\\=\\= {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        text-align: left;\n        margin: 0 !important;\n        width: 80% !important;\n    }\n\n    .wlJuN67ILQJ2-IWokDJZvg\\=\\= {\n        padding: 1rem;\n        gap: 5px;\n        margin-left: 10px;\n    }\n\n    .x-H8MV4cNjxxbxIeI0Gmiw\\=\\= h1 {\n        font-size: 18px;\n    }\n    .x-H8MV4cNjxxbxIeI0Gmiw\\=\\= p {\n        font-size: 16px;\n    }\n\n    /* .imageContainer {\n        width: 40%;\n        display: flex;\n        align-items: center;\n        height: 100%;\n    } */\n}\n@media only screen and (max-width: 600px) {\n    .x-H8MV4cNjxxbxIeI0Gmiw\\=\\= {\n        margin: 2rem;\n    }\n    .oIFLP0uZdmjXHyD2aosGBA\\=\\= {\n        display: none;\n    }\n\n    .wlJuN67ILQJ2-IWokDJZvg\\=\\= {\n        padding: 2rem;\n        width: 80%;\n    }\n}\n", ""]);
 // Exports
-___CSS_LOADER_EXPORT___.locals = {};
+___CSS_LOADER_EXPORT___.locals = {
+	"wrapper": "M8LJ3yDECOdkQ27zqYiceg==",
+	"fullPageContainer": "x-H8MV4cNjxxbxIeI0Gmiw==",
+	"imageContainer": "oIFLP0uZdmjXHyD2aosGBA==",
+	"textContainer": "wlJuN67ILQJ2-IWokDJZvg=="
+};
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 
