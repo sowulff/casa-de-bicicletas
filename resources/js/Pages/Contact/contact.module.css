@@ -8,19 +8,19 @@
     font-family: Julius;
 }
 
-.wrapper {
+.contactWrapper {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
 
-.wrapper h1 {
+.contactWrapper h1 {
     font-size: 1.5rem !important;
     font-family: Roboto-Thin;
 }
 
-.wrapper p {
+.contactWrapper p {
     font-size: 1rem;
     font-family: Roboto-Thin;
 }
@@ -35,7 +35,7 @@
     font-family: Roboto-Thin;
 }
 
-.wrapper img {
+.contactWrapper img {
     width: 100%;
     border-radius: 0px 50px 0 0px;
 }

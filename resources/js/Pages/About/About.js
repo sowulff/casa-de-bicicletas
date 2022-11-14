@@ -6,7 +6,7 @@ export default function About() {
     return (
         <div className={styles.about}>
             <NavBar />
-            <div className={styles.wrapper}>
+            <div className={styles.aboutWrapper}>
                 <div className={styles.fullPageContainer}>
                     <div className={styles.imageContainer}>
                         <img src={"assets/galleri/19.JPG"} />

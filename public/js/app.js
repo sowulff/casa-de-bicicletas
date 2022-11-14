@@ -5285,7 +5285,7 @@ function About() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
     className: _about_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].about,
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-      className: _about_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].wrapper,
+      className: _about_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].aboutWrapper,
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: _about_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].fullPageContainer,
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
@@ -5928,7 +5928,7 @@ function Contact() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
     className: _contact_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].contact,
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-      className: _contact_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].wrapper,
+      className: _contact_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].contactWrapper,
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
         className: _contact_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].fullPageContainer,
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
@@ -6470,9 +6470,6 @@ function NavBar() {
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
         href: "/om-oss",
         children: "OM OSS \u2191"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-        href: "/kontakt",
-        children: "KONTAKT \u2191"
       })]
     })]
   });
@@ -6733,14 +6730,14 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n.tVxuWpOLNj1lRMxlQpYkng\\=\\= {\n    font-family: Roboto-Thin;\n}\n\n.fW8DKrA6lh6i8G7tRFbQXQ\\=\\= {\n    border: 2px solid #aeaaa245;\n    border-radius: 50px 0px 0 50px;\n    border-left: none;\n}\n.ujP2vLmV4SjdR9BW2IAzZA\\=\\= {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    height: 90%;\n}\n.ujP2vLmV4SjdR9BW2IAzZA\\=\\= img {\n    max-width: 55%;\n    border-radius: 50px 0 50px 0;\n    -o-object-fit: cover;\n       object-fit: cover;\n}\n\n.ujP2vLmV4SjdR9BW2IAzZA\\=\\= h1 {\n    padding-bottom: 1rem;\n}\n.ujP2vLmV4SjdR9BW2IAzZA\\=\\= p,\nh1 {\n    padding: 0 2rem;\n}\n\n.rw7KynDNZdxtv3Zt\\+nDYDw\\=\\= {\n    display: flex;\n    flex-direction: column;\n}\n\n@media only screen and (max-width: 850px) {\n    .-qWcAnpmV9ZDPqb2VEasYw\\=\\= {\n        width: 100%;\n        display: flex;\n        justify-content: center;\n    }\n    .fW8DKrA6lh6i8G7tRFbQXQ\\=\\= {\n        width: 80vw;\n        border-left: 2px solid #aeaaa245;\n    }\n\n    .ujP2vLmV4SjdR9BW2IAzZA\\=\\= {\n        flex-direction: column;\n        gap: 2rem;\n    }\n\n    .ujP2vLmV4SjdR9BW2IAzZA\\=\\= img {\n        max-width: 100%;\n    }\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n.tVxuWpOLNj1lRMxlQpYkng\\=\\= {\n    font-family: Roboto-Thin;\n}\n\n.fW8DKrA6lh6i8G7tRFbQXQ\\=\\= {\n    border: 2px solid #aeaaa245;\n    border-radius: 50px 0px 0 50px;\n    border-left: none;\n}\n.ujP2vLmV4SjdR9BW2IAzZA\\=\\= {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    height: 90%;\n}\n.ujP2vLmV4SjdR9BW2IAzZA\\=\\= img {\n    max-width: 55%;\n    border-radius: 50px 0 50px 0;\n    -o-object-fit: cover;\n       object-fit: cover;\n}\n\n.LBgiKdkHbIt7jjZPSHR-3w\\=\\= .ujP2vLmV4SjdR9BW2IAzZA\\=\\= h1 {\n    padding-bottom: 1rem;\n    font-family: Roboto-Thin;\n}\n\n.LBgiKdkHbIt7jjZPSHR-3w\\=\\= .ujP2vLmV4SjdR9BW2IAzZA\\=\\= p,\nh1 {\n    padding: 0 2rem;\n}\n\n.rw7KynDNZdxtv3Zt\\+nDYDw\\=\\= {\n    display: flex;\n    flex-direction: column;\n}\n\n@media only screen and (max-width: 850px) {\n    .LBgiKdkHbIt7jjZPSHR-3w\\=\\= {\n        width: 100%;\n        display: flex;\n        justify-content: center;\n    }\n    .fW8DKrA6lh6i8G7tRFbQXQ\\=\\= {\n        width: 80vw;\n        border-left: 2px solid #aeaaa245;\n    }\n\n    .ujP2vLmV4SjdR9BW2IAzZA\\=\\= {\n        flex-direction: column;\n        gap: 2rem;\n    }\n\n    .ujP2vLmV4SjdR9BW2IAzZA\\=\\= img {\n        max-width: 100%;\n    }\n\n    .LBgiKdkHbIt7jjZPSHR-3w\\=\\= .rw7KynDNZdxtv3Zt\\+nDYDw\\=\\= {\n        padding-bottom: 2rem;\n    }\n\n    .ujP2vLmV4SjdR9BW2IAzZA\\=\\= {\n        height: unset;\n    }\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"about": "tVxuWpOLNj1lRMxlQpYkng==",
 	"fullPageContainer": "fW8DKrA6lh6i8G7tRFbQXQ==",
 	"imageContainer": "ujP2vLmV4SjdR9BW2IAzZA==",
-	"textContainer": "rw7KynDNZdxtv3Zt+nDYDw==",
-	"wrapper": "-qWcAnpmV9ZDPqb2VEasYw=="
+	"aboutWrapper": "LBgiKdkHbIt7jjZPSHR-3w==",
+	"textContainer": "rw7KynDNZdxtv3Zt+nDYDw=="
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -6926,10 +6923,10 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\n.M8LJ3yDECOdkQ27zqYiceg\\=\\= {\n    display: flex;\n    justify-content: center;\n    flex-direction: column;\n    align-items: center;\n}\n\n.M8LJ3yDECOdkQ27zqYiceg\\=\\= h1 {\n    font-size: 1.5rem !important;\n    font-family: Roboto-Thin;\n}\n\n.M8LJ3yDECOdkQ27zqYiceg\\=\\= p {\n    font-size: 1rem;\n    font-family: Roboto-Thin;\n}\n\n.x-H8MV4cNjxxbxIeI0Gmiw\\=\\= {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    border: 2px solid #aeaaa245;\n    border-radius: 50px 50px 0 50px;\n    width: 60%;\n    font-family: Roboto-Thin;\n}\n\n.M8LJ3yDECOdkQ27zqYiceg\\=\\= img {\n    width: 100%;\n    border-radius: 0px 50px 0 0px;\n}\n\n.oIFLP0uZdmjXHyD2aosGBA\\=\\= {\n    width: 40%;\n    display: flex;\n    align-items: center;\n    height: 100%;\n}\n\n.wlJuN67ILQJ2-IWokDJZvg\\=\\= {\n    width: 60%;\n    display: flex;\n    justify-content: left;\n    align-items: left;\n    flex-direction: column;\n    gap: 1rem;\n    padding: 2rem;\n}\n\n@media only screen and (max-width: 1000px) {\n    .x-H8MV4cNjxxbxIeI0Gmiw\\=\\= {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        text-align: left;\n        margin: 0 !important;\n        width: 80% !important;\n    }\n\n    .wlJuN67ILQJ2-IWokDJZvg\\=\\= {\n        padding: 1rem;\n        gap: 5px;\n        margin-left: 10px;\n    }\n\n    .x-H8MV4cNjxxbxIeI0Gmiw\\=\\= h1 {\n        font-size: 18px;\n    }\n    .x-H8MV4cNjxxbxIeI0Gmiw\\=\\= p {\n        font-size: 16px;\n    }\n\n    /* .imageContainer {\n        width: 40%;\n        display: flex;\n        align-items: center;\n        height: 100%;\n    } */\n}\n@media only screen and (max-width: 600px) {\n    .x-H8MV4cNjxxbxIeI0Gmiw\\=\\= {\n        margin: 2rem;\n    }\n    .oIFLP0uZdmjXHyD2aosGBA\\=\\= {\n        display: none;\n    }\n\n    .wlJuN67ILQJ2-IWokDJZvg\\=\\= {\n        padding: 2rem;\n        width: 80%;\n    }\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\n.djzTrzTVf\\+yGjYvp1i9FRQ\\=\\= {\n    display: flex;\n    justify-content: center;\n    flex-direction: column;\n    align-items: center;\n}\n\n.djzTrzTVf\\+yGjYvp1i9FRQ\\=\\= h1 {\n    font-size: 1.5rem !important;\n    font-family: Roboto-Thin;\n}\n\n.djzTrzTVf\\+yGjYvp1i9FRQ\\=\\= p {\n    font-size: 1rem;\n    font-family: Roboto-Thin;\n}\n\n.x-H8MV4cNjxxbxIeI0Gmiw\\=\\= {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    border: 2px solid #aeaaa245;\n    border-radius: 50px 50px 0 50px;\n    width: 60%;\n    font-family: Roboto-Thin;\n}\n\n.djzTrzTVf\\+yGjYvp1i9FRQ\\=\\= img {\n    width: 100%;\n    border-radius: 0px 50px 0 0px;\n}\n\n.oIFLP0uZdmjXHyD2aosGBA\\=\\= {\n    width: 40%;\n    display: flex;\n    align-items: center;\n    height: 100%;\n}\n\n.wlJuN67ILQJ2-IWokDJZvg\\=\\= {\n    width: 60%;\n    display: flex;\n    justify-content: left;\n    align-items: left;\n    flex-direction: column;\n    gap: 1rem;\n    padding: 2rem;\n}\n\n@media only screen and (max-width: 1000px) {\n    .x-H8MV4cNjxxbxIeI0Gmiw\\=\\= {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        text-align: left;\n        margin: 0 !important;\n        width: 80% !important;\n    }\n\n    .wlJuN67ILQJ2-IWokDJZvg\\=\\= {\n        padding: 1rem;\n        gap: 5px;\n        margin-left: 10px;\n    }\n\n    .x-H8MV4cNjxxbxIeI0Gmiw\\=\\= h1 {\n        font-size: 18px;\n    }\n    .x-H8MV4cNjxxbxIeI0Gmiw\\=\\= p {\n        font-size: 16px;\n    }\n\n    /* .imageContainer {\n        width: 40%;\n        display: flex;\n        align-items: center;\n        height: 100%;\n    } */\n}\n@media only screen and (max-width: 600px) {\n    .x-H8MV4cNjxxbxIeI0Gmiw\\=\\= {\n        margin: 2rem;\n    }\n    .oIFLP0uZdmjXHyD2aosGBA\\=\\= {\n        display: none;\n    }\n\n    .wlJuN67ILQJ2-IWokDJZvg\\=\\= {\n        padding: 2rem;\n        width: 80%;\n    }\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
-	"wrapper": "M8LJ3yDECOdkQ27zqYiceg==",
+	"contactWrapper": "djzTrzTVf+yGjYvp1i9FRQ==",
 	"fullPageContainer": "x-H8MV4cNjxxbxIeI0Gmiw==",
 	"imageContainer": "oIFLP0uZdmjXHyD2aosGBA==",
 	"textContainer": "wlJuN67ILQJ2-IWokDJZvg=="
@@ -7022,7 +7019,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\nbody {\n    font-family: Roboto-Thin;\n}\n\n._4USzpIOJSIJ-abx07L2ZuQ\\=\\= {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    z-index: -1;\n    overflow: hidden;\n}\n.Esszq93d-43raJAL6-zqsg\\=\\= {\n    height: 100%;\n    width: 100%;\n    -o-object-fit: cover;\n       object-fit: cover;\n    pointer-events: none;\n}\n.E78Lg\\+vvbPmKumJqowKcsQ\\=\\= {\n    padding-left: 1.5rem;\n    color: rgb(225, 219, 211);\n    width: 40%;\n    line-height: 1.5;\n    margin-left: 1.5rem;\n    display: flex;\n    flex-direction: column;\n    height: 75vh;\n    justify-content: flex-end;\n}\n\n.VPWl5ySPsjhRHawsvA9gTA\\=\\= {\n    font-size: 1.8rem;\n}\n\n@media only screen and (max-width: 850px) {\n    .E78Lg\\+vvbPmKumJqowKcsQ\\=\\= {\n        width: 90%;\n        padding-top: 40%;\n        padding-left: 0;\n    }\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\nbody {\n    font-family: Roboto-Thin;\n}\n\n._4USzpIOJSIJ-abx07L2ZuQ\\=\\= {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    z-index: -1;\n    overflow: hidden;\n}\n.Esszq93d-43raJAL6-zqsg\\=\\= {\n    height: 100%;\n    width: 100%;\n    -o-object-fit: cover;\n       object-fit: cover;\n    pointer-events: none;\n}\n.E78Lg\\+vvbPmKumJqowKcsQ\\=\\= {\n    padding-left: 1.5rem;\n    color: rgb(225, 219, 211);\n    width: 40%;\n    line-height: 1.5;\n    margin-left: 1.5rem;\n    display: flex;\n    flex-direction: column;\n    height: 65vh;\n    justify-content: flex-end;\n}\n\n.VPWl5ySPsjhRHawsvA9gTA\\=\\= {\n    font-size: 1.8rem;\n}\n\n@media only screen and (max-width: 850px) {\n    .E78Lg\\+vvbPmKumJqowKcsQ\\=\\= {\n        width: 90%;\n        padding-top: 40%;\n        padding-left: 0;\n    }\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"bgVideo": "_4USzpIOJSIJ-abx07L2ZuQ==",
@@ -7052,7 +7049,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\n@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\nsvg {\n    margin-top: 0.8rem !important;\n}\n\n.rkT4cAwgqzlmUavoEGU5dA\\=\\= {\n    width: 100%;\n    display: flex;\n    justify-content: center;\n    background-color: #aeaaa245;\n    flex-direction: column;\n    margin: 0;\n    align-items: center;\n    padding-top: 2rem;\n    margin-top: 5rem;\n}\n\n.rkT4cAwgqzlmUavoEGU5dA\\=\\= p {\n    margin: 0;\n    font-size: 12px;\n    color: rgb(42, 36, 26);\n    font-family: Roboto-Thin;\n}\n\n.HmgCxTqfG\\+FOpoGNCkBSjA\\=\\= {\n    font-family: Julius;\n    padding-bottom: 0.5rem;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\n@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\nsvg {\n    margin-top: 0.8rem !important;\n}\n\n.rkT4cAwgqzlmUavoEGU5dA\\=\\= {\n    width: 100%;\n    display: flex;\n    justify-content: center;\n    background-color: #aeaaa245;\n    flex-direction: column;\n    margin: 0;\n    align-items: center;\n    padding-top: 2rem;\n    padding-bottom: 1rem;\n    margin-top: 5rem;\n}\n\n.rkT4cAwgqzlmUavoEGU5dA\\=\\= p {\n    margin: 0;\n    font-size: 12px;\n    color: rgb(42, 36, 26);\n    font-family: Roboto-Thin;\n}\n\n.HmgCxTqfG\\+FOpoGNCkBSjA\\=\\= {\n    font-family: Julius;\n    padding-bottom: 0.5rem;\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"footer": "rkT4cAwgqzlmUavoEGU5dA==",

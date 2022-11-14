@@ -6,7 +6,7 @@ export default function Contact() {
     return (
         <div className={styles.contact}>
             <NavBar />
-            <div className={styles.wrapper}>
+            <div className={styles.contactWrapper}>
                 <div className={styles.fullPageContainer}>
                     <div className={styles.textContainer}>
                         <h1>Casa La Marina</h1>
