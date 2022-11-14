@@ -11,7 +11,7 @@ export default function About() {
                     <div className={styles.imageContainer}>
                         <img src={"assets/galleri/19.JPG"} />
                         <div className={styles.textContainer}>
-                            <h1>Hej!</h1>
+                            <h1>Molle & Jonas</h1>
                             <p>
                                 Vi är två glada Göteborgare med intresset för
                                 mountainbike gemensamt. Den ena av oss har

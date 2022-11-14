@@ -15,13 +15,9 @@ export default function Contact() {
                         <p>Avenida San Fulgencio 300</p>
                         <p>03194 San Fulgencio</p>
                         <p>Alicante, Spanien</p>
+                        <p>Telefon: +46 739 293 83</p>
+                        <p>E-post: casa@info.se</p>
 
-                        <p>+46 739 293 83 / casa@info.se</p>
-
-                        <p>
-                            Vid frågor, kontakta oss via telefon eller e-post.
-                            Transfer från Alicante flygplats går att ordna.
-                        </p>
                         <Link
                             className={styles.mailTo}
                             onClick={(e) => {
