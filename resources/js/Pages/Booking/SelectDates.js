@@ -9,6 +9,7 @@ import { registerLocale, setDefaultLocale } from "react-datepicker";
 import sv from "date-fns/locale/sv";
 import styles from "./selectDates.module.css";
 import Footer from "../../components/Footer/Footer";
+import emailjs from "emailjs-com";
 
 registerLocale("sv", sv);
 
@@ -50,6 +51,21 @@ export default function selectDates({ room, bookings, rooms }) {
 
     function submit(e) {
         e.preventDefault();
+        emailjs
+            .sendForm(
+                "service_28p48oe",
+                "template_msi86bn",
+                e.target,
+                "px6u5Af-2QCLnhWNA"
+            )
+            .then(
+                (result) => {
+                    console.log(result.text);
+                },
+                (error) => {
+                    console.log(error.text);
+                }
+            );
         post("/bokning");
     }
 
@@ -95,6 +111,7 @@ export default function selectDates({ room, bookings, rooms }) {
                         value={data.first_name}
                         onChange={(e) => setData("first_name", e.target.value)}
                         placeholder="Förnamn"
+                        name="first_name"
                     />
 
                     <input
@@ -102,12 +119,14 @@ export default function selectDates({ room, bookings, rooms }) {
                         value={data.last_name}
                         onChange={(e) => setData("last_name", e.target.value)}
                         placeholder="Efternamn"
+                        name="last_name"
                     />
                     <input
                         type="text"
                         value={data.email}
                         onChange={(e) => setData("email", e.target.value)}
                         placeholder="E-post"
+                        name="email"
                     />
                     <input
                         type="text"
