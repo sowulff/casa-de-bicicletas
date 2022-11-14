@@ -41,6 +41,7 @@ export default function NavBar() {
                 <Link href="/cykling">CYKLING &#8593;</Link>
                 <Link href="/galleri">GALLERI &#8595;</Link>
                 <Link href="/om-oss">OM OSS &#8593;</Link>
+                <Link href="/kontakt">KONTAKT &#8593;</Link>
             </div>
         </div>
     );

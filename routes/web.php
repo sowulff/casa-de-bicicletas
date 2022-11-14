@@ -44,6 +44,10 @@ Route::get('/cykling', function () {
 Route::get('/om-oss', function () {
     return Inertia::render('About/About');
 });
+
+Route::get('/kontakt', function () {
+    return Inertia::render('Contact/Contact');
+});
 // Route::get('/admin/dashboard', DashboardController::class);
 
 Route::get('/boka', ListAllRoomsController::class, function () {
