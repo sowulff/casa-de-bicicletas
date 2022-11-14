@@ -32,7 +32,7 @@ svg {
     font-family: Roboto-Thin;
 }
 
-.name {
-    font-family: Julius;
+.footer .name {
     padding-bottom: 0.5rem;
+    font-size: 1.1rem !important;
 }
