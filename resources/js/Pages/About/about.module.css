@@ -20,7 +20,6 @@
 }
 .imageContainer img {
     max-width: 55%;
-
     border-radius: 50px 0 50px 0;
     object-fit: cover;
 }
@@ -39,8 +38,22 @@ h1 {
 }
 
 @media only screen and (max-width: 850px) {
+    .wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .fullPageContainer {
+        width: 80vw;
+        border-left: 2px solid #aeaaa245;
+    }
+
     .imageContainer {
         flex-direction: column;
         gap: 2rem;
+    }
+
+    .imageContainer img {
+        max-width: 100%;
     }
 }
