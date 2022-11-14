@@ -50,7 +50,7 @@ export default function selectDates({ room, bookings, rooms }) {
 
     function submit(e) {
         e.preventDefault();
-        post("/upload");
+        post("/bokning");
     }
 
     const dateToDisable = () => {

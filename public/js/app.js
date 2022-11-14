@@ -5687,7 +5687,7 @@ function selectDates(_ref) {
 
   function submit(e) {
     e.preventDefault();
-    post("/upload");
+    post("/bokning");
   }
 
   var dateToDisable = function dateToDisable() {
@@ -6470,6 +6470,9 @@ function NavPopUpMenu(_ref) {
           children: "GALLERI \u2192"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
           href: "/om-oss",
+          children: "OM OSS \u2192"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
+          href: "/kontakt",
           children: "OM OSS \u2192"
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("button", {

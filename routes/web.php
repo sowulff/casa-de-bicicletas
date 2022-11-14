@@ -83,7 +83,7 @@ Route::get('/booking/confirmation', function () {
 //   Route::get('/', DashboardController::class)->name('dashboard');
 //});
 
-Route::post('/upload', NewBookingController::class);
+Route::post('/bokning', NewBookingController::class);
 Route::post('/logout', LogoutController::class);
-Route::get('/upload', NewBookingController::class);
+Route::get('/bokning', NewBookingController::class);
 Route::post('/bookings/{booking}', DeleteBookingController::class);
