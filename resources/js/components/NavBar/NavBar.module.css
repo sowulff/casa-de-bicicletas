@@ -9,15 +9,21 @@
     align-items: center;
     padding: 2rem 2rem 1rem 2rem;
 }
+.active {
+    border-bottom: 1px solid black;
+}
 .navLinks {
     display: flex;
     gap: 2rem;
     font-family: Julius;
 }
-
+.underline {
+    background-color: #3e2e29;
+}
 a {
     text-decoration: none;
     color: #3e2e29;
+    padding-bottom: 0.3rem;
 }
 
 .navLinks a:hover {

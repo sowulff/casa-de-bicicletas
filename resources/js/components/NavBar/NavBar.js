@@ -2,10 +2,11 @@ import { Link } from "@inertiajs/inertia-react";
 import { useState } from "react";
 import NavPopUpMenu from "../NavPopUpMenu/NavPopUpMenu";
 import styles from "./NavBar.module.css";
+import { usePage } from "@inertiajs/inertia-react";
 
 export default function NavBar() {
     const [navMenuIsOpen, setNavMenuIsOpen] = useState(false);
-    console.log(navMenuIsOpen);
+    const { url, component } = usePage();
     return (
         <div className={styles.navBar}>
             <Link className={styles.logo} href="/">
@@ -37,11 +38,36 @@ export default function NavBar() {
                 <NavPopUpMenu navMenuIsOpenState={setNavMenuIsOpen} />
             )}
             <div className={styles.navLinks}>
-                <Link href="/boka">BOKA &#8595;</Link>
-                <Link href="/cykling">CYKLING &#8593;</Link>
-                <Link href="/galleri">GALLERI &#8595;</Link>
-                <Link href="/om-oss">OM OSS &#8593;</Link>
-                <Link href="/kontakt">KONTAKT &#8593;</Link>
+                <Link
+                    href="/boka"
+                    className={url === "/boka" ? styles.active : ""}
+                >
+                    BOKA &#8595;
+                </Link>
+                <Link
+                    href="/cykling"
+                    className={url === "/cykling" ? styles.active : ""}
+                >
+                    CYKLING &#8593;
+                </Link>
+                <Link
+                    href="/galleri"
+                    className={url === "/galleri" ? styles.active : ""}
+                >
+                    GALLERI &#8595;
+                </Link>
+                <Link
+                    href="/om-oss"
+                    className={url === "/om-oss" ? styles.active : ""}
+                >
+                    OM OSS &#8593;
+                </Link>
+                <Link
+                    href="/kontakt"
+                    className={url === "/kontakt" ? styles.active : ""}
+                >
+                    KONTAKT &#8595;
+                </Link>
             </div>
         </div>
     );
