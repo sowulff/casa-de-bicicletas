@@ -6,19 +6,38 @@
 .about {
     font-family: Roboto-Thin;
 }
+
+.fullPageContainer {
+    border: 2px solid #aeaaa245;
+    border-radius: 50px 0px 0 50px;
+    border-left: none;
+}
 .imageContainer {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 90%;
 }
 .imageContainer img {
     max-width: 55%;
-    height: auto;
-    border-radius: 0px 0 50px 0;
+
+    border-radius: 50px 0 50px 0;
+    object-fit: cover;
 }
-.imageContainer h3 {
+
+.imageContainer h1 {
+    padding-bottom: 1rem;
+}
+.imageContainer p,
+h1 {
     padding: 0 2rem;
 }
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+}
+
 @media only screen and (max-width: 850px) {
     .imageContainer {
         flex-direction: column;
