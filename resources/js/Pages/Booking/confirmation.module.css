@@ -22,6 +22,7 @@
 
 .wrapper p {
     font-size: 1rem;
+    font-family: Roboto-Thin;
 }
 
 .fullPageContainer {
@@ -31,10 +32,11 @@
     border: 2px solid #aeaaa245;
     border-radius: 50px 50px 0 50px;
     width: 60%;
+    font-family: Roboto-Thin;
 }
 
 .wrapper img {
-    width: 80%;
+    width: 100%;
     border-radius: 50px 50px 0 50px;
 }
 
@@ -53,4 +55,48 @@
     flex-direction: column;
     gap: 1rem;
     padding: 2rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    .fullPageContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        margin: 0 !important;
+        width: 80% !important;
+    }
+
+    .textContainer {
+        padding: 1rem;
+        gap: 5px;
+        margin-left: 10px;
+    }
+
+    .fullPageContainer h1 {
+        font-size: 18px;
+    }
+    .fullPageContainer p {
+        font-size: 16px;
+    }
+
+    /* .imageContainer {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        height: 100%;
+    } */
+}
+@media only screen and (max-width: 600px) {
+    .fullPageContainer {
+        margin: 2rem;
+    }
+    .imageContainer {
+        display: none;
+    }
+
+    .textContainer {
+        padding: 2rem;
+        width: 80%;
+    }
 }
