@@ -68,6 +68,10 @@
     max-width: 90%;
     padding: 2rem;
 }
+.cardThree .photoSectionTwo {
+    max-width: 100%;
+}
+
 @media only screen and (max-width: 850px) {
     .cardOne {
         flex-direction: column;
@@ -84,6 +88,7 @@
     }
     .cardThree .photoSectionTwo {
         max-width: 100%;
+        padding: 1rem;
     }
     .photoSectionOne {
         padding-left: 2rem;
