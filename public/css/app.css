@@ -118,5 +118,15 @@
         padding: unset;
         line-height: 2rem !important;
     }
+
+    .react-datepicker__navigation.react-datepicker__navigation--next {
+        width: unset;
+        padding: 1rem;
+    }
+
+    .react-datepicker__navigation.react-datepicker__navigation--previous {
+        width: unset;
+        padding: 1rem;
+    }
 }
 

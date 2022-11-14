@@ -5593,13 +5593,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var dateformat__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! dateformat */ "./node_modules/dateformat/lib/dateformat.js");
 /* harmony import */ var _components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/NavBar/NavBar */ "./resources/js/components/NavBar/NavBar.js");
-/* harmony import */ var react_datepicker__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-datepicker */ "./node_modules/react-datepicker/dist/react-datepicker.min.js");
-/* harmony import */ var react_datepicker__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_datepicker__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var react_datepicker__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-datepicker */ "./node_modules/react-datepicker/dist/react-datepicker.min.js");
+/* harmony import */ var react_datepicker__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react_datepicker__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var react_datepicker_dist_react_datepicker_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-datepicker/dist/react-datepicker.css */ "./node_modules/react-datepicker/dist/react-datepicker.css");
-/* harmony import */ var date_fns_locale_sv__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! date-fns/locale/sv */ "./node_modules/date-fns/esm/locale/sv/index.js");
+/* harmony import */ var date_fns_locale_sv__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! date-fns/locale/sv */ "./node_modules/date-fns/esm/locale/sv/index.js");
 /* harmony import */ var _selectDates_module_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./selectDates.module.css */ "./resources/js/Pages/Booking/selectDates.module.css");
 /* harmony import */ var _components_Footer_Footer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/Footer/Footer */ "./resources/js/components/Footer/Footer.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var emailjs_com__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! emailjs-com */ "./node_modules/emailjs-com/es/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
@@ -5631,7 +5632,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-(0,react_datepicker__WEBPACK_IMPORTED_MODULE_8__.registerLocale)("sv", date_fns_locale_sv__WEBPACK_IMPORTED_MODULE_9__["default"]);
+
+(0,react_datepicker__WEBPACK_IMPORTED_MODULE_9__.registerLocale)("sv", date_fns_locale_sv__WEBPACK_IMPORTED_MODULE_10__["default"]);
 function selectDates(_ref) {
   var room = _ref.room,
       bookings = _ref.bookings,
@@ -5687,7 +5689,12 @@ function selectDates(_ref) {
 
   function submit(e) {
     e.preventDefault();
-    post("/upload");
+    emailjs_com__WEBPACK_IMPORTED_MODULE_7__["default"].sendForm("service_28p48oe", "template_msi86bn", e.target, "px6u5Af-2QCLnhWNA").then(function (result) {
+      console.log(result.text);
+    }, function (error) {
+      console.log(error.text);
+    });
+    post("/bokning");
   }
 
   var dateToDisable = function dateToDisable() {
@@ -5706,10 +5713,10 @@ function selectDates(_ref) {
   };
 
   var disableDates = dateToDisable();
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_3__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_3__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
       className: _selectDates_module_css__WEBPACK_IMPORTED_MODULE_5__["default"].fullpageContainer,
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)((react_datepicker__WEBPACK_IMPORTED_MODULE_8___default()), {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)((react_datepicker__WEBPACK_IMPORTED_MODULE_9___default()), {
         selected: startDate,
         onChange: onChange,
         startDate: startDate,
@@ -5719,82 +5726,85 @@ function selectDates(_ref) {
         selectsRange: true,
         inline: true,
         locale: "sv"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("form", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("form", {
         onSubmit: submit,
-        children: [errors && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+        children: [errors && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
           className: _selectDates_module_css__WEBPACK_IMPORTED_MODULE_5__["default"].errorMessage,
           children: errorMessage
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("input", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("input", {
           type: "text",
           value: data.first_name,
           onChange: function onChange(e) {
             return setData("first_name", e.target.value);
           },
-          placeholder: "F\xF6rnamn"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("input", {
+          placeholder: "F\xF6rnamn",
+          name: "first_name"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("input", {
           type: "text",
           value: data.last_name,
           onChange: function onChange(e) {
             return setData("last_name", e.target.value);
           },
-          placeholder: "Efternamn"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("input", {
+          placeholder: "Efternamn",
+          name: "last_name"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("input", {
           type: "text",
           value: data.email,
           onChange: function onChange(e) {
             return setData("email", e.target.value);
           },
-          placeholder: "E-post"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("input", {
+          placeholder: "E-post",
+          name: "email"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("input", {
           type: "text",
           value: data.mobile,
           onChange: function onChange(e) {
             return setData("mobile", e.target.value);
           },
           placeholder: "Mobilnummer"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
           className: _selectDates_module_css__WEBPACK_IMPORTED_MODULE_5__["default"].guestSelect,
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("select", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("select", {
             type: "number",
             value: data.guests,
             onChange: function onChange(e) {
               return setData("guests", parseInt(e.target.value));
             },
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("option", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("option", {
               value: "",
               children: "Antal g\xE4ster"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("option", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("option", {
               value: "1",
               children: "1"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("option", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("option", {
               value: "2",
               children: "2"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("option", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("option", {
               value: "3",
               children: "3"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("option", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("option", {
               value: "4",
               children: "4"
             })]
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("h2", {
-          children: ["Totalpris:", endDate != null && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("span", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("h2", {
+          children: ["Totalpris:", endDate != null && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("span", {
             children: [totalPrice, " kr"]
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
           className: _selectDates_module_css__WEBPACK_IMPORTED_MODULE_5__["default"].buttonContainer,
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("button", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("button", {
             type: "submit",
             children: "BOKA NU!"
           })
         })]
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
       className: _selectDates_module_css__WEBPACK_IMPORTED_MODULE_5__["default"].rules,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
         children: "AVBOKNINGSREGLER: H\xE4r st\xE5r det vad som g\xE4ller f\xF6r avbokning och kanske \xE4ven hur man betalar lite mer tect hehehe kanske kanske"
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_6__["default"], {})]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_6__["default"], {})]
   });
 }
 
@@ -6471,6 +6481,9 @@ function NavPopUpMenu(_ref) {
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
           href: "/om-oss",
           children: "OM OSS \u2192"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
+          href: "/kontakt",
+          children: "KONTAKT \u2192"
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("button", {
         onClick: function onClick() {
@@ -18643,6 +18656,265 @@ deepmerge.all = function deepmergeAll(array, options) {
 var deepmerge_1 = deepmerge;
 
 module.exports = deepmerge_1;
+
+
+/***/ }),
+
+/***/ "./node_modules/emailjs-com/es/api/sendPost.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/emailjs-com/es/api/sendPost.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "sendPost": () => (/* binding */ sendPost)
+/* harmony export */ });
+/* harmony import */ var _models_EmailJSResponseStatus__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../models/EmailJSResponseStatus */ "./node_modules/emailjs-com/es/models/EmailJSResponseStatus.js");
+/* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../store/store */ "./node_modules/emailjs-com/es/store/store.js");
+
+
+const sendPost = (url, data, headers = {}) => {
+    return new Promise((resolve, reject) => {
+        const xhr = new XMLHttpRequest();
+        xhr.addEventListener('load', ({ target }) => {
+            const responseStatus = new _models_EmailJSResponseStatus__WEBPACK_IMPORTED_MODULE_0__.EmailJSResponseStatus(target);
+            if (responseStatus.status === 200 || responseStatus.text === 'OK') {
+                resolve(responseStatus);
+            }
+            else {
+                reject(responseStatus);
+            }
+        });
+        xhr.addEventListener('error', ({ target }) => {
+            reject(new _models_EmailJSResponseStatus__WEBPACK_IMPORTED_MODULE_0__.EmailJSResponseStatus(target));
+        });
+        xhr.open('POST', _store_store__WEBPACK_IMPORTED_MODULE_1__.store._origin + url, true);
+        Object.keys(headers).forEach((key) => {
+            xhr.setRequestHeader(key, headers[key]);
+        });
+        xhr.send(data);
+    });
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/emailjs-com/es/index.js":
+/*!**********************************************!*\
+  !*** ./node_modules/emailjs-com/es/index.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   "init": () => (/* reexport safe */ _methods_init_init__WEBPACK_IMPORTED_MODULE_0__.init),
+/* harmony export */   "send": () => (/* reexport safe */ _methods_send_send__WEBPACK_IMPORTED_MODULE_1__.send),
+/* harmony export */   "sendForm": () => (/* reexport safe */ _methods_sendForm_sendForm__WEBPACK_IMPORTED_MODULE_2__.sendForm)
+/* harmony export */ });
+/* harmony import */ var _methods_init_init__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./methods/init/init */ "./node_modules/emailjs-com/es/methods/init/init.js");
+/* harmony import */ var _methods_send_send__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./methods/send/send */ "./node_modules/emailjs-com/es/methods/send/send.js");
+/* harmony import */ var _methods_sendForm_sendForm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./methods/sendForm/sendForm */ "./node_modules/emailjs-com/es/methods/sendForm/sendForm.js");
+
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+    init: _methods_init_init__WEBPACK_IMPORTED_MODULE_0__.init,
+    send: _methods_send_send__WEBPACK_IMPORTED_MODULE_1__.send,
+    sendForm: _methods_sendForm_sendForm__WEBPACK_IMPORTED_MODULE_2__.sendForm,
+});
+
+
+/***/ }),
+
+/***/ "./node_modules/emailjs-com/es/methods/init/init.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/emailjs-com/es/methods/init/init.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "init": () => (/* binding */ init)
+/* harmony export */ });
+/* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../store/store */ "./node_modules/emailjs-com/es/store/store.js");
+
+/**
+ * Initiation
+ * @param {string} userID - set the EmailJS user ID
+ * @param {string} origin - set the EmailJS origin
+ */
+const init = (userID, origin = 'https://api.emailjs.com') => {
+    _store_store__WEBPACK_IMPORTED_MODULE_0__.store._userID = userID;
+    _store_store__WEBPACK_IMPORTED_MODULE_0__.store._origin = origin;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/emailjs-com/es/methods/send/send.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/emailjs-com/es/methods/send/send.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "send": () => (/* binding */ send)
+/* harmony export */ });
+/* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../store/store */ "./node_modules/emailjs-com/es/store/store.js");
+/* harmony import */ var _utils_validateParams__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/validateParams */ "./node_modules/emailjs-com/es/utils/validateParams.js");
+/* harmony import */ var _api_sendPost__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../api/sendPost */ "./node_modules/emailjs-com/es/api/sendPost.js");
+
+
+
+/**
+ * Send a template to the specific EmailJS service
+ * @param {string} serviceID - the EmailJS service ID
+ * @param {string} templateID - the EmailJS template ID
+ * @param {object} templatePrams - the template params, what will be set to the EmailJS template
+ * @param {string} userID - the EmailJS user ID
+ * @returns {Promise<EmailJSResponseStatus>}
+ */
+const send = (serviceID, templateID, templatePrams, userID) => {
+    const uID = userID || _store_store__WEBPACK_IMPORTED_MODULE_0__.store._userID;
+    (0,_utils_validateParams__WEBPACK_IMPORTED_MODULE_1__.validateParams)(uID, serviceID, templateID);
+    const params = {
+        lib_version: '3.2.0',
+        user_id: uID,
+        service_id: serviceID,
+        template_id: templateID,
+        template_params: templatePrams,
+    };
+    return (0,_api_sendPost__WEBPACK_IMPORTED_MODULE_2__.sendPost)('/api/v1.0/email/send', JSON.stringify(params), {
+        'Content-type': 'application/json',
+    });
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/emailjs-com/es/methods/sendForm/sendForm.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/emailjs-com/es/methods/sendForm/sendForm.js ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "sendForm": () => (/* binding */ sendForm)
+/* harmony export */ });
+/* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../store/store */ "./node_modules/emailjs-com/es/store/store.js");
+/* harmony import */ var _utils_validateParams__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/validateParams */ "./node_modules/emailjs-com/es/utils/validateParams.js");
+/* harmony import */ var _api_sendPost__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../api/sendPost */ "./node_modules/emailjs-com/es/api/sendPost.js");
+
+
+
+const findHTMLForm = (form) => {
+    let currentForm;
+    if (typeof form === 'string') {
+        currentForm = document.querySelector(form);
+    }
+    else {
+        currentForm = form;
+    }
+    if (!currentForm || currentForm.nodeName !== 'FORM') {
+        throw 'The 3rd parameter is expected to be the HTML form element or the style selector of form';
+    }
+    return currentForm;
+};
+/**
+ * Send a form the specific EmailJS service
+ * @param {string} serviceID - the EmailJS service ID
+ * @param {string} templateID - the EmailJS template ID
+ * @param {string | HTMLFormElement} form - the form element or selector
+ * @param {string} userID - the EmailJS user ID
+ * @returns {Promise<EmailJSResponseStatus>}
+ */
+const sendForm = (serviceID, templateID, form, userID) => {
+    const uID = userID || _store_store__WEBPACK_IMPORTED_MODULE_0__.store._userID;
+    const currentForm = findHTMLForm(form);
+    (0,_utils_validateParams__WEBPACK_IMPORTED_MODULE_1__.validateParams)(uID, serviceID, templateID);
+    const formData = new FormData(currentForm);
+    formData.append('lib_version', '3.2.0');
+    formData.append('service_id', serviceID);
+    formData.append('template_id', templateID);
+    formData.append('user_id', uID);
+    return (0,_api_sendPost__WEBPACK_IMPORTED_MODULE_2__.sendPost)('/api/v1.0/email/send-form', formData);
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/emailjs-com/es/models/EmailJSResponseStatus.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/emailjs-com/es/models/EmailJSResponseStatus.js ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "EmailJSResponseStatus": () => (/* binding */ EmailJSResponseStatus)
+/* harmony export */ });
+class EmailJSResponseStatus {
+    constructor(httpResponse) {
+        this.status = httpResponse.status;
+        this.text = httpResponse.responseText;
+    }
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/emailjs-com/es/store/store.js":
+/*!****************************************************!*\
+  !*** ./node_modules/emailjs-com/es/store/store.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "store": () => (/* binding */ store)
+/* harmony export */ });
+const store = {
+    _origin: 'https://api.emailjs.com',
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/emailjs-com/es/utils/validateParams.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/emailjs-com/es/utils/validateParams.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "validateParams": () => (/* binding */ validateParams)
+/* harmony export */ });
+const validateParams = (userID, serviceID, templateID) => {
+    if (!userID) {
+        throw 'The user ID is required. Visit https://dashboard.emailjs.com/admin/integration';
+    }
+    if (!serviceID) {
+        throw 'The service ID is required. Visit https://dashboard.emailjs.com/admin';
+    }
+    if (!templateID) {
+        throw 'The template ID is required. Visit https://dashboard.emailjs.com/admin/templates';
+    }
+    return true;
+};
 
 
 /***/ }),
@@ -60446,7 +60718,7 @@ var token=/d{1,4}|D{3,4}|m{1,4}|yy(?:yy)?|([HhMsTt])\1?|W{1,2}|[LlopSZN]|"[^"]*"
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"Promise based HTTP client for the browser and node.js","main":"index.js","scripts":{"test":"grunt test","start":"node ./sandbox/server.js","build":"NODE_ENV=production grunt build","preversion":"npm test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json","postversion":"git push && git push --tags","examples":"node ./examples/server.js","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","fix":"eslint --fix lib/**/*.js"},"repository":{"type":"git","url":"https://github.com/axios/axios.git"},"keywords":["xhr","http","ajax","promise","node"],"author":"Matt Zabriskie","license":"MIT","bugs":{"url":"https://github.com/axios/axios/issues"},"homepage":"https://axios-http.com","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"jsdelivr":"dist/axios.min.js","unpkg":"dist/axios.min.js","typings":"./index.d.ts","dependencies":{"follow-redirects":"^1.14.0"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}]}');
+module.exports = JSON.parse('{"_args":[["axios@0.21.4","/Users/sowulff/Developer/casa-de-bicicletas"]],"_from":"axios@0.21.4","_id":"axios@0.21.4","_inBundle":false,"_integrity":"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==","_location":"/@inertiajs/inertia/axios","_phantomChildren":{},"_requested":{"type":"version","registry":true,"raw":"axios@0.21.4","name":"axios","escapedName":"axios","rawSpec":"0.21.4","saveSpec":null,"fetchSpec":"0.21.4"},"_requiredBy":["/@inertiajs/inertia"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz","_spec":"0.21.4","_where":"/Users/sowulff/Developer/casa-de-bicicletas","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.14.0"},"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"homepage":"https://axios-http.com","jsdelivr":"dist/axios.min.js","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","fix":"eslint --fix lib/**/*.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","unpkg":"dist/axios.min.js","version":"0.21.4"}');
 
 /***/ })
 

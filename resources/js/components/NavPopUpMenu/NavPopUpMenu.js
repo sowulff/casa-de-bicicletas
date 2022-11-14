@@ -10,7 +10,7 @@ export default function NavPopUpMenu({ navMenuIsOpenState }) {
                     <Link href="/cykling">CYKLING &rarr; </Link>
                     <Link href="/galleri">GALLERI &rarr;</Link>
                     <Link href="/om-oss">OM OSS &rarr;</Link>
-                    <Link href="/kontakt">OM OSS &rarr;</Link>
+                    <Link href="/kontakt">KONTAKT &rarr;</Link>
                 </div>
                 <button
                     onClick={() => navMenuIsOpenState(false)}
