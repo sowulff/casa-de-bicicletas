@@ -5610,7 +5610,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var date_fns_locale_sv__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! date-fns/locale/sv */ "./node_modules/date-fns/esm/locale/sv/index.js");
 /* harmony import */ var _selectDates_module_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./selectDates.module.css */ "./resources/js/Pages/Booking/selectDates.module.css");
 /* harmony import */ var _components_Footer_Footer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/Footer/Footer */ "./resources/js/components/Footer/Footer.js");
-Object(function webpackMissingModule() { var e = new Error("Cannot find module 'emailjs-com'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var emailjs_com__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! emailjs-com */ "./node_modules/emailjs-com/es/index.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
@@ -5700,7 +5700,7 @@ function selectDates(_ref) {
 
   function submit(e) {
     e.preventDefault();
-    Object(function webpackMissingModule() { var e = new Error("Cannot find module 'emailjs-com'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())("service_28p48oe", "template_msi86bn", e.target, "px6u5Af-2QCLnhWNA").then(function (result) {
+    emailjs_com__WEBPACK_IMPORTED_MODULE_7__["default"].sendForm("service_28p48oe", "template_msi86bn", e.target, "px6u5Af-2QCLnhWNA").then(function (result) {
       console.log(result.text);
     }, function (error) {
       console.log(error.text);
@@ -5918,42 +5918,51 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _contact_module_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./contact.module.css */ "./resources/js/Pages/Contact/contact.module.css");
 /* harmony import */ var _components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/NavBar/NavBar */ "./resources/js/components/NavBar/NavBar.js");
 /* harmony import */ var _components_Footer_Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/Footer/Footer */ "./resources/js/components/Footer/Footer.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
 
 
 function Contact() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
     className: _contact_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].contact,
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
       className: _contact_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].contactWrapper,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
         className: _contact_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].fullPageContainer,
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
           className: _contact_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].textContainer,
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h1", {
             children: "Casa La Marina"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
             children: "Avenida San Fulgencio 300"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
             children: "03194 San Fulgencio"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
             children: "Alicante, Spanien"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
             children: "+46 739 293 83 / casa@info.se"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
             children: "Vid fr\xE5gor, kontakta oss via telefon eller e-post. Transfer fr\xE5n Alicante flygplats g\xE5r att ordna."
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__.Link, {
+            className: _contact_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].mailTo,
+            onClick: function onClick(e) {
+              window.location.href = "mailto:no-reply@example.com";
+              e.preventDefault();
+            },
+            children: "Maila oss"
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
           className: _contact_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].imageContainer,
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
             src: "assets/galleri/23.JPG"
           })
         })]
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {})]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {})]
   });
 }
 
@@ -6416,13 +6425,17 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 function NavBar() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
       navMenuIsOpen = _useState2[0],
       setNavMenuIsOpen = _useState2[1];
 
-  console.log(navMenuIsOpen);
+  var _usePage = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.usePage)(),
+      url = _usePage.url,
+      component = _usePage.component;
+
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
     className: _NavBar_module_css__WEBPACK_IMPORTED_MODULE_3__["default"].navBar,
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
@@ -6460,16 +6473,24 @@ function NavBar() {
       className: _NavBar_module_css__WEBPACK_IMPORTED_MODULE_3__["default"].navLinks,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
         href: "/boka",
+        className: url === "/boka" ? _NavBar_module_css__WEBPACK_IMPORTED_MODULE_3__["default"].active : "",
         children: "BOKA \u2193"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
         href: "/cykling",
+        className: url === "/cykling" ? _NavBar_module_css__WEBPACK_IMPORTED_MODULE_3__["default"].active : "",
         children: "CYKLING \u2191"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
         href: "/galleri",
+        className: url === "/galleri" ? _NavBar_module_css__WEBPACK_IMPORTED_MODULE_3__["default"].active : "",
         children: "GALLERI \u2193"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
         href: "/om-oss",
+        className: url === "/om-oss" ? _NavBar_module_css__WEBPACK_IMPORTED_MODULE_3__["default"].active : "",
         children: "OM OSS \u2191"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
+        href: "/kontakt",
+        className: url === "/kontakt" ? _NavBar_module_css__WEBPACK_IMPORTED_MODULE_3__["default"].active : "",
+        children: "KONTAKT \u2193"
       })]
     })]
   });
@@ -6730,7 +6751,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n.tVxuWpOLNj1lRMxlQpYkng\\=\\= {\n    font-family: Roboto-Thin;\n}\n\n.fW8DKrA6lh6i8G7tRFbQXQ\\=\\= {\n    border: 2px solid #aeaaa245;\n    border-radius: 50px 0px 0 50px;\n    border-left: none;\n}\n.ujP2vLmV4SjdR9BW2IAzZA\\=\\= {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    height: 90%;\n}\n.ujP2vLmV4SjdR9BW2IAzZA\\=\\= img {\n    max-width: 55%;\n    border-radius: 50px 0 50px 0;\n    -o-object-fit: cover;\n       object-fit: cover;\n}\n\n.LBgiKdkHbIt7jjZPSHR-3w\\=\\= .ujP2vLmV4SjdR9BW2IAzZA\\=\\= h1 {\n    padding-bottom: 1rem;\n    font-family: Roboto-Thin;\n}\n\n.LBgiKdkHbIt7jjZPSHR-3w\\=\\= .ujP2vLmV4SjdR9BW2IAzZA\\=\\= p,\nh1 {\n    padding: 0 2rem;\n}\n\n.rw7KynDNZdxtv3Zt\\+nDYDw\\=\\= {\n    display: flex;\n    flex-direction: column;\n}\n\n@media only screen and (max-width: 850px) {\n    .LBgiKdkHbIt7jjZPSHR-3w\\=\\= {\n        width: 100%;\n        display: flex;\n        justify-content: center;\n    }\n    .fW8DKrA6lh6i8G7tRFbQXQ\\=\\= {\n        width: 80vw;\n        border-left: 2px solid #aeaaa245;\n    }\n\n    .ujP2vLmV4SjdR9BW2IAzZA\\=\\= {\n        flex-direction: column;\n        gap: 2rem;\n    }\n\n    .ujP2vLmV4SjdR9BW2IAzZA\\=\\= img {\n        max-width: 100%;\n    }\n\n    .LBgiKdkHbIt7jjZPSHR-3w\\=\\= .rw7KynDNZdxtv3Zt\\+nDYDw\\=\\= {\n        padding-bottom: 2rem;\n    }\n\n    .ujP2vLmV4SjdR9BW2IAzZA\\=\\= {\n        height: unset;\n    }\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n.tVxuWpOLNj1lRMxlQpYkng\\=\\= {\n    font-family: Roboto-Thin;\n}\n\n.fW8DKrA6lh6i8G7tRFbQXQ\\=\\= {\n    border: 2px solid #aeaaa245;\n    border-radius: 50px 0px 0 50px;\n    border-left: none;\n}\n.ujP2vLmV4SjdR9BW2IAzZA\\=\\= {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    height: 90%;\n}\n.ujP2vLmV4SjdR9BW2IAzZA\\=\\= img {\n    max-width: 55%;\n    border-radius: 50px 0 50px 0;\n    -o-object-fit: cover;\n       object-fit: cover;\n}\n\n.LBgiKdkHbIt7jjZPSHR-3w\\=\\= .ujP2vLmV4SjdR9BW2IAzZA\\=\\= h1 {\n    padding-bottom: 1rem;\n    font-family: Roboto-Thin;\n}\n\n.LBgiKdkHbIt7jjZPSHR-3w\\=\\= .ujP2vLmV4SjdR9BW2IAzZA\\=\\= p,\n.LBgiKdkHbIt7jjZPSHR-3w\\=\\= .ujP2vLmV4SjdR9BW2IAzZA\\=\\= h1 {\n    padding: 0 2rem;\n}\n\n.rw7KynDNZdxtv3Zt\\+nDYDw\\=\\= {\n    display: flex;\n    flex-direction: column;\n}\n\n@media only screen and (max-width: 850px) {\n    .LBgiKdkHbIt7jjZPSHR-3w\\=\\= {\n        width: 100%;\n        display: flex;\n        justify-content: center;\n    }\n    .fW8DKrA6lh6i8G7tRFbQXQ\\=\\= {\n        width: 80vw;\n        border-left: 2px solid #aeaaa245;\n    }\n\n    .ujP2vLmV4SjdR9BW2IAzZA\\=\\= {\n        flex-direction: column;\n        gap: 2rem;\n    }\n\n    .ujP2vLmV4SjdR9BW2IAzZA\\=\\= img {\n        max-width: 100%;\n    }\n\n    .LBgiKdkHbIt7jjZPSHR-3w\\=\\= .rw7KynDNZdxtv3Zt\\+nDYDw\\=\\= {\n        padding-bottom: 2rem;\n    }\n\n    .ujP2vLmV4SjdR9BW2IAzZA\\=\\= {\n        height: unset;\n    }\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"about": "tVxuWpOLNj1lRMxlQpYkng==",
@@ -6923,13 +6944,14 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\n.djzTrzTVf\\+yGjYvp1i9FRQ\\=\\= {\n    display: flex;\n    justify-content: center;\n    flex-direction: column;\n    align-items: center;\n}\n\n.djzTrzTVf\\+yGjYvp1i9FRQ\\=\\= h1 {\n    font-size: 1.5rem !important;\n    font-family: Roboto-Thin;\n}\n\n.djzTrzTVf\\+yGjYvp1i9FRQ\\=\\= p {\n    font-size: 1rem;\n    font-family: Roboto-Thin;\n}\n\n.x-H8MV4cNjxxbxIeI0Gmiw\\=\\= {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    border: 2px solid #aeaaa245;\n    border-radius: 50px 50px 0 50px;\n    width: 60%;\n    font-family: Roboto-Thin;\n}\n\n.djzTrzTVf\\+yGjYvp1i9FRQ\\=\\= img {\n    width: 100%;\n    border-radius: 0px 50px 0 0px;\n}\n\n.oIFLP0uZdmjXHyD2aosGBA\\=\\= {\n    width: 40%;\n    display: flex;\n    align-items: center;\n    height: 100%;\n}\n\n.wlJuN67ILQJ2-IWokDJZvg\\=\\= {\n    width: 60%;\n    display: flex;\n    justify-content: left;\n    align-items: left;\n    flex-direction: column;\n    gap: 1rem;\n    padding: 2rem;\n}\n\n@media only screen and (max-width: 1000px) {\n    .x-H8MV4cNjxxbxIeI0Gmiw\\=\\= {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        text-align: left;\n        margin: 0 !important;\n        width: 80% !important;\n    }\n\n    .wlJuN67ILQJ2-IWokDJZvg\\=\\= {\n        padding: 1rem;\n        gap: 5px;\n        margin-left: 10px;\n    }\n\n    .x-H8MV4cNjxxbxIeI0Gmiw\\=\\= h1 {\n        font-size: 18px;\n    }\n    .x-H8MV4cNjxxbxIeI0Gmiw\\=\\= p {\n        font-size: 16px;\n    }\n\n    /* .imageContainer {\n        width: 40%;\n        display: flex;\n        align-items: center;\n        height: 100%;\n    } */\n}\n@media only screen and (max-width: 600px) {\n    .x-H8MV4cNjxxbxIeI0Gmiw\\=\\= {\n        margin: 2rem;\n    }\n    .oIFLP0uZdmjXHyD2aosGBA\\=\\= {\n        display: none;\n    }\n\n    .wlJuN67ILQJ2-IWokDJZvg\\=\\= {\n        padding: 2rem;\n        width: 80%;\n    }\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\n.djzTrzTVf\\+yGjYvp1i9FRQ\\=\\= {\n    display: flex;\n    justify-content: center;\n    flex-direction: column;\n    align-items: center;\n}\n\n.djzTrzTVf\\+yGjYvp1i9FRQ\\=\\= h1 {\n    font-size: 1.5rem !important;\n    font-family: Roboto-Thin;\n}\n\n.djzTrzTVf\\+yGjYvp1i9FRQ\\=\\= p {\n    font-size: 1rem;\n    font-family: Roboto-Thin;\n}\n\n.x-H8MV4cNjxxbxIeI0Gmiw\\=\\= {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    border: 2px solid #aeaaa245;\n    border-radius: 50px 50px 0 50px;\n    width: 60%;\n    font-family: Roboto-Thin;\n}\n\n.djzTrzTVf\\+yGjYvp1i9FRQ\\=\\= img {\n    width: 100%;\n    border-radius: 0px 50px 0 0px;\n}\n\n.oIFLP0uZdmjXHyD2aosGBA\\=\\= {\n    width: 40%;\n    display: flex;\n    align-items: center;\n    height: 100%;\n}\n\n.wlJuN67ILQJ2-IWokDJZvg\\=\\= {\n    width: 60%;\n\n    display: flex;\n    justify-content: space-between;\n    align-items: left;\n    flex-direction: column;\n    gap: 1rem;\n    padding: 2rem;\n}\n.wLHMPYjtSCyJqGKIgslMLg\\=\\= {\n    background-color: #fd6363;\n    display: flex;\n    justify-content: center;\n    padding: 0.2rem;\n    border-radius: 50px 100px 0 50px;\n    border: solid 1px #fd6363;\n    color: white;\n    margin-top: 20%;\n}\n\n@media only screen and (max-width: 1000px) {\n    .x-H8MV4cNjxxbxIeI0Gmiw\\=\\= {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        text-align: left;\n        margin: 0 !important;\n        width: 80% !important;\n    }\n\n    .wlJuN67ILQJ2-IWokDJZvg\\=\\= {\n        padding: 1rem;\n        gap: 5px;\n        margin-left: 10px;\n    }\n\n    .x-H8MV4cNjxxbxIeI0Gmiw\\=\\= h1 {\n        font-size: 18px;\n    }\n    .x-H8MV4cNjxxbxIeI0Gmiw\\=\\= p {\n        font-size: 16px;\n    }\n\n    /* .imageContainer {\n        width: 40%;\n        display: flex;\n        align-items: center;\n        height: 100%;\n    } */\n}\n@media only screen and (max-width: 600px) {\n    .x-H8MV4cNjxxbxIeI0Gmiw\\=\\= {\n        margin: 2rem;\n    }\n    .oIFLP0uZdmjXHyD2aosGBA\\=\\= {\n        display: none;\n    }\n\n    .wlJuN67ILQJ2-IWokDJZvg\\=\\= {\n        padding: 2rem;\n        width: 80%;\n    }\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"contactWrapper": "djzTrzTVf+yGjYvp1i9FRQ==",
 	"fullPageContainer": "x-H8MV4cNjxxbxIeI0Gmiw==",
 	"imageContainer": "oIFLP0uZdmjXHyD2aosGBA==",
-	"textContainer": "wlJuN67ILQJ2-IWokDJZvg=="
+	"textContainer": "wlJuN67ILQJ2-IWokDJZvg==",
+	"mailTo": "wLHMPYjtSCyJqGKIgslMLg=="
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -7019,7 +7041,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\nbody {\n    font-family: Roboto-Thin;\n}\n\n._4USzpIOJSIJ-abx07L2ZuQ\\=\\= {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    z-index: -1;\n    overflow: hidden;\n}\n.Esszq93d-43raJAL6-zqsg\\=\\= {\n    height: 100%;\n    width: 100%;\n    -o-object-fit: cover;\n       object-fit: cover;\n    pointer-events: none;\n}\n.E78Lg\\+vvbPmKumJqowKcsQ\\=\\= {\n    padding-left: 1.5rem;\n    color: rgb(225, 219, 211);\n    width: 40%;\n    line-height: 1.5;\n    margin-left: 1.5rem;\n    display: flex;\n    flex-direction: column;\n    height: 65vh;\n    justify-content: flex-end;\n}\n\n.VPWl5ySPsjhRHawsvA9gTA\\=\\= {\n    font-size: 1.8rem;\n}\n\n@media only screen and (max-width: 850px) {\n    .E78Lg\\+vvbPmKumJqowKcsQ\\=\\= {\n        width: 90%;\n        padding-top: 40%;\n        padding-left: 0;\n    }\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\nbody {\n    font-family: Roboto-Thin;\n}\n\n._4USzpIOJSIJ-abx07L2ZuQ\\=\\= {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    z-index: -1;\n    overflow: hidden;\n}\n.Esszq93d-43raJAL6-zqsg\\=\\= {\n    height: 100%;\n    width: 100%;\n    -o-object-fit: cover;\n       object-fit: cover;\n    pointer-events: none;\n}\n.E78Lg\\+vvbPmKumJqowKcsQ\\=\\= {\n    padding-left: 1.5rem;\n    color: rgb(225, 219, 211);\n    width: 40%;\n    line-height: 1.5;\n    margin-left: 1.5rem;\n    display: flex;\n    flex-direction: column;\n    height: 75vh;\n    justify-content: flex-end;\n}\n\n.VPWl5ySPsjhRHawsvA9gTA\\=\\= {\n    font-size: 1.8rem;\n}\n\n@media only screen and (max-width: 850px) {\n    .E78Lg\\+vvbPmKumJqowKcsQ\\=\\= {\n        width: 90%;\n        padding-top: 40%;\n        padding-left: 0;\n    }\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"bgVideo": "_4USzpIOJSIJ-abx07L2ZuQ==",
@@ -7049,7 +7071,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\n@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\nsvg {\n    margin-top: 0.8rem !important;\n}\n\n.rkT4cAwgqzlmUavoEGU5dA\\=\\= {\n    width: 100%;\n    display: flex;\n    justify-content: center;\n    background-color: #aeaaa245;\n    flex-direction: column;\n    margin: 0;\n    align-items: center;\n    padding-top: 2rem;\n    padding-bottom: 1rem;\n    margin-top: 5rem;\n}\n\n.rkT4cAwgqzlmUavoEGU5dA\\=\\= p {\n    margin: 0;\n    font-size: 12px;\n    color: rgb(42, 36, 26);\n    font-family: Roboto-Thin;\n}\n\n.HmgCxTqfG\\+FOpoGNCkBSjA\\=\\= {\n    font-family: Julius;\n    padding-bottom: 0.5rem;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\n@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\nsvg {\n    margin-top: 0.8rem !important;\n}\n\n.rkT4cAwgqzlmUavoEGU5dA\\=\\= {\n    width: 100%;\n    display: flex;\n    justify-content: center;\n    background-color: #aeaaa245;\n    flex-direction: column;\n    margin: 0;\n    align-items: center;\n    padding-top: 2rem;\n    padding-bottom: 1rem;\n    margin-top: 5rem;\n}\n\n.rkT4cAwgqzlmUavoEGU5dA\\=\\= p {\n    margin: 0;\n    font-size: 12px;\n    color: rgb(42, 36, 26);\n    font-family: Roboto-Thin;\n}\n\n.rkT4cAwgqzlmUavoEGU5dA\\=\\= .HmgCxTqfG\\+FOpoGNCkBSjA\\=\\= {\n    padding-bottom: 0.5rem;\n    font-size: 1.1rem !important;\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"footer": "rkT4cAwgqzlmUavoEGU5dA==",
@@ -7077,11 +7099,13 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\n._71hV\\+fOZYQGIixtAlDhymQ\\=\\= {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 2rem 2rem 1rem 2rem;\n}\n.V7hdcHsY5o68MXxr1nsD8Q\\=\\= {\n    display: flex;\n    gap: 2rem;\n    font-family: Julius;\n}\n\na {\n    text-decoration: none;\n    color: #3e2e29;\n}\n\n.V7hdcHsY5o68MXxr1nsD8Q\\=\\= a:hover {\n    border-bottom: 1px solid#3e2e29;\n}\n\n.QH3-tSp6gjwQakvBwdGa5A\\=\\=:hover {\n    border-bottom: none;\n}\n._6b8ZBlmHxU0QC1L-Oo5QYg\\=\\= {\n    display: none;\n}\n\n.QfGAqRcTzOIdA0mPoh3INQ\\=\\= {\n    background-color: transparent;\n    border: none;\n    padding: 0;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    width: 20px;\n    height: 14px;\n}\n.\\+xF2b64o\\+f0VMmAhvuzXNg\\=\\= {\n    background-color: black;\n    width: 100%;\n    height: 2px;\n}\n\n@media only screen and (max-width: 850px) {\n    ._6b8ZBlmHxU0QC1L-Oo5QYg\\=\\= {\n        display: block;\n    }\n    .V7hdcHsY5o68MXxr1nsD8Q\\=\\= {\n        display: none;\n    }\n    ._71hV\\+fOZYQGIixtAlDhymQ\\=\\= {\n        align-items: flex-start;\n    }\n    svg {\n        width: 70%;\n    }\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\n._71hV\\+fOZYQGIixtAlDhymQ\\=\\= {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 2rem 2rem 1rem 2rem;\n}\n._6Uq9-Sk3QviGIxCdHcCBdA\\=\\= {\n    border-bottom: 1px solid black;\n}\n.V7hdcHsY5o68MXxr1nsD8Q\\=\\= {\n    display: flex;\n    gap: 2rem;\n    font-family: Julius;\n}\n.D2ORbr4jinFNQvLKBmf-8g\\=\\= {\n    background-color: #3e2e29;\n}\na {\n    text-decoration: none;\n    color: #3e2e29;\n    padding-bottom: 0.3rem;\n}\n\n.V7hdcHsY5o68MXxr1nsD8Q\\=\\= a:hover {\n    border-bottom: 1px solid#3e2e29;\n}\n\n.QH3-tSp6gjwQakvBwdGa5A\\=\\=:hover {\n    border-bottom: none;\n}\n._6b8ZBlmHxU0QC1L-Oo5QYg\\=\\= {\n    display: none;\n}\n\n.QfGAqRcTzOIdA0mPoh3INQ\\=\\= {\n    background-color: transparent;\n    border: none;\n    padding: 0;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    width: 20px;\n    height: 14px;\n}\n.\\+xF2b64o\\+f0VMmAhvuzXNg\\=\\= {\n    background-color: black;\n    width: 100%;\n    height: 2px;\n}\n\n@media only screen and (max-width: 850px) {\n    ._6b8ZBlmHxU0QC1L-Oo5QYg\\=\\= {\n        display: block;\n    }\n    .V7hdcHsY5o68MXxr1nsD8Q\\=\\= {\n        display: none;\n    }\n    ._71hV\\+fOZYQGIixtAlDhymQ\\=\\= {\n        align-items: flex-start;\n    }\n    svg {\n        width: 70%;\n    }\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"navBar": "_71hV+fOZYQGIixtAlDhymQ==",
+	"active": "_6Uq9-Sk3QviGIxCdHcCBdA==",
 	"navLinks": "V7hdcHsY5o68MXxr1nsD8Q==",
+	"underline": "D2ORbr4jinFNQvLKBmf-8g==",
 	"logo": "QH3-tSp6gjwQakvBwdGa5A==",
 	"hamburgerMenu": "_6b8ZBlmHxU0QC1L-Oo5QYg==",
 	"hamburgerButton": "QfGAqRcTzOIdA0mPoh3INQ==",
@@ -18698,6 +18722,265 @@ deepmerge.all = function deepmergeAll(array, options) {
 var deepmerge_1 = deepmerge;
 
 module.exports = deepmerge_1;
+
+
+/***/ }),
+
+/***/ "./node_modules/emailjs-com/es/api/sendPost.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/emailjs-com/es/api/sendPost.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "sendPost": () => (/* binding */ sendPost)
+/* harmony export */ });
+/* harmony import */ var _models_EmailJSResponseStatus__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../models/EmailJSResponseStatus */ "./node_modules/emailjs-com/es/models/EmailJSResponseStatus.js");
+/* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../store/store */ "./node_modules/emailjs-com/es/store/store.js");
+
+
+const sendPost = (url, data, headers = {}) => {
+    return new Promise((resolve, reject) => {
+        const xhr = new XMLHttpRequest();
+        xhr.addEventListener('load', ({ target }) => {
+            const responseStatus = new _models_EmailJSResponseStatus__WEBPACK_IMPORTED_MODULE_0__.EmailJSResponseStatus(target);
+            if (responseStatus.status === 200 || responseStatus.text === 'OK') {
+                resolve(responseStatus);
+            }
+            else {
+                reject(responseStatus);
+            }
+        });
+        xhr.addEventListener('error', ({ target }) => {
+            reject(new _models_EmailJSResponseStatus__WEBPACK_IMPORTED_MODULE_0__.EmailJSResponseStatus(target));
+        });
+        xhr.open('POST', _store_store__WEBPACK_IMPORTED_MODULE_1__.store._origin + url, true);
+        Object.keys(headers).forEach((key) => {
+            xhr.setRequestHeader(key, headers[key]);
+        });
+        xhr.send(data);
+    });
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/emailjs-com/es/index.js":
+/*!**********************************************!*\
+  !*** ./node_modules/emailjs-com/es/index.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   "init": () => (/* reexport safe */ _methods_init_init__WEBPACK_IMPORTED_MODULE_0__.init),
+/* harmony export */   "send": () => (/* reexport safe */ _methods_send_send__WEBPACK_IMPORTED_MODULE_1__.send),
+/* harmony export */   "sendForm": () => (/* reexport safe */ _methods_sendForm_sendForm__WEBPACK_IMPORTED_MODULE_2__.sendForm)
+/* harmony export */ });
+/* harmony import */ var _methods_init_init__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./methods/init/init */ "./node_modules/emailjs-com/es/methods/init/init.js");
+/* harmony import */ var _methods_send_send__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./methods/send/send */ "./node_modules/emailjs-com/es/methods/send/send.js");
+/* harmony import */ var _methods_sendForm_sendForm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./methods/sendForm/sendForm */ "./node_modules/emailjs-com/es/methods/sendForm/sendForm.js");
+
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+    init: _methods_init_init__WEBPACK_IMPORTED_MODULE_0__.init,
+    send: _methods_send_send__WEBPACK_IMPORTED_MODULE_1__.send,
+    sendForm: _methods_sendForm_sendForm__WEBPACK_IMPORTED_MODULE_2__.sendForm,
+});
+
+
+/***/ }),
+
+/***/ "./node_modules/emailjs-com/es/methods/init/init.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/emailjs-com/es/methods/init/init.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "init": () => (/* binding */ init)
+/* harmony export */ });
+/* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../store/store */ "./node_modules/emailjs-com/es/store/store.js");
+
+/**
+ * Initiation
+ * @param {string} userID - set the EmailJS user ID
+ * @param {string} origin - set the EmailJS origin
+ */
+const init = (userID, origin = 'https://api.emailjs.com') => {
+    _store_store__WEBPACK_IMPORTED_MODULE_0__.store._userID = userID;
+    _store_store__WEBPACK_IMPORTED_MODULE_0__.store._origin = origin;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/emailjs-com/es/methods/send/send.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/emailjs-com/es/methods/send/send.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "send": () => (/* binding */ send)
+/* harmony export */ });
+/* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../store/store */ "./node_modules/emailjs-com/es/store/store.js");
+/* harmony import */ var _utils_validateParams__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/validateParams */ "./node_modules/emailjs-com/es/utils/validateParams.js");
+/* harmony import */ var _api_sendPost__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../api/sendPost */ "./node_modules/emailjs-com/es/api/sendPost.js");
+
+
+
+/**
+ * Send a template to the specific EmailJS service
+ * @param {string} serviceID - the EmailJS service ID
+ * @param {string} templateID - the EmailJS template ID
+ * @param {object} templatePrams - the template params, what will be set to the EmailJS template
+ * @param {string} userID - the EmailJS user ID
+ * @returns {Promise<EmailJSResponseStatus>}
+ */
+const send = (serviceID, templateID, templatePrams, userID) => {
+    const uID = userID || _store_store__WEBPACK_IMPORTED_MODULE_0__.store._userID;
+    (0,_utils_validateParams__WEBPACK_IMPORTED_MODULE_1__.validateParams)(uID, serviceID, templateID);
+    const params = {
+        lib_version: '3.2.0',
+        user_id: uID,
+        service_id: serviceID,
+        template_id: templateID,
+        template_params: templatePrams,
+    };
+    return (0,_api_sendPost__WEBPACK_IMPORTED_MODULE_2__.sendPost)('/api/v1.0/email/send', JSON.stringify(params), {
+        'Content-type': 'application/json',
+    });
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/emailjs-com/es/methods/sendForm/sendForm.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/emailjs-com/es/methods/sendForm/sendForm.js ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "sendForm": () => (/* binding */ sendForm)
+/* harmony export */ });
+/* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../store/store */ "./node_modules/emailjs-com/es/store/store.js");
+/* harmony import */ var _utils_validateParams__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/validateParams */ "./node_modules/emailjs-com/es/utils/validateParams.js");
+/* harmony import */ var _api_sendPost__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../api/sendPost */ "./node_modules/emailjs-com/es/api/sendPost.js");
+
+
+
+const findHTMLForm = (form) => {
+    let currentForm;
+    if (typeof form === 'string') {
+        currentForm = document.querySelector(form);
+    }
+    else {
+        currentForm = form;
+    }
+    if (!currentForm || currentForm.nodeName !== 'FORM') {
+        throw 'The 3rd parameter is expected to be the HTML form element or the style selector of form';
+    }
+    return currentForm;
+};
+/**
+ * Send a form the specific EmailJS service
+ * @param {string} serviceID - the EmailJS service ID
+ * @param {string} templateID - the EmailJS template ID
+ * @param {string | HTMLFormElement} form - the form element or selector
+ * @param {string} userID - the EmailJS user ID
+ * @returns {Promise<EmailJSResponseStatus>}
+ */
+const sendForm = (serviceID, templateID, form, userID) => {
+    const uID = userID || _store_store__WEBPACK_IMPORTED_MODULE_0__.store._userID;
+    const currentForm = findHTMLForm(form);
+    (0,_utils_validateParams__WEBPACK_IMPORTED_MODULE_1__.validateParams)(uID, serviceID, templateID);
+    const formData = new FormData(currentForm);
+    formData.append('lib_version', '3.2.0');
+    formData.append('service_id', serviceID);
+    formData.append('template_id', templateID);
+    formData.append('user_id', uID);
+    return (0,_api_sendPost__WEBPACK_IMPORTED_MODULE_2__.sendPost)('/api/v1.0/email/send-form', formData);
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/emailjs-com/es/models/EmailJSResponseStatus.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/emailjs-com/es/models/EmailJSResponseStatus.js ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "EmailJSResponseStatus": () => (/* binding */ EmailJSResponseStatus)
+/* harmony export */ });
+class EmailJSResponseStatus {
+    constructor(httpResponse) {
+        this.status = httpResponse.status;
+        this.text = httpResponse.responseText;
+    }
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/emailjs-com/es/store/store.js":
+/*!****************************************************!*\
+  !*** ./node_modules/emailjs-com/es/store/store.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "store": () => (/* binding */ store)
+/* harmony export */ });
+const store = {
+    _origin: 'https://api.emailjs.com',
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/emailjs-com/es/utils/validateParams.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/emailjs-com/es/utils/validateParams.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "validateParams": () => (/* binding */ validateParams)
+/* harmony export */ });
+const validateParams = (userID, serviceID, templateID) => {
+    if (!userID) {
+        throw 'The user ID is required. Visit https://dashboard.emailjs.com/admin/integration';
+    }
+    if (!serviceID) {
+        throw 'The service ID is required. Visit https://dashboard.emailjs.com/admin';
+    }
+    if (!templateID) {
+        throw 'The template ID is required. Visit https://dashboard.emailjs.com/admin/templates';
+    }
+    return true;
+};
 
 
 /***/ }),
@@ -60501,7 +60784,7 @@ var token=/d{1,4}|D{3,4}|m{1,4}|yy(?:yy)?|([HhMsTt])\1?|W{1,2}|[LlopSZN]|"[^"]*"
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"Promise based HTTP client for the browser and node.js","main":"index.js","scripts":{"test":"grunt test","start":"node ./sandbox/server.js","build":"NODE_ENV=production grunt build","preversion":"npm test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json","postversion":"git push && git push --tags","examples":"node ./examples/server.js","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","fix":"eslint --fix lib/**/*.js"},"repository":{"type":"git","url":"https://github.com/axios/axios.git"},"keywords":["xhr","http","ajax","promise","node"],"author":"Matt Zabriskie","license":"MIT","bugs":{"url":"https://github.com/axios/axios/issues"},"homepage":"https://axios-http.com","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"jsdelivr":"dist/axios.min.js","unpkg":"dist/axios.min.js","typings":"./index.d.ts","dependencies":{"follow-redirects":"^1.14.0"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}]}');
+module.exports = JSON.parse('{"_args":[["axios@0.21.4","/Users/sowulff/Developer/casa-de-bicicletas"]],"_from":"axios@0.21.4","_id":"axios@0.21.4","_inBundle":false,"_integrity":"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==","_location":"/@inertiajs/inertia/axios","_phantomChildren":{},"_requested":{"type":"version","registry":true,"raw":"axios@0.21.4","name":"axios","escapedName":"axios","rawSpec":"0.21.4","saveSpec":null,"fetchSpec":"0.21.4"},"_requiredBy":["/@inertiajs/inertia"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz","_spec":"0.21.4","_where":"/Users/sowulff/Developer/casa-de-bicicletas","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.14.0"},"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"homepage":"https://axios-http.com","jsdelivr":"dist/axios.min.js","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","fix":"eslint --fix lib/**/*.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","unpkg":"dist/axios.min.js","version":"0.21.4"}');
 
 /***/ })
 

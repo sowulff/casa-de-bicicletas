@@ -1,6 +1,7 @@
 import styles from "./contact.module.css";
 import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Footer/Footer";
+import { Link } from "@inertiajs/inertia-react";
 
 export default function Contact() {
     return (
@@ -21,7 +22,18 @@ export default function Contact() {
                             Vid frågor, kontakta oss via telefon eller e-post.
                             Transfer från Alicante flygplats går att ordna.
                         </p>
+                        <Link
+                            className={styles.mailTo}
+                            onClick={(e) => {
+                                window.location.href =
+                                    "mailto:no-reply@example.com";
+                                e.preventDefault();
+                            }}
+                        >
+                            Maila oss
+                        </Link>
                     </div>
+
                     <div className={styles.imageContainer}>
                         <img src={"assets/galleri/23.JPG"} />
                     </div>
