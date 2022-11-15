@@ -29,7 +29,7 @@ body {
 /* container som håller hela sidan */
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     justify-content: center;
     gap: 2rem 5rem;
     /* padding: 1rem; */
@@ -38,8 +38,14 @@ body {
 /* container som håller varje enskilt rum och dess info */
 .roomContainer {
     display: flex;
-    flex-direction: column;
-    width: 35%;
+    flex-direction: row;
+    width: 60%;
+    justify-self: center;
+    align-self: center;
+    border: 2px#d3d2cf45 solid;
+    border-radius: 50px 0 50px 50px;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .roomContainer h2 {
@@ -52,9 +58,18 @@ body {
 }
 
 .roomContainer img {
-    width: 100%;
+    width: 50%;
+    object-fit: cover;
 }
 
+.roomInfo {
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.selectRoomImgContainer {
+    height: 100%;
+}
 /* styling för knapparna */
 .linkContainer {
     background-color: #fd6363;
@@ -63,6 +78,8 @@ body {
     padding: 0.2rem;
     border-radius: 50px 100px 0 50px;
     border: solid 1px #fd6363;
+    width: 80%;
+    margin-top: 3rem;
 }
 
 .linkContainer:hover {
@@ -80,96 +97,123 @@ body {
     padding: 0.1rem;
 }
 
-/* container som håller varje enskilt rum men har en större width för att få en mörkare bakgrund bakom vissa rum */
-.coloredContainer {
-    background-color: #d3d2cf45;
+.roomContainer:nth-child(1) img {
+    border-radius: 50px 0 50px 50px;
 }
 
-.coloredContainer:first-child {
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: right;
-}
-
-.coloredContainer:nth-child(3) {
-    background-color: #d3d2cf45;
-    display: flex;
-    justify-content: right;
-}
-
-.coloredContainer:last-child {
-    background-color: #ffffff;
-}
-.coloredContainer:last-child .link {
-    padding-left: 0.9rem;
-}
-
-.coloredContainer:nth-child(2) {
-    border-radius: 0 0 0 35px;
-}
-.coloredContainer:nth-child(2) .link {
-    padding-left: 0.9rem;
-}
-
-.coloredContainer:nth-child(3) {
-    border-radius: 0 0 35px 0;
-}
-.coloredContainer:nth-child(2) .linkContainer {
-    border-radius: 0 50px 50px 100px;
-}
-
-.coloredContainer:nth-child(3) .linkContainer {
+.roomContainer:nth-child(1) .linkContainer {
     border-radius: 50px 0 100px 50px;
 }
 
-.coloredContainer:nth-child(4) .linkContainer {
-    border-radius: 100px 50px 50px 0;
+.roomContainer:nth-child(2) {
+    border-radius: 0 0 0 50px;
+    background-color: white;
+    border: 2px#d3d2cf45 solid;
+    border-radius: 50px 50px 0 50px;
+    flex-direction: row-reverse;
+}
+.roomContainer:nth-child(2) img {
+    border-radius: 50px 50px 0 50px;
+}
+
+.roomContainer:nth-child(2) .linkContainer {
+    border-radius: 0 50px 50px 100px;
+}
+
+.roomContainer:nth-child(3) img {
+    border-radius: 50px 0 50px 50px;
+}
+
+.roomContainer:nth-child(3) {
+    border-radius: 0 0 50px 0;
+    background-color: white;
+    border: 2px#d3d2cf45 solid;
+    border-radius: 50px 0 50px 50px;
+}
+
+.roomContainer:nth-child(3) .linkContainer {
+    border-radius: 50px 0 100px 50px;
+}
+
+.roomContainer:nth-child(4) img {
+    border-radius: 50px 50px 0 50px;
+}
+
+.roomContainer:nth-child(4) .linkContainer {
+    border-radius: 0 50px 50px 100px;
+}
+
+.roomContainer:last-child {
+    background-color: white;
+    border: 2px#d3d2cf45 solid;
+    border-radius: 50px 50px 0px 50px;
+    flex-direction: row-reverse;
 }
 
 @media only screen and (max-width: 1000px) {
-    .roomContainer {
-        width: 50%;
-    }
-}
-@media only screen and (max-width: 850px) {
-    .fullPageContainer h2 {
-        font-size: 1.5rem !important;
-        margin-top: 2rem;
-    }
     .container {
         grid-template-columns: 1fr;
         justify-content: center;
         gap: 2rem 5rem;
         padding: 1rem;
     }
+
+    .fullPageContainer h2 {
+        font-size: 1.5rem !important;
+    }
     .roomContainer {
+        width: 50%;
         flex-direction: column;
-        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
     }
 
-    .roomContainer p,
-    .fullPageContainer h2 {
-        padding-left: 3rem;
-        padding-right: 3rem;
-        padding-top: 1rem;
+    .roomContainer img {
+        width: 100%;
     }
+    .roomContainer:nth-child(2),
+    .roomContainer:nth-child(4) {
+        flex-direction: column;
+    }
+
     .linkContainer {
         width: 50%;
         display: flex;
         justify-self: center;
         align-self: center;
+        margin-top: 1rem;
     }
 
     .roomInfo {
         width: 100%;
-        background-color: rgb(255, 255, 255);
         padding-bottom: 2rem;
-        border: 2px solid #d3d2cf45;
+        border: unset;
     }
+
     .linkWrapper {
         display: flex;
         width: 100%;
         justify-content: center;
         align-items: center;
+    }
+
+    .linkContainer {
+        width: 100%;
+    }
+    .selectRoomImgContainer {
+        border: unset;
+    }
+
+    @media only screen and (max-width: 500px) {
+        .roomContainer {
+            padding: unset;
+        }
+        .roomContainer p {
+            font-size: 12px;
+        }
+        .link {
+            font-size: 0.7rem;
+        }
     }
 }

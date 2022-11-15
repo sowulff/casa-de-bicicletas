@@ -5295,13 +5295,13 @@ function About() {
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
             className: _about_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].textContainer,
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {
-              children: "Hej!"
+              children: "Molle & Jonas"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
               children: ["Vi \xE4r tv\xE5 glada G\xF6teborgare med intresset f\xF6r mountainbike gemensamt. Den ena av oss har cyklat f\xF6r landslaget och den andra har bakgrund fr\xE5n surfing.", " "]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-              children: "2021 best\xE4mde vi oss f\xF6r att \xF6ppna Casa La Marina med m\xE5let att m\xF6ta och sammanf\xF6ra m\xE4nniskor som vi kunde cykla tillsammans med p\xE5 en h\xE4rlig plats. \xC4ven om vi \xE4gnar mycket tid f\xF6r cykling \xE4r det inte ett m\xE5ste att du delar v\xE5r k\xE4rlek f\xF6r cyklingen \u2013 hit \xE4r alla v\xE4lkomna! Vi str\xE4var efter att bevara en familj\xE4r atmosf\xE4r och go st\xE4mning."
+              children: "2021 best\xE4mde vi oss f\xF6r att \xF6ppna Casa La Marina med m\xE5let att m\xF6ta och sammanf\xF6ra m\xE4nniskor som vi kunde cykla tillsammans med p\xE5 en h\xE4rlig plats. \xC4ven om vi \xE4gnar mycket \xE5t cykling \xE4r det inte ett m\xE5ste att du delar v\xE5r k\xE4rlek f\xF6r cyklingen \u2013 hit \xE4r alla v\xE4lkomna! Vi str\xE4var efter att bevara en familj\xE4r atmosf\xE4r och go st\xE4mning."
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-              children: "Casa La Marina \xE4r ett semesterboende i San Fulgencio. H\xE4r kan du hyra en l\xE4genhet, dubbelrum, femb\xE4dsrum eller en st\xE4llplats f\xF6r din husbil, husvagn eller campenvan. Sl\xE4ng n\xE5got p\xE5 grillen, utmana kompisen i en biljard eller pingis-match, slappa i h\xE4ngmattan eller bada i poolen. H\xE4r \xE4r m\xF6jligheterna m\xE5nga! I n\xE4romr\xE5det finns m\xE5nga sev\xE4rdheter. Vi hj\xE4lper g\xE4rna till med tips p\xE5 utflykter!"
+              children: "Casa La Marina \xE4r ett semesterboende i San Fulgencio. H\xE4r kan du hyra en l\xE4genhet, dubbelrum, femb\xE4ddsrum eller en st\xE4llplats f\xF6r din husbil, husvagn eller campenvan. Sl\xE4ng n\xE5got p\xE5 grillen, utmana kompisen i en biljard eller pingis-match, slappa i h\xE4ngmattan eller bada i poolen. H\xE4r \xE4r m\xF6jligheterna m\xE5nga! I n\xE4romr\xE5det finns dessutom m\xE5nga sev\xE4rdheter. Vi hj\xE4lper g\xE4rna till med tips p\xE5 utflykter!"
             })]
           })]
         })
@@ -5869,9 +5869,10 @@ function selectRoom(_ref) {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
         className: _selectRoom_module_css__WEBPACK_IMPORTED_MODULE_2__["default"].container,
         children: rooms.map(function (room) {
-          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-            className: _selectRoom_module_css__WEBPACK_IMPORTED_MODULE_2__["default"].coloredContainer,
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+          return (
+            /*#__PURE__*/
+            // <div className={styles.coloredContainer}>
+            (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
               className: _selectRoom_module_css__WEBPACK_IMPORTED_MODULE_2__["default"].roomContainer,
               value: data.room_id,
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
@@ -5898,8 +5899,9 @@ function selectRoom(_ref) {
                   })
                 })]
               })]
-            }, room.id)
-          });
+            }, room.id) // </div>
+
+          );
         })
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], {})]
@@ -5922,42 +5924,51 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _contact_module_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./contact.module.css */ "./resources/js/Pages/Contact/contact.module.css");
 /* harmony import */ var _components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/NavBar/NavBar */ "./resources/js/components/NavBar/NavBar.js");
 /* harmony import */ var _components_Footer_Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/Footer/Footer */ "./resources/js/components/Footer/Footer.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
 
 
 function Contact() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
     className: _contact_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].contact,
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
       className: _contact_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].contactWrapper,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
         className: _contact_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].fullPageContainer,
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
           className: _contact_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].textContainer,
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h1", {
             children: "Casa La Marina"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
             children: "Avenida San Fulgencio 300"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
             children: "03194 San Fulgencio"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
             children: "Alicante, Spanien"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-            children: "+46 739 293 83 / casa@info.se"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-            children: "Vid fr\xE5gor, kontakta oss via telefon eller e-post. Transfer fr\xE5n Alicante flygplats g\xE5r att ordna."
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+            children: "Telefon: +46 739 293 83"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+            children: "E-post: casa@info.se"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__.Link, {
+            className: _contact_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].mailTo,
+            onClick: function onClick(e) {
+              window.location.href = "mailto:no-reply@example.com";
+              e.preventDefault();
+            },
+            children: "Maila oss"
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
           className: _contact_module_css__WEBPACK_IMPORTED_MODULE_0__["default"].imageContainer,
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
             src: "assets/galleri/23.JPG"
           })
         })]
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {})]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {})]
   });
 }
 
@@ -6746,7 +6757,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n.tVxuWpOLNj1lRMxlQpYkng\\=\\= {\n    font-family: Roboto-Thin;\n}\n\n.fW8DKrA6lh6i8G7tRFbQXQ\\=\\= {\n    border: 2px solid #aeaaa245;\n    border-radius: 50px 0px 0 50px;\n    border-left: none;\n}\n.ujP2vLmV4SjdR9BW2IAzZA\\=\\= {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    height: 90%;\n}\n.ujP2vLmV4SjdR9BW2IAzZA\\=\\= img {\n    max-width: 55%;\n    border-radius: 50px 0 50px 0;\n    -o-object-fit: cover;\n       object-fit: cover;\n}\n\n.LBgiKdkHbIt7jjZPSHR-3w\\=\\= .ujP2vLmV4SjdR9BW2IAzZA\\=\\= h1 {\n    padding-bottom: 1rem;\n    font-family: Roboto-Thin;\n}\n\n.LBgiKdkHbIt7jjZPSHR-3w\\=\\= .ujP2vLmV4SjdR9BW2IAzZA\\=\\= p,\n.LBgiKdkHbIt7jjZPSHR-3w\\=\\= .ujP2vLmV4SjdR9BW2IAzZA\\=\\= h1 {\n    padding: 0 2rem;\n    padding-bottom: 1rem;\n}\n\n.rw7KynDNZdxtv3Zt\\+nDYDw\\=\\= {\n    display: flex;\n    flex-direction: column;\n}\n\n.LBgiKdkHbIt7jjZPSHR-3w\\=\\= p {\n    margin-top: 0.5rem;\n}\n\n@media only screen and (max-width: 1050px) {\n    .LBgiKdkHbIt7jjZPSHR-3w\\=\\= {\n        font-size: 12px;\n    }\n\n    .LBgiKdkHbIt7jjZPSHR-3w\\=\\= h1 {\n        font-size: 18px;\n    }\n    .LBgiKdkHbIt7jjZPSHR-3w\\=\\= p {\n        margin-top: 0rem;\n    }\n}\n\n@media only screen and (max-width: 850px) {\n    .LBgiKdkHbIt7jjZPSHR-3w\\=\\= {\n        width: 100%;\n        display: flex;\n        justify-content: center;\n        font-size: 14px;\n    }\n    .fW8DKrA6lh6i8G7tRFbQXQ\\=\\= {\n        width: 80vw;\n        border-left: 2px solid #aeaaa245;\n    }\n\n    .ujP2vLmV4SjdR9BW2IAzZA\\=\\= {\n        flex-direction: column;\n        gap: 2rem;\n    }\n\n    .ujP2vLmV4SjdR9BW2IAzZA\\=\\= img {\n        max-width: 100%;\n    }\n\n    .LBgiKdkHbIt7jjZPSHR-3w\\=\\= .rw7KynDNZdxtv3Zt\\+nDYDw\\=\\= {\n        padding-bottom: 2rem;\n    }\n\n    .ujP2vLmV4SjdR9BW2IAzZA\\=\\= {\n        height: unset;\n    }\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n.tVxuWpOLNj1lRMxlQpYkng\\=\\= {\n    font-family: Roboto-Thin;\n}\n\n.fW8DKrA6lh6i8G7tRFbQXQ\\=\\= {\n    border: 2px solid #aeaaa245;\n    border-radius: 50px 0px 0 50px;\n    border-left: none;\n}\n.ujP2vLmV4SjdR9BW2IAzZA\\=\\= {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    height: 90%;\n}\n.ujP2vLmV4SjdR9BW2IAzZA\\=\\= img {\n    max-width: 55%;\n    border-radius: 50px 0 0 0;\n    -o-object-fit: cover;\n       object-fit: cover;\n}\n\n.LBgiKdkHbIt7jjZPSHR-3w\\=\\= .ujP2vLmV4SjdR9BW2IAzZA\\=\\= h1 {\n    padding-bottom: 1rem;\n    font-family: Roboto-Thin;\n}\n\n.LBgiKdkHbIt7jjZPSHR-3w\\=\\= .ujP2vLmV4SjdR9BW2IAzZA\\=\\= p,\n.LBgiKdkHbIt7jjZPSHR-3w\\=\\= .ujP2vLmV4SjdR9BW2IAzZA\\=\\= h1 {\n    padding: 0 2rem;\n    padding-bottom: 1rem;\n}\n\n.rw7KynDNZdxtv3Zt\\+nDYDw\\=\\= {\n    display: flex;\n    flex-direction: column;\n}\n\n.LBgiKdkHbIt7jjZPSHR-3w\\=\\= p {\n    margin-top: 0.5rem;\n}\n\n@media only screen and (max-width: 1050px) {\n    .LBgiKdkHbIt7jjZPSHR-3w\\=\\= {\n        font-size: 12px;\n    }\n\n    .LBgiKdkHbIt7jjZPSHR-3w\\=\\= h1 {\n        font-size: 18px;\n    }\n    .LBgiKdkHbIt7jjZPSHR-3w\\=\\= p {\n        margin-top: 0rem;\n    }\n}\n\n@media only screen and (max-width: 850px) {\n    .LBgiKdkHbIt7jjZPSHR-3w\\=\\= {\n        width: 100%;\n        display: flex;\n        justify-content: center;\n        font-size: 14px;\n    }\n    .fW8DKrA6lh6i8G7tRFbQXQ\\=\\= {\n        width: 80vw;\n        border-left: 2px solid #aeaaa245;\n    }\n\n    .ujP2vLmV4SjdR9BW2IAzZA\\=\\= {\n        flex-direction: column;\n        gap: 2rem;\n    }\n\n    .ujP2vLmV4SjdR9BW2IAzZA\\=\\= img {\n        max-width: 100%;\n    }\n\n    .LBgiKdkHbIt7jjZPSHR-3w\\=\\= .rw7KynDNZdxtv3Zt\\+nDYDw\\=\\= {\n        padding-bottom: 2rem;\n    }\n\n    .ujP2vLmV4SjdR9BW2IAzZA\\=\\= {\n        height: unset;\n    }\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"about": "tVxuWpOLNj1lRMxlQpYkng==",
@@ -6903,7 +6914,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\nbody {\n    font-family: Roboto-Thin;\n}\n\n.Pf8w0f\\+s31\\+9K2fu4vJBYw\\=\\= h2 {\n    padding-top: 0.8rem;\n    padding-bottom: 0.8rem;\n}\n\n.WHjbWmiU1IiXC2bKa6wetw\\=\\= {\n    display: flex;\n    justify-content: center;\n}\n\n.ctRvS2vs5po9DtcvX8glBw\\=\\= {\n    padding-top: 0.8rem;\n    padding-bottom: 0.8rem;\n}\n/* container som håller hela sidan */\n.bArZ17oPD7EX8SO\\+wwoFJA\\=\\= {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    justify-content: center;\n    gap: 2rem 5rem;\n    /* padding: 1rem; */\n}\n\n/* container som håller varje enskilt rum och dess info */\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= {\n    display: flex;\n    flex-direction: column;\n    width: 35%;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= h2 {\n    font-family: Julius;\n    font-size: 1rem;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= p {\n    font-size: 0.9rem;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= img {\n    width: 100%;\n}\n\n/* styling för knapparna */\n.ldUC95G-xUa6ZcAXb49yow\\=\\= {\n    background-color: #fd6363;\n    display: flex;\n    justify-content: center;\n    padding: 0.2rem;\n    border-radius: 50px 100px 0 50px;\n    border: solid 1px #fd6363;\n}\n\n.ldUC95G-xUa6ZcAXb49yow\\=\\=:hover {\n    background-color: white;\n    border: solid 1px #fd6363;\n}\n.ldUC95G-xUa6ZcAXb49yow\\=\\=:hover .EJBYWyp\\+GUZGYgfz7UeSGw\\=\\= {\n    color: #fd6363;\n}\n\n.EJBYWyp\\+GUZGYgfz7UeSGw\\=\\= {\n    font-size: 0.8rem;\n    font-family: Julius;\n    color: white;\n    padding: 0.1rem;\n}\n\n/* container som håller varje enskilt rum men har en större width för att få en mörkare bakgrund bakom vissa rum */\n.WrX3i4N-HUqi1ymL3N7Ojg\\=\\= {\n    background-color: #d3d2cf45;\n}\n\n.WrX3i4N-HUqi1ymL3N7Ojg\\=\\=:first-child {\n    background-color: rgb(255, 255, 255);\n    display: flex;\n    justify-content: right;\n}\n\n.WrX3i4N-HUqi1ymL3N7Ojg\\=\\=:nth-child(3) {\n    background-color: #d3d2cf45;\n    display: flex;\n    justify-content: right;\n}\n\n.WrX3i4N-HUqi1ymL3N7Ojg\\=\\=:last-child {\n    background-color: #ffffff;\n}\n.WrX3i4N-HUqi1ymL3N7Ojg\\=\\=:last-child .EJBYWyp\\+GUZGYgfz7UeSGw\\=\\= {\n    padding-left: 0.9rem;\n}\n\n.WrX3i4N-HUqi1ymL3N7Ojg\\=\\=:nth-child(2) {\n    border-radius: 0 0 0 35px;\n}\n.WrX3i4N-HUqi1ymL3N7Ojg\\=\\=:nth-child(2) .EJBYWyp\\+GUZGYgfz7UeSGw\\=\\= {\n    padding-left: 0.9rem;\n}\n\n.WrX3i4N-HUqi1ymL3N7Ojg\\=\\=:nth-child(3) {\n    border-radius: 0 0 35px 0;\n}\n.WrX3i4N-HUqi1ymL3N7Ojg\\=\\=:nth-child(2) .ldUC95G-xUa6ZcAXb49yow\\=\\= {\n    border-radius: 0 50px 50px 100px;\n}\n\n.WrX3i4N-HUqi1ymL3N7Ojg\\=\\=:nth-child(3) .ldUC95G-xUa6ZcAXb49yow\\=\\= {\n    border-radius: 50px 0 100px 50px;\n}\n\n.WrX3i4N-HUqi1ymL3N7Ojg\\=\\=:nth-child(4) .ldUC95G-xUa6ZcAXb49yow\\=\\= {\n    border-radius: 100px 50px 50px 0;\n}\n\n@media only screen and (max-width: 1000px) {\n    .Ib5IaVeo8xk0PoOLMqeKgw\\=\\= {\n        width: 50%;\n    }\n}\n@media only screen and (max-width: 850px) {\n    .Pf8w0f\\+s31\\+9K2fu4vJBYw\\=\\= h2 {\n        font-size: 1.5rem !important;\n        margin-top: 2rem;\n    }\n    .bArZ17oPD7EX8SO\\+wwoFJA\\=\\= {\n        grid-template-columns: 1fr;\n        justify-content: center;\n        gap: 2rem 5rem;\n        padding: 1rem;\n    }\n    .Ib5IaVeo8xk0PoOLMqeKgw\\=\\= {\n        flex-direction: column;\n        width: 100%;\n    }\n\n    .Ib5IaVeo8xk0PoOLMqeKgw\\=\\= p,\n    .Pf8w0f\\+s31\\+9K2fu4vJBYw\\=\\= h2 {\n        padding-left: 3rem;\n        padding-right: 3rem;\n        padding-top: 1rem;\n    }\n    .ldUC95G-xUa6ZcAXb49yow\\=\\= {\n        width: 50%;\n        display: flex;\n        justify-self: center;\n        align-self: center;\n    }\n\n    .x7y4ywn4yWE92WHqIUn7AQ\\=\\= {\n        width: 100%;\n        background-color: rgb(255, 255, 255);\n        padding-bottom: 2rem;\n        border: 2px solid #d3d2cf45;\n    }\n    .JdR2S\\+y9cut7sYvT8Y3RvQ\\=\\= {\n        display: flex;\n        width: 100%;\n        justify-content: center;\n        align-items: center;\n    }\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\nbody {\n    font-family: Roboto-Thin;\n}\n\n.Pf8w0f\\+s31\\+9K2fu4vJBYw\\=\\= h2 {\n    padding-top: 0.8rem;\n    padding-bottom: 0.8rem;\n}\n\n.WHjbWmiU1IiXC2bKa6wetw\\=\\= {\n    display: flex;\n    justify-content: center;\n}\n\n.ctRvS2vs5po9DtcvX8glBw\\=\\= {\n    padding-top: 0.8rem;\n    padding-bottom: 0.8rem;\n}\n/* container som håller hela sidan */\n.bArZ17oPD7EX8SO\\+wwoFJA\\=\\= {\n    display: grid;\n    grid-template-rows: 1fr 1fr;\n    justify-content: center;\n    gap: 2rem 5rem;\n    /* padding: 1rem; */\n}\n\n/* container som håller varje enskilt rum och dess info */\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= {\n    display: flex;\n    flex-direction: row;\n    width: 60%;\n    justify-self: center;\n    align-self: center;\n    border: 2px#d3d2cf45 solid;\n    border-radius: 50px 0 50px 50px;\n    justify-content: center;\n    gap: 1rem;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= h2 {\n    font-family: Julius;\n    font-size: 1rem;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= p {\n    font-size: 0.9rem;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\= img {\n    width: 50%;\n    -o-object-fit: cover;\n       object-fit: cover;\n}\n\n.x7y4ywn4yWE92WHqIUn7AQ\\=\\= {\n    padding: 1rem;\n    margin-top: 1rem;\n}\n\n.jhmSPVtZ5\\+XPnjHfeREsxA\\=\\= {\n    height: 100%;\n}\n/* styling för knapparna */\n.ldUC95G-xUa6ZcAXb49yow\\=\\= {\n    background-color: #fd6363;\n    display: flex;\n    justify-content: center;\n    padding: 0.2rem;\n    border-radius: 50px 100px 0 50px;\n    border: solid 1px #fd6363;\n    width: 80%;\n    margin-top: 3rem;\n}\n\n.ldUC95G-xUa6ZcAXb49yow\\=\\=:hover {\n    background-color: white;\n    border: solid 1px #fd6363;\n}\n.ldUC95G-xUa6ZcAXb49yow\\=\\=:hover .EJBYWyp\\+GUZGYgfz7UeSGw\\=\\= {\n    color: #fd6363;\n}\n\n.EJBYWyp\\+GUZGYgfz7UeSGw\\=\\= {\n    font-size: 0.8rem;\n    font-family: Julius;\n    color: white;\n    padding: 0.1rem;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\=:nth-child(1) img {\n    border-radius: 50px 0 50px 50px;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\=:nth-child(1) .ldUC95G-xUa6ZcAXb49yow\\=\\= {\n    border-radius: 50px 0 100px 50px;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\=:nth-child(2) {\n    border-radius: 0 0 0 50px;\n    background-color: white;\n    border: 2px#d3d2cf45 solid;\n    border-radius: 50px 50px 0 50px;\n    flex-direction: row-reverse;\n}\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\=:nth-child(2) img {\n    border-radius: 50px 50px 0 50px;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\=:nth-child(2) .ldUC95G-xUa6ZcAXb49yow\\=\\= {\n    border-radius: 0 50px 50px 100px;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\=:nth-child(3) img {\n    border-radius: 50px 0 50px 50px;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\=:nth-child(3) {\n    border-radius: 0 0 50px 0;\n    background-color: white;\n    border: 2px#d3d2cf45 solid;\n    border-radius: 50px 0 50px 50px;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\=:nth-child(3) .ldUC95G-xUa6ZcAXb49yow\\=\\= {\n    border-radius: 50px 0 100px 50px;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\=:nth-child(4) img {\n    border-radius: 50px 50px 0 50px;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\=:nth-child(4) .ldUC95G-xUa6ZcAXb49yow\\=\\= {\n    border-radius: 0 50px 50px 100px;\n}\n\n.Ib5IaVeo8xk0PoOLMqeKgw\\=\\=:last-child {\n    background-color: white;\n    border: 2px#d3d2cf45 solid;\n    border-radius: 50px 50px 0px 50px;\n    flex-direction: row-reverse;\n}\n\n@media only screen and (max-width: 1000px) {\n    .bArZ17oPD7EX8SO\\+wwoFJA\\=\\= {\n        grid-template-columns: 1fr;\n        justify-content: center;\n        gap: 2rem 5rem;\n        padding: 1rem;\n    }\n\n    .Pf8w0f\\+s31\\+9K2fu4vJBYw\\=\\= h2 {\n        font-size: 1.5rem !important;\n    }\n    .Ib5IaVeo8xk0PoOLMqeKgw\\=\\= {\n        width: 50%;\n        flex-direction: column;\n        justify-content: center;\n        align-items: center;\n        gap: 0;\n    }\n\n    .Ib5IaVeo8xk0PoOLMqeKgw\\=\\= img {\n        width: 100%;\n    }\n    .Ib5IaVeo8xk0PoOLMqeKgw\\=\\=:nth-child(2),\n    .Ib5IaVeo8xk0PoOLMqeKgw\\=\\=:nth-child(4) {\n        flex-direction: column;\n    }\n\n    .ldUC95G-xUa6ZcAXb49yow\\=\\= {\n        width: 50%;\n        display: flex;\n        justify-self: center;\n        align-self: center;\n        margin-top: 1rem;\n    }\n\n    .x7y4ywn4yWE92WHqIUn7AQ\\=\\= {\n        width: 100%;\n        padding-bottom: 2rem;\n        border: unset;\n    }\n\n    .JdR2S\\+y9cut7sYvT8Y3RvQ\\=\\= {\n        display: flex;\n        width: 100%;\n        justify-content: center;\n        align-items: center;\n    }\n\n    .ldUC95G-xUa6ZcAXb49yow\\=\\= {\n        width: 100%;\n    }\n    .jhmSPVtZ5\\+XPnjHfeREsxA\\=\\= {\n        border: unset;\n    }\n\n    @media only screen and (max-width: 500px) {\n        .Ib5IaVeo8xk0PoOLMqeKgw\\=\\= {\n            padding: unset;\n        }\n        .Ib5IaVeo8xk0PoOLMqeKgw\\=\\= p {\n            font-size: 12px;\n        }\n        .EJBYWyp\\+GUZGYgfz7UeSGw\\=\\= {\n            font-size: 0.7rem;\n        }\n    }\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"fullPageContainer": "Pf8w0f+s31+9K2fu4vJBYw==",
@@ -6911,10 +6922,10 @@ ___CSS_LOADER_EXPORT___.locals = {
 	"price": "ctRvS2vs5po9DtcvX8glBw==",
 	"container": "bArZ17oPD7EX8SO+wwoFJA==",
 	"roomContainer": "Ib5IaVeo8xk0PoOLMqeKgw==",
+	"roomInfo": "x7y4ywn4yWE92WHqIUn7AQ==",
+	"selectRoomImgContainer": "jhmSPVtZ5+XPnjHfeREsxA==",
 	"linkContainer": "ldUC95G-xUa6ZcAXb49yow==",
 	"link": "EJBYWyp+GUZGYgfz7UeSGw==",
-	"coloredContainer": "WrX3i4N-HUqi1ymL3N7Ojg==",
-	"roomInfo": "x7y4ywn4yWE92WHqIUn7AQ==",
 	"linkWrapper": "JdR2S+y9cut7sYvT8Y3RvQ=="
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
@@ -6939,13 +6950,14 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\n.djzTrzTVf\\+yGjYvp1i9FRQ\\=\\= {\n    display: flex;\n    justify-content: center;\n    flex-direction: column;\n    align-items: center;\n}\n\n.djzTrzTVf\\+yGjYvp1i9FRQ\\=\\= h1 {\n    font-size: 1.5rem !important;\n    font-family: Roboto-Thin;\n}\n\n.djzTrzTVf\\+yGjYvp1i9FRQ\\=\\= p {\n    font-size: 1rem;\n    font-family: Roboto-Thin;\n}\n\n.x-H8MV4cNjxxbxIeI0Gmiw\\=\\= {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    border: 2px solid #aeaaa245;\n    border-radius: 50px 50px 0 50px;\n    width: 60%;\n    font-family: Roboto-Thin;\n}\n\n.djzTrzTVf\\+yGjYvp1i9FRQ\\=\\= img {\n    width: 100%;\n    border-radius: 0px 50px 0 0px;\n}\n\n.oIFLP0uZdmjXHyD2aosGBA\\=\\= {\n    width: 40%;\n    display: flex;\n    align-items: center;\n    height: 100%;\n}\n\n.wlJuN67ILQJ2-IWokDJZvg\\=\\= {\n    width: 60%;\n    display: flex;\n    justify-content: left;\n    align-items: left;\n    flex-direction: column;\n    gap: 1rem;\n    padding: 2rem;\n}\n\n@media only screen and (max-width: 1000px) {\n    .x-H8MV4cNjxxbxIeI0Gmiw\\=\\= {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        text-align: left;\n        margin: 0 !important;\n        width: 80% !important;\n    }\n\n    .wlJuN67ILQJ2-IWokDJZvg\\=\\= {\n        padding: 1rem;\n        gap: 5px;\n        margin-left: 10px;\n    }\n\n    .x-H8MV4cNjxxbxIeI0Gmiw\\=\\= h1 {\n        font-size: 18px;\n    }\n    .x-H8MV4cNjxxbxIeI0Gmiw\\=\\= p {\n        font-size: 16px;\n    }\n\n    /* .imageContainer {\n        width: 40%;\n        display: flex;\n        align-items: center;\n        height: 100%;\n    } */\n}\n@media only screen and (max-width: 600px) {\n    .x-H8MV4cNjxxbxIeI0Gmiw\\=\\= {\n        margin: 2rem;\n    }\n    .oIFLP0uZdmjXHyD2aosGBA\\=\\= {\n        display: none;\n    }\n\n    .wlJuN67ILQJ2-IWokDJZvg\\=\\= {\n        padding: 2rem;\n        width: 80%;\n    }\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n\n@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n\n.djzTrzTVf\\+yGjYvp1i9FRQ\\=\\= {\n    display: flex;\n    justify-content: center;\n    flex-direction: column;\n    align-items: center;\n}\n\n.djzTrzTVf\\+yGjYvp1i9FRQ\\=\\= h1 {\n    font-size: 1.5rem !important;\n    font-family: Roboto-Thin;\n    margin-bottom: 1rem;\n}\n\n.djzTrzTVf\\+yGjYvp1i9FRQ\\=\\= p {\n    font-size: 1rem;\n    font-family: Roboto-Thin;\n}\n\n.x-H8MV4cNjxxbxIeI0Gmiw\\=\\= {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    border: 2px solid #aeaaa245;\n    border-radius: 50px 50px 0 50px;\n    width: 60%;\n    font-family: Roboto-Thin;\n}\n\n.djzTrzTVf\\+yGjYvp1i9FRQ\\=\\= img {\n    width: 100%;\n    border-radius: 0px 50px 0 0px;\n}\n\n.oIFLP0uZdmjXHyD2aosGBA\\=\\= {\n    width: 40%;\n    display: flex;\n    align-items: center;\n    height: 100%;\n}\n\n.wlJuN67ILQJ2-IWokDJZvg\\=\\= {\n    width: 60%;\n    text-align: right;\n    display: flex;\n    flex-direction: column;\n    gap: 0.5rem;\n    padding: 2rem;\n}\n.wLHMPYjtSCyJqGKIgslMLg\\=\\= {\n    background-color: #fd6363;\n    display: flex;\n    justify-content: center;\n    padding: 0.2rem;\n    width: 60%;\n    border-radius: 0px 0px 0px 50px;\n    border: solid 1px #fd6363;\n    color: white;\n    margin-top: 1rem;\n    align-self: flex-end;\n    font-family: Julius;\n}\n\n.wLHMPYjtSCyJqGKIgslMLg\\=\\=:hover {\n    background-color: white;\n    color: #fd6363;\n    border: solid 1px #fd6363;\n}\n\n@media only screen and (max-width: 1000px) {\n    .x-H8MV4cNjxxbxIeI0Gmiw\\=\\= {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        text-align: left;\n        margin: 0 !important;\n        width: 80% !important;\n    }\n\n    .wlJuN67ILQJ2-IWokDJZvg\\=\\= {\n        padding: 1rem;\n        gap: 5px;\n        margin-left: 10px;\n    }\n\n    .x-H8MV4cNjxxbxIeI0Gmiw\\=\\= h1 {\n        font-size: 18px;\n    }\n    .x-H8MV4cNjxxbxIeI0Gmiw\\=\\= p {\n        font-size: 16px;\n    }\n\n    /* .imageContainer {\n        width: 40%;\n        display: flex;\n        align-items: center;\n        height: 100%;\n    } */\n}\n@media only screen and (max-width: 600px) {\n    .x-H8MV4cNjxxbxIeI0Gmiw\\=\\= {\n        margin: 2rem;\n    }\n    .oIFLP0uZdmjXHyD2aosGBA\\=\\= {\n        display: none;\n    }\n\n    .wlJuN67ILQJ2-IWokDJZvg\\=\\= {\n        padding: 2rem;\n        width: 80%;\n    }\n    .wLHMPYjtSCyJqGKIgslMLg\\=\\= {\n        width: 100%;\n    }\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"contactWrapper": "djzTrzTVf+yGjYvp1i9FRQ==",
 	"fullPageContainer": "x-H8MV4cNjxxbxIeI0Gmiw==",
 	"imageContainer": "oIFLP0uZdmjXHyD2aosGBA==",
-	"textContainer": "wlJuN67ILQJ2-IWokDJZvg=="
+	"textContainer": "wlJuN67ILQJ2-IWokDJZvg==",
+	"mailTo": "wLHMPYjtSCyJqGKIgslMLg=="
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
