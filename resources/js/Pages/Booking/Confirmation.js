@@ -23,6 +23,10 @@ export default function Confirmation({ booking }) {
                             Datum: {booking.start_date} - {booking.end_date}
                         </p>
                         <p>Antal gäster: {booking.guests}</p>
+                        <p className={styles.bold}>
+                            Vi kommer skicka ett mail med betalningsuppgifter
+                            och annan nödvändig information inom ett par dagar.
+                        </p>
                         <p>
                             Vid frågor - kontakta oss på molle@molle.se eller på
                             telefonnumer +46 84 92 20.

@@ -161,9 +161,9 @@ export default function selectDates({ room, bookings, rooms }) {
             </div>
             <div className={styles.rules}>
                 <p>
-                    AVBOKNINGSREGLER: Här står det vad som gäller för avbokning
-                    och kanske även hur man betalar lite mer tect hehehe kanske
-                    kanske
+                    AVBOKNINGSREGLER: Avbokning vid mindre än 30 dagar till
+                    ankomst återbetalas 50% av priset, 7 dagar innan ankomst
+                    sker ingen återbetalning.
                 </p>
             </div>
             <Footer />

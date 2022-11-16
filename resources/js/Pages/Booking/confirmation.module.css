@@ -19,6 +19,9 @@
     font-size: 1.5rem !important;
     font-family: Roboto-Thin;
 }
+.bold {
+    font-weight: bold;
+}
 
 .wrapper p {
     font-size: 1rem;

@@ -33,7 +33,7 @@ export default function selectRoom({ rooms }) {
                                     <h2>{room.name}</h2>
                                     <p>{room.description}</p>
                                     <p className={styles.price}>
-                                        {room.price + " kr"}
+                                        {room.price + " € /natt"}
                                     </p>
                                     <div className={styles.linkWrapper}>
                                         <div className={styles.linkContainer}>

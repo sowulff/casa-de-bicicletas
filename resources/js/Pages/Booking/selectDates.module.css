@@ -93,7 +93,9 @@ select {
     display: flex;
     justify-content: center;
     font-family: Roboto-Thin;
+
     padding-top: 3rem;
+    text-align: center;
 }
 
 .errorMessage {
