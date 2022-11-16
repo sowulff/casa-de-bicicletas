@@ -151,7 +151,7 @@ export default function selectDates({ room, bookings, rooms }) {
                     </div>
                     <h2>
                         Totalpris:
-                        {endDate != null && <span>{totalPrice} kr</span>}
+                        {endDate != null && <span>{totalPrice} €</span>}
                     </h2>
 
                     <div className={styles.buttonContainer}>
