@@ -32,14 +32,14 @@ body {
     grid-template-rows: 1fr 1fr;
     justify-content: center;
     gap: 2rem 5rem;
-    /* padding: 1rem; */
 }
 
 /* container som håller varje enskilt rum och dess info */
 .roomContainer {
     display: flex;
     flex-direction: row;
-    width: 60%;
+    width: 80%;
+    height: 300px;
     justify-self: center;
     align-self: center;
     border: 2px#d3d2cf45 solid;
@@ -59,12 +59,14 @@ body {
 
 .roomContainer img {
     width: 50%;
+    height: 100%;
     object-fit: cover;
 }
 
 .roomInfo {
     padding: 1rem;
     margin-top: 1rem;
+    width: 50%;
 }
 
 .selectRoomImgContainer {
@@ -167,6 +169,7 @@ body {
         justify-content: center;
         align-items: center;
         gap: 0;
+        height: unset;
     }
 
     .roomContainer img {
@@ -208,6 +211,11 @@ body {
     @media only screen and (max-width: 500px) {
         .roomContainer {
             padding: unset;
+            width: 70%;
+        }
+
+        .roomContainer img {
+            height: 200px;
         }
         .roomContainer p {
             font-size: 12px;
