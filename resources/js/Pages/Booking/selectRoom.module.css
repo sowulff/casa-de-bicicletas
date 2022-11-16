@@ -211,7 +211,7 @@ body {
     @media only screen and (max-width: 500px) {
         .roomContainer {
             padding: unset;
-            width: 70%;
+            width: 90%;
         }
 
         .roomContainer img {
