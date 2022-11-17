@@ -5583,7 +5583,7 @@ function Confirmation(_ref) {
             className: _confirmation_module_css__WEBPACK_IMPORTED_MODULE_2__["default"].bold,
             children: "Vi kommer skicka ett mail med betalningsuppgifter och annan n\xF6dv\xE4ndig information inom ett par dagar."
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
-            children: "Vid fr\xE5gor - kontakta oss p\xE5 molle@molle.se eller p\xE5 telefonnumer +46 84 92 20."
+            children: "Vid fr\xE5gor - kontakta oss p\xE5 bellezadelcieloltd@gmail.com eller p\xE5 telefonnumer +46 70 55 99 83."
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
             children: "V\xE4lkommen!"
           })]

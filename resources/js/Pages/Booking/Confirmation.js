@@ -28,8 +28,9 @@ export default function Confirmation({ booking }) {
                             och annan nödvändig information inom ett par dagar.
                         </p>
                         <p>
-                            Vid frågor - kontakta oss på molle@molle.se eller på
-                            telefonnumer +46 84 92 20.
+                            Vid frågor - kontakta oss på
+                            bellezadelcieloltd@gmail.com eller på telefonnumer
+                            +46 70 55 99 83.
                         </p>
                         <p>Välkommen!</p>
                     </div>
