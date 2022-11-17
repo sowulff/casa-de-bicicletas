@@ -46,8 +46,6 @@ export default function selectDates({ room, bookings, rooms }) {
         start_date: "",
         end_date: "",
     });
-    const errorMessage = errors[Object.keys(errors)[0]];
-    console.log(errors);
 
     function submit(e) {
         e.preventDefault();
@@ -123,12 +121,11 @@ export default function selectDates({ room, bookings, rooms }) {
                     locale="sv"
                 />
                 <form onSubmit={submit}>
-                    {errors && (
+                    {errors.start_date && (
                         <div className={styles.errorMessage}>
-                            {errorMessage}
+                            Vänligen välj datum för din vistelse.
                         </div>
                     )}
-
                     <input
                         type="text"
                         value={data.first_name}
@@ -136,6 +133,11 @@ export default function selectDates({ room, bookings, rooms }) {
                         placeholder="Förnamn"
                         name="first_name"
                     />
+                    {errors.first_name && (
+                        <div className={styles.errorMessage}>
+                            Vänligen fyll i ditt förnamn.
+                        </div>
+                    )}
 
                     <input
                         type="text"
@@ -144,6 +146,11 @@ export default function selectDates({ room, bookings, rooms }) {
                         placeholder="Efternamn"
                         name="last_name"
                     />
+                    {errors.last_name && (
+                        <div className={styles.errorMessage}>
+                            Vänligen fyll i ditt efternamn.
+                        </div>
+                    )}
                     <input
                         type="text"
                         value={data.email}
@@ -151,12 +158,22 @@ export default function selectDates({ room, bookings, rooms }) {
                         placeholder="E-post"
                         name="email"
                     />
+                    {errors.email && (
+                        <div className={styles.errorMessage}>
+                            Vänligen fyll i en giltig epost-adress.
+                        </div>
+                    )}
                     <input
                         type="text"
                         value={data.mobile}
                         onChange={(e) => setData("mobile", e.target.value)}
                         placeholder="Mobilnummer"
                     />
+                    {errors.mobile && (
+                        <div className={styles.errorMessage}>
+                            Vänligen fyll i ditt mobilnummer.
+                        </div>
+                    )}
                     <div className={styles.guestSelect}>
                         <select
                             type="number"

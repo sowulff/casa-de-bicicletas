@@ -5717,9 +5717,6 @@ function selectDates(_ref) {
       post = _useForm.post,
       errors = _useForm.errors;
 
-  var errorMessage = errors[Object.keys(errors)[0]];
-  console.log(errors);
-
   function submit(e) {
     e.preventDefault();
     emailjs_com__WEBPACK_IMPORTED_MODULE_7__["default"].sendForm("service_28p48oe", "template_msi86bn", e.target, "px6u5Af-2QCLnhWNA").then(function (result) {
@@ -5780,9 +5777,9 @@ function selectDates(_ref) {
         locale: "sv"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("form", {
         onSubmit: submit,
-        children: [errors && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+        children: [errors.start_date && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
           className: _selectDates_module_css__WEBPACK_IMPORTED_MODULE_5__["default"].errorMessage,
-          children: errorMessage
+          children: "V\xE4nligen v\xE4lj datum f\xF6r din vistelse."
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("input", {
           type: "text",
           value: data.first_name,
@@ -5791,6 +5788,9 @@ function selectDates(_ref) {
           },
           placeholder: "F\xF6rnamn",
           name: "first_name"
+        }), errors.first_name && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+          className: _selectDates_module_css__WEBPACK_IMPORTED_MODULE_5__["default"].errorMessage,
+          children: "V\xE4nligen fyll i ditt f\xF6rnamn."
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("input", {
           type: "text",
           value: data.last_name,
@@ -5799,6 +5799,9 @@ function selectDates(_ref) {
           },
           placeholder: "Efternamn",
           name: "last_name"
+        }), errors.last_name && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+          className: _selectDates_module_css__WEBPACK_IMPORTED_MODULE_5__["default"].errorMessage,
+          children: "V\xE4nligen fyll i ditt efternamn."
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("input", {
           type: "text",
           value: data.email,
@@ -5807,6 +5810,9 @@ function selectDates(_ref) {
           },
           placeholder: "E-post",
           name: "email"
+        }), errors.email && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+          className: _selectDates_module_css__WEBPACK_IMPORTED_MODULE_5__["default"].errorMessage,
+          children: "V\xE4nligen fyll i en giltig epost-adress."
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("input", {
           type: "text",
           value: data.mobile,
@@ -5814,6 +5820,9 @@ function selectDates(_ref) {
             return setData("mobile", e.target.value);
           },
           placeholder: "Mobilnummer"
+        }), errors.mobile && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+          className: _selectDates_module_css__WEBPACK_IMPORTED_MODULE_5__["default"].errorMessage,
+          children: "V\xE4nligen fyll i ditt mobilnummer."
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
           className: _selectDates_module_css__WEBPACK_IMPORTED_MODULE_5__["default"].guestSelect,
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("select", {
