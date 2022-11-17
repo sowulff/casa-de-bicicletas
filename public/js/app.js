@@ -5730,11 +5730,29 @@ function selectDates(_ref) {
     post("/bokning");
   }
 
+  var bookingData = [{
+    room_id: 3,
+    date: [{
+      date: "2022-11-21",
+      bookings: 0
+    }]
+  }];
+
   var dateToDisable = function dateToDisable() {
     return bookings.map(function (booking) {
       var dates = [];
       var date = new Date(booking.start_date);
       var end_date = new Date(booking.end_date);
+
+      if (booking.room_id === 3) {
+        bookingData[0]["date"].find(function (obj, index) {
+          var dateStart = (0,dateformat__WEBPACK_IMPORTED_MODULE_2__["default"])(date, "yyyy-mm-dd");
+
+          if (obj.date === dateStart) {
+            return bookingData[0]["date"][index]["bookings"] += 1;
+          }
+        }); // bookingData[0]["date"].bookings += 1;
+      }
 
       while (date <= end_date) {
         dates.push(new Date(date));
@@ -5745,6 +5763,7 @@ function selectDates(_ref) {
     });
   };
 
+  console.log(bookingData, "<----");
   var disableDates = dateToDisable();
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_3__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
