@@ -9,72 +9,72 @@ export default function Galleri() {
             <div className={styles.gridWrapper}>
                 <div className={styles.columnOne}>
                     <div>
-                        <img src={"assets/galleri/1.JPG"} />
+                        <img loading="lazy" src={"assets/galleri/1.JPG"} />
                     </div>
                     <div>
-                        <img src={"assets/galleri/2.JPG"} />
+                        <img loading="lazy" src={"assets/galleri/2.JPG"} />
                     </div>
                     <div>
-                        <img src={"assets/galleri/3.JPG"} />
+                        <img loading="lazy" src={"assets/galleri/3.JPG"} />
                     </div>
                     <div>
-                        <img src={"assets/galleri/4.JPG"} />
+                        <img loading="lazy" src={"assets/galleri/4.JPG"} />
                     </div>
                     <div>
-                        <img src={"assets/galleri/5.JPG"} />
+                        <img loading="lazy" src={"assets/galleri/5.JPG"} />
                     </div>
-                    <img src={"assets/galleri/6.JPG"} />
+                    <img loading="lazy" src={"assets/galleri/6.JPG"} />
                     <div>
-                        <img src={"assets/galleri/7.JPG"} />
-                    </div>
-                    <div>
-                        <img src={"assets/galleri/8.JPG"} />
+                        <img loading="lazy" src={"assets/galleri/7.JPG"} />
                     </div>
                     <div>
-                        <img src={"assets/galleri/9.JPG"} />
+                        <img loading="lazy" src={"assets/galleri/8.JPG"} />
                     </div>
                     <div>
-                        <img src={"assets/galleri/10.JPG"} />
+                        <img loading="lazy" src={"assets/galleri/9.JPG"} />
                     </div>
                     <div>
-                        <img src={"assets/galleri/11.JPG"} />
+                        <img loading="lazy" src={"assets/galleri/10.JPG"} />
+                    </div>
+                    <div>
+                        <img loading="lazy" src={"assets/galleri/11.JPG"} />
                     </div>
 
                     <div>
-                        <img src={"assets/galleri/12.JPG"} />
+                        <img loading="lazy" src={"assets/galleri/12.JPG"} />
                     </div>
                 </div>
                 <div className={styles.columnTwo}>
                     <div>
-                        <img src={"assets/galleri/13.JPG"} />
+                        <img loading="lazy" src={"assets/galleri/13.JPG"} />
                     </div>
                     <div>
-                        <img src={"assets/galleri/14.JPG"} />
+                        <img loading="lazy" src={"assets/galleri/14.JPG"} />
                     </div>
                     <div>
-                        <img src={"assets/galleri/15.JPG"} />
+                        <img loading="lazy" src={"assets/galleri/15.JPG"} />
                     </div>
                     <div>
-                        <img src={"assets/galleri/16.JPG"} />
+                        <img loading="lazy" src={"assets/galleri/16.JPG"} />
                     </div>
                     <div>
-                        <img src={"assets/galleri/17.JPG"} />
+                        <img loading="lazy" src={"assets/galleri/17.JPG"} />
                     </div>
                     <div>
-                        <img src={"assets/galleri/18.JPG"} />
+                        <img loading="lazy" src={"assets/galleri/18.JPG"} />
                     </div>
                     <div>
-                        <img src={"assets/galleri/19.JPG"} />
+                        <img loading="lazy" src={"assets/galleri/19.JPG"} />
                     </div>
                     <div>
-                        <img src={"assets/galleri/20.JPG"} />
+                        <img loading="lazy" src={"assets/galleri/20.JPG"} />
                     </div>
 
                     <div>
-                        <img src={"assets/galleri/21.JPG"} />
+                        <img loading="lazy" src={"assets/galleri/21.JPG"} />
                     </div>
                     <div>
-                        <img src={"assets/galleri/22.JPG"} />
+                        <img loading="lazy" src={"assets/galleri/22.JPG"} />
                     </div>
 
                     <div>

@@ -5,12 +5,18 @@
 .gridWrapper img {
     max-width: 100%;
     height: auto;
+
     vertical-align: middle;
     display: inline-block;
 }
 .gridWrapper {
     display: flex;
     gap: 1rem;
+}
+.columnOne div,
+.columnTwo div,
+.columnThree div {
+    width: 100%;
 }
 .columnOne,
 .columnTwo,

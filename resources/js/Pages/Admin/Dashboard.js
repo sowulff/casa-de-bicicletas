@@ -43,7 +43,27 @@ export default function Dashboard({ bookings }) {
                             key={booking.id}
                             className={styles.bookingCard}
                         >
-                            <p className={styles.typeOfRoom}>Lägenhet</p>
+                            {booking.room_id == 1 && (
+                                <div className={styles.typeOfRoom}>
+                                    Lägenhet
+                                </div>
+                            )}
+                            {booking.room_id == 2 && (
+                                <div className={styles.typeOfRoom}>
+                                    Dubbelrum
+                                </div>
+                            )}
+                            {booking.room_id == 3 && (
+                                <div className={styles.typeOfRoom}>
+                                    Ställplats
+                                </div>
+                            )}
+                            {booking.room_id == 4 && (
+                                <div className={styles.typeOfRoom}>
+                                    Fembäddsrum
+                                </div>
+                            )}
+                            {/* <p className={styles.typeOfRoom}>Lägenhet</p> */}
                             <p>{booking.guests} personer</p>
 
                             <p className={styles.bookingDate}>
