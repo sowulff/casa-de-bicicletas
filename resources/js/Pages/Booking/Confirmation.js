@@ -14,10 +14,18 @@ export default function Confirmation({ booking }) {
                         <img src={"assets/galleri/25.JPG"} />
                     </div>
                     <div className={styles.textContainer}>
-                        <h1>Tack för din bokning, {booking.first_name}!</h1>
+                        <h1>
+                            Tack för din bokning,
+                            <span className={styles.capitalize}>
+                                {booking.first_name}!
+                            </span>
+                        </h1>
                         <p>Casa La Marina</p>
                         <p>
-                            Namn: {booking.first_name} {booking.last_name}{" "}
+                            Namn:
+                            <span className={styles.capitalize}>
+                                {booking.first_name} {booking.last_name}
+                            </span>
                         </p>
                         <p>
                             Datum: {booking.start_date} - {booking.end_date}
