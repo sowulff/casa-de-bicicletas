@@ -68,12 +68,33 @@ export default function selectDates({ room, bookings, rooms }) {
             );
         post("/bokning");
     }
+    const bookingData = [
+        {
+            room_id: 3,
+            date: [
+                {
+                    date: "2022-11-21",
+                    bookings: 0,
+                },
+            ],
+        },
+    ];
 
     const dateToDisable = () => {
         return bookings.map((booking) => {
             const dates = [];
             let date = new Date(booking.start_date);
             let end_date = new Date(booking.end_date);
+
+            if (booking.room_id === 3) {
+                bookingData[0]["date"].find((obj, index) => {
+                    const dateStart = dateFormat(date, "yyyy-mm-dd");
+                    if (obj.date === dateStart) {
+                        return (bookingData[0]["date"][index]["bookings"] += 1);
+                    }
+                });
+                // bookingData[0]["date"].bookings += 1;
+            }
             while (date <= end_date) {
                 dates.push(new Date(date));
                 date.setDate(date.getDate() + 1);
@@ -81,6 +102,8 @@ export default function selectDates({ room, bookings, rooms }) {
             return dates;
         });
     };
+
+    console.log(bookingData, "<----");
 
     const disableDates = dateToDisable();
 
