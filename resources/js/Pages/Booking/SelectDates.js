@@ -123,7 +123,7 @@ export default function selectDates({ room, bookings, rooms }) {
                 <form onSubmit={submit}>
                     {errors.start_date && (
                         <div className={styles.errorMessage}>
-                            Vänligen välj datum för din vistelse.
+                            Vänligen välj datum för din vistelse. &#8593;
                         </div>
                     )}
                     <input
@@ -135,7 +135,7 @@ export default function selectDates({ room, bookings, rooms }) {
                     />
                     {errors.first_name && (
                         <div className={styles.errorMessage}>
-                            Vänligen fyll i ditt förnamn.
+                            Vänligen fyll i ditt förnamn. &#8593;
                         </div>
                     )}
 
@@ -148,7 +148,7 @@ export default function selectDates({ room, bookings, rooms }) {
                     />
                     {errors.last_name && (
                         <div className={styles.errorMessage}>
-                            Vänligen fyll i ditt efternamn.
+                            Vänligen fyll i ditt efternamn. &#8593;
                         </div>
                     )}
                     <input
@@ -160,7 +160,7 @@ export default function selectDates({ room, bookings, rooms }) {
                     />
                     {errors.email && (
                         <div className={styles.errorMessage}>
-                            Vänligen fyll i en giltig epost-adress.
+                            Vänligen fyll i en giltig epost-adress. &#8593;
                         </div>
                     )}
                     <input
@@ -171,7 +171,7 @@ export default function selectDates({ room, bookings, rooms }) {
                     />
                     {errors.mobile && (
                         <div className={styles.errorMessage}>
-                            Vänligen fyll i ditt mobilnummer.
+                            Vänligen fyll i ditt mobilnummer. &#8593;
                         </div>
                     )}
                     <div className={styles.guestSelect}>

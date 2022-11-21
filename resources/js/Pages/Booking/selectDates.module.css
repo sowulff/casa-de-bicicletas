@@ -93,15 +93,14 @@ select {
     display: flex;
     justify-content: center;
     font-family: Roboto-Thin;
-
     padding-top: 3rem;
     text-align: center;
 }
 
 .errorMessage {
-    text-align: center;
-    font-family: sans-serif;
+    font-family: Roboto-Thin;
     color: rgb(255, 108, 108);
+    padding-left: 0.5rem;
 }
 
 @media only screen and (max-width: 850px) {
