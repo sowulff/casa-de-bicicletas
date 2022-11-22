@@ -5421,7 +5421,7 @@ function Dashboard(_ref) {
             children: [booking.start_date, " till ", booking.end_date]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
-              children: ["Namn:", booking.first_name, " ", booking.last_name]
+              children: ["Namn: ", booking.first_name, " ", booking.last_name]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
               children: ["E-post: ", booking.email]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
@@ -5727,41 +5727,50 @@ function selectDates(_ref) {
     post("/bokning");
   }
 
-  var bookingData = [{
-    room_id: 3,
-    date: [{
-      date: "2022-11-21",
-      bookings: 0
-    }]
-  }];
-
   var dateToDisable = function dateToDisable() {
-    return bookings.map(function (booking) {
-      var dates = [];
-      var date = new Date(booking.start_date);
+    var bookingData = [];
+    var temporaryBookingData = [];
+    bookings.map(function (booking) {
+      var start_date = new Date(booking.start_date);
       var end_date = new Date(booking.end_date);
 
-      if (booking.room_id === 3) {
-        bookingData[0]["date"].find(function (obj, index) {
-          var dateStart = (0,dateformat__WEBPACK_IMPORTED_MODULE_2__["default"])(date, "yyyy-mm-dd");
+      var _loop = function _loop() {
+        var dateStart = (0,dateformat__WEBPACK_IMPORTED_MODULE_2__["default"])(start_date, "yyyy-mm-dd");
 
-          if (obj.date === dateStart) {
-            return bookingData[0]["date"][index]["bookings"] += 1;
+        if (booking.room_id === 3) {
+          var findBooking = temporaryBookingData.find(function (element, index) {
+            if (element.date === dateStart) {
+              return temporaryBookingData[index]["bookings"] += 1;
+            }
+
+            return undefined;
+          });
+
+          if (findBooking === undefined) {
+            temporaryBookingData.push({
+              date: dateStart,
+              bookings: 1
+            });
           }
-        }); // bookingData[0]["date"].bookings += 1;
-      }
+        } else {
+          bookingData.push(new Date(dateStart));
+        }
 
-      while (date <= end_date) {
-        dates.push(new Date(date));
-        date.setDate(date.getDate() + 1);
-      }
+        start_date.setDate(start_date.getDate() + 1);
+      };
 
-      return dates;
+      while (start_date <= end_date) {
+        _loop();
+      }
     });
+    temporaryBookingData.map(function (data) {
+      if (data.bookings >= 6) {
+        bookingData.push(new Date(data.date));
+      }
+    });
+    return bookingData;
   };
 
-  console.log(bookingData, "<----");
-  var disableDates = dateToDisable();
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_3__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
       className: _selectDates_module_css__WEBPACK_IMPORTED_MODULE_5__["default"].fullpageContainer,
@@ -5770,7 +5779,7 @@ function selectDates(_ref) {
         onChange: onChange,
         startDate: startDate,
         endDate: endDate,
-        excludeDates: disableDates.flat(),
+        excludeDates: dateToDisable().flat(),
         minDate: new Date(),
         selectsRange: true,
         inline: true,
@@ -6854,7 +6863,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n.OUZt7XLE32sP19hzzyqXkw\\=\\= {\n    width: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    padding: 2rem;\n}\n.sTpwB7ZcBqIhvv4dENvZcw\\=\\= h1 {\n    text-align: center;\n    padding: 2rem;\n    font-family: Julius;\n}\n.ypzc66m7KZK-M5bDHS7wOg\\=\\= {\n    background-color: white !important;\n    color: rgb(58, 53, 53) !important;\n    border: 1px solid rgb(58, 53, 53) !important;\n    width: 100%;\n    border-radius: 50px 50px 50px 0 !important;\n}\n\n.ypzc66m7KZK-M5bDHS7wOg\\=\\=:hover {\n    background-color: rgb(58, 53, 53) !important;\n    color: white !important;\n    border: 1px solid rgb(58, 53, 53) !important;\n    width: 100% !important;\n}\n\n.wLZ1RWP3SnLx52mOh\\+xtJw\\=\\= {\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: center;\n    background-color: rgb(244, 242, 241);\n}\n.khq3lv1woluKpC8-cpcbgw\\=\\= {\n    background-color: white;\n    font-family: Roboto-Thin;\n    padding: 2rem;\n    margin: 2rem;\n    display: flex;\n    flex-direction: column;\n    gap: 1rem;\n    text-align: center;\n    border-radius: 15px 15px 0px 15px;\n}\n.sTpwB7ZcBqIhvv4dENvZcw\\=\\= button {\n    width: 100%;\n    text-align: center;\n    padding: 0.5rem;\n    cursor: pointer;\n    background-color: #fd6363;\n    border: none;\n    border-radius: 15px 15px 0px 15px;\n    color: white;\n    font-family: Roboto-Thin;\n    font-size: 1rem;\n}\n\nbutton:hover {\n    background-color: white;\n    border: 1px solid #fd6363;\n    color: #fd6363;\n}\n.b5vt9Qr97YmSbiNYZY4X4Q\\=\\= {\n    padding: 1rem;\n    font-size: 1.5rem;\n    border-radius: 15px;\n}\n\n.XZ9zEwQ5mE14nx1o-eObAw\\=\\= {\n    display: flex;\n    flex-direction: column;\n    gap: 0.5rem;\n}\n\n.XZ9zEwQ5mE14nx1o-eObAw\\=\\= p {\n    background-color: white;\n    color: rgb(58, 53, 53);\n    font-size: 2rem;\n    font-family: Roboto-Thin;\n}\n\n.zRQsfSKh2TaNZT2W\\+C2S7Q\\=\\= {\n    font-size: 1.5rem;\n}\n\n@media only screen and (max-width: 850px) {\n    .XZ9zEwQ5mE14nx1o-eObAw\\=\\= p {\n        background-color: white;\n        color: rgb(58, 53, 53);\n        font-size: 1rem;\n        font-family: Roboto-Thin;\n    }\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n    src: url(\"/../assets/fonts/Roboto-Thin.ttf\");\n    font-family: Roboto-Thin;\n}\n@font-face {\n    src: url(\"/../assets/fonts/JuliusSansOne-Regular.ttf\");\n    font-family: Julius;\n}\n.OUZt7XLE32sP19hzzyqXkw\\=\\= {\n    width: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    padding: 2rem;\n}\n.sTpwB7ZcBqIhvv4dENvZcw\\=\\= h1 {\n    text-align: center;\n    padding: 2rem;\n    font-family: Julius;\n}\n.ypzc66m7KZK-M5bDHS7wOg\\=\\= {\n    background-color: white !important;\n    color: rgb(58, 53, 53) !important;\n    border: 1px solid rgb(58, 53, 53) !important;\n    width: 100%;\n    border-radius: 50px 50px 50px 0 !important;\n}\n\n.ypzc66m7KZK-M5bDHS7wOg\\=\\=:hover {\n    background-color: rgb(58, 53, 53) !important;\n    color: white !important;\n    border: 1px solid rgb(58, 53, 53) !important;\n    width: 100% !important;\n}\n\n.wLZ1RWP3SnLx52mOh\\+xtJw\\=\\= {\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: center;\n    background-color: rgb(244, 242, 241);\n}\n.khq3lv1woluKpC8-cpcbgw\\=\\= {\n    background-color: white;\n    font-family: Roboto-Thin;\n    padding: 2rem;\n    margin: 2rem;\n    display: flex;\n    flex-direction: column;\n    gap: 1rem;\n    text-align: center;\n    border-radius: 15px 15px 0px 15px;\n}\n.sTpwB7ZcBqIhvv4dENvZcw\\=\\= button {\n    width: 100%;\n    text-align: center;\n    padding: 0.5rem;\n    cursor: pointer;\n    background-color: #fd6363;\n    border: none;\n    border-radius: 50px 50px 0px 50px;\n    color: white;\n    font-family: Roboto-Thin;\n    font-size: 1rem;\n}\n\nbutton:hover {\n    background-color: white;\n    border: 1px solid #fd6363;\n    color: #fd6363;\n}\n.b5vt9Qr97YmSbiNYZY4X4Q\\=\\= {\n    padding: 1rem;\n    font-size: 1.5rem;\n    border-radius: 15px;\n}\n\n.XZ9zEwQ5mE14nx1o-eObAw\\=\\= {\n    display: flex;\n    flex-direction: column;\n    gap: 0.5rem;\n}\n\n.XZ9zEwQ5mE14nx1o-eObAw\\=\\= p {\n    background-color: white;\n    color: rgb(58, 53, 53);\n    font-size: 2rem;\n    font-family: Roboto-Thin;\n}\n\n.zRQsfSKh2TaNZT2W\\+C2S7Q\\=\\= {\n    font-size: 1.5rem;\n}\n\n@media only screen and (max-width: 850px) {\n    .XZ9zEwQ5mE14nx1o-eObAw\\=\\= p {\n        background-color: white;\n        color: rgb(58, 53, 53);\n        font-size: 1rem;\n        font-family: Roboto-Thin;\n    }\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"header": "OUZt7XLE32sP19hzzyqXkw==",
