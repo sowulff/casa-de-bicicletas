@@ -3,7 +3,7 @@ import NavBar from "../../components/NavBar/NavBar";
 import { useForm } from "@inertiajs/inertia-react";
 import styles from "./selectRoom.module.css";
 import Footer from "../../components/Footer/Footer";
-
+import React from "react";
 export default function selectRoom({ rooms }) {
     const { data, setData, post } = useForm({
         first_name: "",

@@ -1,6 +1,7 @@
 import styles from "./about.module.css";
 import Footer from "../../components/Footer/Footer";
 import NavBar from "../../components/NavBar/NavBar";
+import React from "react";
 
 export default function About() {
     return (

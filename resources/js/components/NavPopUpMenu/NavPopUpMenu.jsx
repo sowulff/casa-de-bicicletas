@@ -1,5 +1,6 @@
 import { Link } from "@inertiajs/inertia-react";
 import styles from "./NavPopUpMenu.module.css";
+import React from "react";
 
 export default function NavPopUpMenu({ navMenuIsOpenState }) {
     return (

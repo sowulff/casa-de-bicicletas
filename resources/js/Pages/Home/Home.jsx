@@ -1,5 +1,6 @@
 import styles from "./home.module.css";
 import NavBar from "../../components/NavBar/NavBar";
+import React from "react";
 
 export default function Welcome() {
     return (

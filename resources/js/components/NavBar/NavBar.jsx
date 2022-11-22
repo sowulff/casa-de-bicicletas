@@ -1,20 +1,16 @@
-import { Inertia } from "@inertiajs/inertia";
-import { useForm } from "@inertiajs/inertia-react";
-import styles from "./dashboard.module.css";
+import { Link } from "@inertiajs/inertia-react";
+import { useState } from "react";
+import NavPopUpMenu from "../NavPopUpMenu/NavPopUpMenu";
+import styles from "./NavBar.module.css";
+import { usePage } from "@inertiajs/inertia-react";
+import React from "react";
 
-export default function Dashboard({ bookings }) {
-    const { post } = useForm();
-    const logout = (e) => {
-        e.preventDefault();
-        post("/logout");
-    };
-    const deleteBooking = async (id) => {
-        Inertia.post(`/bookings/${id}`);
-    };
-
+export default function NavBar() {
+    const [navMenuIsOpen, setNavMenuIsOpen] = useState(false);
+    const { url, component } = usePage();
     return (
-        <div className={styles.bookingPage}>
-            <div className={styles.header}>
+        <div className={styles.navBar}>
+            <Link className={styles.logo} href="/">
                 <svg
                     width="152"
                     height="77"
@@ -27,64 +23,52 @@ export default function Dashboard({ bookings }) {
                         fill="#433535"
                     />
                 </svg>
-                <div className={styles.logOutContainer}>
-                    <p>Adminpanel</p>
-
-                    <button onClick={logout} className={styles.logOut}>
-                        Logga ut
-                    </button>
-                </div>
+            </Link>
+            {/* HamburgerMenu */}
+            <div className={styles.hamburgerMenu}>
+                <button
+                    onClick={() => setNavMenuIsOpen(true)}
+                    className={styles.hamburgerButton}
+                >
+                    <div className={styles.hamburgerBar}></div>
+                    <div className={styles.hamburgerBar}></div>
+                    <div className={styles.hamburgerBar}></div>
+                </button>
             </div>
-            <div className={styles.bookingContainer}>
-                {bookings.map(function (booking) {
-                    return (
-                        <div
-                            value={booking.id}
-                            key={booking.id}
-                            className={styles.bookingCard}
-                        >
-                            {booking.room_id == 1 && (
-                                <div className={styles.typeOfRoom}>
-                                    Lägenhet
-                                </div>
-                            )}
-                            {booking.room_id == 2 && (
-                                <div className={styles.typeOfRoom}>
-                                    Dubbelrum
-                                </div>
-                            )}
-                            {booking.room_id == 3 && (
-                                <div className={styles.typeOfRoom}>
-                                    Ställplats
-                                </div>
-                            )}
-                            {booking.room_id == 4 && (
-                                <div className={styles.typeOfRoom}>
-                                    Fembäddsrum
-                                </div>
-                            )}
-                            {/* <p className={styles.typeOfRoom}>Lägenhet</p> */}
-                            <p>{booking.guests} personer</p>
-
-                            <p className={styles.bookingDate}>
-                                {booking.start_date} till {booking.end_date}
-                            </p>
-
-                            <div>
-                                <p>
-                                    Namn: {booking.first_name}{" "}
-                                    {booking.last_name}
-                                </p>
-                                <p>E-post: {booking.email}</p>
-                                <p>Telefonnummer: {booking.mobile}</p>
-                            </div>
-
-                            <button onClick={() => deleteBooking(booking.id)}>
-                                DELETE
-                            </button>
-                        </div>
-                    );
-                })}
+            {navMenuIsOpen && (
+                <NavPopUpMenu navMenuIsOpenState={setNavMenuIsOpen} />
+            )}
+            <div className={styles.navLinks}>
+                <Link
+                    href="/boka"
+                    className={url === "/boka" ? styles.active : ""}
+                >
+                    BOKA &#8595;
+                </Link>
+                <Link
+                    href="/cykling"
+                    className={url === "/cykling" ? styles.active : ""}
+                >
+                    CYKLING &#8593;
+                </Link>
+                <Link
+                    href="/galleri"
+                    className={url === "/galleri" ? styles.active : ""}
+                >
+                    GALLERI &#8595;
+                </Link>
+                <Link
+                    href="/om-oss"
+                    className={url === "/om-oss" ? styles.active : ""}
+                >
+                    OM OSS &#8593;
+                </Link>
+                <Link
+                    href="/kontakt"
+                    className={url === "/kontakt" ? styles.active : ""}
+                >
+                    KONTAKT &#8595;
+                </Link>
             </div>
         </div>
     );

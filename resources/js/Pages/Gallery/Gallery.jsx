@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./gallery.module.css";
 import NavBar from "../../components/NavBar/NavBar";
+
 export default function Galleri() {
     return (
         <div>

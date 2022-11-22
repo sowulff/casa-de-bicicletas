@@ -2,6 +2,7 @@ import styles from "./contact.module.css";
 import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Footer/Footer";
 import { Link } from "@inertiajs/inertia-react";
+import React from "react";
 
 export default function Contact() {
     return (
