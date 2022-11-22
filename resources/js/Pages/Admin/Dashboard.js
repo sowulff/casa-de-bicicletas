@@ -72,7 +72,7 @@ export default function Dashboard({ bookings }) {
 
                             <div>
                                 <p>
-                                    Namn:{booking.first_name}{" "}
+                                    Namn: {booking.first_name}{" "}
                                     {booking.last_name}
                                 </p>
                                 <p>E-post: {booking.email}</p>
