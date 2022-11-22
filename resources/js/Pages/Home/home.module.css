@@ -32,6 +32,31 @@ body {
     flex-direction: column;
     height: 75vh;
     justify-content: flex-end;
+    transform: translateX(-50%);
+    opacity: 0;
+    top: 40px;
+    left: 10px;
+    animation: slideUp ease 3s forwards 1.2s;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-40px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(40px);
+        opacity: 1;
+    }
 }
 
 .firstLine {
