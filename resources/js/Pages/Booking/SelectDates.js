@@ -66,45 +66,48 @@ export default function selectDates({ room, bookings, rooms }) {
             );
         post("/bokning");
     }
-    const bookingData = [
-        {
-            room_id: 3,
-            date: [
-                {
-                    date: "2022-11-21",
-                    bookings: 0,
-                },
-            ],
-        },
-    ];
 
     const dateToDisable = () => {
-        return bookings.map((booking) => {
-            const dates = [];
-            let date = new Date(booking.start_date);
+        const bookingData = [];
+        const temporaryBookingData = [];
+        bookings.map((booking) => {
+            let start_date = new Date(booking.start_date);
             let end_date = new Date(booking.end_date);
 
-            if (booking.room_id === 3) {
-                bookingData[0]["date"].find((obj, index) => {
-                    const dateStart = dateFormat(date, "yyyy-mm-dd");
-                    if (obj.date === dateStart) {
-                        return (bookingData[0]["date"][index]["bookings"] += 1);
+            while (start_date <= end_date) {
+                const dateStart = dateFormat(start_date, "yyyy-mm-dd");
+                if (booking.room_id === 3) {
+                    const findBooking = temporaryBookingData.find(
+                        (element, index) => {
+                            if (element.date === dateStart) {
+                                return (temporaryBookingData[index][
+                                    "bookings"
+                                ] += 1);
+                            }
+                            return undefined;
+                        }
+                    );
+
+                    if (findBooking === undefined) {
+                        temporaryBookingData.push({
+                            date: dateStart,
+                            bookings: 1,
+                        });
                     }
-                });
-                // bookingData[0]["date"].bookings += 1;
+                } else {
+                    bookingData.push(new Date(dateStart));
+                }
+                start_date.setDate(start_date.getDate() + 1);
             }
-            while (date <= end_date) {
-                dates.push(new Date(date));
-                date.setDate(date.getDate() + 1);
-            }
-            return dates;
         });
+
+        temporaryBookingData.map((data) => {
+            if (data.bookings >= 6) {
+                bookingData.push(new Date(data.date));
+            }
+        });
+        return bookingData;
     };
-
-    console.log(bookingData, "<----");
-
-    const disableDates = dateToDisable();
-
     return (
         <div>
             <NavBar />
@@ -114,7 +117,7 @@ export default function selectDates({ room, bookings, rooms }) {
                     onChange={onChange}
                     startDate={startDate}
                     endDate={endDate}
-                    excludeDates={disableDates.flat()}
+                    excludeDates={dateToDisable().flat()}
                     minDate={new Date()}
                     selectsRange
                     inline
