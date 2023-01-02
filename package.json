@@ -16,6 +16,7 @@
     "dependencies": {
         "@inertiajs/inertia": "^0.11.1",
         "@inertiajs/inertia-react": "^0.8.1",
+        "composer": "^4.1.0",
         "date-fns": "^2.29.3",
         "dateformat": "^5.0.3",
         "emailjs-com": "^3.2.0",
