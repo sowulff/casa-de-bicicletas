@@ -40,7 +40,7 @@ export default function About() {
                                 finns dessutom många sevärdheter. Vi hjälper
                                 gärna till med tips på utflykter!
                             </p>
-                            <p>test update 🤙 lala</p>
+                            <p>test update 🤙</p>
                         </div>
                     </div>
                 </div>
